@@ -1,0 +1,22 @@
+[
+	{
+		"caption": "RubyMotionBuilder: Build",
+		"command": "ruby_motion_build"
+	},
+	{
+		"caption": "RubyMotionBuilder: Clean",
+		"command": "ruby_motion_clean"
+	},
+	{
+		"caption": "RubyMotionBuilder: Run",
+		"command": "ruby_motion_run"
+	},
+	{
+		"caption": "RubyMotionBuilder: Generate syntax",
+		"command": "generate_ruby_motion_syntax"
+	},
+	{
+		"caption": "RubyMotionBuilder: Generate completions",
+		"command": "generate_ruby_motion_completions"
+	}
+]
