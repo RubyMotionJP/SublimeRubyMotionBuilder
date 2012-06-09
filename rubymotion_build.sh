@@ -1,8 +1,9 @@
 #!/bin/sh
 
 CMD=$1
+
 if [ "CMD" = "" ]; then
-	CMD="rake"
+	CMD="rake build"
 fi
 
 $CMD 2>&1 | ruby -e "\

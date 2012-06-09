@@ -17,15 +17,18 @@ def FindRubyMotionRakefile(dir_name):
 	return None
 
 class RubyMotionBuild(sublime_plugin.WindowCommand):
-	def run(self):
+	def run(self, build_target=None):
 		view = self.window.active_view()
 		if not view:
 			return
 		dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
 		if dir_name:
 			sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+			cmd = "rake build"
+			if build_target and build_target != "all":
+				cmd += ":" + build_target
 			file_regex = "^(...*?):([0-9]*):([0-9]*)"
-			self.window.run_command("exec", {"cmd": ["sh", sh_name, "rake build:simulator"], "working_dir": dir_name, "file_regex": file_regex})
+			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
 
 class RubyMotionClean(sublime_plugin.WindowCommand):
 	def run(self):
@@ -35,8 +38,9 @@ class RubyMotionClean(sublime_plugin.WindowCommand):
 		dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
 		if dir_name:
 			sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+			cmd = "rake clean"
 			file_regex = "^(...*?):([0-9]*):([0-9]*)"
-			self.window.run_command("exec", {"cmd": ["sh", sh_name, "rake clean"], "working_dir": dir_name, "file_regex": file_regex})
+			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
 
 class RubyMotionRun(sublime_plugin.WindowCommand):
 	def run(self):
@@ -48,6 +52,18 @@ class RubyMotionRun(sublime_plugin.WindowCommand):
 			sh_name = os.path.join(this_dir, "rubymotion_run.sh")
 			file_regex = "^(...*?):([0-9]*):([0-9]*)"
 			self.window.run_command("exec", {"cmd": ["sh", sh_name, dir_name], "working_dir": dir_name, "file_regex": file_regex})
+
+class RubyMotionDeploy(sublime_plugin.WindowCommand):
+	def run(self):
+		view = self.window.active_view()
+		if not view:
+			return
+		dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
+		if dir_name:
+			sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+			cmd = "rake device"
+			file_regex = "^(...*?):([0-9]*):([0-9]*)"
+			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
 
 class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
 	def run(self):

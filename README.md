@@ -15,13 +15,20 @@ This plugin provides some features that simplify RubyMotion developing in Sublim
 
 * Build system (only work with RubyMotion)
 
-	Provides build system for RubyMotion. Supports three commands, `Build`, `Clean` and `Run`.
+	Provides build system for RubyMotion. Supports three commands, `Build`, `Clean`, `Run` and `Deploy`.
 	`Run` kick Terminal.app automatically.
 
 Package Control Installation
 ----------------------------
 
-not yet
+1. Open the Command Palette using **[command + shift + p]** and enter "add repository".
+2. Select `Package Control: Add Repository` from the popup menu and press **[return]**
+3. Enter "https://github.com/haraken3/SublimeRubyMotionBuilder" to the URL field. 
+4. Open the Command Palette using **[command + shift + p]** and enter "install package".
+5. Select `Package Control: Install Package` from the popup menu and press **[return]**
+6. Enter "SublimeRubyMotionBuilder" and press **[return]**
+
+**note:** This step requires [Package Control](http://wbond.net/sublime_packages/package_control/installation).
 
 Manual Installation
 ------------
@@ -45,7 +52,7 @@ Usage
 
 ### RubyMotion syntax
 
-1. Open *.rb or "Rakefile" in your RubyMotion project
+1. Open *.rb or Rakefile in your RubyMotion project
 2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working.
 
 **note:** RubyMotion detection rule is projtect's Rakefile contains "Motion", or not.
@@ -57,11 +64,11 @@ Usage
 
 ### Build
 
-1. Open "Rakefile" or *.rb in your RubyMotion project and enter **[command + b]**.
+1. Open *.rb or Rakefile in your RubyMotion project and enter **[command + b]**.
 2. Wait for the console to notify you the message "[Finished]".
 3. If you get a error, you can jump to it with press **[F4]**
 
-**note:** Actual command is "rake build:simulator".
+**note:** Default target is Simulator. If you want to change the target, please edit "RubyMotion.sublime-build".
 
 ### Clean
 
@@ -71,12 +78,18 @@ Usage
 
 ### Run
 
-1. Open "Rakefile" or *.rb in your RubyMotion project and enter **[command + r]**.
+1. Open *.rb or Rakefile in your RubyMotion project and enter **[command + r]**.
 2. Wait for the Terminal.app will kick Simulator.
 3. If you want to modify code and to try again, just re-enter **[command + r]**.
 Then, automatically post "quit" to Terminal.app and re-execute "rake".
 
 **note:** `Goto symbol` was assigned to **[control + r]**
+
+### Deploy
+
+1. Open the Command Palette using **[command + shift + p]** and enter "deploy".
+2. Select `RubyMotionBuilder: Deploy` from the popup menu and press **[return]**
+3. Wait for the console to notify you the message "[Finished]".
 
 ### Syntax/Completions generator
 
