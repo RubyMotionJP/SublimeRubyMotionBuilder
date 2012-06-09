@@ -1,6 +1,7 @@
 [
 	{ "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
 	{ "keys": ["super+r"], "command": "ruby_motion_run"},
+	{ "keys": ["super+alt+b"], "command": "ruby_motion_deploy"},
 	{ "keys": ["#"], "command": "insert_snippet", "args": {"contents": "#{${1:$SELECTION}}$0"}, "context":
 		[
 			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
