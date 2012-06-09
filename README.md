@@ -87,9 +87,8 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake".
 
 ### Deploy
 
-1. Open the Command Palette using **[command + shift + p]** and enter "deploy".
-2. Select `RubyMotionBuilder: Deploy` from the popup menu and press **[return]**
-3. Wait for the console to notify you the message "[Finished]".
+1. Open *.rb or Rakefile in your RubyMotion project and enter **[command + option + b]**.
+2. Wait for the console to notify you the message "[Finished]".
 
 ### Syntax/Completions generator
 
