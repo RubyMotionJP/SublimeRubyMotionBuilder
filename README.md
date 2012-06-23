@@ -21,14 +21,14 @@ This plugin provides some features that simplify RubyMotion developing in Sublim
 Package Control Installation
 ----------------------------
 
+**note:** This step requires [Package Control](http://wbond.net/sublime_packages/package_control/installation).
+
 1. Open the Command Palette using **[command + shift + p]** and enter "add repository".
 2. Select `Package Control: Add Repository` from the popup menu and press **[return]**
 3. Enter "https://github.com/haraken3/SublimeRubyMotionBuilder" to the URL field. 
 4. Open the Command Palette using **[command + shift + p]** and enter "install package".
 5. Select `Package Control: Install Package` from the popup menu and press **[return]**
 6. Enter "SublimeRubyMotionBuilder" and press **[return]**
-
-**note:** This step requires [Package Control](http://wbond.net/sublime_packages/package_control/installation).
 
 Manual Installation
 ------------
