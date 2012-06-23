@@ -28,7 +28,7 @@ Package Control Installation
 3. Enter "https://github.com/haraken3/SublimeRubyMotionBuilder" to the URL field. 
 4. Open the Command Palette using **[command + shift + p]** and enter "install package".
 5. Select `Package Control: Install Package` from the popup menu and press **[return]**
-6. Enter "SublimeRubyMotionBuilder" and press **[return]**
+6. Enter "RubyMotionBuilder" and press **[return]**
 
 Manual Installation
 ------------
