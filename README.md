@@ -5,7 +5,7 @@ This plugin provides some features that simplify RubyMotion developing in Sublim
 
 * RubyMotion syntax
 
-	It will work with RubyMotion project related *.rb and Rakefile.
+	It will work with RubyMotion project related \*.rb and Rakefile.
 	Code completion and Build system don't work in pure Ruby editing.
 
 * Code completion
@@ -23,12 +23,9 @@ Package Control Installation
 
 **note:** This step requires [Package Control](http://wbond.net/sublime_packages/package_control/installation).
 
-1. Open the Command Palette using **[command + shift + p]** and enter "add repository".
-2. Select `Package Control: Add Repository` from the popup menu and press **[return]**
-3. Enter "https://github.com/haraken3/SublimeRubyMotionBuilder" to the URL field. 
-4. Open the Command Palette using **[command + shift + p]** and enter "install package".
-5. Select `Package Control: Install Package` from the popup menu and press **[return]**
-6. Enter "RubyMotionBuilder" and press **[return]**
+1. Open the Command Palette using **[command + shift + p]** and enter "install package".
+2. Select `Package Control: Install Package` from the popup menu and press **[return]**
+3. Enter "RubyMotionBuilder" and press **[return]**
 
 Manual Installation
 ------------
@@ -52,8 +49,8 @@ Usage
 
 ### RubyMotion syntax
 
-1. Open *.rb or Rakefile in your RubyMotion project
-2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working.
+1. Open \*.rb or Rakefile in your RubyMotion project
+2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working. If Sublime Text 2 cache keep syntax as "Ruby", please close and open the file.
 
 **note:** RubyMotion detection rule is projtect's Rakefile contains "Motion", or not.
 
@@ -64,7 +61,7 @@ Usage
 
 ### Build
 
-1. Open *.rb or Rakefile in your RubyMotion project and enter **[command + b]**.
+1. Open \*.rb or Rakefile in your RubyMotion project and enter **[command + b]**.
 2. Wait for the console to notify you the message "[Finished]".
 3. If you get a error, you can jump to it with press **[F4]**
 
@@ -78,7 +75,7 @@ Usage
 
 ### Run
 
-1. Open *.rb or Rakefile in your RubyMotion project and enter **[command + r]**.
+1. Open *\.rb or Rakefile in your RubyMotion project and enter **[command + r]**.
 2. Wait for the Terminal.app will kick Simulator.
 3. If you want to modify code and to try again, just re-enter **[command + r]**.
 Then, automatically post "quit" to Terminal.app and re-execute "rake".
@@ -87,10 +84,12 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake".
 
 ### Deploy
 
-1. Open *.rb or Rakefile in your RubyMotion project and enter **[command + option + b]**.
+1. Open \*.rb or Rakefile in your RubyMotion project and enter **[command + option + b]**.
 2. Wait for the console to notify you the message "[Finished]".
 
 ### Syntax/Completions generator
+
+These two commands also supported in Command Pallet.
 
 * `RubyMotionBuilder: Generate syntax` will generate syntax and snippets from Ruby syntax.
 * `RubyMotionBuilder: Generate completions` will generate completions from BridgeSupport files of RubyMotion.
