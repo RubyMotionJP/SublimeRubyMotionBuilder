@@ -15,7 +15,7 @@ This plugin provides some features that simplify RubyMotion developing in Sublim
 
 * Build system (only work with RubyMotion)
 
-	Provides build system for RubyMotion. Supports three commands, `Build`, `Clean`, `Run` and `Deploy`.
+	Provides build system for RubyMotion. Supports four commands, `Build`, `Clean`, `Run` and `Deploy`.
 	`Run` kick Terminal.app automatically.
 
 Package Control Installation
