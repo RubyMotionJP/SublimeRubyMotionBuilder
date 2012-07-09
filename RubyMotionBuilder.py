@@ -53,6 +53,7 @@ class RubyMotionRun(sublime_plugin.WindowCommand):
 			file_regex = "^(...*?):([0-9]*):([0-9]*)"
 			# build console is not required for Run
 			self.window.run_command("hide_panel", {"panel": "output.exec"})
+			settings = sublime.load_settings("Preferences.sublime-settings")
 			show_panel_on_build = settings.get("show_panel_on_build", True)
 			if show_panel_on_build:
 				# temporary setting to keep console visibility
