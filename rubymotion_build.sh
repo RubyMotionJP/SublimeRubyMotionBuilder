@@ -1,9 +1,13 @@
 #!/bin/sh
 
 CMD=$1
+ENV=$2
 
-if [ "CMD" = "" ]; then
+if [ "$CMD" = "" ]; then
 	CMD="rake build"
+fi
+if [ "$ENV" != "" ]; then
+	eval . $ENV
 fi
 
 $CMD 2>&1 | ruby -e "\

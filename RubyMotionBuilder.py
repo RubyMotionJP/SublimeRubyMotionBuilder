@@ -27,8 +27,12 @@ class RubyMotionBuild(sublime_plugin.WindowCommand):
 			cmd = "rake build"
 			if build_target and build_target != "all":
 				cmd += ":" + build_target
+
+			settings = sublime.load_settings("RubyMotion.sublime-settings")
+			env_file = settings.get("rubymotion_build_env_file", "")
+
 			file_regex = "^(...*?):([0-9]*):([0-9]*)"
-			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
+			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
 
 class RubyMotionClean(sublime_plugin.WindowCommand):
 	def run(self):
@@ -39,8 +43,12 @@ class RubyMotionClean(sublime_plugin.WindowCommand):
 		if dir_name:
 			sh_name = os.path.join(this_dir, "rubymotion_build.sh")
 			cmd = "rake clean"
+
+			settings = sublime.load_settings("RubyMotion.sublime-settings")
+			env_file = settings.get("rubymotion_build_env_file", "")
+
 			file_regex = "^(...*?):([0-9]*):([0-9]*)"
-			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
+			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
 
 class RubyMotionRun(sublime_plugin.WindowCommand):
 	def run(self):
@@ -71,8 +79,12 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
 		if dir_name:
 			sh_name = os.path.join(this_dir, "rubymotion_build.sh")
 			cmd = "rake device"
+
+			settings = sublime.load_settings("RubyMotion.sublime-settings")
+			env_file = settings.get("rubymotion_build_env_file", "")
+
 			file_regex = "^(...*?):([0-9]*):([0-9]*)"
-			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
+			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
 
 class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
 	def run(self):
@@ -92,4 +104,3 @@ class SetRubyMotionSyntax(sublime_plugin.EventListener):
 		if ext == ".rb" or file_name == "Rakefile":
 			if FindRubyMotionRakefile(dir_name):
 				view.set_syntax_file(os.path.join(this_dir, "RubyMotion.tmLanguage"))
-
