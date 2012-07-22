@@ -2,6 +2,7 @@
 
 TERMINAL_ID="RubyMotionBuilder"
 PROJECT_DIR="$1"
+OPTIONS="$2"
 
 if [ "${PROJECT_DIR}" = "" ]; then
     exit 1
@@ -23,7 +24,7 @@ try
             end tell
         end try
     delay 0.1
-    do script "rake" in front window
+    do script "rake ${OPTIONS}" in front window
     end tell
 end try
 END

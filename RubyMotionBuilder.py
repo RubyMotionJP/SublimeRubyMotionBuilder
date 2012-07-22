@@ -51,7 +51,7 @@ class RubyMotionClean(sublime_plugin.WindowCommand):
 			self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
 
 class RubyMotionRun(sublime_plugin.WindowCommand):
-	def run(self):
+	def run(self, options=""):
 		view = self.window.active_view()
 		if not view:
 			return
@@ -66,7 +66,7 @@ class RubyMotionRun(sublime_plugin.WindowCommand):
 			if show_panel_on_build:
 				# temporary setting to keep console visibility
 				settings.set("show_panel_on_build", False)
-			self.window.run_command("exec", {"cmd": ["sh", sh_name, dir_name], "working_dir": dir_name, "file_regex": file_regex})
+			self.window.run_command("exec", {"cmd": ["sh", sh_name, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
 			# setting recovery
 			settings.set("show_panel_on_build", show_panel_on_build)
 

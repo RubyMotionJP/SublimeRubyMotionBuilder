@@ -75,7 +75,7 @@ Usage
 
 ### Run
 
-1. Open *\.rb or Rakefile in your RubyMotion project and enter **[command + r]**.
+1. Open *\.rb or Rakefile in your RubyMotion project and enter **[command + r]**. If you want to enable retina, please enter **[shift + command + r]**.
 2. Wait for the Terminal.app will kick Simulator.
 3. If you want to modify code and to try again, just re-enter **[command + r]**.
 Then, automatically post "quit" to Terminal.app and re-execute "rake".
