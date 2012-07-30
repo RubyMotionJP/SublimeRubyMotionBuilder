@@ -185,6 +185,9 @@
     "CFErrorGetTypeID",
     "CFFileDescriptorGetTypeID",
     "CFFileSecurityGetTypeID",
+    "CFHTTPAuthenticationGetTypeID",
+    "CFHTTPMessageGetTypeID",
+    "CFHostGetTypeID",
     "CFLocaleCopyAvailableLocaleIdentifiers",
     "CFLocaleCopyCommonISOCurrencyCodes",
     "CFLocaleCopyCurrent",
@@ -196,6 +199,10 @@
     "CFLocaleGetTypeID",
     "CFMachPortGetTypeID",
     "CFMessagePortGetTypeID",
+    "CFNetServiceBrowserGetTypeID",
+    "CFNetServiceGetTypeID",
+    "CFNetServiceMonitorGetTypeID",
+    "CFNetworkCopySystemProxySettings",
     "CFNotificationCenterGetDarwinNotifyCenter",
     "CFNotificationCenterGetLocalCenter",
     "CFNotificationCenterGetTypeID",
@@ -8300,6 +8307,10 @@
       "contents": "CFErrorGetDomain(${1:CFErrorRef err})"
     },
     {
+      "trigger": "CFFTPCreateParsedResourceListing",
+      "contents": "CFFTPCreateParsedResourceListing(${1:CFAllocatorRef alloc}, ${2:UInt8* buffer}, ${3:CFIndex bufferLength}, ${4:CFDictionaryRef* parsed})"
+    },
+    {
       "trigger": "CFFileDescriptorCreate",
       "contents": "CFFileDescriptorCreate(${1:CFAllocatorRef allocator}, ${2:CFFileDescriptorNativeDescriptor fd}, ${3:Boolean closeOnInvalidate}, ${4:CFFileDescriptorCallBack callout}, ${5:CFFileDescriptorContext* context})"
     },
@@ -8408,8 +8419,172 @@
       "contents": "CFGregorianDateIsValid(${1:CFGregorianDate gdate}, ${2:CFOptionFlags unitFlags})"
     },
     {
+      "trigger": "CFHTTPAuthenticationAppliesToRequest",
+      "contents": "CFHTTPAuthenticationAppliesToRequest(${1:CFHTTPAuthenticationRef auth}, ${2:CFHTTPMessageRef request})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationCopyDomains",
+      "contents": "CFHTTPAuthenticationCopyDomains(${1:CFHTTPAuthenticationRef auth})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationCopyMethod",
+      "contents": "CFHTTPAuthenticationCopyMethod(${1:CFHTTPAuthenticationRef auth})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationCopyRealm",
+      "contents": "CFHTTPAuthenticationCopyRealm(${1:CFHTTPAuthenticationRef auth})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationCreateFromResponse",
+      "contents": "CFHTTPAuthenticationCreateFromResponse(${1:CFAllocatorRef alloc}, ${2:CFHTTPMessageRef response})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationIsValid",
+      "contents": "CFHTTPAuthenticationIsValid(${1:CFHTTPAuthenticationRef auth}, ${2:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationRequiresAccountDomain",
+      "contents": "CFHTTPAuthenticationRequiresAccountDomain(${1:CFHTTPAuthenticationRef auth})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationRequiresOrderedRequests",
+      "contents": "CFHTTPAuthenticationRequiresOrderedRequests(${1:CFHTTPAuthenticationRef auth})"
+    },
+    {
+      "trigger": "CFHTTPAuthenticationRequiresUserNameAndPassword",
+      "contents": "CFHTTPAuthenticationRequiresUserNameAndPassword(${1:CFHTTPAuthenticationRef auth})"
+    },
+    {
+      "trigger": "CFHTTPMessageAddAuthentication",
+      "contents": "CFHTTPMessageAddAuthentication(${1:CFHTTPMessageRef request}, ${2:CFHTTPMessageRef authenticationFailureResponse}, ${3:CFStringRef username}, ${4:CFStringRef password}, ${5:CFStringRef authenticationScheme}, ${6:Boolean forProxy})"
+    },
+    {
+      "trigger": "CFHTTPMessageAppendBytes",
+      "contents": "CFHTTPMessageAppendBytes(${1:CFHTTPMessageRef message}, ${2:UInt8* newBytes}, ${3:CFIndex numBytes})"
+    },
+    {
+      "trigger": "CFHTTPMessageApplyCredentialDictionary",
+      "contents": "CFHTTPMessageApplyCredentialDictionary(${1:CFHTTPMessageRef request}, ${2:CFHTTPAuthenticationRef auth}, ${3:CFDictionaryRef dict}, ${4:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFHTTPMessageApplyCredentials",
+      "contents": "CFHTTPMessageApplyCredentials(${1:CFHTTPMessageRef request}, ${2:CFHTTPAuthenticationRef auth}, ${3:CFStringRef username}, ${4:CFStringRef password}, ${5:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopyAllHeaderFields",
+      "contents": "CFHTTPMessageCopyAllHeaderFields(${1:CFHTTPMessageRef message})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopyBody",
+      "contents": "CFHTTPMessageCopyBody(${1:CFHTTPMessageRef message})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopyHeaderFieldValue",
+      "contents": "CFHTTPMessageCopyHeaderFieldValue(${1:CFHTTPMessageRef message}, ${2:CFStringRef headerField})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopyRequestMethod",
+      "contents": "CFHTTPMessageCopyRequestMethod(${1:CFHTTPMessageRef request})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopyRequestURL",
+      "contents": "CFHTTPMessageCopyRequestURL(${1:CFHTTPMessageRef request})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopyResponseStatusLine",
+      "contents": "CFHTTPMessageCopyResponseStatusLine(${1:CFHTTPMessageRef response})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopySerializedMessage",
+      "contents": "CFHTTPMessageCopySerializedMessage(${1:CFHTTPMessageRef request})"
+    },
+    {
+      "trigger": "CFHTTPMessageCopyVersion",
+      "contents": "CFHTTPMessageCopyVersion(${1:CFHTTPMessageRef message})"
+    },
+    {
+      "trigger": "CFHTTPMessageCreateCopy",
+      "contents": "CFHTTPMessageCreateCopy(${1:CFAllocatorRef alloc}, ${2:CFHTTPMessageRef message})"
+    },
+    {
+      "trigger": "CFHTTPMessageCreateEmpty",
+      "contents": "CFHTTPMessageCreateEmpty(${1:CFAllocatorRef alloc}, ${2:Boolean isRequest})"
+    },
+    {
+      "trigger": "CFHTTPMessageCreateRequest",
+      "contents": "CFHTTPMessageCreateRequest(${1:CFAllocatorRef alloc}, ${2:CFStringRef requestMethod}, ${3:CFURLRef url}, ${4:CFStringRef httpVersion})"
+    },
+    {
+      "trigger": "CFHTTPMessageCreateResponse",
+      "contents": "CFHTTPMessageCreateResponse(${1:CFAllocatorRef alloc}, ${2:CFIndex statusCode}, ${3:CFStringRef statusDescription}, ${4:CFStringRef httpVersion})"
+    },
+    {
+      "trigger": "CFHTTPMessageGetResponseStatusCode",
+      "contents": "CFHTTPMessageGetResponseStatusCode(${1:CFHTTPMessageRef response})"
+    },
+    {
+      "trigger": "CFHTTPMessageIsHeaderComplete",
+      "contents": "CFHTTPMessageIsHeaderComplete(${1:CFHTTPMessageRef message})"
+    },
+    {
+      "trigger": "CFHTTPMessageIsRequest",
+      "contents": "CFHTTPMessageIsRequest(${1:CFHTTPMessageRef message})"
+    },
+    {
+      "trigger": "CFHTTPMessageSetBody",
+      "contents": "CFHTTPMessageSetBody(${1:CFHTTPMessageRef message}, ${2:CFDataRef bodyData})"
+    },
+    {
+      "trigger": "CFHTTPMessageSetHeaderFieldValue",
+      "contents": "CFHTTPMessageSetHeaderFieldValue(${1:CFHTTPMessageRef message}, ${2:CFStringRef headerField}, ${3:CFStringRef value})"
+    },
+    {
       "trigger": "CFHash",
       "contents": "CFHash(${1:CFTypeRef cf})"
+    },
+    {
+      "trigger": "CFHostCancelInfoResolution",
+      "contents": "CFHostCancelInfoResolution(${1:CFHostRef theHost}, ${2:CFHostInfoType info})"
+    },
+    {
+      "trigger": "CFHostCreateCopy",
+      "contents": "CFHostCreateCopy(${1:CFAllocatorRef alloc}, ${2:CFHostRef host})"
+    },
+    {
+      "trigger": "CFHostCreateWithAddress",
+      "contents": "CFHostCreateWithAddress(${1:CFAllocatorRef allocator}, ${2:CFDataRef addr})"
+    },
+    {
+      "trigger": "CFHostCreateWithName",
+      "contents": "CFHostCreateWithName(${1:CFAllocatorRef allocator}, ${2:CFStringRef hostname})"
+    },
+    {
+      "trigger": "CFHostGetAddressing",
+      "contents": "CFHostGetAddressing(${1:CFHostRef theHost}, ${2:Boolean* hasBeenResolved})"
+    },
+    {
+      "trigger": "CFHostGetNames",
+      "contents": "CFHostGetNames(${1:CFHostRef theHost}, ${2:Boolean* hasBeenResolved})"
+    },
+    {
+      "trigger": "CFHostGetReachability",
+      "contents": "CFHostGetReachability(${1:CFHostRef theHost}, ${2:Boolean* hasBeenResolved})"
+    },
+    {
+      "trigger": "CFHostScheduleWithRunLoop",
+      "contents": "CFHostScheduleWithRunLoop(${1:CFHostRef theHost}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
+    },
+    {
+      "trigger": "CFHostSetClient",
+      "contents": "CFHostSetClient(${1:CFHostRef theHost}, ${2:CFHostClientCallBack clientCB}, ${3:CFHostClientContext* clientContext})"
+    },
+    {
+      "trigger": "CFHostStartInfoResolution",
+      "contents": "CFHostStartInfoResolution(${1:CFHostRef theHost}, ${2:CFHostInfoType info}, ${3:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFHostUnscheduleFromRunLoop",
+      "contents": "CFHostUnscheduleFromRunLoop(${1:CFHostRef theHost}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
     },
     {
       "trigger": "CFLocaleCopyDisplayNameForPropertyValue",
@@ -8558,6 +8733,166 @@
     {
       "trigger": "CFMessagePortSetName",
       "contents": "CFMessagePortSetName(${1:CFMessagePortRef ms}, ${2:CFStringRef newName})"
+    },
+    {
+      "trigger": "CFNetDiagnosticCopyNetworkStatusPassively",
+      "contents": "CFNetDiagnosticCopyNetworkStatusPassively(${1:CFNetDiagnosticRef details}, ${2:CFStringRef* description})"
+    },
+    {
+      "trigger": "CFNetDiagnosticCreateWithStreams",
+      "contents": "CFNetDiagnosticCreateWithStreams(${1:CFAllocatorRef alloc}, ${2:CFReadStreamRef readStream}, ${3:CFWriteStreamRef writeStream})"
+    },
+    {
+      "trigger": "CFNetDiagnosticCreateWithURL",
+      "contents": "CFNetDiagnosticCreateWithURL(${1:CFAllocatorRef alloc}, ${2:CFURLRef url})"
+    },
+    {
+      "trigger": "CFNetDiagnosticDiagnoseProblemInteractively",
+      "contents": "CFNetDiagnosticDiagnoseProblemInteractively(${1:CFNetDiagnosticRef details})"
+    },
+    {
+      "trigger": "CFNetDiagnosticSetName",
+      "contents": "CFNetDiagnosticSetName(${1:CFNetDiagnosticRef details}, ${2:CFStringRef name})"
+    },
+    {
+      "trigger": "CFNetServiceBrowserCreate",
+      "contents": "CFNetServiceBrowserCreate(${1:CFAllocatorRef alloc}, ${2:CFNetServiceBrowserClientCallBack clientCB}, ${3:CFNetServiceClientContext* clientContext})"
+    },
+    {
+      "trigger": "CFNetServiceBrowserInvalidate",
+      "contents": "CFNetServiceBrowserInvalidate(${1:CFNetServiceBrowserRef browser})"
+    },
+    {
+      "trigger": "CFNetServiceBrowserScheduleWithRunLoop",
+      "contents": "CFNetServiceBrowserScheduleWithRunLoop(${1:CFNetServiceBrowserRef browser}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
+    },
+    {
+      "trigger": "CFNetServiceBrowserSearchForDomains",
+      "contents": "CFNetServiceBrowserSearchForDomains(${1:CFNetServiceBrowserRef browser}, ${2:Boolean registrationDomains}, ${3:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFNetServiceBrowserSearchForServices",
+      "contents": "CFNetServiceBrowserSearchForServices(${1:CFNetServiceBrowserRef browser}, ${2:CFStringRef domain}, ${3:CFStringRef serviceType}, ${4:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFNetServiceBrowserStopSearch",
+      "contents": "CFNetServiceBrowserStopSearch(${1:CFNetServiceBrowserRef browser}, ${2:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFNetServiceBrowserUnscheduleFromRunLoop",
+      "contents": "CFNetServiceBrowserUnscheduleFromRunLoop(${1:CFNetServiceBrowserRef browser}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
+    },
+    {
+      "trigger": "CFNetServiceCancel",
+      "contents": "CFNetServiceCancel(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceCreate",
+      "contents": "CFNetServiceCreate(${1:CFAllocatorRef alloc}, ${2:CFStringRef domain}, ${3:CFStringRef serviceType}, ${4:CFStringRef name}, ${5:SInt32 port})"
+    },
+    {
+      "trigger": "CFNetServiceCreateCopy",
+      "contents": "CFNetServiceCreateCopy(${1:CFAllocatorRef alloc}, ${2:CFNetServiceRef service})"
+    },
+    {
+      "trigger": "CFNetServiceCreateDictionaryWithTXTData",
+      "contents": "CFNetServiceCreateDictionaryWithTXTData(${1:CFAllocatorRef alloc}, ${2:CFDataRef txtRecord})"
+    },
+    {
+      "trigger": "CFNetServiceCreateTXTDataWithDictionary",
+      "contents": "CFNetServiceCreateTXTDataWithDictionary(${1:CFAllocatorRef alloc}, ${2:CFDictionaryRef keyValuePairs})"
+    },
+    {
+      "trigger": "CFNetServiceGetAddressing",
+      "contents": "CFNetServiceGetAddressing(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceGetDomain",
+      "contents": "CFNetServiceGetDomain(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceGetName",
+      "contents": "CFNetServiceGetName(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceGetPortNumber",
+      "contents": "CFNetServiceGetPortNumber(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceGetTXTData",
+      "contents": "CFNetServiceGetTXTData(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceGetTargetHost",
+      "contents": "CFNetServiceGetTargetHost(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceGetType",
+      "contents": "CFNetServiceGetType(${1:CFNetServiceRef theService})"
+    },
+    {
+      "trigger": "CFNetServiceMonitorCreate",
+      "contents": "CFNetServiceMonitorCreate(${1:CFAllocatorRef alloc}, ${2:CFNetServiceRef theService}, ${3:CFNetServiceMonitorClientCallBack clientCB}, ${4:CFNetServiceClientContext* clientContext})"
+    },
+    {
+      "trigger": "CFNetServiceMonitorInvalidate",
+      "contents": "CFNetServiceMonitorInvalidate(${1:CFNetServiceMonitorRef monitor})"
+    },
+    {
+      "trigger": "CFNetServiceMonitorScheduleWithRunLoop",
+      "contents": "CFNetServiceMonitorScheduleWithRunLoop(${1:CFNetServiceMonitorRef monitor}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
+    },
+    {
+      "trigger": "CFNetServiceMonitorStart",
+      "contents": "CFNetServiceMonitorStart(${1:CFNetServiceMonitorRef monitor}, ${2:CFNetServiceMonitorType recordType}, ${3:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFNetServiceMonitorStop",
+      "contents": "CFNetServiceMonitorStop(${1:CFNetServiceMonitorRef monitor}, ${2:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFNetServiceMonitorUnscheduleFromRunLoop",
+      "contents": "CFNetServiceMonitorUnscheduleFromRunLoop(${1:CFNetServiceMonitorRef monitor}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
+    },
+    {
+      "trigger": "CFNetServiceRegisterWithOptions",
+      "contents": "CFNetServiceRegisterWithOptions(${1:CFNetServiceRef theService}, ${2:CFOptionFlags options}, ${3:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFNetServiceResolveWithTimeout",
+      "contents": "CFNetServiceResolveWithTimeout(${1:CFNetServiceRef theService}, ${2:CFTimeInterval timeout}, ${3:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFNetServiceScheduleWithRunLoop",
+      "contents": "CFNetServiceScheduleWithRunLoop(${1:CFNetServiceRef theService}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
+    },
+    {
+      "trigger": "CFNetServiceSetClient",
+      "contents": "CFNetServiceSetClient(${1:CFNetServiceRef theService}, ${2:CFNetServiceClientCallBack clientCB}, ${3:CFNetServiceClientContext* clientContext})"
+    },
+    {
+      "trigger": "CFNetServiceSetTXTData",
+      "contents": "CFNetServiceSetTXTData(${1:CFNetServiceRef theService}, ${2:CFDataRef txtRecord})"
+    },
+    {
+      "trigger": "CFNetServiceUnscheduleFromRunLoop",
+      "contents": "CFNetServiceUnscheduleFromRunLoop(${1:CFNetServiceRef theService}, ${2:CFRunLoopRef runLoop}, ${3:CFStringRef runLoopMode})"
+    },
+    {
+      "trigger": "CFNetworkCopyProxiesForAutoConfigurationScript",
+      "contents": "CFNetworkCopyProxiesForAutoConfigurationScript(${1:CFStringRef proxyAutoConfigurationScript}, ${2:CFURLRef targetURL}, ${3:CFErrorRef* error})"
+    },
+    {
+      "trigger": "CFNetworkCopyProxiesForURL",
+      "contents": "CFNetworkCopyProxiesForURL(${1:CFURLRef url}, ${2:CFDictionaryRef proxySettings})"
+    },
+    {
+      "trigger": "CFNetworkExecuteProxyAutoConfigurationScript",
+      "contents": "CFNetworkExecuteProxyAutoConfigurationScript(${1:CFStringRef proxyAutoConfigurationScript}, ${2:CFURLRef targetURL}, ${3:CFProxyAutoConfigurationResultCallback cb}, ${4:CFStreamClientContext* clientContext})"
+    },
+    {
+      "trigger": "CFNetworkExecuteProxyAutoConfigurationURL",
+      "contents": "CFNetworkExecuteProxyAutoConfigurationURL(${1:CFURLRef proxyAutoConfigURL}, ${2:CFURLRef targetURL}, ${3:CFProxyAutoConfigurationResultCallback cb}, ${4:CFStreamClientContext* clientContext})"
     },
     {
       "trigger": "CFNotificationCenterAddObserver",
@@ -8856,8 +9191,20 @@
       "contents": "CFReadStreamCopyProperty(${1:CFReadStreamRef stream}, ${2:CFStringRef propertyName})"
     },
     {
+      "trigger": "CFReadStreamCreateForHTTPRequest",
+      "contents": "CFReadStreamCreateForHTTPRequest(${1:CFAllocatorRef alloc}, ${2:CFHTTPMessageRef request})"
+    },
+    {
+      "trigger": "CFReadStreamCreateForStreamedHTTPRequest",
+      "contents": "CFReadStreamCreateForStreamedHTTPRequest(${1:CFAllocatorRef alloc}, ${2:CFHTTPMessageRef requestHeaders}, ${3:CFReadStreamRef requestBody})"
+    },
+    {
       "trigger": "CFReadStreamCreateWithBytesNoCopy",
       "contents": "CFReadStreamCreateWithBytesNoCopy(${1:CFAllocatorRef alloc}, ${2:UInt8* bytes}, ${3:CFIndex length}, ${4:CFAllocatorRef bytesDeallocator})"
+    },
+    {
+      "trigger": "CFReadStreamCreateWithFTPURL",
+      "contents": "CFReadStreamCreateWithFTPURL(${1:CFAllocatorRef alloc}, ${2:CFURLRef ftpURL})"
     },
     {
       "trigger": "CFReadStreamCreateWithFile",
@@ -9244,6 +9591,14 @@
       "contents": "CFSocketSetSocketFlags(${1:CFSocketRef s}, ${2:CFOptionFlags flags})"
     },
     {
+      "trigger": "CFSocketStreamSOCKSGetError",
+      "contents": "CFSocketStreamSOCKSGetError(${1:CFStreamError* error})"
+    },
+    {
+      "trigger": "CFSocketStreamSOCKSGetErrorSubdomain",
+      "contents": "CFSocketStreamSOCKSGetErrorSubdomain(${1:CFStreamError* error})"
+    },
+    {
       "trigger": "CFSocketUnregister",
       "contents": "CFSocketUnregister(${1:CFSocketSignature* nameServerSignature}, ${2:CFTimeInterval timeout}, ${3:CFStringRef name})"
     },
@@ -9260,8 +9615,16 @@
       "contents": "CFStreamCreatePairWithSocket(${1:CFAllocatorRef alloc}, ${2:CFSocketNativeHandle sock}, ${3:CFReadStreamRef* readStream}, ${4:CFWriteStreamRef* writeStream})"
     },
     {
+      "trigger": "CFStreamCreatePairWithSocketToCFHost",
+      "contents": "CFStreamCreatePairWithSocketToCFHost(${1:CFAllocatorRef alloc}, ${2:CFHostRef host}, ${3:SInt32 port}, ${4:CFReadStreamRef* readStream}, ${5:CFWriteStreamRef* writeStream})"
+    },
+    {
       "trigger": "CFStreamCreatePairWithSocketToHost",
       "contents": "CFStreamCreatePairWithSocketToHost(${1:CFAllocatorRef alloc}, ${2:CFStringRef host}, ${3:UInt32 port}, ${4:CFReadStreamRef* readStream}, ${5:CFWriteStreamRef* writeStream})"
+    },
+    {
+      "trigger": "CFStreamCreatePairWithSocketToNetService",
+      "contents": "CFStreamCreatePairWithSocketToNetService(${1:CFAllocatorRef alloc}, ${2:CFNetServiceRef service}, ${3:CFReadStreamRef* readStream}, ${4:CFWriteStreamRef* writeStream})"
     },
     {
       "trigger": "CFStringAppend",
@@ -10138,6 +10501,10 @@
     {
       "trigger": "CFWriteStreamCreateWithBuffer",
       "contents": "CFWriteStreamCreateWithBuffer(${1:CFAllocatorRef alloc}, ${2:UInt8* buffer}, ${3:CFIndex bufferCapacity})"
+    },
+    {
+      "trigger": "CFWriteStreamCreateWithFTPURL",
+      "contents": "CFWriteStreamCreateWithFTPURL(${1:CFAllocatorRef alloc}, ${2:CFURLRef ftpURL})"
     },
     {
       "trigger": "CFWriteStreamCreateWithFile",
@@ -28145,7 +28512,7 @@
     },
     {
       "trigger": "UIGraphicsBeginImageContextWithOptions",
-      "contents": "UIGraphicsBeginImageContextWithOptions(${1:CGSize size}, ${2:BOOL opaque}, ${3:CGFloat scale})"
+      "contents": "UIGraphicsBeginImageContextWithOptions(${1:CGSize size}, ${2:BOOL cftype}, ${3:CGFloat scale})"
     },
     {
       "trigger": "UIGraphicsBeginPDFContextToData",
@@ -40952,6 +41319,10 @@
       "contents": "KCFCoreFoundationVersionNumber_iPhoneOS_3_2"
     },
     {
+      "trigger": "kCFDNSServiceFailureKey (CFStringRef)",
+      "contents": "KCFDNSServiceFailureKey"
+    },
+    {
       "trigger": "kCFDataSearchAnchored (2)",
       "contents": "KCFDataSearchAnchored"
     },
@@ -41100,6 +41471,10 @@
       "contents": "KCFErrorDescriptionKey"
     },
     {
+      "trigger": "kCFErrorDomainCFNetwork (CFStringRef)",
+      "contents": "KCFErrorDomainCFNetwork"
+    },
+    {
       "trigger": "kCFErrorDomainCocoa (CFStringRef)",
       "contents": "KCFErrorDomainCocoa"
     },
@@ -41120,8 +41495,48 @@
       "contents": "KCFErrorDomainSystemConfiguration"
     },
     {
+      "trigger": "kCFErrorDomainWinSock (CFStringRef)",
+      "contents": "KCFErrorDomainWinSock"
+    },
+    {
       "trigger": "kCFErrorFilePathKey (CFStringRef)",
       "contents": "KCFErrorFilePathKey"
+    },
+    {
+      "trigger": "kCFErrorHTTPAuthenticationTypeUnsupported (300)",
+      "contents": "KCFErrorHTTPAuthenticationTypeUnsupported"
+    },
+    {
+      "trigger": "kCFErrorHTTPBadCredentials (301)",
+      "contents": "KCFErrorHTTPBadCredentials"
+    },
+    {
+      "trigger": "kCFErrorHTTPBadProxyCredentials (307)",
+      "contents": "KCFErrorHTTPBadProxyCredentials"
+    },
+    {
+      "trigger": "kCFErrorHTTPBadURL (305)",
+      "contents": "KCFErrorHTTPBadURL"
+    },
+    {
+      "trigger": "kCFErrorHTTPConnectionLost (302)",
+      "contents": "KCFErrorHTTPConnectionLost"
+    },
+    {
+      "trigger": "kCFErrorHTTPParseFailure (303)",
+      "contents": "KCFErrorHTTPParseFailure"
+    },
+    {
+      "trigger": "kCFErrorHTTPProxyConnectionFailure (306)",
+      "contents": "KCFErrorHTTPProxyConnectionFailure"
+    },
+    {
+      "trigger": "kCFErrorHTTPRedirectionLoopDetected (304)",
+      "contents": "KCFErrorHTTPRedirectionLoopDetected"
+    },
+    {
+      "trigger": "kCFErrorHTTPSProxyConnectionFailure (310)",
+      "contents": "KCFErrorHTTPSProxyConnectionFailure"
     },
     {
       "trigger": "kCFErrorLocalizedDescriptionKey (CFStringRef)",
@@ -41136,6 +41551,14 @@
       "contents": "KCFErrorLocalizedRecoverySuggestionKey"
     },
     {
+      "trigger": "kCFErrorPACFileAuth (309)",
+      "contents": "KCFErrorPACFileAuth"
+    },
+    {
+      "trigger": "kCFErrorPACFileError (308)",
+      "contents": "KCFErrorPACFileError"
+    },
+    {
       "trigger": "kCFErrorURLKey (CFStringRef)",
       "contents": "KCFErrorURLKey"
     },
@@ -41144,12 +41567,56 @@
       "contents": "KCFErrorUnderlyingErrorKey"
     },
     {
+      "trigger": "kCFFTPErrorUnexpectedStatusCode (200)",
+      "contents": "KCFFTPErrorUnexpectedStatusCode"
+    },
+    {
+      "trigger": "kCFFTPResourceGroup (CFStringRef)",
+      "contents": "KCFFTPResourceGroup"
+    },
+    {
+      "trigger": "kCFFTPResourceLink (CFStringRef)",
+      "contents": "KCFFTPResourceLink"
+    },
+    {
+      "trigger": "kCFFTPResourceModDate (CFStringRef)",
+      "contents": "KCFFTPResourceModDate"
+    },
+    {
+      "trigger": "kCFFTPResourceMode (CFStringRef)",
+      "contents": "KCFFTPResourceMode"
+    },
+    {
+      "trigger": "kCFFTPResourceName (CFStringRef)",
+      "contents": "KCFFTPResourceName"
+    },
+    {
+      "trigger": "kCFFTPResourceOwner (CFStringRef)",
+      "contents": "KCFFTPResourceOwner"
+    },
+    {
+      "trigger": "kCFFTPResourceSize (CFStringRef)",
+      "contents": "KCFFTPResourceSize"
+    },
+    {
+      "trigger": "kCFFTPResourceType (CFStringRef)",
+      "contents": "KCFFTPResourceType"
+    },
+    {
+      "trigger": "kCFFTPStatusCodeKey (CFStringRef)",
+      "contents": "KCFFTPStatusCodeKey"
+    },
+    {
       "trigger": "kCFFileDescriptorReadCallBack (1)",
       "contents": "KCFFileDescriptorReadCallBack"
     },
     {
       "trigger": "kCFFileDescriptorWriteCallBack (2)",
       "contents": "KCFFileDescriptorWriteCallBack"
+    },
+    {
+      "trigger": "kCFGetAddrInfoFailureKey (CFStringRef)",
+      "contents": "KCFGetAddrInfoFailureKey"
     },
     {
       "trigger": "kCFGregorianAllUnits (16777215)",
@@ -41184,8 +41651,68 @@
       "contents": "KCFGregorianUnitsYears"
     },
     {
+      "trigger": "kCFHTTPAuthenticationAccountDomain (CFStringRef)",
+      "contents": "KCFHTTPAuthenticationAccountDomain"
+    },
+    {
+      "trigger": "kCFHTTPAuthenticationPassword (CFStringRef)",
+      "contents": "KCFHTTPAuthenticationPassword"
+    },
+    {
+      "trigger": "kCFHTTPAuthenticationSchemeBasic (CFStringRef)",
+      "contents": "KCFHTTPAuthenticationSchemeBasic"
+    },
+    {
+      "trigger": "kCFHTTPAuthenticationSchemeDigest (CFStringRef)",
+      "contents": "KCFHTTPAuthenticationSchemeDigest"
+    },
+    {
+      "trigger": "kCFHTTPAuthenticationSchemeNTLM (CFStringRef)",
+      "contents": "KCFHTTPAuthenticationSchemeNTLM"
+    },
+    {
+      "trigger": "kCFHTTPAuthenticationSchemeNegotiate (CFStringRef)",
+      "contents": "KCFHTTPAuthenticationSchemeNegotiate"
+    },
+    {
+      "trigger": "kCFHTTPAuthenticationUsername (CFStringRef)",
+      "contents": "KCFHTTPAuthenticationUsername"
+    },
+    {
+      "trigger": "kCFHTTPCookieCannotParseCookieFile (-4000)",
+      "contents": "KCFHTTPCookieCannotParseCookieFile"
+    },
+    {
+      "trigger": "kCFHTTPVersion1_0 (CFStringRef)",
+      "contents": "KCFHTTPVersion1_0"
+    },
+    {
+      "trigger": "kCFHTTPVersion1_1 (CFStringRef)",
+      "contents": "KCFHTTPVersion1_1"
+    },
+    {
       "trigger": "kCFHebrewCalendar (CFStringRef)",
       "contents": "KCFHebrewCalendar"
+    },
+    {
+      "trigger": "kCFHostAddresses (0)",
+      "contents": "KCFHostAddresses"
+    },
+    {
+      "trigger": "kCFHostErrorHostNotFound (1)",
+      "contents": "KCFHostErrorHostNotFound"
+    },
+    {
+      "trigger": "kCFHostErrorUnknown (2)",
+      "contents": "KCFHostErrorUnknown"
+    },
+    {
+      "trigger": "kCFHostNames (1)",
+      "contents": "KCFHostNames"
+    },
+    {
+      "trigger": "kCFHostReachability (2)",
+      "contents": "KCFHostReachability"
     },
     {
       "trigger": "kCFISO8601Calendar (CFStringRef)",
@@ -41334,6 +41861,142 @@
     {
       "trigger": "kCFMessagePortTransportError (-4)",
       "contents": "KCFMessagePortTransportError"
+    },
+    {
+      "trigger": "kCFNetDiagnosticConnectionDown (-66557)",
+      "contents": "KCFNetDiagnosticConnectionDown"
+    },
+    {
+      "trigger": "kCFNetDiagnosticConnectionIndeterminate (-66558)",
+      "contents": "KCFNetDiagnosticConnectionIndeterminate"
+    },
+    {
+      "trigger": "kCFNetDiagnosticConnectionUp (-66559)",
+      "contents": "KCFNetDiagnosticConnectionUp"
+    },
+    {
+      "trigger": "kCFNetDiagnosticErr (-66560)",
+      "contents": "KCFNetDiagnosticErr"
+    },
+    {
+      "trigger": "kCFNetDiagnosticNoErr (0)",
+      "contents": "KCFNetDiagnosticNoErr"
+    },
+    {
+      "trigger": "kCFNetServiceErrorBadArgument (-72004)",
+      "contents": "KCFNetServiceErrorBadArgument"
+    },
+    {
+      "trigger": "kCFNetServiceErrorCancel (-72005)",
+      "contents": "KCFNetServiceErrorCancel"
+    },
+    {
+      "trigger": "kCFNetServiceErrorCollision (-72001)",
+      "contents": "KCFNetServiceErrorCollision"
+    },
+    {
+      "trigger": "kCFNetServiceErrorDNSServiceFailure (-73000)",
+      "contents": "KCFNetServiceErrorDNSServiceFailure"
+    },
+    {
+      "trigger": "kCFNetServiceErrorInProgress (-72003)",
+      "contents": "KCFNetServiceErrorInProgress"
+    },
+    {
+      "trigger": "kCFNetServiceErrorInvalid (-72006)",
+      "contents": "KCFNetServiceErrorInvalid"
+    },
+    {
+      "trigger": "kCFNetServiceErrorNotFound (-72002)",
+      "contents": "KCFNetServiceErrorNotFound"
+    },
+    {
+      "trigger": "kCFNetServiceErrorTimeout (-72007)",
+      "contents": "KCFNetServiceErrorTimeout"
+    },
+    {
+      "trigger": "kCFNetServiceErrorUnknown (-72000)",
+      "contents": "KCFNetServiceErrorUnknown"
+    },
+    {
+      "trigger": "kCFNetServiceFlagIsDefault (4)",
+      "contents": "KCFNetServiceFlagIsDefault"
+    },
+    {
+      "trigger": "kCFNetServiceFlagIsDomain (2)",
+      "contents": "KCFNetServiceFlagIsDomain"
+    },
+    {
+      "trigger": "kCFNetServiceFlagIsRegistrationDomain (4)",
+      "contents": "KCFNetServiceFlagIsRegistrationDomain"
+    },
+    {
+      "trigger": "kCFNetServiceFlagMoreComing (1)",
+      "contents": "KCFNetServiceFlagMoreComing"
+    },
+    {
+      "trigger": "kCFNetServiceFlagNoAutoRename (1)",
+      "contents": "KCFNetServiceFlagNoAutoRename"
+    },
+    {
+      "trigger": "kCFNetServiceFlagRemove (8)",
+      "contents": "KCFNetServiceFlagRemove"
+    },
+    {
+      "trigger": "kCFNetServiceMonitorTXT (1)",
+      "contents": "KCFNetServiceMonitorTXT"
+    },
+    {
+      "trigger": "kCFNetServicesErrorBadArgument (-72004)",
+      "contents": "KCFNetServicesErrorBadArgument"
+    },
+    {
+      "trigger": "kCFNetServicesErrorCancel (-72005)",
+      "contents": "KCFNetServicesErrorCancel"
+    },
+    {
+      "trigger": "kCFNetServicesErrorCollision (-72001)",
+      "contents": "KCFNetServicesErrorCollision"
+    },
+    {
+      "trigger": "kCFNetServicesErrorInProgress (-72003)",
+      "contents": "KCFNetServicesErrorInProgress"
+    },
+    {
+      "trigger": "kCFNetServicesErrorInvalid (-72006)",
+      "contents": "KCFNetServicesErrorInvalid"
+    },
+    {
+      "trigger": "kCFNetServicesErrorNotFound (-72002)",
+      "contents": "KCFNetServicesErrorNotFound"
+    },
+    {
+      "trigger": "kCFNetServicesErrorTimeout (-72007)",
+      "contents": "KCFNetServicesErrorTimeout"
+    },
+    {
+      "trigger": "kCFNetServicesErrorUnknown (-72000)",
+      "contents": "KCFNetServicesErrorUnknown"
+    },
+    {
+      "trigger": "kCFNetworkProxiesHTTPEnable (CFStringRef)",
+      "contents": "KCFNetworkProxiesHTTPEnable"
+    },
+    {
+      "trigger": "kCFNetworkProxiesHTTPPort (CFStringRef)",
+      "contents": "KCFNetworkProxiesHTTPPort"
+    },
+    {
+      "trigger": "kCFNetworkProxiesHTTPProxy (CFStringRef)",
+      "contents": "KCFNetworkProxiesHTTPProxy"
+    },
+    {
+      "trigger": "kCFNetworkProxiesProxyAutoConfigEnable (CFStringRef)",
+      "contents": "KCFNetworkProxiesProxyAutoConfigEnable"
+    },
+    {
+      "trigger": "kCFNetworkProxiesProxyAutoConfigURLString (CFStringRef)",
+      "contents": "KCFNetworkProxiesProxyAutoConfigURLString"
     },
     {
       "trigger": "kCFNotFound (-1)",
@@ -41744,6 +42407,58 @@
       "contents": "KCFPropertyListXMLFormat_v1_0"
     },
     {
+      "trigger": "kCFProxyAutoConfigurationHTTPResponseKey (CFStringRef)",
+      "contents": "KCFProxyAutoConfigurationHTTPResponseKey"
+    },
+    {
+      "trigger": "kCFProxyAutoConfigurationURLKey (CFStringRef)",
+      "contents": "KCFProxyAutoConfigurationURLKey"
+    },
+    {
+      "trigger": "kCFProxyHostNameKey (CFStringRef)",
+      "contents": "KCFProxyHostNameKey"
+    },
+    {
+      "trigger": "kCFProxyPasswordKey (CFStringRef)",
+      "contents": "KCFProxyPasswordKey"
+    },
+    {
+      "trigger": "kCFProxyPortNumberKey (CFStringRef)",
+      "contents": "KCFProxyPortNumberKey"
+    },
+    {
+      "trigger": "kCFProxyTypeAutoConfigurationURL (CFStringRef)",
+      "contents": "KCFProxyTypeAutoConfigurationURL"
+    },
+    {
+      "trigger": "kCFProxyTypeFTP (CFStringRef)",
+      "contents": "KCFProxyTypeFTP"
+    },
+    {
+      "trigger": "kCFProxyTypeHTTP (CFStringRef)",
+      "contents": "KCFProxyTypeHTTP"
+    },
+    {
+      "trigger": "kCFProxyTypeHTTPS (CFStringRef)",
+      "contents": "KCFProxyTypeHTTPS"
+    },
+    {
+      "trigger": "kCFProxyTypeKey (CFStringRef)",
+      "contents": "KCFProxyTypeKey"
+    },
+    {
+      "trigger": "kCFProxyTypeNone (CFStringRef)",
+      "contents": "KCFProxyTypeNone"
+    },
+    {
+      "trigger": "kCFProxyTypeSOCKS (CFStringRef)",
+      "contents": "KCFProxyTypeSOCKS"
+    },
+    {
+      "trigger": "kCFProxyUsernameKey (CFStringRef)",
+      "contents": "KCFProxyUsernameKey"
+    },
+    {
       "trigger": "kCFRepublicOfChinaCalendar (CFStringRef)",
       "contents": "KCFRepublicOfChinaCalendar"
     },
@@ -41798,6 +42513,62 @@
     {
       "trigger": "kCFRunLoopRunTimedOut (3)",
       "contents": "KCFRunLoopRunTimedOut"
+    },
+    {
+      "trigger": "kCFSOCKS4ErrorIdConflict (112)",
+      "contents": "KCFSOCKS4ErrorIdConflict"
+    },
+    {
+      "trigger": "kCFSOCKS4ErrorIdentdFailed (111)",
+      "contents": "KCFSOCKS4ErrorIdentdFailed"
+    },
+    {
+      "trigger": "kCFSOCKS4ErrorRequestFailed (110)",
+      "contents": "KCFSOCKS4ErrorRequestFailed"
+    },
+    {
+      "trigger": "kCFSOCKS4ErrorUnknownStatusCode (113)",
+      "contents": "KCFSOCKS4ErrorUnknownStatusCode"
+    },
+    {
+      "trigger": "kCFSOCKS5ErrorBadCredentials (122)",
+      "contents": "KCFSOCKS5ErrorBadCredentials"
+    },
+    {
+      "trigger": "kCFSOCKS5ErrorBadResponseAddr (121)",
+      "contents": "KCFSOCKS5ErrorBadResponseAddr"
+    },
+    {
+      "trigger": "kCFSOCKS5ErrorBadState (120)",
+      "contents": "KCFSOCKS5ErrorBadState"
+    },
+    {
+      "trigger": "kCFSOCKS5ErrorNoAcceptableMethod (124)",
+      "contents": "KCFSOCKS5ErrorNoAcceptableMethod"
+    },
+    {
+      "trigger": "kCFSOCKS5ErrorUnsupportedNegotiationMethod (123)",
+      "contents": "KCFSOCKS5ErrorUnsupportedNegotiationMethod"
+    },
+    {
+      "trigger": "kCFSOCKSErrorUnknownClientVersion (100)",
+      "contents": "KCFSOCKSErrorUnknownClientVersion"
+    },
+    {
+      "trigger": "kCFSOCKSErrorUnsupportedServerVersion (101)",
+      "contents": "KCFSOCKSErrorUnsupportedServerVersion"
+    },
+    {
+      "trigger": "kCFSOCKSNegotiationMethodKey (CFStringRef)",
+      "contents": "KCFSOCKSNegotiationMethodKey"
+    },
+    {
+      "trigger": "kCFSOCKSStatusCodeKey (CFStringRef)",
+      "contents": "KCFSOCKSStatusCodeKey"
+    },
+    {
+      "trigger": "kCFSOCKSVersionKey (CFStringRef)",
+      "contents": "KCFSOCKSVersionKey"
     },
     {
       "trigger": "kCFSocketAcceptCallBack (2)",
@@ -41892,12 +42663,120 @@
       "contents": "KCFStreamErrorDomainCustom"
     },
     {
+      "trigger": "kCFStreamErrorDomainFTP (SInt32)",
+      "contents": "KCFStreamErrorDomainFTP"
+    },
+    {
+      "trigger": "kCFStreamErrorDomainHTTP (SInt32)",
+      "contents": "KCFStreamErrorDomainHTTP"
+    },
+    {
       "trigger": "kCFStreamErrorDomainMacOSStatus (2)",
       "contents": "KCFStreamErrorDomainMacOSStatus"
     },
     {
+      "trigger": "kCFStreamErrorDomainMach (SInt32)",
+      "contents": "KCFStreamErrorDomainMach"
+    },
+    {
+      "trigger": "kCFStreamErrorDomainNetDB (SInt32)",
+      "contents": "KCFStreamErrorDomainNetDB"
+    },
+    {
+      "trigger": "kCFStreamErrorDomainNetServices (SInt32)",
+      "contents": "KCFStreamErrorDomainNetServices"
+    },
+    {
       "trigger": "kCFStreamErrorDomainPOSIX (1)",
       "contents": "KCFStreamErrorDomainPOSIX"
+    },
+    {
+      "trigger": "kCFStreamErrorDomainSOCKS (int)",
+      "contents": "KCFStreamErrorDomainSOCKS"
+    },
+    {
+      "trigger": "kCFStreamErrorDomainSSL (int)",
+      "contents": "KCFStreamErrorDomainSSL"
+    },
+    {
+      "trigger": "kCFStreamErrorDomainSystemConfiguration (SInt32)",
+      "contents": "KCFStreamErrorDomainSystemConfiguration"
+    },
+    {
+      "trigger": "kCFStreamErrorDomainWinSock (CFIndex)",
+      "contents": "KCFStreamErrorDomainWinSock"
+    },
+    {
+      "trigger": "kCFStreamErrorHTTPAuthenticationBadPassword (-1002)",
+      "contents": "KCFStreamErrorHTTPAuthenticationBadPassword"
+    },
+    {
+      "trigger": "kCFStreamErrorHTTPAuthenticationBadUserName (-1001)",
+      "contents": "KCFStreamErrorHTTPAuthenticationBadUserName"
+    },
+    {
+      "trigger": "kCFStreamErrorHTTPAuthenticationTypeUnsupported (-1000)",
+      "contents": "KCFStreamErrorHTTPAuthenticationTypeUnsupported"
+    },
+    {
+      "trigger": "kCFStreamErrorHTTPBadURL (-3)",
+      "contents": "KCFStreamErrorHTTPBadURL"
+    },
+    {
+      "trigger": "kCFStreamErrorHTTPParseFailure (-1)",
+      "contents": "KCFStreamErrorHTTPParseFailure"
+    },
+    {
+      "trigger": "kCFStreamErrorHTTPRedirectionLoop (-2)",
+      "contents": "KCFStreamErrorHTTPRedirectionLoop"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS4IdConflict (93)",
+      "contents": "KCFStreamErrorSOCKS4IdConflict"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS4IdentdFailed (92)",
+      "contents": "KCFStreamErrorSOCKS4IdentdFailed"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS4RequestFailed (91)",
+      "contents": "KCFStreamErrorSOCKS4RequestFailed"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS4SubDomainResponse (2)",
+      "contents": "KCFStreamErrorSOCKS4SubDomainResponse"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS5BadResponseAddr (1)",
+      "contents": "KCFStreamErrorSOCKS5BadResponseAddr"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS5BadState (2)",
+      "contents": "KCFStreamErrorSOCKS5BadState"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS5SubDomainMethod (4)",
+      "contents": "KCFStreamErrorSOCKS5SubDomainMethod"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS5SubDomainResponse (5)",
+      "contents": "KCFStreamErrorSOCKS5SubDomainResponse"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKS5SubDomainUserPass (3)",
+      "contents": "KCFStreamErrorSOCKS5SubDomainUserPass"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKSSubDomainNone (0)",
+      "contents": "KCFStreamErrorSOCKSSubDomainNone"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKSSubDomainVersionCode (1)",
+      "contents": "KCFStreamErrorSOCKSSubDomainVersionCode"
+    },
+    {
+      "trigger": "kCFStreamErrorSOCKSUnknownClientVersion (3)",
+      "contents": "KCFStreamErrorSOCKSUnknownClientVersion"
     },
     {
       "trigger": "kCFStreamEventCanAcceptBytes (4)",
@@ -41932,20 +42811,248 @@
       "contents": "KCFStreamPropertyDataWritten"
     },
     {
+      "trigger": "kCFStreamPropertyFTPAttemptPersistentConnection (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPAttemptPersistentConnection"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPFetchResourceInfo (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPFetchResourceInfo"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPFileTransferOffset (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPFileTransferOffset"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPPassword (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPPassword"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPProxy (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPProxy"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPProxyHost (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPProxyHost"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPProxyPassword (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPProxyPassword"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPProxyPort (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPProxyPort"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPProxyUser (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPProxyUser"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPResourceSize (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPResourceSize"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPUsePassiveMode (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPUsePassiveMode"
+    },
+    {
+      "trigger": "kCFStreamPropertyFTPUserName (CFStringRef)",
+      "contents": "KCFStreamPropertyFTPUserName"
+    },
+    {
       "trigger": "kCFStreamPropertyFileCurrentOffset (CFStringRef)",
       "contents": "KCFStreamPropertyFileCurrentOffset"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPAttemptPersistentConnection (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPAttemptPersistentConnection"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPFinalRequest (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPFinalRequest"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPFinalURL (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPFinalURL"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPProxy (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPProxy"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPProxyHost (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPProxyHost"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPProxyPort (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPProxyPort"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPRequestBytesWrittenCount (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPRequestBytesWrittenCount"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPResponseHeader (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPResponseHeader"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPSProxyHost (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPSProxyHost"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPSProxyPort (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPSProxyPort"
+    },
+    {
+      "trigger": "kCFStreamPropertyHTTPShouldAutoredirect (CFStringRef)",
+      "contents": "KCFStreamPropertyHTTPShouldAutoredirect"
+    },
+    {
+      "trigger": "kCFStreamPropertyProxyLocalBypass (CFStringRef)",
+      "contents": "KCFStreamPropertyProxyLocalBypass"
+    },
+    {
+      "trigger": "kCFStreamPropertySOCKSPassword (CFStringRef)",
+      "contents": "KCFStreamPropertySOCKSPassword"
+    },
+    {
+      "trigger": "kCFStreamPropertySOCKSProxy (CFStringRef)",
+      "contents": "KCFStreamPropertySOCKSProxy"
+    },
+    {
+      "trigger": "kCFStreamPropertySOCKSProxyHost (CFStringRef)",
+      "contents": "KCFStreamPropertySOCKSProxyHost"
+    },
+    {
+      "trigger": "kCFStreamPropertySOCKSProxyPort (CFStringRef)",
+      "contents": "KCFStreamPropertySOCKSProxyPort"
+    },
+    {
+      "trigger": "kCFStreamPropertySOCKSUser (CFStringRef)",
+      "contents": "KCFStreamPropertySOCKSUser"
+    },
+    {
+      "trigger": "kCFStreamPropertySOCKSVersion (CFStringRef)",
+      "contents": "KCFStreamPropertySOCKSVersion"
+    },
+    {
+      "trigger": "kCFStreamPropertySSLPeerCertificates (CFStringRef)",
+      "contents": "KCFStreamPropertySSLPeerCertificates"
+    },
+    {
+      "trigger": "kCFStreamPropertySSLPeerTrust (CFStringRef)",
+      "contents": "KCFStreamPropertySSLPeerTrust"
+    },
+    {
+      "trigger": "kCFStreamPropertySSLSettings (CFStringRef)",
+      "contents": "KCFStreamPropertySSLSettings"
+    },
+    {
+      "trigger": "kCFStreamPropertyShouldCloseNativeSocket (CFStringRef)",
+      "contents": "KCFStreamPropertyShouldCloseNativeSocket"
     },
     {
       "trigger": "kCFStreamPropertySocketNativeHandle (CFStringRef)",
       "contents": "KCFStreamPropertySocketNativeHandle"
     },
     {
+      "trigger": "kCFStreamPropertySocketRemoteHost (CFStringRef)",
+      "contents": "KCFStreamPropertySocketRemoteHost"
+    },
+    {
       "trigger": "kCFStreamPropertySocketRemoteHostName (CFStringRef)",
       "contents": "KCFStreamPropertySocketRemoteHostName"
     },
     {
+      "trigger": "kCFStreamPropertySocketRemoteNetService (CFStringRef)",
+      "contents": "KCFStreamPropertySocketRemoteNetService"
+    },
+    {
       "trigger": "kCFStreamPropertySocketRemotePortNumber (CFStringRef)",
       "contents": "KCFStreamPropertySocketRemotePortNumber"
+    },
+    {
+      "trigger": "kCFStreamPropertySocketSecurityLevel (CFStringRef)",
+      "contents": "KCFStreamPropertySocketSecurityLevel"
+    },
+    {
+      "trigger": "kCFStreamSSLAllowsAnyRoot (CFStringRef)",
+      "contents": "KCFStreamSSLAllowsAnyRoot"
+    },
+    {
+      "trigger": "kCFStreamSSLAllowsExpiredCertificates (CFStringRef)",
+      "contents": "KCFStreamSSLAllowsExpiredCertificates"
+    },
+    {
+      "trigger": "kCFStreamSSLAllowsExpiredRoots (CFStringRef)",
+      "contents": "KCFStreamSSLAllowsExpiredRoots"
+    },
+    {
+      "trigger": "kCFStreamSSLCertificates (CFStringRef)",
+      "contents": "KCFStreamSSLCertificates"
+    },
+    {
+      "trigger": "kCFStreamSSLIsServer (CFStringRef)",
+      "contents": "KCFStreamSSLIsServer"
+    },
+    {
+      "trigger": "kCFStreamSSLLevel (CFStringRef)",
+      "contents": "KCFStreamSSLLevel"
+    },
+    {
+      "trigger": "kCFStreamSSLPeerName (CFStringRef)",
+      "contents": "KCFStreamSSLPeerName"
+    },
+    {
+      "trigger": "kCFStreamSSLValidatesCertificateChain (CFStringRef)",
+      "contents": "KCFStreamSSLValidatesCertificateChain"
+    },
+    {
+      "trigger": "kCFStreamSocketSOCKSVersion4 (CFStringRef)",
+      "contents": "KCFStreamSocketSOCKSVersion4"
+    },
+    {
+      "trigger": "kCFStreamSocketSOCKSVersion5 (CFStringRef)",
+      "contents": "KCFStreamSocketSOCKSVersion5"
+    },
+    {
+      "trigger": "kCFStreamSocketSecurityLevelNegotiatedSSL (CFStringRef)",
+      "contents": "KCFStreamSocketSecurityLevelNegotiatedSSL"
+    },
+    {
+      "trigger": "kCFStreamSocketSecurityLevelNone (CFStringRef)",
+      "contents": "KCFStreamSocketSecurityLevelNone"
+    },
+    {
+      "trigger": "kCFStreamSocketSecurityLevelSSLv2 (CFStringRef)",
+      "contents": "KCFStreamSocketSecurityLevelSSLv2"
+    },
+    {
+      "trigger": "kCFStreamSocketSecurityLevelSSLv3 (CFStringRef)",
+      "contents": "KCFStreamSocketSecurityLevelSSLv3"
+    },
+    {
+      "trigger": "kCFStreamSocketSecurityLevelTLSv1 (CFStringRef)",
+      "contents": "KCFStreamSocketSecurityLevelTLSv1"
+    },
+    {
+      "trigger": "kCFStreamSocketSecurityNone (0)",
+      "contents": "KCFStreamSocketSecurityNone"
+    },
+    {
+      "trigger": "kCFStreamSocketSecuritySSLv2 (1)",
+      "contents": "KCFStreamSocketSecuritySSLv2"
+    },
+    {
+      "trigger": "kCFStreamSocketSecuritySSLv23 (3)",
+      "contents": "KCFStreamSocketSecuritySSLv23"
+    },
+    {
+      "trigger": "kCFStreamSocketSecuritySSLv3 (2)",
+      "contents": "KCFStreamSocketSecuritySSLv3"
+    },
+    {
+      "trigger": "kCFStreamSocketSecurityTLSv1 (4)",
+      "contents": "KCFStreamSocketSecurityTLSv1"
     },
     {
       "trigger": "kCFStreamStatusAtEnd (5)",
@@ -42870,6 +43977,190 @@
     {
       "trigger": "kCFURLEnumeratorSuccess (1)",
       "contents": "KCFURLEnumeratorSuccess"
+    },
+    {
+      "trigger": "kCFURLErrorBadServerResponse (-1011)",
+      "contents": "KCFURLErrorBadServerResponse"
+    },
+    {
+      "trigger": "kCFURLErrorBadURL (-1000)",
+      "contents": "KCFURLErrorBadURL"
+    },
+    {
+      "trigger": "kCFURLErrorCallIsActive (-1019)",
+      "contents": "KCFURLErrorCallIsActive"
+    },
+    {
+      "trigger": "kCFURLErrorCancelled (-999)",
+      "contents": "KCFURLErrorCancelled"
+    },
+    {
+      "trigger": "kCFURLErrorCannotCloseFile (-3002)",
+      "contents": "KCFURLErrorCannotCloseFile"
+    },
+    {
+      "trigger": "kCFURLErrorCannotConnectToHost (-1004)",
+      "contents": "KCFURLErrorCannotConnectToHost"
+    },
+    {
+      "trigger": "kCFURLErrorCannotCreateFile (-3000)",
+      "contents": "KCFURLErrorCannotCreateFile"
+    },
+    {
+      "trigger": "kCFURLErrorCannotDecodeContentData (-1016)",
+      "contents": "KCFURLErrorCannotDecodeContentData"
+    },
+    {
+      "trigger": "kCFURLErrorCannotDecodeRawData (-1015)",
+      "contents": "KCFURLErrorCannotDecodeRawData"
+    },
+    {
+      "trigger": "kCFURLErrorCannotFindHost (-1003)",
+      "contents": "KCFURLErrorCannotFindHost"
+    },
+    {
+      "trigger": "kCFURLErrorCannotLoadFromNetwork (-2000)",
+      "contents": "KCFURLErrorCannotLoadFromNetwork"
+    },
+    {
+      "trigger": "kCFURLErrorCannotMoveFile (-3005)",
+      "contents": "KCFURLErrorCannotMoveFile"
+    },
+    {
+      "trigger": "kCFURLErrorCannotOpenFile (-3001)",
+      "contents": "KCFURLErrorCannotOpenFile"
+    },
+    {
+      "trigger": "kCFURLErrorCannotParseResponse (-1017)",
+      "contents": "KCFURLErrorCannotParseResponse"
+    },
+    {
+      "trigger": "kCFURLErrorCannotRemoveFile (-3004)",
+      "contents": "KCFURLErrorCannotRemoveFile"
+    },
+    {
+      "trigger": "kCFURLErrorCannotWriteToFile (-3003)",
+      "contents": "KCFURLErrorCannotWriteToFile"
+    },
+    {
+      "trigger": "kCFURLErrorClientCertificateRejected (-1205)",
+      "contents": "KCFURLErrorClientCertificateRejected"
+    },
+    {
+      "trigger": "kCFURLErrorClientCertificateRequired (-1206)",
+      "contents": "KCFURLErrorClientCertificateRequired"
+    },
+    {
+      "trigger": "kCFURLErrorDNSLookupFailed (-1006)",
+      "contents": "KCFURLErrorDNSLookupFailed"
+    },
+    {
+      "trigger": "kCFURLErrorDataLengthExceedsMaximum (-1103)",
+      "contents": "KCFURLErrorDataLengthExceedsMaximum"
+    },
+    {
+      "trigger": "kCFURLErrorDataNotAllowed (-1020)",
+      "contents": "KCFURLErrorDataNotAllowed"
+    },
+    {
+      "trigger": "kCFURLErrorDownloadDecodingFailedMidStream (-3006)",
+      "contents": "KCFURLErrorDownloadDecodingFailedMidStream"
+    },
+    {
+      "trigger": "kCFURLErrorDownloadDecodingFailedToComplete (-3007)",
+      "contents": "KCFURLErrorDownloadDecodingFailedToComplete"
+    },
+    {
+      "trigger": "kCFURLErrorFailingURLErrorKey (CFStringRef)",
+      "contents": "KCFURLErrorFailingURLErrorKey"
+    },
+    {
+      "trigger": "kCFURLErrorFailingURLStringErrorKey (CFStringRef)",
+      "contents": "KCFURLErrorFailingURLStringErrorKey"
+    },
+    {
+      "trigger": "kCFURLErrorFileDoesNotExist (-1100)",
+      "contents": "KCFURLErrorFileDoesNotExist"
+    },
+    {
+      "trigger": "kCFURLErrorFileIsDirectory (-1101)",
+      "contents": "KCFURLErrorFileIsDirectory"
+    },
+    {
+      "trigger": "kCFURLErrorHTTPTooManyRedirects (-1007)",
+      "contents": "KCFURLErrorHTTPTooManyRedirects"
+    },
+    {
+      "trigger": "kCFURLErrorInternationalRoamingOff (-1018)",
+      "contents": "KCFURLErrorInternationalRoamingOff"
+    },
+    {
+      "trigger": "kCFURLErrorNetworkConnectionLost (-1005)",
+      "contents": "KCFURLErrorNetworkConnectionLost"
+    },
+    {
+      "trigger": "kCFURLErrorNoPermissionsToReadFile (-1102)",
+      "contents": "KCFURLErrorNoPermissionsToReadFile"
+    },
+    {
+      "trigger": "kCFURLErrorNotConnectedToInternet (-1009)",
+      "contents": "KCFURLErrorNotConnectedToInternet"
+    },
+    {
+      "trigger": "kCFURLErrorRedirectToNonExistentLocation (-1010)",
+      "contents": "KCFURLErrorRedirectToNonExistentLocation"
+    },
+    {
+      "trigger": "kCFURLErrorRequestBodyStreamExhausted (-1021)",
+      "contents": "KCFURLErrorRequestBodyStreamExhausted"
+    },
+    {
+      "trigger": "kCFURLErrorResourceUnavailable (-1008)",
+      "contents": "KCFURLErrorResourceUnavailable"
+    },
+    {
+      "trigger": "kCFURLErrorSecureConnectionFailed (-1200)",
+      "contents": "KCFURLErrorSecureConnectionFailed"
+    },
+    {
+      "trigger": "kCFURLErrorServerCertificateHasBadDate (-1201)",
+      "contents": "KCFURLErrorServerCertificateHasBadDate"
+    },
+    {
+      "trigger": "kCFURLErrorServerCertificateHasUnknownRoot (-1203)",
+      "contents": "KCFURLErrorServerCertificateHasUnknownRoot"
+    },
+    {
+      "trigger": "kCFURLErrorServerCertificateNotYetValid (-1204)",
+      "contents": "KCFURLErrorServerCertificateNotYetValid"
+    },
+    {
+      "trigger": "kCFURLErrorServerCertificateUntrusted (-1202)",
+      "contents": "KCFURLErrorServerCertificateUntrusted"
+    },
+    {
+      "trigger": "kCFURLErrorTimedOut (-1001)",
+      "contents": "KCFURLErrorTimedOut"
+    },
+    {
+      "trigger": "kCFURLErrorUnknown (-998)",
+      "contents": "KCFURLErrorUnknown"
+    },
+    {
+      "trigger": "kCFURLErrorUnsupportedURL (-1002)",
+      "contents": "KCFURLErrorUnsupportedURL"
+    },
+    {
+      "trigger": "kCFURLErrorUserAuthenticationRequired (-1013)",
+      "contents": "KCFURLErrorUserAuthenticationRequired"
+    },
+    {
+      "trigger": "kCFURLErrorUserCancelledAuthentication (-1012)",
+      "contents": "KCFURLErrorUserCancelledAuthentication"
+    },
+    {
+      "trigger": "kCFURLErrorZeroByteResource (-1014)",
+      "contents": "KCFURLErrorZeroByteResource"
     },
     {
       "trigger": "kCFURLFileAllocatedSizeKey (CFStringRef)",
@@ -51600,6 +52891,10 @@
       "contents": "KSMPTETimeValid"
     },
     {
+      "trigger": "kSOCKS5NoAcceptableMethod (255)",
+      "contents": "KSOCKS5NoAcceptableMethod"
+    },
+    {
       "trigger": "kSSLAborted (4)",
       "contents": "KSSLAborted"
     },
@@ -58229,7 +59524,7 @@
     },
     {
       "trigger": "setOpaque:",
-      "contents": "setOpaque(${1:BOOL opaque})"
+      "contents": "setOpaque(${1:BOOL cftype})"
     },
     {
       "trigger": "setOptional:",
