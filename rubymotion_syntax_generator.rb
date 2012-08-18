@@ -32,29 +32,33 @@ Dir.foreach("../Ruby") do |file_name|
 
     iobuf = StringIO.open
 
-    File.open(src_file_name, "r") do |in_file|
+    begin
+      File.open(src_file_name, "r") do |in_file|
 
-      skip = false
-      in_file.each do |line|
-        # ignore lines
-        skip = false if skip and line =~ /<key>/
-        skip = true if line =~ />(fileTypes|firstLineMatch)</
-        next if skip
+        skip = false
+        in_file.each do |line|
+          # ignore lines
+          skip = false if skip and line =~ /<key>/
+          skip = true if line =~ />(fileTypes|firstLineMatch)</
+          next if skip
 
-        line = line.gsub(/>Ruby</, ">RubyMotion<")
-        line = line.gsub(/source\.ruby/, "source.rubymotion")
-        line = line.gsub(/\.ruby</, '.rubymotion<')
-        line = line.gsub(/>[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}</, ">#{`uuidgen`.chomp}<")
+          line = line.gsub(/>Ruby</, ">RubyMotion<")
+          line = line.gsub(/source\.ruby/, "source.rubymotion")
+          line = line.gsub(/\.ruby</, '.rubymotion<')
+          line = line.gsub(/>[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}</, ">#{`uuidgen`.chomp}<")
 
-        iobuf.puts line
+          iobuf.puts line
 
-      end # in_file.each
+        end # in_file.each
 
-    end # File.open of in_file
+      end # File.open of in_file
 
-    File.open(dst_file_name, "w") do |out_file|
-      out_file.puts iobuf.string
-    end  # File.open of out_file
+      File.open(dst_file_name, "w") do |out_file|
+        out_file.puts iobuf.string
+      end  # File.open of out_file
+    rescue
+      STDERR.puts " -> FAILED: #{$!.backtrace.first} : #{$!}" if DebugEnabled
+    end
 
     iobuf.close
 
