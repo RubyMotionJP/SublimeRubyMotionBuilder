@@ -5,6 +5,7 @@ require "stringio"
 DebugEnabled = true
 
 ignore_files = [
+  "RubyMotion.tmLanguage",
   "Default.sublime-commands",
   "Default.sublime-keymap",
   "RubyMotion.sublime-build",
@@ -43,8 +44,7 @@ Dir.foreach("../Ruby") do |file_name|
           next if skip
 
           line = line.gsub(/>Ruby</, ">RubyMotion<")
-          line = line.gsub(/source\.ruby/, "source.rubymotion")
-          line = line.gsub(/\.ruby</, '.rubymotion<')
+          line = line.gsub(/source\.ruby([< ])/, "source.rubymotion\\1")
           line = line.gsub(/>[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}</, ">#{`uuidgen`.chomp}<")
 
           iobuf.puts line
