@@ -31,6 +31,7 @@ Dir.foreach("../Ruby") do |file_name|
     dst_file_name = base + ext
     STDERR.puts "Creating: #{dst_file_name}" if DebugEnabled
 
+    uuid = ">#{`uuidgen`.chomp}<"
     iobuf = StringIO.open
 
     begin
@@ -45,7 +46,7 @@ Dir.foreach("../Ruby") do |file_name|
 
           line = line.gsub(/>Ruby</, ">RubyMotion<")
           line = line.gsub(/source\.ruby([< ])/, "source.rubymotion\\1")
-          line = line.gsub(/>[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}</, ">#{`uuidgen`.chomp}<")
+          line = line.gsub(/>[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}</, uuid)
 
           iobuf.puts line
 
