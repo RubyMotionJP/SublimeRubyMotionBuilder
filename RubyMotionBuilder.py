@@ -98,9 +98,16 @@ class GenerateRubyMotionCompletions(sublime_plugin.WindowCommand):
 		self.window.run_command("exec", {"cmd": ["ruby", rb_name, bridge_support_dir], "working_dir": this_dir})
 
 class SetRubyMotionSyntax(sublime_plugin.EventListener):
-	def on_load(self, view):
+	def set_rubymotion_syntax(self, view):
 		dir_name, file_name = os.path.split(view.file_name())
 		ext = os.path.splitext(file_name)[1]
 		if ext == ".rb" or file_name == "Rakefile":
 			if FindRubyMotionRakefile(dir_name):
 				view.set_syntax_file(os.path.join(this_dir, "RubyMotion.tmLanguage"))
+
+    def on_load(self, view):
+        self.set_rubymotion_syntax(view)
+
+    def on_post_save(self, view):
+        self.set_rubymotion_syntax(view)
+
