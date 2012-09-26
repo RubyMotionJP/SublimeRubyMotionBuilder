@@ -108,6 +108,6 @@ class SetRubyMotionSyntax(sublime_plugin.EventListener):
     def on_load(self, view):
         self.set_rubymotion_syntax(view)
 
-    def on_post_save(self, view):
+    def on_pre_save(self, view):
         self.set_rubymotion_syntax(view)
 
