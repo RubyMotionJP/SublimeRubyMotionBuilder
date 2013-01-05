@@ -31,18 +31,8 @@ Manual Installation
 ------------
 
 Put this package into your Sublime Text 2 packages folder:
-
-* Mac OS X
 	
 	 ~/Library/Application Support/Sublime Text 2/Packages
-
-* Linux
-	
-	~/.Sublime Text 2/Packages/
-
-* Windows
-
-	%APPDATA%/Sublime Text 2/Packages/
 
 Usage
 -----
