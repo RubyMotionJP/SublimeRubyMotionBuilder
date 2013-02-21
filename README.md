@@ -93,3 +93,15 @@ These two commands also supported in Command Pallet.
 
 * `RubyMotionBuilder: Generate syntax` will generate syntax and snippets from Ruby syntax.
 * `RubyMotionBuilder: Generate completions` will generate completions from BridgeSupport files of RubyMotion.
+
+Configuration
+-----
+If you want to do `Build`, `Clean` and `Deploy` with specific path, Add option to configuration file such as following..
+
+    {
+        "rubymotion_build_env_file": "$HOME/.bash_profile"
+    }
+
+The configuration file is here.
+
+    ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/RubyMotion.sublime-settings
