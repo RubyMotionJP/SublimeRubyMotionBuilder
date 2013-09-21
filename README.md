@@ -24,9 +24,10 @@ Manual Installation
 Put this package into your Sublime Text 3 packages folder:
 
 * Mac OS X
-	
-  % git clone https://github.com/Watson1978/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/RubyMotionBuild
-	 
+
+```
+% git clone https://github.com/Watson1978/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/RubyMotionBuild
+```
 
 Usage
 -----
@@ -34,7 +35,7 @@ Usage
 ### RubyMotion syntax
 
 1. Open \*.rb or Rakefile in your RubyMotion project
-2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working. If Sublime Text 2 cache keep syntax as "Ruby", please close and open the file.
+2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working. If Sublime Text 3 cache keep syntax as "Ruby", please close and open the file.
 
 **note:** RubyMotion detection rule is projtect's Rakefile contains "Motion", or not.
 
