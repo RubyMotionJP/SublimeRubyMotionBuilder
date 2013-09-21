@@ -18,6 +18,12 @@ def FindRubyMotionRakefile(dir_name):
         dir_name = os.path.dirname(dir_name)
     return None
 
+def GetLanguageFilePath():
+    # Retuns file path like "Packages/RubyMotionBuild/RubyMotion.tmLanguage"
+    path = os.path.join(this_dir, "RubyMotion.tmLanguage")
+    path = path.lstrip(os.path.normpath(os.path.join(sublime.packages_path(), "..")))
+    return path
+
 
 class RubyMotionBuild(sublime_plugin.WindowCommand):
     def run(self, build_target=None):
@@ -114,7 +120,7 @@ class SetRubyMotionSyntax(sublime_plugin.EventListener):
             ext = os.path.splitext(file_name)[1]
             if ext == ".rb" or file_name == "Rakefile":
                 if FindRubyMotionRakefile(dir_name):
-                    view.set_syntax_file(os.path.join(this_dir, "RubyMotion.tmLanguage"))
+                    view.set_syntax_file(GetLanguageFilePath())
 
     def on_load(self, view):
         self.set_rubymotion_syntax(view)
