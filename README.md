@@ -1,7 +1,7 @@
-RubyMotionBuilder for Sublime Text 2
+RubyMotionBuilder for Sublime Text 3
 ==========================================
 
-This plugin provides some features that simplify RubyMotion developing in Sublime Text 2.
+This plugin provides some features that simplify RubyMotion developing in Sublime Text 3.
 
 * RubyMotion syntax
 
@@ -17,15 +17,6 @@ This plugin provides some features that simplify RubyMotion developing in Sublim
 
 	Provides build system for RubyMotion. Supports four commands, `Build`, `Clean`, `Run` and `Deploy`.
 	`Run` kick Terminal.app automatically.
-
-Package Control Installation
-----------------------------
-
-**note:** This step requires [Package Control](http://wbond.net/sublime_packages/package_control/installation).
-
-1. Open the Command Palette using **[command + shift + p]** and enter "install package".
-2. Select `Package Control: Install Package` from the popup menu and press **[return]**
-3. Enter "RubyMotionBuilder" and press **[return]**
 
 Manual Installation
 ------------
