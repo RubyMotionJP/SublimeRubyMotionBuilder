@@ -114,7 +114,7 @@ class SetRubyMotionSyntax(sublime_plugin.EventListener):
             ext = os.path.splitext(file_name)[1]
             if ext == ".rb" or file_name == "Rakefile":
                 if FindRubyMotionRakefile(dir_name):
-                    view.set_syntax_file(os.path.join(this_dir, "RubyMotion.tmLanguage"))
+                    view.set_syntax_file('Packages/RubyMotionBuild/RubyMotion.tmLanguage')
 
     def on_load(self, view):
         self.set_rubymotion_syntax(view)
