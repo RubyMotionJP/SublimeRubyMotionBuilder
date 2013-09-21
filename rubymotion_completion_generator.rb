@@ -5,7 +5,7 @@ require 'rexml/document'
 DebugEnabled = true
 
 # RubyMotion Bridgesupport default path
-RubyMotionPath = ARGV[0] || "/Library/RubyMotion/data/5.1/BridgeSupport/"
+RubyMotionPath = ARGV[0] || "/Library/RubyMotion/data/ios/7.0/BridgeSupport/"
 
 STDERR.puts "build for " + RubyMotionPath if DebugEnabled
 
@@ -227,7 +227,6 @@ class RubyMotionCompletion
     _node.each_element("method") do |method|
       # Prepend method name with class name if this is a class method
       method_name = method.attribute("selector").to_s
-      method_name = "%s.%s" % [class_name, method_name] if method.attribute("class_method")
 
       trigger = method_name
       contents = create_contents(method_name, method)
