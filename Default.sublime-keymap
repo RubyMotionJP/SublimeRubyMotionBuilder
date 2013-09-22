@@ -3,6 +3,7 @@
 	{ "keys": ["super+r"], "command": "ruby_motion_run"},
 	{ "keys": ["shift+super+r"], "command": "ruby_motion_run", "args": {"options": "retina=true"} },
 	{ "keys": ["super+alt+b"], "command": "ruby_motion_deploy"},
+	{ "keys": ["ctrl+alt+d"], "command": "ruby_motion_doc"},
 	{ "keys": ["#"], "command": "insert_snippet", "args": {"contents": "#{${1:$SELECTION}}$0"}, "context":
 		[
 			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },

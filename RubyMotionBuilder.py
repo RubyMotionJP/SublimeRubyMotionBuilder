@@ -1,6 +1,7 @@
+import os.path
+import subprocess
 import sublime
 import sublime_plugin
-import os.path
 import re
 
 this_dir = os.path.split(os.path.abspath(__file__))[0]
@@ -97,6 +98,14 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
 
             file_regex = "^(...*?):([0-9]*):([0-9]*)"
             self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
+
+
+class RubyMotionDoc(sublime_plugin.WindowCommand):
+    def run(self):
+        view = self.window.active_view()
+        selection = view.sel()[0]
+        word = view.substr(selection)
+        subprocess.call(["open", "dash://%s" % word])
 
 
 class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
