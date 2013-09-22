@@ -1,6 +1,7 @@
+import os.path
+import subprocess
 import sublime
 import sublime_plugin
-import os.path
 import re
 
 this_dir = os.path.split(os.path.abspath(__file__))[0]
@@ -98,7 +99,7 @@ class RubyMotionDoc(sublime_plugin.WindowCommand):
         view = self.window.active_view()
         selection = view.sel()[0]
         word = view.substr(selection)
-        self.window.run_command("exec", {"cmd": ["open", "dash://%s" % word]})
+        subprocess.call(["open", "dash://%s" % word])
 
 
 class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
