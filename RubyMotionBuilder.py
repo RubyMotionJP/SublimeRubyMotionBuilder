@@ -102,7 +102,7 @@ class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
 class GenerateRubyMotionCompletions(sublime_plugin.WindowCommand):
     def run(self):
         rb_name = os.path.join(this_dir, "rubymotion_completion_generator.rb")
-        bridge_support_dir = "/Library/RubyMotion/data/5.1/BridgeSupport/"
+        bridge_support_dir = "/Library/RubyMotion/data/ios/7.0/BridgeSupport/"
         self.window.run_command("exec", {"cmd": ["ruby", rb_name, bridge_support_dir], "working_dir": this_dir})
 
 
