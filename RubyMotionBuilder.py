@@ -27,7 +27,7 @@ class RubyMotionBuild(sublime_plugin.WindowCommand):
             return
         dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
         if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+            sh_name = os.path.join(this_dir, "bin/rubymotion_build.sh")
             cmd = "rake build"
             if build_target and build_target != "all":
                 cmd += ":" + build_target
@@ -46,7 +46,7 @@ class RubyMotionClean(sublime_plugin.WindowCommand):
             return
         dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
         if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+            sh_name = os.path.join(this_dir, "bin/rubymotion_build.sh")
             cmd = "rake clean"
 
             settings = sublime.load_settings("RubyMotion.sublime-settings")
@@ -63,7 +63,7 @@ class RubyMotionRun(sublime_plugin.WindowCommand):
             return
         dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
         if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_run.sh")
+            sh_name = os.path.join(this_dir, "bin/rubymotion_run.sh")
             file_regex = "^(...*?):([0-9]*):([0-9]*)"
             # build console is not required for Run
             self.window.run_command("hide_panel", {"panel": "output.exec"})
@@ -84,7 +84,7 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
             return
         dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
         if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+            sh_name = os.path.join(this_dir, "bin/rubymotion_build.sh")
             cmd = "rake device"
 
             settings = sublime.load_settings("RubyMotion.sublime-settings")
