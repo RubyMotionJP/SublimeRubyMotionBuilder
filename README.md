@@ -72,6 +72,11 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake".
 1. Open \*.rb or Rakefile in your RubyMotion project and enter **[command + option + b]**.
 2. Wait for the console to notify you the message "[Finished]".
 
+### Show reference documents using Dash app
+
+1. Open \*.rb or Rakefile in your RubyMotion project.
+2. Select a word (like method) and enter **[control + option + d]**.
+
 ### Syntax/Completions generator
 
 These two commands also supported in Command Pallet.

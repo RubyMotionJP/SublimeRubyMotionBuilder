@@ -93,6 +93,14 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
             self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
 
 
+class RubyMotionDoc(sublime_plugin.WindowCommand):
+    def run(self):
+        view = self.window.active_view()
+        selection = view.sel()[0]
+        word = view.substr(selection)
+        self.window.run_command("exec", {"cmd": ["open", "dash://%s" % word]})
+
+
 class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
     def run(self):
         rb_name = os.path.join(this_dir, "rubymotion_syntax_generator.rb")
