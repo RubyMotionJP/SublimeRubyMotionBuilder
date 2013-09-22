@@ -84,14 +84,19 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
             return
         dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
         if dir_name:
-            sh_name = os.path.join(this_dir, "bin/rubymotion_build.sh")
-            cmd = "rake device"
-
-            settings = sublime.load_settings("RubyMotion.sublime-settings")
-            env_file = settings.get("rubymotion_build_env_file", "")
-
+            sh_name = os.path.join(this_dir, "bin/rubymotion_run.sh")
             file_regex = "^(...*?):([0-9]*):([0-9]*)"
-            self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
+            options = "device"
+            # build console is not required for Deploy
+            self.window.run_command("hide_panel", {"panel": "output.exec"})
+            settings = sublime.load_settings("RubyMotion.sublime-settings")
+            show_panel_on_build = settings.get("show_panel_on_build", True)
+            if show_panel_on_build:
+                # temporary setting to keep console visibility
+                settings.set("show_panel_on_build", False)
+            self.window.run_command("exec", {"cmd": ["sh", sh_name, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
+            # setting recovery
+            settings.set("show_panel_on_build", show_panel_on_build)
 
 
 class RubyMotionDoc(sublime_plugin.WindowCommand):
