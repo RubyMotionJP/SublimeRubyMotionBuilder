@@ -22,7 +22,7 @@ Dir.foreach("../Ruby") do |file_name|
     next if ext == ".cache"
 
     # Ruby.* rename to RubyMotion.*
-    base = File.basename(file_name, ext) 
+    base = File.basename(file_name, ext)
     base = "RubyMotion" if base == "Ruby"
 
     # skip ignore file
