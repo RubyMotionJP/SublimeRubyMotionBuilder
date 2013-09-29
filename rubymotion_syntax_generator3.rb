@@ -28,7 +28,7 @@ Zip::File.foreach(ruby_package_file) do |zip|
   next if ext == ".cache"
 
   # Ruby.* rename to RubyMotion.*
-  base = File.basename(file_name, ext) 
+  base = File.basename(file_name, ext)
   base = "RubyMotion" if base == "Ruby"
 
   # skip ignore file
