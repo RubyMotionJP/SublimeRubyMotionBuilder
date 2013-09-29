@@ -1,7 +1,7 @@
-RubyMotionBuilder for Sublime Text 2
+RubyMotionBuilder for Sublime Text 2 and 3
 ==========================================
 
-This plugin provides some features that simplify RubyMotion developing in Sublime Text 2.
+This plugin provides some features that simplify RubyMotion developing in Sublime Text 2 and 3.
 
 * RubyMotion syntax
 
@@ -30,19 +30,20 @@ Package Control Installation
 Manual Installation
 ------------
 
-Put this package into your Sublime Text 2 packages folder:
+Put this package into your Sublime Text 2 or 3 packages folder:
 
 * Mac OS X
-	
-	 ~/Library/Application Support/Sublime Text 2/Packages
 
-* Linux
-	
-	~/.Sublime Text 2/Packages/
+** Sublime Text 2
+```
+% git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/RubyMotionBuild
+```
 
-* Windows
+** Sublime Text 3
+```
+% git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/RubyMotionBuild
+```
 
-	%APPDATA%/Sublime Text 2/Packages/
 
 Usage
 -----
@@ -50,7 +51,7 @@ Usage
 ### RubyMotion syntax
 
 1. Open \*.rb or Rakefile in your RubyMotion project
-2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working. If Sublime Text 2 cache keep syntax as "Ruby", please close and open the file.
+2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working. If Sublime Text cache keep syntax as "Ruby", please close and open the file.
 
 **note:** RubyMotion detection rule is projtect's Rakefile contains "Motion", or not.
 
