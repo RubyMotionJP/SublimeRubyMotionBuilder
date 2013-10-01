@@ -23,23 +23,23 @@ Package Control Installation
 
 **note:** This step requires [Package Control](http://wbond.net/sublime_packages/package_control/installation).
 
-1. Open the Command Palette using **[command + shift + p]** and enter "install package".
-2. Select `Package Control: Install Package` from the popup menu and press **[return]**
-3. Enter "RubyMotionBuilder" and press **[return]**
+1. Open the Command Palette using [`command` + `shift` + `p`] and enter "install package".
+2. Select `Package Control: Install Package` from the popup menu and press [`enter` / `return`]
+3. Enter "RubyMotionBuilder" and press [`enter` / `return`]
 
 Manual Installation
 ------------
 
 Put this package into your Sublime Text 2 or 3 packages folder:
 
-* Mac OS X
+### Mac OS X
 
-** Sublime Text 2
+* Sublime Text 2
 ```
 % git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/RubyMotionBuild
 ```
 
-** Sublime Text 3
+* Sublime Text 3
 ```
 % git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/RubyMotionBuild
 ```
@@ -58,40 +58,40 @@ Usage
 ### Code completion
 
 1. Inside your RubyMotion project just start typing the name of a method and the autocomplete window will pop up.
-2. Press enter/return to trigger the completion.
+2. Press `enter` / `return` to trigger the completion.
 
 ### Build
 
-1. Open \*.rb or Rakefile in your RubyMotion project and enter **[command + b]**.
+1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `b`].
 2. Wait for the console to notify you the message "[Finished]".
-3. If you get a error, you can jump to it with press **[F4]**
+3. If you get a error, you can jump to it with press [`F4`]
 
 **note:** Default target is Simulator. If you want to change the target, please edit "RubyMotion.sublime-build".
 
 ### Clean
 
-1. Open the Command Palette using **[command + shift + p]** and enter "clean".
-2. Select `RubyMotionBuilder: Clean` from the popup menu and press **[return]**
+1. Open the Command Palette using [`command` + `shift` + `p`] and press "clean".
+2. Select `RubyMotionBuilder: Clean` from the popup menu and press [`enter` / `return`].
 3. Wait for the console to notify you the message "[Finished]".
 
 ### Run
 
-1. Open *\.rb or Rakefile in your RubyMotion project and enter **[command + r]**. If you want to enable retina, please enter **[shift + command + r]**.
+1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `r`]. If you want to enable retina, please press [`shift` + `command` + `r`].
 2. Wait for the Terminal.app will kick Simulator.
-3. If you want to modify code and to try again, just re-enter **[command + r]**.
+3. If you want to modify code and to try again, just re-press [`command` + `r`].
 Then, automatically post "quit" to Terminal.app and re-execute "rake".
 
-**note:** `Goto symbol` was assigned to **[control + r]**
+**note:** `Goto symbol` was assigned to [`control` + `r`]
 
 ### Deploy
 
-1. Open \*.rb or Rakefile in your RubyMotion project and enter **[command + option + b]**.
+1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `b`].
 2. Wait for the console to notify you the message "[Finished]".
 
 ### Show reference documents using Dash app
 
 1. Open \*.rb or Rakefile in your RubyMotion project.
-2. Select a word (like method) and enter **[control + option + d]**.
+2. Select a word (like method) and press [`control` + `option` + `d`].
 
 ### Syntax/Completions generator
 
