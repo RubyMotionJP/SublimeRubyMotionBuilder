@@ -9,8 +9,15 @@ if [ "${PROJECT_DIR}" = "" ]; then
     exit 1
 fi
 
+if [ "${OPTIONS}" = "" ]; then
+    RAKE="rake"
+else
+    RAKE="rake ${OPTIONS}"
+fi
+
 if [ "${TERMINAL_APP}" = "iTerm" ]; then
     open -a "iTerm"
+
     osascript<<END
         tell application "iTerm"
             set current_session to (the first session of the current terminal)
@@ -19,7 +26,7 @@ if [ "${TERMINAL_APP}" = "iTerm" ]; then
                 if ("rake" is in name of current_session) then write text "exit"
 
                 write text "cd ${PROJECT_DIR}"
-                write text "rake ${OPTIONS}"
+                write text "${RAKE}"
             end tell
         end tell
 END
@@ -40,7 +47,7 @@ else
                     end tell
                 end try
             delay 0.1
-            do script "rake ${OPTIONS}" in front window
+            do script "${RAKE}" in front window
             end tell
         end try
 END
