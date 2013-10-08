@@ -19,7 +19,7 @@ if [ "${TERMINAL_APP}" = "iTerm" ]; then
                 if ("rake" is in name of current_session) then write text "exit"
 
                 write text "cd ${PROJECT_DIR}"
-                write text "rake"
+                write text "rake ${OPTIONS}"
             end tell
         end tell
 END
