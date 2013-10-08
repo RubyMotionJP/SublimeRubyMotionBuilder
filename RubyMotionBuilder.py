@@ -78,7 +78,8 @@ class RubyMotionRun(sublime_plugin.WindowCommand):
             if show_panel_on_build:
                 # temporary setting to keep console visibility
                 settings.set("show_panel_on_build", False)
-            self.window.run_command("exec", {"cmd": ["sh", sh_name, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
+            terminal = view.settings().get("terminal", "Terminal")
+            self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
             # setting recovery
             settings.set("show_panel_on_build", show_panel_on_build)
 
@@ -100,7 +101,8 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
             if show_panel_on_build:
                 # temporary setting to keep console visibility
                 settings.set("show_panel_on_build", False)
-            self.window.run_command("exec", {"cmd": ["sh", sh_name, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
+            terminal = view.settings().get("terminal", "Terminal")
+            self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, dir_name, options, terminal], "working_dir": dir_name, "file_regex": file_regex})
             # setting recovery
             settings.set("show_panel_on_build", show_panel_on_build)
 
