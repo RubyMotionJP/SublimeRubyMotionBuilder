@@ -13,18 +13,13 @@ try
     tell application "Terminal"
         activate
         try
-            set buildWindow to item 1 of (every window whose custom title is "${TERMINAL_ID}")
-            set index of buildWindow to 1
-            do script "quit" in buildWindow
-            do script "cd \"${PROJECT_DIR}\"" in buildWindow
-        on error
-            do script "alias quit='' && cd \"${PROJECT_DIR}\" && clear"
-            tell window 1
-                set custom title to "${TERMINAL_ID}"
-            end tell
+						close (every window whose custom title is "rake")
+						delay 0.5
+		        do script "cd \"${PROJECT_DIR}\""
+				    do script "rake ${OPTIONS}" in front window
+				on error errs number errn
+						display dialog errs & return & "Error: " & (errn as string)
         end try
-    delay 0.1
-    do script "rake ${OPTIONS}" in front window
-    end tell
+	    end tell
 end try
 END
