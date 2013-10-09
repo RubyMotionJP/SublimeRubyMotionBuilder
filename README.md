@@ -99,3 +99,15 @@ These two commands also supported in Command Pallet.
 
 * `RubyMotionBuilder: Generate syntax` will generate syntax and snippets from Ruby syntax.
 * `RubyMotionBuilder: Generate completions` will generate completions from BridgeSupport files of RubyMotion.
+
+### Switch Terminal
+
+1. Open \*.rb or Rakefile in your RubyMotion project
+2. Open [Sublime Text]->[Preferences]->[Settings - More]->[Syntax Specific - User] in Sublime Text menu.
+3. Configure "terminal" setting to switch terminal application to build app. The following settings switch terminal to "iTerm".
+
+```json
+{
+	"terminal": "iTerm"
+}
+```
