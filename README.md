@@ -83,6 +83,13 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake".
 
 **note:** `Goto symbol` was assigned to [`control` + `r`]
 
+### Run Spec
+
+1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `r`].
+2. Wait for the Terminal.app will kick Simulator.
+3. If you want to modify code and to try again, just re-press [`command` + `option` + `r`].
+Then, automatically post "quit" to Terminal.app and re-execute "rake spec".
+
 ### Deploy
 
 1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `b`].

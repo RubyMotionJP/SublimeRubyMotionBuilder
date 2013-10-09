@@ -78,6 +78,11 @@ class RubyMotionRun(sublime_plugin.WindowCommand):
         RunRubyMotionRunScript(self, options)
 
 
+class RubyMotionRunSpec(sublime_plugin.WindowCommand):
+    def run(self, options=""):
+        RunRubyMotionRunScript(self, "spec")
+
+
 class RubyMotionDeploy(sublime_plugin.WindowCommand):
     def run(self):
         RunRubyMotionRunScript(self, "device")
