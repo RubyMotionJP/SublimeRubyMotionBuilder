@@ -25,86 +25,62 @@ def GetLanguageFilePath():
     path = path.lstrip(os.path.normpath(os.path.join(sublime.packages_path(), "..")))
     return path
 
+def RunRubyMotionBuildScript(self, build_target, cmd):
+    view = self.window.active_view()
+    if not view:
+        return
+    dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
+    if dir_name:
+        sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+        if build_target and build_target != "all":
+            cmd += ":" + build_target
+
+        settings = sublime.load_settings("RubyMotion.sublime-settings")
+        env_file = settings.get("rubymotion_build_env_file", "")
+
+        file_regex = "^(...*?):([0-9]*):([0-9]*)"
+        self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
+
+
+def RunRubyMotionRunScript(self, options):
+    view = self.window.active_view()
+    if not view:
+        return
+    dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
+    if dir_name:
+        sh_name = os.path.join(this_dir, "rubymotion_run.sh")
+        file_regex = "^(...*?):([0-9]*):([0-9]*)"
+        # build console is not required for Run
+        self.window.run_command("hide_panel", {"panel": "output.exec"})
+        settings = sublime.load_settings("Preferences.sublime-settings")
+        show_panel_on_build = settings.get("show_panel_on_build", True)
+        if show_panel_on_build:
+            # temporary setting to keep console visibility
+            settings.set("show_panel_on_build", False)
+        terminal = view.settings().get("terminal", "Terminal")
+        self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
+        # setting recovery
+        settings.set("show_panel_on_build", show_panel_on_build)
+
 
 class RubyMotionBuild(sublime_plugin.WindowCommand):
     def run(self, build_target=None):
-        view = self.window.active_view()
-        if not view:
-            return
-        dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
-        if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_build.sh")
-            cmd = "rake build"
-            if build_target and build_target != "all":
-                cmd += ":" + build_target
-
-            settings = sublime.load_settings("RubyMotion.sublime-settings")
-            env_file = settings.get("rubymotion_build_env_file", "")
-
-            file_regex = "^(...*?):([0-9]*):([0-9]*)"
-            self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
+        RunRubyMotionBuildScript(self, build_target, "rake build")
 
 
 class RubyMotionClean(sublime_plugin.WindowCommand):
     def run(self):
-        view = self.window.active_view()
-        if not view:
-            return
-        dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
-        if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_build.sh")
-            cmd = "rake clean"
-
-            settings = sublime.load_settings("RubyMotion.sublime-settings")
-            env_file = settings.get("rubymotion_build_env_file", "")
-
-            file_regex = "^(...*?):([0-9]*):([0-9]*)"
-            self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
+        RunRubyMotionBuildScript(self, None, "rake clean")
 
 
 class RubyMotionRun(sublime_plugin.WindowCommand):
     def run(self, options=""):
-        view = self.window.active_view()
-        if not view:
-            return
-        dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
-        if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_run.sh")
-            file_regex = "^(...*?):([0-9]*):([0-9]*)"
-            # build console is not required for Run
-            self.window.run_command("hide_panel", {"panel": "output.exec"})
-            settings = sublime.load_settings("Preferences.sublime-settings")
-            show_panel_on_build = settings.get("show_panel_on_build", True)
-            if show_panel_on_build:
-                # temporary setting to keep console visibility
-                settings.set("show_panel_on_build", False)
-            terminal = view.settings().get("terminal", "Terminal")
-            self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
-            # setting recovery
-            settings.set("show_panel_on_build", show_panel_on_build)
+        RunRubyMotionRunScript(self, options)
 
 
 class RubyMotionDeploy(sublime_plugin.WindowCommand):
     def run(self):
-        view = self.window.active_view()
-        if not view:
-            return
-        dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
-        if dir_name:
-            sh_name = os.path.join(this_dir, "rubymotion_run.sh")
-            file_regex = "^(...*?):([0-9]*):([0-9]*)"
-            options = "device"
-            # build console is not required for Deploy
-            self.window.run_command("hide_panel", {"panel": "output.exec"})
-            settings = sublime.load_settings("RubyMotion.sublime-settings")
-            show_panel_on_build = settings.get("show_panel_on_build", True)
-            if show_panel_on_build:
-                # temporary setting to keep console visibility
-                settings.set("show_panel_on_build", False)
-            terminal = view.settings().get("terminal", "Terminal")
-            self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, dir_name, options, terminal], "working_dir": dir_name, "file_regex": file_regex})
-            # setting recovery
-            settings.set("show_panel_on_build", show_panel_on_build)
+        RunRubyMotionRunScript(self, "device")
 
 
 class RubyMotionDoc(sublime_plugin.WindowCommand):
