@@ -132,4 +132,5 @@ Configuration
 ```json
 {
 	"activate_terminal": false
-}```
+}
+```
