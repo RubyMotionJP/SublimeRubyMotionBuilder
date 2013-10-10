@@ -23,7 +23,9 @@ if [ "${TERMINAL_APP}" = "iTerm" ]; then
             select current_session
 
             tell current_session
-                if ("rake" is in name of current_session) then write text "exit"
+                if (name is "ruby" or name is "rake" or name is "sim") then 
+                    write text "exit"
+                end if
 
                 write text "cd ${PROJECT_DIR}"
                 write text "${RAKE}"
