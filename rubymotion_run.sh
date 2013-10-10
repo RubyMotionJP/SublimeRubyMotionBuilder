@@ -16,10 +16,9 @@ else
 fi
 
 if [ "${TERMINAL_APP}" = "iTerm" ]; then
-    open -a "iTerm"
-
     osascript<<END
         tell application "iTerm"
+            activate
             set current_session to (the first session of the current terminal)
 
             tell current_session
