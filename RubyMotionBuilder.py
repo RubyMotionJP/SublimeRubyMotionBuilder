@@ -58,7 +58,9 @@ def RunRubyMotionRunScript(self, options):
             # temporary setting to keep console visibility
             settings.set("show_panel_on_build", False)
         terminal = view.settings().get("terminal", "Terminal")
-        self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
+        activate_terminal = view.settings().get("activate_terminal", True)
+        activate_terminal = "true" if activate_terminal else "false"
+        self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, activate_terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
         # setting recovery
         settings.set("show_panel_on_build", show_panel_on_build)
 

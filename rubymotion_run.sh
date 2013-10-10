@@ -2,8 +2,9 @@
 
 TERMINAL_ID="RubyMotionBuilder"
 TERMINAL_APP="$1"
-PROJECT_DIR="$2"
-OPTIONS="$3"
+ACTIVATE_TERMINAL="$2"
+PROJECT_DIR="$3"
+OPTIONS="$4"
 
 if [ "${PROJECT_DIR}" = "" ]; then
     exit 1
@@ -18,7 +19,7 @@ fi
 if [ "${TERMINAL_APP}" = "iTerm" ]; then
     osascript<<END
         tell application "iTerm"
-            activate
+            if "${ACTIVATE_TERMINAL}" is "true" then activate
             set current_session to (the first session of the current terminal)
             select current_session
 
@@ -36,7 +37,7 @@ else
     osascript<<END
         try
             tell application "Terminal"
-                activate
+                if "${ACTIVATE_TERMINAL}" is "true" then activate
                 try
                     set buildWindow to item 1 of (every window whose custom title is "${TERMINAL_ID}")
                     set index of buildWindow to 1
