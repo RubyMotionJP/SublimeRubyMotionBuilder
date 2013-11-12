@@ -226,16 +226,12 @@ class RubyMotionCompletion
     # Traverse class methods
     _node.each_element("method") do |method|
       # Prepend method name with class name if this is a class method
-      method_name = method.attribute("selector").to_s
-
-      trigger = begin
-        if method.attribute("class_method")
-          "%s.%s" % [class_name, method_name]
-        else
-          method_name
-        end
-      end
+      trigger = method_name = method.attribute("selector").to_s
       contents = create_contents(method_name, method)
+      if method.attribute("class_method")
+        trigger = "%s.%s" % [class_name, method_name]
+        contents = trigger if method_name == contents
+      end
 
       completions << create_completion(trigger, contents)
     end

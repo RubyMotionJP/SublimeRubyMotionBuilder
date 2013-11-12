@@ -26,13 +26,20 @@
     "ALAsset",
     "ALAssetRepresentation",
     "ALAssetsFilter",
+    "ALAssetsFilter.allAssets",
+    "ALAssetsFilter.allPhotos",
+    "ALAssetsFilter.allVideos",
     "ALAssetsGroup",
     "ALAssetsLibrary",
+    "ALAssetsLibrary.authorizationStatus",
+    "ALAssetsLibrary.disableSharedPhotoStreamsSupport",
     "AMSymbol",
     "API",
     "ASIdentifierManager",
+    "ASIdentifierManager.sharedManager",
     "AVAsset",
     "AVAssetExportSession",
+    "AVAssetExportSession.allExportPresets",
     "AVAssetImageGenerator",
     "AVAssetReader",
     "AVAssetReaderAudioMixOutput",
@@ -60,6 +67,7 @@
     "AVAudioRecorder",
     "AVAudioRecorderDelegate",
     "AVAudioSession",
+    "AVAudioSession.sharedInstance",
     "AVAudioSessionChannelDescription",
     "AVAudioSessionDataSourceDescription",
     "AVAudioSessionDelegate",
@@ -70,6 +78,7 @@
     "AVCaptureAudioDataOutputSampleBufferDelegate",
     "AVCaptureConnection",
     "AVCaptureDevice",
+    "AVCaptureDevice.devices",
     "AVCaptureDeviceFormat",
     "AVCaptureDeviceInput",
     "AVCaptureFileOutput",
@@ -94,18 +103,27 @@
     "AVMetadataFaceObject",
     "AVMetadataItem",
     "AVMetadataItemFilter",
+    "AVMetadataItemFilter.metadataItemFilterForSharing",
     "AVMetadataMachineReadableCodeObject",
     "AVMetadataObject",
     "AVMutableAudioMix",
+    "AVMutableAudioMix.audioMix",
     "AVMutableAudioMixInputParameters",
+    "AVMutableAudioMixInputParameters.audioMixInputParameters",
     "AVMutableComposition",
+    "AVMutableComposition.composition",
     "AVMutableCompositionTrack",
     "AVMutableMetadataItem",
+    "AVMutableMetadataItem.metadataItem",
     "AVMutableTimedMetadataGroup",
     "AVMutableVideoComposition",
+    "AVMutableVideoComposition.videoComposition",
     "AVMutableVideoCompositionInstruction",
+    "AVMutableVideoCompositionInstruction.videoCompositionInstruction",
     "AVMutableVideoCompositionLayerInstruction",
+    "AVMutableVideoCompositionLayerInstruction.videoCompositionLayerInstruction",
     "AVOutputSettingsAssistant",
+    "AVOutputSettingsAssistant.availableOutputSettingsPresets",
     "AVPlayer",
     "AVPlayerItem",
     "AVPlayerItemAccessLog",
@@ -123,6 +141,8 @@
     "AVPlayerMediaSelectionCriteria",
     "AVQueuePlayer",
     "AVSpeechSynthesisVoice",
+    "AVSpeechSynthesisVoice.currentLanguageCode",
+    "AVSpeechSynthesisVoice.speechVoices",
     "AVSpeechSynthesizer",
     "AVSpeechSynthesizerDelegate",
     "AVSpeechUtterance",
@@ -130,6 +150,8 @@
     "AVTextStyleRule",
     "AVTimedMetadataGroup",
     "AVURLAsset",
+    "AVURLAsset.audiovisualMIMETypes",
+    "AVURLAsset.audiovisualTypes",
     "AVVideoCompositing",
     "AVVideoComposition",
     "AVVideoCompositionCoreAnimationTool",
@@ -139,17 +161,21 @@
     "AVVideoCompositionValidationHandling",
     "CAAction",
     "CAAnimation",
+    "CAAnimation.animation",
     "CAAnimationDelegate",
     "CAAnimationGroup",
     "CABasicAnimation",
     "CACurrentMediaTime",
     "CADisplayLink",
     "CAEmitterBehavior",
+    "CAEmitterBehavior.behaviorTypes",
     "CAEmitterCell",
+    "CAEmitterCell.emitterCell",
     "CAEmitterLayer",
     "CAGradientLayer",
     "CAKeyframeAnimation",
     "CALayer",
+    "CALayer.layer",
     "CALayerDelegate",
     "CAMediaTiming",
     "CAMediaTimingFunction",
@@ -159,7 +185,17 @@
     "CAShapeLayer",
     "CATextLayer",
     "CATiledLayer",
+    "CATiledLayer.fadeDuration",
     "CATransaction",
+    "CATransaction.animationDuration",
+    "CATransaction.animationTimingFunction",
+    "CATransaction.begin",
+    "CATransaction.commit",
+    "CATransaction.completionBlock",
+    "CATransaction.disableActions",
+    "CATransaction.flush",
+    "CATransaction.lock",
+    "CATransaction.unlock",
     "CATransform3DValue",
     "CATransition",
     "CAValueFunction",
@@ -175,6 +211,7 @@
     "CBPeripheral",
     "CBPeripheralDelegate",
     "CBPeripheralManager",
+    "CBPeripheralManager.authorizationStatus",
     "CBPeripheralManagerDelegate",
     "CBService",
     "CBUUID",
@@ -295,6 +332,7 @@
     "CIFeature",
     "CIFilter",
     "CIImage",
+    "CIImage.emptyImage",
     "CIVector",
     "CLBeacon",
     "CLBeaconRegion",
@@ -303,6 +341,14 @@
     "CLHeading",
     "CLLocation",
     "CLLocationManager",
+    "CLLocationManager.authorizationStatus",
+    "CLLocationManager.deferredLocationUpdatesAvailable",
+    "CLLocationManager.headingAvailable",
+    "CLLocationManager.isRangingAvailable",
+    "CLLocationManager.locationServicesEnabled",
+    "CLLocationManager.regionMonitoringAvailable",
+    "CLLocationManager.regionMonitoringEnabled",
+    "CLLocationManager.significantLocationChangeMonitoringAvailable",
     "CLLocationManagerDelegate",
     "CLPlacemark",
     "CLRegion",
@@ -322,10 +368,13 @@
     "CMMemoryPoolGetTypeID",
     "CMMotionActivity",
     "CMMotionActivityManager",
+    "CMMotionActivityManager.isActivityAvailable",
     "CMMotionManager",
+    "CMMotionManager.availableAttitudeReferenceFrames",
     "CMSampleBufferGetTypeID",
     "CMSimpleQueueGetTypeID",
     "CMStepCounter",
+    "CMStepCounter.isStepCountingAvailable",
     "CMTimeMappingValue",
     "CMTimeRangeValue",
     "CMTimeValue",
@@ -348,6 +397,7 @@
     "CTRunGetTypeID",
     "CTSubscriber",
     "CTSubscriberInfo",
+    "CTSubscriberInfo.subscriber",
     "CTTelephonyNetworkInfo",
     "CTTextTabGetTypeID",
     "CTTypesetterGetTypeID",
@@ -361,7 +411,9 @@
     "EAAccessory",
     "EAAccessoryDelegate",
     "EAAccessoryManager",
+    "EAAccessoryManager.sharedAccessoryManager",
     "EAGLContext",
+    "EAGLContext.currentContext",
     "EAGLDrawable",
     "EAGLSharegroup",
     "EASession",
@@ -385,6 +437,8 @@
     "EKSource",
     "EKStructuredLocation",
     "GCController",
+    "GCController.controllers",
+    "GCController.stopWirelessControllerDiscovery",
     "GCControllerAxisInput",
     "GCControllerButtonInput",
     "GCControllerDirectionPad",
@@ -396,13 +450,17 @@
     "GKAchievement",
     "GKAchievementChallenge",
     "GKAchievementDescription",
+    "GKAchievementDescription.incompleteAchievementImage",
+    "GKAchievementDescription.placeholderCompletedAchievementImage",
     "GKAchievementViewController",
     "GKAchievementViewControllerDelegate",
     "GKChallenge",
     "GKChallengeEventHandler",
+    "GKChallengeEventHandler.challengeEventHandler",
     "GKChallengeEventHandlerDelegate",
     "GKChallengeListener",
     "GKFriendRequestComposeViewController",
+    "GKFriendRequestComposeViewController.maxNumberOfRecipients",
     "GKFriendRequestComposeViewControllerDelegate",
     "GKGameCenterControllerDelegate",
     "GKGameCenterViewController",
@@ -413,10 +471,12 @@
     "GKLeaderboardViewController",
     "GKLeaderboardViewControllerDelegate",
     "GKLocalPlayer",
+    "GKLocalPlayer.localPlayer",
     "GKMatch",
     "GKMatchDelegate",
     "GKMatchRequest",
     "GKMatchmaker",
+    "GKMatchmaker.sharedMatchmaker",
     "GKMatchmakerViewController",
     "GKMatchmakerViewControllerDelegate",
     "GKNotificationBanner",
@@ -428,6 +488,7 @@
     "GKSession",
     "GKSessionDelegate",
     "GKTurnBasedEventHandler",
+    "GKTurnBasedEventHandler.sharedTurnBasedEventHandler",
     "GKTurnBasedEventHandlerDelegate",
     "GKTurnBasedEventListener",
     "GKTurnBasedExchange",
@@ -437,8 +498,11 @@
     "GKTurnBasedMatchmakerViewControllerDelegate",
     "GKTurnBasedParticipant",
     "GKVoiceChat",
+    "GKVoiceChat.isVoIPAllowed",
     "GKVoiceChatClient",
     "GKVoiceChatService",
+    "GKVoiceChatService.defaultVoiceChatService",
+    "GKVoiceChatService.isVoIPAllowed",
     "GLKBaseEffect",
     "GLKEffectPropertyFog",
     "GLKEffectPropertyLight",
@@ -468,6 +532,9 @@
     "IOBufferDuration",
     "ISOcountryCode",
     "JSContext",
+    "JSContext.currentArguments",
+    "JSContext.currentContext",
+    "JSContext.currentThis",
     "JSContextGroupCreate",
     "JSGlobalContextRef",
     "JSManagedValue",
@@ -486,8 +553,12 @@
     "MCSession",
     "MCSessionDelegate",
     "MFMailComposeViewController",
+    "MFMailComposeViewController.canSendMail",
     "MFMailComposeViewControllerDelegate",
     "MFMessageComposeViewController",
+    "MFMessageComposeViewController.canSendAttachments",
+    "MFMessageComposeViewController.canSendSubject",
+    "MFMessageComposeViewController.canSendText",
     "MFMessageComposeViewControllerDelegate",
     "MIDIGetDriverIORunLoop",
     "MIDIGetNumberOfDestinations",
@@ -497,6 +568,7 @@
     "MIDINetworkConnection",
     "MIDINetworkHost",
     "MIDINetworkSession",
+    "MIDINetworkSession.defaultSession",
     "MIDIRestart",
     "MIMEType",
     "MKAnnotation",
@@ -516,7 +588,9 @@
     "MKLocalSearchRequest",
     "MKLocalSearchResponse",
     "MKMapCamera",
+    "MKMapCamera.camera",
     "MKMapItem",
+    "MKMapItem.mapItemForCurrentLocation",
     "MKMapSnapshot",
     "MKMapSnapshotOptions",
     "MKMapSnapshotter",
@@ -551,20 +625,34 @@
     "MPMediaItemArtwork",
     "MPMediaItemCollection",
     "MPMediaLibrary",
+    "MPMediaLibrary.defaultMediaLibrary",
     "MPMediaPickerController",
     "MPMediaPickerControllerDelegate",
     "MPMediaPlayback",
     "MPMediaPropertyPredicate",
     "MPMediaQuery",
+    "MPMediaQuery.albumsQuery",
+    "MPMediaQuery.artistsQuery",
+    "MPMediaQuery.audiobooksQuery",
+    "MPMediaQuery.compilationsQuery",
+    "MPMediaQuery.composersQuery",
+    "MPMediaQuery.genresQuery",
+    "MPMediaQuery.playlistsQuery",
+    "MPMediaQuery.podcastsQuery",
+    "MPMediaQuery.songsQuery",
     "MPMediaQuerySection",
     "MPMovieAccessLog",
     "MPMovieAccessLogEvent",
     "MPMovieErrorLog",
     "MPMovieErrorLogEvent",
     "MPMoviePlayerController",
+    "MPMoviePlayerController.preparePrerollAds",
     "MPMoviePlayerViewController",
     "MPMusicPlayerController",
+    "MPMusicPlayerController.applicationMusicPlayer",
+    "MPMusicPlayerController.iPodMusicPlayer",
     "MPNowPlayingInfoCenter",
+    "MPNowPlayingInfoCenter.defaultCenter",
     "MPTimedMetadata",
     "MPVolumeSettingsAlertHide",
     "MPVolumeSettingsAlertIsVisible",
@@ -574,8 +662,11 @@
     "NKAssetDownload",
     "NKIssue",
     "NKLibrary",
+    "NKLibrary.sharedLibrary",
     "NSArray",
+    "NSArray.array",
     "NSAssertionHandler",
+    "NSAssertionHandler.currentHandler",
     "NSAtomicStore",
     "NSAtomicStoreCacheNode",
     "NSAttributeDescription",
@@ -583,14 +674,41 @@
     "NSAutoreleasePool",
     "NSBlockOperation",
     "NSBundle",
+    "NSBundle.allBundles",
+    "NSBundle.allFrameworks",
+    "NSBundle.mainBundle",
     "NSByteCountFormatter",
     "NSCache",
     "NSCacheDelegate",
     "NSCachedURLResponse",
     "NSCalendar",
+    "NSCalendar.autoupdatingCurrentCalendar",
+    "NSCalendar.currentCalendar",
     "NSCharacterSet",
+    "NSCharacterSet.URLFragmentAllowedCharacterSet",
+    "NSCharacterSet.URLHostAllowedCharacterSet",
+    "NSCharacterSet.URLPasswordAllowedCharacterSet",
+    "NSCharacterSet.URLPathAllowedCharacterSet",
+    "NSCharacterSet.URLQueryAllowedCharacterSet",
+    "NSCharacterSet.URLUserAllowedCharacterSet",
+    "NSCharacterSet.alphanumericCharacterSet",
+    "NSCharacterSet.capitalizedLetterCharacterSet",
+    "NSCharacterSet.controlCharacterSet",
+    "NSCharacterSet.decimalDigitCharacterSet",
+    "NSCharacterSet.decomposableCharacterSet",
+    "NSCharacterSet.illegalCharacterSet",
+    "NSCharacterSet.letterCharacterSet",
+    "NSCharacterSet.lowercaseLetterCharacterSet",
+    "NSCharacterSet.newlineCharacterSet",
+    "NSCharacterSet.nonBaseCharacterSet",
+    "NSCharacterSet.punctuationCharacterSet",
+    "NSCharacterSet.symbolCharacterSet",
+    "NSCharacterSet.uppercaseLetterCharacterSet",
+    "NSCharacterSet.whitespaceAndNewlineCharacterSet",
+    "NSCharacterSet.whitespaceCharacterSet",
     "NSCoder",
     "NSCoderMethods",
+    "NSCoderMethods.version",
     "NSCoding",
     "NSComparisonPredicate",
     "NSCompoundPredicate",
@@ -600,16 +718,30 @@
     "NSCopying",
     "NSCountedSet",
     "NSData",
+    "NSData.data",
     "NSDataDetector",
     "NSDate",
+    "NSDate.date",
+    "NSDate.distantFuture",
+    "NSDate.distantPast",
+    "NSDate.timeIntervalSinceReferenceDate",
     "NSDateComponents",
     "NSDateFormatter",
+    "NSDateFormatter.defaultFormatterBehavior",
     "NSDecimalNumber",
+    "NSDecimalNumber.defaultBehavior",
+    "NSDecimalNumber.maximumDecimalNumber",
+    "NSDecimalNumber.minimumDecimalNumber",
+    "NSDecimalNumber.notANumber",
+    "NSDecimalNumber.one",
+    "NSDecimalNumber.zero",
     "NSDecimalNumberBehaviors",
     "NSDecimalNumberHandler",
+    "NSDecimalNumberHandler.defaultDecimalNumberHandler",
     "NSDefaultMallocZone",
     "NSDelayedPerforming",
     "NSDictionary",
+    "NSDictionary.dictionary",
     "NSDirectoryEnumerator",
     "NSDiscardableContent",
     "NSDiscardableContentProxy",
@@ -621,6 +753,8 @@
     "NSErrorRecoveryAttempting",
     "NSException",
     "NSExpression",
+    "NSExpression.expressionForAnyKey",
+    "NSExpression.expressionForEvaluatedObject",
     "NSExpressionDescription",
     "NSFastEnumeration",
     "NSFetchRequest",
@@ -630,8 +764,14 @@
     "NSFetchedResultsControllerDelegate",
     "NSFetchedResultsSectionInfo",
     "NSFileCoordinator",
+    "NSFileCoordinator.filePresenters",
     "NSFileHandle",
+    "NSFileHandle.fileHandleWithNullDevice",
+    "NSFileHandle.fileHandleWithStandardError",
+    "NSFileHandle.fileHandleWithStandardInput",
+    "NSFileHandle.fileHandleWithStandardOutput",
     "NSFileManager",
+    "NSFileManager.defaultManager",
     "NSFileManagerDelegate",
     "NSFilePresenter",
     "NSFileVersion",
@@ -641,19 +781,23 @@
     "NSGetUncaughtExceptionHandler",
     "NSHTTPCookie",
     "NSHTTPCookieStorage",
+    "NSHTTPCookieStorage.sharedHTTPCookieStorage",
     "NSHTTPURLResponse",
     "NSHashTable",
+    "NSHashTable.weakObjectsHashTable",
     "NSHomeDirectory",
     "NSHostByteOrder",
     "NSIncrementalStore",
     "NSIncrementalStoreNode",
     "NSIndexPath",
     "NSIndexSet",
+    "NSIndexSet.indexSet",
     "NSInputStream",
     "NSInvocation",
     "NSInvocationOperation",
     "NSJSONSerialization",
     "NSKeyValueCoding",
+    "NSKeyValueCoding.accessInstanceVariablesDirectly",
     "NSKeyValueObserverNotification",
     "NSKeyValueObserverRegistration",
     "NSKeyValueObserving",
@@ -661,24 +805,40 @@
     "NSKeyedArchiver",
     "NSKeyedArchiverDelegate",
     "NSKeyedArchiverObjectSubstitution",
+    "NSKeyedArchiverObjectSubstitution.classFallbacksForKeyedArchiver",
     "NSKeyedUnarchiver",
     "NSKeyedUnarchiverDelegate",
     "NSKeyedUnarchiverObjectSubstitution",
+    "NSKeyedUnarchiverObjectSubstitution.classForKeyedUnarchiver",
     "NSLayoutConstraint",
     "NSLayoutManager",
     "NSLayoutManagerDelegate",
     "NSLinguisticTagger",
     "NSLocale",
+    "NSLocale.ISOCountryCodes",
+    "NSLocale.ISOCurrencyCodes",
+    "NSLocale.ISOLanguageCodes",
+    "NSLocale.autoupdatingCurrentLocale",
+    "NSLocale.availableLocaleIdentifiers",
+    "NSLocale.commonISOCurrencyCodes",
+    "NSLocale.currentLocale",
+    "NSLocale.preferredLanguages",
+    "NSLocale.systemLocale",
     "NSLock",
     "NSLocking",
     "NSLogPageSize",
     "NSMachPort",
     "NSMachPortDelegate",
     "NSManagedObject",
+    "NSManagedObject.contextShouldIgnoreUnmodeledPropertyChanges",
     "NSManagedObjectContext",
     "NSManagedObjectID",
     "NSManagedObjectModel",
     "NSMapTable",
+    "NSMapTable.strongToStrongObjectsMapTable",
+    "NSMapTable.strongToWeakObjectsMapTable",
+    "NSMapTable.weakToStrongObjectsMapTable",
+    "NSMapTable.weakToWeakObjectsMapTable",
     "NSMappingModel",
     "NSMergeConflict",
     "NSMergePolicy",
@@ -707,49 +867,90 @@
     "NSNetServiceDelegate",
     "NSNotification",
     "NSNotificationCenter",
+    "NSNotificationCenter.defaultCenter",
     "NSNotificationQueue",
+    "NSNotificationQueue.defaultQueue",
     "NSNull",
+    "NSNull.null",
     "NSNumber",
     "NSNumberFormatter",
+    "NSNumberFormatter.defaultFormatterBehavior",
     "NSObject",
+    "NSObject.accessInstanceVariablesDirectly",
+    "NSObject.alloc",
+    "NSObject.appearance",
+    "NSObject.class",
+    "NSObject.classFallbacksForKeyedArchiver",
+    "NSObject.classForKeyedUnarchiver",
+    "NSObject.description",
+    "NSObject.initialize",
+    "NSObject.load",
+    "NSObject.new",
+    "NSObject.superclass",
+    "NSObject.supportsSecureCoding",
+    "NSObject.uiaxFocusedApplicationElement",
+    "NSObject.uiaxSystemWideElement",
+    "NSObject.version",
     "NSOpenStepRootDirectory",
     "NSOperation",
     "NSOperationQueue",
+    "NSOperationQueue.currentQueue",
+    "NSOperationQueue.mainQueue",
     "NSOrderedSet",
+    "NSOrderedSet.orderedSet",
     "NSOrthography",
     "NSOutputStream",
+    "NSOutputStream.outputStreamToMemory",
     "NSPageSize",
     "NSParagraphStyle",
+    "NSParagraphStyle.defaultParagraphStyle",
     "NSPersistentStore",
+    "NSPersistentStore.migrationManagerClass",
     "NSPersistentStoreCoordinator",
+    "NSPersistentStoreCoordinator.registeredStoreTypes",
     "NSPersistentStoreRequest",
     "NSPipe",
+    "NSPipe.pipe",
     "NSPointerArray",
+    "NSPointerArray.strongObjectsPointerArray",
+    "NSPointerArray.weakObjectsPointerArray",
     "NSPointerFunctions",
     "NSPort",
+    "NSPort.port",
     "NSPortDelegate",
     "NSPredicate",
     "NSProcessInfo",
+    "NSProcessInfo.processInfo",
     "NSProgress",
+    "NSProgress.currentProgress",
     "NSPropertyDescription",
     "NSPropertyListSerialization",
     "NSPropertyMapping",
     "NSProxy",
+    "NSProxy.alloc",
+    "NSProxy.class",
     "NSRealMemoryAvailable",
     "NSRecursiveLock",
     "NSRegularExpression",
     "NSRelationshipDescription",
     "NSRunLoop",
+    "NSRunLoop.currentRunLoop",
+    "NSRunLoop.mainRunLoop",
     "NSSaveChangesRequest",
     "NSScanner",
     "NSSecureCoding",
+    "NSSecureCoding.supportsSecureCoding",
     "NSSet",
+    "NSSet.set",
     "NSShadow",
     "NSSocketPort",
     "NSSortDescriptor",
     "NSStream",
     "NSStreamDelegate",
     "NSString",
+    "NSString.availableStringEncodings",
+    "NSString.defaultCStringEncoding",
+    "NSString.string",
     "NSStringDrawingContext",
     "NSTemporaryDirectory",
     "NSTextAttachment",
@@ -761,13 +962,29 @@
     "NSTextStorageDelegate",
     "NSTextTab",
     "NSThread",
+    "NSThread.callStackReturnAddresses",
+    "NSThread.callStackSymbols",
+    "NSThread.currentThread",
+    "NSThread.exit",
+    "NSThread.isMainThread",
+    "NSThread.isMultiThreaded",
+    "NSThread.mainThread",
+    "NSThread.threadPriority",
     "NSThreadPerformAdditions",
     "NSTimeZone",
+    "NSTimeZone.abbreviationDictionary",
+    "NSTimeZone.defaultTimeZone",
+    "NSTimeZone.knownTimeZoneNames",
+    "NSTimeZone.localTimeZone",
+    "NSTimeZone.resetSystemTimeZone",
+    "NSTimeZone.systemTimeZone",
+    "NSTimeZone.timeZoneDataVersion",
     "NSTimer",
     "NSURL",
     "NSURLAuthenticationChallenge",
     "NSURLAuthenticationChallengeSender",
     "NSURLCache",
+    "NSURLCache.sharedURLCache",
     "NSURLComponents",
     "NSURLConnection",
     "NSURLConnectionDataDelegate",
@@ -775,13 +992,18 @@
     "NSURLConnectionDownloadDelegate",
     "NSURLCredential",
     "NSURLCredentialStorage",
+    "NSURLCredentialStorage.sharedCredentialStorage",
     "NSURLProtectionSpace",
     "NSURLProtocol",
     "NSURLProtocolClient",
     "NSURLRequest",
+    "NSURLRequest.supportsSecureCoding",
     "NSURLResponse",
     "NSURLSession",
+    "NSURLSession.sharedSession",
     "NSURLSessionConfiguration",
+    "NSURLSessionConfiguration.defaultSessionConfiguration",
+    "NSURLSessionConfiguration.ephemeralSessionConfiguration",
     "NSURLSessionDataDelegate",
     "NSURLSessionDelegate",
     "NSURLSessionDownloadDelegate",
@@ -789,18 +1011,26 @@
     "NSURLSessionTask",
     "NSURLSessionTaskDelegate",
     "NSUUID",
+    "NSUUID.UUID",
     "NSUbiquitousKeyValueStore",
+    "NSUbiquitousKeyValueStore.defaultStore",
     "NSUndoManager",
     "NSUserDefaults",
+    "NSUserDefaults.resetStandardUserDefaults",
+    "NSUserDefaults.standardUserDefaults",
     "NSUserName",
     "NSValue",
     "NSValueTransformer",
+    "NSValueTransformer.allowsReverseTransformation",
+    "NSValueTransformer.transformedValueClass",
+    "NSValueTransformer.valueTransformerNames",
     "NSXMLParser",
     "NSXMLParserDelegate",
     "PKAddPassesViewController",
     "PKAddPassesViewControllerDelegate",
     "PKPass",
     "PKPassLibrary",
+    "PKPassLibrary.isPassLibraryAvailable",
     "PMSymbol",
     "QLPreviewController",
     "QLPreviewControllerDataSource",
@@ -811,6 +1041,7 @@
     "SCError",
     "SCNetworkReachabilityGetTypeID",
     "SKAction",
+    "SKAction.removeFromParent",
     "SKCropNode",
     "SKDownload",
     "SKEffectNode",
@@ -819,8 +1050,11 @@
     "SKLabelNode",
     "SKMutablePayment",
     "SKNode",
+    "SKNode.node",
     "SKPayment",
     "SKPaymentQueue",
+    "SKPaymentQueue.canMakePayments",
+    "SKPaymentQueue.defaultQueue",
     "SKPaymentTransaction",
     "SKPaymentTransactionObserver",
     "SKPhysicsBody",
@@ -854,6 +1088,7 @@
     "SLRequest",
     "SSLContextGetTypeID",
     "SSReadingList",
+    "SSReadingList.defaultReadingList",
     "SecCertificateGetTypeID",
     "SecIdentityGetTypeID",
     "SecKeyGetTypeID",
@@ -864,41 +1099,93 @@
     "TLSMinimumSupportedProtocol",
     "TWRequest",
     "TWTweetComposeViewController",
+    "TWTweetComposeViewController.canSendTweet",
     "TXTRecordData",
     "UIAActionSheet",
+    "UIAActionSheet.toOneRelationshipKeys",
     "UIAAlert",
+    "UIAAlert._moreToOneRelationshipKeys",
+    "UIAAlert.toOneRelationshipKeys",
     "UIAApplication",
+    "UIAApplication.attributeKeys",
+    "UIAApplication.toManyRelationshipKeys",
+    "UIAApplication.toOneRelationshipKeys",
     "UIAButton",
     "UIAElement",
+    "UIAElement._countsString",
+    "UIAElement._liveCount",
+    "UIAElement._maxCount",
+    "UIAElement._patienceRetryInterval",
+    "UIAElement.allKeys",
+    "UIAElement.attributeKeys",
+    "UIAElement.initialize",
+    "UIAElement.patience",
+    "UIAElement.popPatience",
+    "UIAElement.toManyRelationshipKeys",
+    "UIAElement.toOneRelationshipKeys",
     "UIAElementArray",
+    "UIAElementArray._liveCount",
+    "UIAElementArray._maxCount",
+    "UIAElementArray.initialize",
     "UIAElementNil",
+    "UIAElementNil._liveCount",
+    "UIAElementNil._maxCount",
     "UIAHost",
     "UIAKey",
     "UIAKeyboard",
     "UIALink",
     "UIANavigationBar",
+    "UIANavigationBar._moreToOneRelationshipKeys",
+    "UIANavigationBar.toOneRelationshipKeys",
     "UIAPageIndicator",
     "UIAPicker",
+    "UIAPicker._moreToManyRelationshipKeys",
+    "UIAPicker.toManyRelationshipKeys",
     "UIAPickerWheel",
     "UIAPopover",
     "UIARecorder",
+    "UIARecorder.defaultRecorder",
     "UIARecorderAction",
     "UIAScreen",
+    "UIAScreen.attributeKeys",
     "UIASegmentedControl",
     "UIASlider",
     "UIAStaticText",
     "UIASwitch",
     "UIASyntheticEvents",
+    "UIASyntheticEvents.sharedEventGenerator",
     "UIATabBar",
     "UIATableCell",
     "UIATableGroup",
     "UIATableView",
+    "UIATableView._moreToManyRelationshipKeys",
+    "UIATableView.toManyRelationshipKeys",
     "UIATarget",
+    "UIATarget.attributeKeys",
+    "UIATarget.localTarget",
+    "UIATarget.toManyRelationshipKeys",
+    "UIATarget.toOneRelationshipKeys",
     "UIATextField",
     "UIAWindow",
     "UIAXElement",
+    "UIAXElement._parameterizedAttributeNumbers",
+    "UIAXElement._parameterizedAttributeStrings",
+    "UIAXElement._parameterizedAttributesForStringsDictionary",
+    "UIAXElement._raiseAXErrorAPIDisabled",
+    "UIAXElement._regularAttributeNumbers",
+    "UIAXElement._regularAttributeStrings",
+    "UIAXElement._regularAttributesForStringsDictionary",
+    "UIAXElement._stringsForParameterizedAttributesDictionary",
+    "UIAXElement._stringsForRegularAttributesDictionary",
+    "UIAXElement._stringsForTraitsDictionary",
+    "UIAXElement._traitNumbers",
+    "UIAXElement._traitStrings",
+    "UIAXElement.initialize",
+    "UIAXElement.uiaxFocusedApplicationElement",
+    "UIAXElement.uiaxSystemWideElement",
     "UIAcceleration",
     "UIAccelerometer",
+    "UIAccelerometer.sharedAccelerometer",
     "UIAccelerometerDelegate",
     "UIAccessibility",
     "UIAccessibilityAction",
@@ -916,6 +1203,7 @@
     "UIActionSheet",
     "UIActionSheetDelegate",
     "UIActivity",
+    "UIActivity.activityCategory",
     "UIActivityIndicatorView",
     "UIActivityItemProvider",
     "UIActivityItemSource",
@@ -923,7 +1211,9 @@
     "UIAlertView",
     "UIAlertViewDelegate",
     "UIAppearance",
+    "UIAppearance.appearance",
     "UIApplication",
+    "UIApplication.sharedApplication",
     "UIApplicationDelegate",
     "UIAttachmentBehavior",
     "UIBarButtonItem",
@@ -931,6 +1221,7 @@
     "UIBarPositioning",
     "UIBarPositioningDelegate",
     "UIBezierPath",
+    "UIBezierPath.bezierPath",
     "UIButton",
     "UICollectionReusableView",
     "UICollectionView",
@@ -942,6 +1233,8 @@
     "UICollectionViewFlowLayout",
     "UICollectionViewFlowLayoutInvalidationContext",
     "UICollectionViewLayout",
+    "UICollectionViewLayout.invalidationContextClass",
+    "UICollectionViewLayout.layoutAttributesClass",
     "UICollectionViewLayoutAttributes",
     "UICollectionViewLayoutInvalidationContext",
     "UICollectionViewTransitionLayout",
@@ -949,11 +1242,33 @@
     "UICollisionBehavior",
     "UICollisionBehaviorDelegate",
     "UIColor",
+    "UIColor.blackColor",
+    "UIColor.blueColor",
+    "UIColor.brownColor",
+    "UIColor.clearColor",
+    "UIColor.cyanColor",
+    "UIColor.darkGrayColor",
+    "UIColor.darkTextColor",
+    "UIColor.grayColor",
+    "UIColor.greenColor",
+    "UIColor.groupTableViewBackgroundColor",
+    "UIColor.lightGrayColor",
+    "UIColor.lightTextColor",
+    "UIColor.magentaColor",
+    "UIColor.orangeColor",
+    "UIColor.purpleColor",
+    "UIColor.redColor",
+    "UIColor.scrollViewTexturedBackgroundColor",
+    "UIColor.underPageBackgroundColor",
+    "UIColor.viewFlipsideBackgroundColor",
+    "UIColor.whiteColor",
+    "UIColor.yellowColor",
     "UIControl",
     "UID",
     "UIDataSourceModelAssociation",
     "UIDatePicker",
     "UIDevice",
+    "UIDevice.currentDevice",
     "UIDictationPhrase",
     "UIDocument",
     "UIDocumentInteractionController",
@@ -966,6 +1281,11 @@
     "UIEdgeInsetsValue",
     "UIEvent",
     "UIFont",
+    "UIFont.buttonFontSize",
+    "UIFont.familyNames",
+    "UIFont.labelFontSize",
+    "UIFont.smallSystemFontSize",
+    "UIFont.systemFontSize",
     "UIFontDescriptor",
     "UIGestureRecognizer",
     "UIGestureRecognizerDelegate",
@@ -991,10 +1311,13 @@
     "UILayoutSupport",
     "UILocalNotification",
     "UILocalizedIndexedCollation",
+    "UILocalizedIndexedCollation.currentCollation",
     "UILongPressGestureRecognizer",
     "UIManagedDocument",
+    "UIManagedDocument.persistentStoreName",
     "UIMarkupTextPrintFormatter",
     "UIMenuController",
+    "UIMenuController.sharedMenuController",
     "UIMenuItem",
     "UIMotionEffect",
     "UIMotionEffectGroup",
@@ -1013,6 +1336,8 @@
     "UIPageViewControllerDelegate",
     "UIPanGestureRecognizer",
     "UIPasteboard",
+    "UIPasteboard.generalPasteboard",
+    "UIPasteboard.pasteboardWithUniqueName",
     "UIPercentDrivenInteractiveTransition",
     "UIPickerView",
     "UIPickerViewAccessibilityDelegate",
@@ -1020,11 +1345,19 @@
     "UIPickerViewDelegate",
     "UIPinchGestureRecognizer",
     "UIPopoverBackgroundView",
+    "UIPopoverBackgroundView.arrowBase",
+    "UIPopoverBackgroundView.arrowHeight",
+    "UIPopoverBackgroundView.contentViewInsets",
+    "UIPopoverBackgroundView.wantsDefaultContentAppearance",
     "UIPopoverController",
     "UIPopoverControllerDelegate",
     "UIPrintFormatter",
     "UIPrintInfo",
+    "UIPrintInfo.printInfo",
     "UIPrintInteractionController",
+    "UIPrintInteractionController.isPrintingAvailable",
+    "UIPrintInteractionController.printableUTIs",
+    "UIPrintInteractionController.sharedPrintController",
     "UIPrintInteractionControllerDelegate",
     "UIPrintPageRenderer",
     "UIPrintPaper",
@@ -1036,6 +1369,8 @@
     "UIResponderStandardEditActions",
     "UIRotationGestureRecognizer",
     "UIScreen",
+    "UIScreen.mainScreen",
+    "UIScreen.screens",
     "UIScreenEdgePanGestureRecognizer",
     "UIScreenMode",
     "UIScrollView",
@@ -1071,11 +1406,14 @@
     "UITableViewHeaderFooterView",
     "UITapGestureRecognizer",
     "UITextChecker",
+    "UITextChecker.availableLanguages",
     "UITextField",
     "UITextFieldDelegate",
     "UITextInput",
     "UITextInputDelegate",
     "UITextInputMode",
+    "UITextInputMode.activeInputModes",
+    "UITextInputMode.currentInputMode",
     "UITextInputStringTokenizer",
     "UITextInputTokenizer",
     "UITextInputTraits",
@@ -1088,7 +1426,13 @@
     "UIVideoEditorController",
     "UIVideoEditorControllerDelegate",
     "UIView",
+    "UIView.areAnimationsEnabled",
+    "UIView.commitAnimations",
+    "UIView.layerClass",
+    "UIView.requiresConstraintBasedLayout",
     "UIViewController",
+    "UIViewController.attemptRotationToDeviceOrientation",
+    "UIViewController.prepareInterstitialAds",
     "UIViewControllerAnimatedTransitioning",
     "UIViewControllerContextTransitioning",
     "UIViewControllerInteractiveTransitioning",
@@ -4930,18 +5274,6 @@
       "contents": "ALAssetTypeVideo"
     },
     {
-      "trigger": "ALAssetsFilter.allAssets",
-      "contents": "allAssets"
-    },
-    {
-      "trigger": "ALAssetsFilter.allPhotos",
-      "contents": "allPhotos"
-    },
-    {
-      "trigger": "ALAssetsFilter.allVideos",
-      "contents": "allVideos"
-    },
-    {
       "trigger": "ALAssetsGroupAlbum (2)",
       "contents": "ALAssetsGroupAlbum"
     },
@@ -4984,14 +5316,6 @@
     {
       "trigger": "ALAssetsGroupSavedPhotos (16)",
       "contents": "ALAssetsGroupSavedPhotos"
-    },
-    {
-      "trigger": "ALAssetsLibrary.authorizationStatus",
-      "contents": "authorizationStatus"
-    },
-    {
-      "trigger": "ALAssetsLibrary.disableSharedPhotoStreamsSupport",
-      "contents": "disableSharedPhotoStreamsSupport"
     },
     {
       "trigger": "ALAssetsLibraryAccessGloballyDeniedError (-3312)",
@@ -5558,10 +5882,6 @@
       "contents": "AL_VERSION"
     },
     {
-      "trigger": "ASIdentifierManager.sharedManager",
-      "contents": "sharedManager"
-    },
-    {
       "trigger": "ATSFONTREF_DEFINED (1)",
       "contents": "ATSFONTREF_DEFINED"
     },
@@ -5716,10 +6036,6 @@
     {
       "trigger": "AVAssetExportPresetPassthrough (NSString*)",
       "contents": "AVAssetExportPresetPassthrough"
-    },
-    {
-      "trigger": "AVAssetExportSession.allExportPresets",
-      "contents": "allExportPresets"
     },
     {
       "trigger": "AVAssetExportSession.determineCompatibilityOfExportPreset:withAsset:outputFileType:completionHandler:",
@@ -5920,10 +6236,6 @@
     {
       "trigger": "AVAudioQualityMin (0)",
       "contents": "AVAudioQualityMin"
-    },
-    {
-      "trigger": "AVAudioSession.sharedInstance",
-      "contents": "sharedInstance"
     },
     {
       "trigger": "AVAudioSessionCategoryAmbient (NSString*)",
@@ -6276,10 +6588,6 @@
     {
       "trigger": "AVCaptureDevice.deviceWithUniqueID:",
       "contents": "deviceWithUniqueID(${1:NSString* deviceUniqueID})"
-    },
-    {
-      "trigger": "AVCaptureDevice.devices",
-      "contents": "devices"
     },
     {
       "trigger": "AVCaptureDevice.devicesWithMediaType:",
@@ -7518,10 +7826,6 @@
       "contents": "metadataItemsFromArray(${1:NSArray* metadataItems}, withLocale:${2:NSLocale* locale})"
     },
     {
-      "trigger": "AVMetadataItemFilter.metadataItemFilterForSharing",
-      "contents": "metadataItemFilterForSharing"
-    },
-    {
       "trigger": "AVMetadataKeySpaceCommon (NSString*)",
       "contents": "AVMetadataKeySpaceCommon"
     },
@@ -8094,40 +8398,12 @@
       "contents": "AVMetadataiTunesMetadataKeyUserGenre"
     },
     {
-      "trigger": "AVMutableAudioMix.audioMix",
-      "contents": "audioMix"
-    },
-    {
-      "trigger": "AVMutableAudioMixInputParameters.audioMixInputParameters",
-      "contents": "audioMixInputParameters"
-    },
-    {
       "trigger": "AVMutableAudioMixInputParameters.audioMixInputParametersWithTrack:",
       "contents": "audioMixInputParametersWithTrack(${1:AVAssetTrack* track})"
     },
     {
-      "trigger": "AVMutableComposition.composition",
-      "contents": "composition"
-    },
-    {
-      "trigger": "AVMutableMetadataItem.metadataItem",
-      "contents": "metadataItem"
-    },
-    {
-      "trigger": "AVMutableVideoComposition.videoComposition",
-      "contents": "videoComposition"
-    },
-    {
       "trigger": "AVMutableVideoComposition.videoCompositionWithPropertiesOfAsset:",
       "contents": "videoCompositionWithPropertiesOfAsset(${1:AVAsset* asset})"
-    },
-    {
-      "trigger": "AVMutableVideoCompositionInstruction.videoCompositionInstruction",
-      "contents": "videoCompositionInstruction"
-    },
-    {
-      "trigger": "AVMutableVideoCompositionLayerInstruction.videoCompositionLayerInstruction",
-      "contents": "videoCompositionLayerInstruction"
     },
     {
       "trigger": "AVMutableVideoCompositionLayerInstruction.videoCompositionLayerInstructionWithAssetTrack:",
@@ -8136,10 +8412,6 @@
     {
       "trigger": "AVNumberOfChannelsKey (NSString*)",
       "contents": "AVNumberOfChannelsKey"
-    },
-    {
-      "trigger": "AVOutputSettingsAssistant.availableOutputSettingsPresets",
-      "contents": "availableOutputSettingsPresets"
     },
     {
       "trigger": "AVOutputSettingsAssistant.outputSettingsAssistantWithPreset:",
@@ -8290,14 +8562,6 @@
       "contents": "AVSpeechBoundaryWord"
     },
     {
-      "trigger": "AVSpeechSynthesisVoice.currentLanguageCode",
-      "contents": "currentLanguageCode"
-    },
-    {
-      "trigger": "AVSpeechSynthesisVoice.speechVoices",
-      "contents": "speechVoices"
-    },
-    {
       "trigger": "AVSpeechSynthesisVoice.voiceWithLanguage:",
       "contents": "voiceWithLanguage(${1:NSString* language})"
     },
@@ -8360,14 +8624,6 @@
     {
       "trigger": "AVURLAsset.URLAssetWithURL:options:",
       "contents": "URLAssetWithURL(${1:NSURL* URL}, options:${2:NSDictionary* options})"
-    },
-    {
-      "trigger": "AVURLAsset.audiovisualMIMETypes",
-      "contents": "audiovisualMIMETypes"
-    },
-    {
-      "trigger": "AVURLAsset.audiovisualTypes",
-      "contents": "audiovisualTypes"
     },
     {
       "trigger": "AVURLAsset.isPlayableExtendedMIMEType:",
@@ -8930,20 +9186,12 @@
       "contents": "AudioSessionSetProperty(${1:AudioSessionPropertyID inID}, ${2:UInt32 inDataSize}, ${3:void* inData})"
     },
     {
-      "trigger": "CAAnimation.animation",
-      "contents": "animation"
-    },
-    {
       "trigger": "CAAnimation.defaultValueForKey:",
       "contents": "defaultValueForKey(${1:NSString* key})"
     },
     {
       "trigger": "CADisplayLink.displayLinkWithTarget:selector:",
       "contents": "displayLinkWithTarget(${1:id target}, selector:${2:SEL sel})"
-    },
-    {
-      "trigger": "CAEmitterBehavior.behaviorTypes",
-      "contents": "behaviorTypes"
     },
     {
       "trigger": "CAEmitterBehavior.behaviorWithType:",
@@ -8954,20 +9202,12 @@
       "contents": "defaultValueForKey(${1:NSString* key})"
     },
     {
-      "trigger": "CAEmitterCell.emitterCell",
-      "contents": "emitterCell"
-    },
-    {
       "trigger": "CALayer.defaultActionForKey:",
       "contents": "defaultActionForKey(${1:NSString* event})"
     },
     {
       "trigger": "CALayer.defaultValueForKey:",
       "contents": "defaultValueForKey(${1:NSString* key})"
-    },
-    {
-      "trigger": "CALayer.layer",
-      "contents": "layer"
     },
     {
       "trigger": "CALayer.needsDisplayForKey:",
@@ -8994,42 +9234,6 @@
       "contents": "CAShowFile(${1:void* inObject}, ${2:FILE* inFile})"
     },
     {
-      "trigger": "CATiledLayer.fadeDuration",
-      "contents": "fadeDuration"
-    },
-    {
-      "trigger": "CATransaction.animationDuration",
-      "contents": "animationDuration"
-    },
-    {
-      "trigger": "CATransaction.animationTimingFunction",
-      "contents": "animationTimingFunction"
-    },
-    {
-      "trigger": "CATransaction.begin",
-      "contents": "begin"
-    },
-    {
-      "trigger": "CATransaction.commit",
-      "contents": "commit"
-    },
-    {
-      "trigger": "CATransaction.completionBlock",
-      "contents": "completionBlock"
-    },
-    {
-      "trigger": "CATransaction.disableActions",
-      "contents": "disableActions"
-    },
-    {
-      "trigger": "CATransaction.flush",
-      "contents": "flush"
-    },
-    {
-      "trigger": "CATransaction.lock",
-      "contents": "lock"
-    },
-    {
       "trigger": "CATransaction.setAnimationDuration:",
       "contents": "setAnimationDuration(${1:CFTimeInterval dur})"
     },
@@ -9048,10 +9252,6 @@
     {
       "trigger": "CATransaction.setValue:forKey:",
       "contents": "setValue(${1:id anObject}, forKey:${2:NSString* key})"
-    },
-    {
-      "trigger": "CATransaction.unlock",
-      "contents": "unlock"
     },
     {
       "trigger": "CATransaction.valueForKey:",
@@ -9404,10 +9604,6 @@
     {
       "trigger": "CBErrorUnknown (0)",
       "contents": "CBErrorUnknown"
-    },
-    {
-      "trigger": "CBPeripheralManager.authorizationStatus",
-      "contents": "authorizationStatus"
     },
     {
       "trigger": "CBPeripheralManagerAuthorizationStatusAuthorized (3)",
@@ -13638,6 +13834,14 @@
       "contents": "CGFLOAT_IS_DOUBLE"
     },
     {
+      "trigger": "CGFLOAT_MAX (3.4028235E+38)",
+      "contents": "CGFLOAT_MAX"
+    },
+    {
+      "trigger": "CGFLOAT_MIN (1.1754944E-38)",
+      "contents": "CGFLOAT_MIN"
+    },
+    {
       "trigger": "CGFontCanCreatePostScriptSubset",
       "contents": "CGFontCanCreatePostScriptSubset(${1:CGFontRef font}, ${2:CGFontPostScriptFormat format})"
     },
@@ -14910,10 +15114,6 @@
       "contents": "serializedXMPFromFilters(${1:NSArray* filters}, inputImageExtent:${2:CGRect extent})"
     },
     {
-      "trigger": "CIImage.emptyImage",
-      "contents": "emptyImage"
-    },
-    {
       "trigger": "CIImage.imageWithBitmapData:bytesPerRow:size:format:colorSpace:",
       "contents": "imageWithBitmapData(${1:NSData* d}, bytesPerRow:${2:size_t bpr}, size:${3:CGSize size}, format:${4:CIFormat f}, colorSpace:${5:CGColorSpaceRef cs})"
     },
@@ -15050,40 +15250,8 @@
       "contents": "CLLocationDistanceMax"
     },
     {
-      "trigger": "CLLocationManager.authorizationStatus",
-      "contents": "authorizationStatus"
-    },
-    {
-      "trigger": "CLLocationManager.deferredLocationUpdatesAvailable",
-      "contents": "deferredLocationUpdatesAvailable"
-    },
-    {
-      "trigger": "CLLocationManager.headingAvailable",
-      "contents": "headingAvailable"
-    },
-    {
       "trigger": "CLLocationManager.isMonitoringAvailableForClass:",
       "contents": "isMonitoringAvailableForClass(${1:Class regionClass})"
-    },
-    {
-      "trigger": "CLLocationManager.isRangingAvailable",
-      "contents": "isRangingAvailable"
-    },
-    {
-      "trigger": "CLLocationManager.locationServicesEnabled",
-      "contents": "locationServicesEnabled"
-    },
-    {
-      "trigger": "CLLocationManager.regionMonitoringAvailable",
-      "contents": "regionMonitoringAvailable"
-    },
-    {
-      "trigger": "CLLocationManager.regionMonitoringEnabled",
-      "contents": "regionMonitoringEnabled"
-    },
-    {
-      "trigger": "CLLocationManager.significantLocationChangeMonitoringAvailable",
-      "contents": "significantLocationChangeMonitoringAvailable"
     },
     {
       "trigger": "CLProximityFar (3)",
@@ -15486,14 +15654,6 @@
       "contents": "CMMotionActivityConfidenceMedium"
     },
     {
-      "trigger": "CMMotionActivityManager.isActivityAvailable",
-      "contents": "isActivityAvailable"
-    },
-    {
-      "trigger": "CMMotionManager.availableAttitudeReferenceFrames",
-      "contents": "availableAttitudeReferenceFrames"
-    },
-    {
       "trigger": "CMMuxedFormatDescriptionCreate",
       "contents": "CMMuxedFormatDescriptionCreate(${1:CFAllocatorRef allocator}, ${2:CMMuxedStreamType muxType}, ${3:CFDictionaryRef extensions}, ${4:CMMuxedFormatDescriptionRef* outDesc})"
     },
@@ -15692,10 +15852,6 @@
     {
       "trigger": "CMSimpleQueueReset",
       "contents": "CMSimpleQueueReset(${1:CMSimpleQueueRef queue})"
-    },
-    {
-      "trigger": "CMStepCounter.isStepCountingAvailable",
-      "contents": "isStepCountingAvailable"
     },
     {
       "trigger": "CMSyncConvertTime",
@@ -16650,10 +16806,6 @@
       "contents": "CTRunGetTypographicBounds(${1:CTRunRef run}, ${2:CFRange range}, ${3:CGFloat* ascent}, ${4:CGFloat* descent}, ${5:CGFloat* leading})"
     },
     {
-      "trigger": "CTSubscriberInfo.subscriber",
-      "contents": "subscriber"
-    },
-    {
       "trigger": "CTSubscriberTokenRefreshed (NSString*)",
       "contents": "CTSubscriberTokenRefreshed"
     },
@@ -16950,10 +17102,6 @@
       "contents": "EAAccessoryKey"
     },
     {
-      "trigger": "EAAccessoryManager.sharedAccessoryManager",
-      "contents": "sharedAccessoryManager"
-    },
-    {
       "trigger": "EAAccessorySelectedKey (NSString*)",
       "contents": "EAAccessorySelectedKey"
     },
@@ -16980,10 +17128,6 @@
     {
       "trigger": "EAConnectionIDNone (0)",
       "contents": "EAConnectionIDNone"
-    },
-    {
-      "trigger": "EAGLContext.currentContext",
-      "contents": "currentContext"
     },
     {
       "trigger": "EAGLContext.setCurrentContext:",
@@ -17574,16 +17718,8 @@
       "contents": "FALSE"
     },
     {
-      "trigger": "GCController.controllers",
-      "contents": "controllers"
-    },
-    {
       "trigger": "GCController.startWirelessControllerDiscoveryWithCompletionHandler:",
       "contents": "startWirelessControllerDiscoveryWithCompletionHandler(${1:void (^)(void) completionHandler})"
-    },
-    {
-      "trigger": "GCController.stopWirelessControllerDiscovery",
-      "contents": "stopWirelessControllerDiscovery"
     },
     {
       "trigger": "GCControllerDidConnectNotification (NSString*)",
@@ -17622,24 +17758,12 @@
       "contents": "resetAchievementsWithCompletionHandler(${1:void (^)(NSError *) completionHandler})"
     },
     {
-      "trigger": "GKAchievementDescription.incompleteAchievementImage",
-      "contents": "incompleteAchievementImage"
-    },
-    {
       "trigger": "GKAchievementDescription.loadAchievementDescriptionsWithCompletionHandler:",
       "contents": "loadAchievementDescriptionsWithCompletionHandler(${1:void (^)(NSArray *, NSError *) completionHandler})"
     },
     {
-      "trigger": "GKAchievementDescription.placeholderCompletedAchievementImage",
-      "contents": "placeholderCompletedAchievementImage"
-    },
-    {
       "trigger": "GKChallenge.loadReceivedChallengesWithCompletionHandler:",
       "contents": "loadReceivedChallengesWithCompletionHandler(${1:void (^)(NSArray *, NSError *) completionHandler})"
-    },
-    {
-      "trigger": "GKChallengeEventHandler.challengeEventHandler",
-      "contents": "challengeEventHandler"
     },
     {
       "trigger": "GKChallengeStateCompleted (2)",
@@ -17770,10 +17894,6 @@
       "contents": "GKExchangeTimeoutNone"
     },
     {
-      "trigger": "GKFriendRequestComposeViewController.maxNumberOfRecipients",
-      "contents": "maxNumberOfRecipients"
-    },
-    {
       "trigger": "GKGameCenterViewControllerStateAchievements (1)",
       "contents": "GKGameCenterViewControllerStateAchievements"
     },
@@ -17850,10 +17970,6 @@
       "contents": "GKLeaderboardTimeScopeWeek"
     },
     {
-      "trigger": "GKLocalPlayer.localPlayer",
-      "contents": "localPlayer"
-    },
-    {
       "trigger": "GKMatchRequest.maxPlayersAllowedForMatchOfType:",
       "contents": "maxPlayersAllowedForMatchOfType(${1:GKMatchType matchType})"
     },
@@ -17876,10 +17992,6 @@
     {
       "trigger": "GKMatchTypeTurnBased (2)",
       "contents": "GKMatchTypeTurnBased"
-    },
-    {
-      "trigger": "GKMatchmaker.sharedMatchmaker",
-      "contents": "sharedMatchmaker"
     },
     {
       "trigger": "GKNotificationBanner.showBannerWithTitle:message:completionHandler:",
@@ -18046,10 +18158,6 @@
       "contents": "GKSessionUnknownError"
     },
     {
-      "trigger": "GKTurnBasedEventHandler.sharedTurnBasedEventHandler",
-      "contents": "sharedTurnBasedEventHandler"
-    },
-    {
       "trigger": "GKTurnBasedMatch.findMatchForRequest:withCompletionHandler:",
       "contents": "findMatchForRequest(${1:GKMatchRequest* request}, withCompletionHandler:${2:void (^)(GKTurnBasedMatch *, NSError *) completionHandler})"
     },
@@ -18154,10 +18262,6 @@
       "contents": "GKTurnTimeoutNone"
     },
     {
-      "trigger": "GKVoiceChat.isVoIPAllowed",
-      "contents": "isVoIPAllowed"
-    },
-    {
       "trigger": "GKVoiceChatPlayerConnected (0)",
       "contents": "GKVoiceChatPlayerConnected"
     },
@@ -18176,14 +18280,6 @@
     {
       "trigger": "GKVoiceChatPlayerSpeaking (2)",
       "contents": "GKVoiceChatPlayerSpeaking"
-    },
-    {
-      "trigger": "GKVoiceChatService.defaultVoiceChatService",
-      "contents": "defaultVoiceChatService"
-    },
-    {
-      "trigger": "GKVoiceChatService.isVoIPAllowed",
-      "contents": "isVoIPAllowed"
     },
     {
       "trigger": "GKVoiceChatServiceAudioUnavailableError (32005)",
@@ -23990,18 +24086,6 @@
       "contents": "contextWithJSGlobalContextRef(${1:JSGlobalContextRef jsGlobalContextRef})"
     },
     {
-      "trigger": "JSContext.currentArguments",
-      "contents": "currentArguments"
-    },
-    {
-      "trigger": "JSContext.currentContext",
-      "contents": "currentContext"
-    },
-    {
-      "trigger": "JSContext.currentThis",
-      "contents": "currentThis"
-    },
-    {
       "trigger": "JSContextGetGlobalObject",
       "contents": "JSContextGetGlobalObject(${1:JSContextRef ctx})"
     },
@@ -24550,22 +24634,6 @@
       "contents": "MFMailComposeResultSent"
     },
     {
-      "trigger": "MFMailComposeViewController.canSendMail",
-      "contents": "canSendMail"
-    },
-    {
-      "trigger": "MFMessageComposeViewController.canSendAttachments",
-      "contents": "canSendAttachments"
-    },
-    {
-      "trigger": "MFMessageComposeViewController.canSendSubject",
-      "contents": "canSendSubject"
-    },
-    {
-      "trigger": "MFMessageComposeViewController.canSendText",
-      "contents": "canSendText"
-    },
-    {
       "trigger": "MFMessageComposeViewController.isSupportedAttachmentUTI:",
       "contents": "isSupportedAttachmentUTI(${1:NSString* uti})"
     },
@@ -24748,10 +24816,6 @@
     {
       "trigger": "MIDINetworkNotificationSessionDidChange (NSString*)",
       "contents": "MIDINetworkNotificationSessionDidChange"
-    },
-    {
-      "trigger": "MIDINetworkSession.defaultSession",
-      "contents": "defaultSession"
     },
     {
       "trigger": "MIDIObjectFindByUniqueID",
@@ -25034,16 +25098,8 @@
       "contents": "MKLaunchOptionsShowsTrafficKey"
     },
     {
-      "trigger": "MKMapCamera.camera",
-      "contents": "camera"
-    },
-    {
       "trigger": "MKMapCamera.cameraLookingAtCenterCoordinate:fromEyeCoordinate:eyeAltitude:",
       "contents": "cameraLookingAtCenterCoordinate(${1:CLLocationCoordinate2D centerCoordinate}, fromEyeCoordinate:${2:CLLocationCoordinate2D eyeCoordinate}, eyeAltitude:${3:CLLocationDistance eyeAltitude})"
-    },
-    {
-      "trigger": "MKMapItem.mapItemForCurrentLocation",
-      "contents": "mapItemForCurrentLocation"
     },
     {
       "trigger": "MKMapItem.openMapsWithItems:launchOptions:",
@@ -25454,10 +25510,6 @@
       "contents": "MPMediaItemPropertyUserGrouping"
     },
     {
-      "trigger": "MPMediaLibrary.defaultMediaLibrary",
-      "contents": "defaultMediaLibrary"
-    },
-    {
       "trigger": "MPMediaLibraryDidChangeNotification (NSString*)",
       "contents": "MPMediaLibraryDidChangeNotification"
     },
@@ -25512,42 +25564,6 @@
     {
       "trigger": "MPMediaPropertyPredicate.predicateWithValue:forProperty:comparisonType:",
       "contents": "predicateWithValue(${1:id value}, forProperty:${2:NSString* property}, comparisonType:${3:MPMediaPredicateComparison comparisonType})"
-    },
-    {
-      "trigger": "MPMediaQuery.albumsQuery",
-      "contents": "albumsQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.artistsQuery",
-      "contents": "artistsQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.audiobooksQuery",
-      "contents": "audiobooksQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.compilationsQuery",
-      "contents": "compilationsQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.composersQuery",
-      "contents": "composersQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.genresQuery",
-      "contents": "genresQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.playlistsQuery",
-      "contents": "playlistsQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.podcastsQuery",
-      "contents": "podcastsQuery"
-    },
-    {
-      "trigger": "MPMediaQuery.songsQuery",
-      "contents": "songsQuery"
     },
     {
       "trigger": "MPMediaTypeAny (4294967295)",
@@ -25708,10 +25724,6 @@
     {
       "trigger": "MPMoviePlayerContentPreloadDidFinishNotification (NSString*)",
       "contents": "MPMoviePlayerContentPreloadDidFinishNotification"
-    },
-    {
-      "trigger": "MPMoviePlayerController.preparePrerollAds",
-      "contents": "preparePrerollAds"
     },
     {
       "trigger": "MPMoviePlayerDidEnterFullscreenNotification (NSString*)",
@@ -25886,14 +25898,6 @@
       "contents": "MPMusicPlaybackStateStopped"
     },
     {
-      "trigger": "MPMusicPlayerController.applicationMusicPlayer",
-      "contents": "applicationMusicPlayer"
-    },
-    {
-      "trigger": "MPMusicPlayerController.iPodMusicPlayer",
-      "contents": "iPodMusicPlayer"
-    },
-    {
       "trigger": "MPMusicPlayerControllerNowPlayingItemDidChangeNotification (NSString*)",
       "contents": "MPMusicPlayerControllerNowPlayingItemDidChangeNotification"
     },
@@ -25936,10 +25940,6 @@
     {
       "trigger": "MPMusicShuffleModeSongs (2)",
       "contents": "MPMusicShuffleModeSongs"
-    },
-    {
-      "trigger": "MPNowPlayingInfoCenter.defaultCenter",
-      "contents": "defaultCenter"
     },
     {
       "trigger": "MPNowPlayingInfoPropertyChapterCount (NSString*)",
@@ -26282,10 +26282,6 @@
       "contents": "NKIssueDownloadCompletedNotification"
     },
     {
-      "trigger": "NKLibrary.sharedLibrary",
-      "contents": "sharedLibrary"
-    },
-    {
       "trigger": "NSASCIIStringEncoding (1)",
       "contents": "NSASCIIStringEncoding"
     },
@@ -26402,10 +26398,6 @@
       "contents": "NSArgumentDomain"
     },
     {
-      "trigger": "NSArray.array",
-      "contents": "array"
-    },
-    {
       "trigger": "NSArray.arrayWithArray:",
       "contents": "arrayWithArray(${1:NSArray* array})"
     },
@@ -26428,10 +26420,6 @@
     {
       "trigger": "NSArray.arrayWithObjects:count:",
       "contents": "arrayWithObjects(${1:id* objects}, count:${2:NSUInteger cnt})"
-    },
-    {
-      "trigger": "NSAssertionHandler.currentHandler",
-      "contents": "currentHandler"
     },
     {
       "trigger": "NSAssertionHandlerKey (NSString*)",
@@ -26542,14 +26530,6 @@
       "contents": "URLsForResourcesWithExtension(${1:NSString* ext}, subdirectory:${2:NSString* subpath}, inBundleWithURL:${3:NSURL* bundleURL})"
     },
     {
-      "trigger": "NSBundle.allBundles",
-      "contents": "allBundles"
-    },
-    {
-      "trigger": "NSBundle.allFrameworks",
-      "contents": "allFrameworks"
-    },
-    {
       "trigger": "NSBundle.bundleForClass:",
       "contents": "bundleForClass(${1:Class aClass})"
     },
@@ -26564,10 +26544,6 @@
     {
       "trigger": "NSBundle.bundleWithURL:",
       "contents": "bundleWithURL(${1:NSURL* url})"
-    },
-    {
-      "trigger": "NSBundle.mainBundle",
-      "contents": "mainBundle"
     },
     {
       "trigger": "NSBundle.pathForResource:ofType:inDirectory:",
@@ -26694,14 +26670,6 @@
       "contents": "NSCalculationUnderflow"
     },
     {
-      "trigger": "NSCalendar.autoupdatingCurrentCalendar",
-      "contents": "autoupdatingCurrentCalendar"
-    },
-    {
-      "trigger": "NSCalendar.currentCalendar",
-      "contents": "currentCalendar"
-    },
-    {
       "trigger": "NSCalendarCalendarUnit (1048576)",
       "contents": "NSCalendarCalendarUnit"
     },
@@ -26822,38 +26790,6 @@
       "contents": "NSCharacterEncodingDocumentAttribute"
     },
     {
-      "trigger": "NSCharacterSet.URLFragmentAllowedCharacterSet",
-      "contents": "URLFragmentAllowedCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.URLHostAllowedCharacterSet",
-      "contents": "URLHostAllowedCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.URLPasswordAllowedCharacterSet",
-      "contents": "URLPasswordAllowedCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.URLPathAllowedCharacterSet",
-      "contents": "URLPathAllowedCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.URLQueryAllowedCharacterSet",
-      "contents": "URLQueryAllowedCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.URLUserAllowedCharacterSet",
-      "contents": "URLUserAllowedCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.alphanumericCharacterSet",
-      "contents": "alphanumericCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.capitalizedLetterCharacterSet",
-      "contents": "capitalizedLetterCharacterSet"
-    },
-    {
       "trigger": "NSCharacterSet.characterSetWithBitmapRepresentation:",
       "contents": "characterSetWithBitmapRepresentation(${1:NSData* data})"
     },
@@ -26870,58 +26806,6 @@
       "contents": "characterSetWithRange(${1:NSRange aRange})"
     },
     {
-      "trigger": "NSCharacterSet.controlCharacterSet",
-      "contents": "controlCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.decimalDigitCharacterSet",
-      "contents": "decimalDigitCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.decomposableCharacterSet",
-      "contents": "decomposableCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.illegalCharacterSet",
-      "contents": "illegalCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.letterCharacterSet",
-      "contents": "letterCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.lowercaseLetterCharacterSet",
-      "contents": "lowercaseLetterCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.newlineCharacterSet",
-      "contents": "newlineCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.nonBaseCharacterSet",
-      "contents": "nonBaseCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.punctuationCharacterSet",
-      "contents": "punctuationCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.symbolCharacterSet",
-      "contents": "symbolCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.uppercaseLetterCharacterSet",
-      "contents": "uppercaseLetterCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.whitespaceAndNewlineCharacterSet",
-      "contents": "whitespaceAndNewlineCharacterSet"
-    },
-    {
-      "trigger": "NSCharacterSet.whitespaceCharacterSet",
-      "contents": "whitespaceCharacterSet"
-    },
-    {
       "trigger": "NSChineseCalendar (NSString*)",
       "contents": "NSChineseCalendar"
     },
@@ -26936,10 +26820,6 @@
     {
       "trigger": "NSCoderMethods.setVersion:",
       "contents": "setVersion(${1:NSInteger aVersion})"
-    },
-    {
-      "trigger": "NSCoderMethods.version",
-      "contents": "version"
     },
     {
       "trigger": "NSComparisonPredicate.predicateWithLeftExpression:rightExpression:customSelector:",
@@ -27154,10 +27034,6 @@
       "contents": "NSCustomSelectorPredicateOperatorType"
     },
     {
-      "trigger": "NSData.data",
-      "contents": "data"
-    },
-    {
       "trigger": "NSData.dataWithBytes:length:",
       "contents": "dataWithBytes(${1:void* bytes}, length:${2:NSUInteger length})"
     },
@@ -27278,10 +27154,6 @@
       "contents": "NSDataWritingWithoutOverwriting"
     },
     {
-      "trigger": "NSDate.date",
-      "contents": "date"
-    },
-    {
       "trigger": "NSDate.dateWithTimeInterval:sinceDate:",
       "contents": "dateWithTimeInterval(${1:NSTimeInterval secsToBeAdded}, sinceDate:${2:NSDate* date})"
     },
@@ -27298,18 +27170,6 @@
       "contents": "dateWithTimeIntervalSinceReferenceDate(${1:NSTimeInterval ti})"
     },
     {
-      "trigger": "NSDate.distantFuture",
-      "contents": "distantFuture"
-    },
-    {
-      "trigger": "NSDate.distantPast",
-      "contents": "distantPast"
-    },
-    {
-      "trigger": "NSDate.timeIntervalSinceReferenceDate",
-      "contents": "timeIntervalSinceReferenceDate"
-    },
-    {
       "trigger": "NSDateAttributeType (900)",
       "contents": "NSDateAttributeType"
     },
@@ -27320,10 +27180,6 @@
     {
       "trigger": "NSDateFormatter.dateFormatFromTemplate:options:locale:",
       "contents": "dateFormatFromTemplate(${1:NSString* tmplate}, options:${2:NSUInteger opts}, locale:${3:NSLocale* locale})"
-    },
-    {
-      "trigger": "NSDateFormatter.defaultFormatterBehavior",
-      "contents": "defaultFormatterBehavior"
     },
     {
       "trigger": "NSDateFormatter.localizedStringFromDate:dateStyle:timeStyle:",
@@ -27438,32 +27294,8 @@
       "contents": "decimalNumberWithString(${1:NSString* numberValue}, locale:${2:id locale})"
     },
     {
-      "trigger": "NSDecimalNumber.defaultBehavior",
-      "contents": "defaultBehavior"
-    },
-    {
-      "trigger": "NSDecimalNumber.maximumDecimalNumber",
-      "contents": "maximumDecimalNumber"
-    },
-    {
-      "trigger": "NSDecimalNumber.minimumDecimalNumber",
-      "contents": "minimumDecimalNumber"
-    },
-    {
-      "trigger": "NSDecimalNumber.notANumber",
-      "contents": "notANumber"
-    },
-    {
-      "trigger": "NSDecimalNumber.one",
-      "contents": "one"
-    },
-    {
       "trigger": "NSDecimalNumber.setDefaultBehavior:",
       "contents": "setDefaultBehavior(${1:id behavior})"
-    },
-    {
-      "trigger": "NSDecimalNumber.zero",
-      "contents": "zero"
     },
     {
       "trigger": "NSDecimalNumberDivideByZeroException (NSString*)",
@@ -27476,10 +27308,6 @@
     {
       "trigger": "NSDecimalNumberHandler.decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:",
       "contents": "decimalNumberHandlerWithRoundingMode(${1:NSRoundingMode roundingMode}, scale:${2:short scale}, raiseOnExactness:${3:BOOL exact}, raiseOnOverflow:${4:BOOL overflow}, raiseOnUnderflow:${5:BOOL underflow}, raiseOnDivideByZero:${6:BOOL divideByZero})"
-    },
-    {
-      "trigger": "NSDecimalNumberHandler.defaultDecimalNumberHandler",
-      "contents": "defaultDecimalNumberHandler"
     },
     {
       "trigger": "NSDecimalNumberOverflowException (NSString*)",
@@ -27568,10 +27396,6 @@
     {
       "trigger": "NSDiacriticInsensitiveSearch (128)",
       "contents": "NSDiacriticInsensitiveSearch"
-    },
-    {
-      "trigger": "NSDictionary.dictionary",
-      "contents": "dictionary"
     },
     {
       "trigger": "NSDictionary.dictionaryWithContentsOfFile:",
@@ -27766,20 +27590,12 @@
       "contents": "expressionForAggregate(${1:NSArray* subexpressions})"
     },
     {
-      "trigger": "NSExpression.expressionForAnyKey",
-      "contents": "expressionForAnyKey"
-    },
-    {
       "trigger": "NSExpression.expressionForBlock:arguments:",
       "contents": "expressionForBlock(${1:id (^)(id, NSArray *, NSMutableDictionary *) block}, arguments:${2:NSArray* arguments})"
     },
     {
       "trigger": "NSExpression.expressionForConstantValue:",
       "contents": "expressionForConstantValue(${1:id obj})"
-    },
-    {
-      "trigger": "NSExpression.expressionForEvaluatedObject",
-      "contents": "expressionForEvaluatedObject"
     },
     {
       "trigger": "NSExpression.expressionForFunction:arguments:",
@@ -27886,10 +27702,6 @@
       "contents": "addFilePresenter(${1:id filePresenter})"
     },
     {
-      "trigger": "NSFileCoordinator.filePresenters",
-      "contents": "filePresenters"
-    },
-    {
       "trigger": "NSFileCoordinator.removeFilePresenter:",
       "contents": "removeFilePresenter(${1:id filePresenter})"
     },
@@ -27978,22 +27790,6 @@
       "contents": "fileHandleForWritingToURL(${1:NSURL* url}, error:${2:NSError** error})"
     },
     {
-      "trigger": "NSFileHandle.fileHandleWithNullDevice",
-      "contents": "fileHandleWithNullDevice"
-    },
-    {
-      "trigger": "NSFileHandle.fileHandleWithStandardError",
-      "contents": "fileHandleWithStandardError"
-    },
-    {
-      "trigger": "NSFileHandle.fileHandleWithStandardInput",
-      "contents": "fileHandleWithStandardInput"
-    },
-    {
-      "trigger": "NSFileHandle.fileHandleWithStandardOutput",
-      "contents": "fileHandleWithStandardOutput"
-    },
-    {
       "trigger": "NSFileHandleConnectionAcceptedNotification (NSString*)",
       "contents": "NSFileHandleConnectionAcceptedNotification"
     },
@@ -28032,10 +27828,6 @@
     {
       "trigger": "NSFileLockingError (255)",
       "contents": "NSFileLockingError"
-    },
-    {
-      "trigger": "NSFileManager.defaultManager",
-      "contents": "defaultManager"
     },
     {
       "trigger": "NSFileManagerItemReplacementUsingNewMetadataOnly (1)",
@@ -28750,10 +28542,6 @@
       "contents": "NSHTTPCookieSecure"
     },
     {
-      "trigger": "NSHTTPCookieStorage.sharedHTTPCookieStorage",
-      "contents": "sharedHTTPCookieStorage"
-    },
-    {
       "trigger": "NSHTTPCookieValue (NSString*)",
       "contents": "NSHTTPCookieValue"
     },
@@ -28768,10 +28556,6 @@
     {
       "trigger": "NSHashTable.hashTableWithOptions:",
       "contents": "hashTableWithOptions(${1:NSPointerFunctionsOptions options})"
-    },
-    {
-      "trigger": "NSHashTable.weakObjectsHashTable",
-      "contents": "weakObjectsHashTable"
     },
     {
       "trigger": "NSHashTableCopyIn (65536)",
@@ -28864,10 +28648,6 @@
     {
       "trigger": "NSIndexPath.indexPathWithIndexes:length:",
       "contents": "indexPathWithIndexes(${1:NSUInteger* indexes}, length:${2:NSUInteger length})"
-    },
-    {
-      "trigger": "NSIndexSet.indexSet",
-      "contents": "indexSet"
     },
     {
       "trigger": "NSIndexSet.indexSetWithIndex:",
@@ -29090,10 +28870,6 @@
       "contents": "NSKeyValueChangeSetting"
     },
     {
-      "trigger": "NSKeyValueCoding.accessInstanceVariablesDirectly",
-      "contents": "accessInstanceVariablesDirectly"
-    },
-    {
       "trigger": "NSKeyValueIntersectSetMutation (3)",
       "contents": "NSKeyValueIntersectSetMutation"
     },
@@ -29158,10 +28934,6 @@
       "contents": "setClassName(${1:NSString* codedName}, forClass:${2:Class cls})"
     },
     {
-      "trigger": "NSKeyedArchiverObjectSubstitution.classFallbacksForKeyedArchiver",
-      "contents": "classFallbacksForKeyedArchiver"
-    },
-    {
       "trigger": "NSKeyedUnarchiveFromDataTransformerName (NSString*)",
       "contents": "NSKeyedUnarchiveFromDataTransformerName"
     },
@@ -29180,10 +28952,6 @@
     {
       "trigger": "NSKeyedUnarchiver.unarchiveObjectWithFile:",
       "contents": "unarchiveObjectWithFile(${1:NSString* path})"
-    },
-    {
-      "trigger": "NSKeyedUnarchiverObjectSubstitution.classForKeyedUnarchiver",
-      "contents": "classForKeyedUnarchiver"
     },
     {
       "trigger": "NSLayoutAttributeBaseline (11)",
@@ -29546,26 +29314,6 @@
       "contents": "NSLocalDomainMask"
     },
     {
-      "trigger": "NSLocale.ISOCountryCodes",
-      "contents": "ISOCountryCodes"
-    },
-    {
-      "trigger": "NSLocale.ISOCurrencyCodes",
-      "contents": "ISOCurrencyCodes"
-    },
-    {
-      "trigger": "NSLocale.ISOLanguageCodes",
-      "contents": "ISOLanguageCodes"
-    },
-    {
-      "trigger": "NSLocale.autoupdatingCurrentLocale",
-      "contents": "autoupdatingCurrentLocale"
-    },
-    {
-      "trigger": "NSLocale.availableLocaleIdentifiers",
-      "contents": "availableLocaleIdentifiers"
-    },
-    {
       "trigger": "NSLocale.canonicalLanguageIdentifierFromString:",
       "contents": "canonicalLanguageIdentifierFromString(${1:NSString* string})"
     },
@@ -29578,16 +29326,8 @@
       "contents": "characterDirectionForLanguage(${1:NSString* isoLangCode})"
     },
     {
-      "trigger": "NSLocale.commonISOCurrencyCodes",
-      "contents": "commonISOCurrencyCodes"
-    },
-    {
       "trigger": "NSLocale.componentsFromLocaleIdentifier:",
       "contents": "componentsFromLocaleIdentifier(${1:NSString* string})"
-    },
-    {
-      "trigger": "NSLocale.currentLocale",
-      "contents": "currentLocale"
     },
     {
       "trigger": "NSLocale.lineDirectionForLanguage:",
@@ -29604,14 +29344,6 @@
     {
       "trigger": "NSLocale.localeWithLocaleIdentifier:",
       "contents": "localeWithLocaleIdentifier(${1:NSString* ident})"
-    },
-    {
-      "trigger": "NSLocale.preferredLanguages",
-      "contents": "preferredLanguages"
-    },
-    {
-      "trigger": "NSLocale.systemLocale",
-      "contents": "systemLocale"
     },
     {
       "trigger": "NSLocale.windowsLocaleCodeFromLocaleIdentifier:",
@@ -29790,10 +29522,6 @@
       "contents": "NSMallocException"
     },
     {
-      "trigger": "NSManagedObject.contextShouldIgnoreUnmodeledPropertyChanges",
-      "contents": "contextShouldIgnoreUnmodeledPropertyChanges"
-    },
-    {
       "trigger": "NSManagedObjectContextDidSaveNotification (NSString*)",
       "contents": "NSManagedObjectContextDidSaveNotification"
     },
@@ -29852,22 +29580,6 @@
     {
       "trigger": "NSMapTable.mapTableWithKeyOptions:valueOptions:",
       "contents": "mapTableWithKeyOptions(${1:NSPointerFunctionsOptions keyOptions}, valueOptions:${2:NSPointerFunctionsOptions valueOptions})"
-    },
-    {
-      "trigger": "NSMapTable.strongToStrongObjectsMapTable",
-      "contents": "strongToStrongObjectsMapTable"
-    },
-    {
-      "trigger": "NSMapTable.strongToWeakObjectsMapTable",
-      "contents": "strongToWeakObjectsMapTable"
-    },
-    {
-      "trigger": "NSMapTable.weakToStrongObjectsMapTable",
-      "contents": "weakToStrongObjectsMapTable"
-    },
-    {
-      "trigger": "NSMapTable.weakToWeakObjectsMapTable",
-      "contents": "weakToWeakObjectsMapTable"
     },
     {
       "trigger": "NSMapTableCopyIn (65536)",
@@ -30306,10 +30018,6 @@
       "contents": "notificationWithName(${1:NSString* aName}, object:${2:id anObject}, userInfo:${3:NSDictionary* aUserInfo})"
     },
     {
-      "trigger": "NSNotificationCenter.defaultCenter",
-      "contents": "defaultCenter"
-    },
-    {
       "trigger": "NSNotificationCoalescingOnName (1)",
       "contents": "NSNotificationCoalescingOnName"
     },
@@ -30320,14 +30028,6 @@
     {
       "trigger": "NSNotificationNoCoalescing (0)",
       "contents": "NSNotificationNoCoalescing"
-    },
-    {
-      "trigger": "NSNotificationQueue.defaultQueue",
-      "contents": "defaultQueue"
-    },
-    {
-      "trigger": "NSNull.null",
-      "contents": "null"
     },
     {
       "trigger": "NSNullifyDeleteRule (1)",
@@ -30392,10 +30092,6 @@
     {
       "trigger": "NSNumber.numberWithUnsignedShort:",
       "contents": "numberWithUnsignedShort(${1:unsigned short value})"
-    },
-    {
-      "trigger": "NSNumberFormatter.defaultFormatterBehavior",
-      "contents": "defaultFormatterBehavior"
     },
     {
       "trigger": "NSNumberFormatter.localizedStringFromNumber:numberStyle:",
@@ -30494,20 +30190,8 @@
       "contents": "NSOSStatusErrorDomain"
     },
     {
-      "trigger": "NSObject.accessInstanceVariablesDirectly",
-      "contents": "accessInstanceVariablesDirectly"
-    },
-    {
-      "trigger": "NSObject.alloc",
-      "contents": "alloc"
-    },
-    {
       "trigger": "NSObject.allocWithZone:",
       "contents": "allocWithZone(${1:struct _NSZone* zone})"
-    },
-    {
-      "trigger": "NSObject.appearance",
-      "contents": "appearance"
     },
     {
       "trigger": "NSObject.appearanceWhenContainedIn:",
@@ -30526,32 +30210,12 @@
       "contents": "cancelPreviousPerformRequestsWithTarget(${1:id aTarget}, selector:${2:SEL aSelector}, object:${3:id anArgument})"
     },
     {
-      "trigger": "NSObject.class",
-      "contents": "class"
-    },
-    {
-      "trigger": "NSObject.classFallbacksForKeyedArchiver",
-      "contents": "classFallbacksForKeyedArchiver"
-    },
-    {
-      "trigger": "NSObject.classForKeyedUnarchiver",
-      "contents": "classForKeyedUnarchiver"
-    },
-    {
       "trigger": "NSObject.conformsToProtocol:",
       "contents": "conformsToProtocol(${1:Protocol* protocol})"
     },
     {
       "trigger": "NSObject.copyWithZone:",
       "contents": "copyWithZone(${1:struct _NSZone* zone})"
-    },
-    {
-      "trigger": "NSObject.description",
-      "contents": "description"
-    },
-    {
-      "trigger": "NSObject.initialize",
-      "contents": "initialize"
     },
     {
       "trigger": "NSObject.instanceMethodForSelector:",
@@ -30574,16 +30238,8 @@
       "contents": "keyPathsForValuesAffectingValueForKey(${1:NSString* key})"
     },
     {
-      "trigger": "NSObject.load",
-      "contents": "load"
-    },
-    {
       "trigger": "NSObject.mutableCopyWithZone:",
       "contents": "mutableCopyWithZone(${1:struct _NSZone* zone})"
-    },
-    {
-      "trigger": "NSObject.new",
-      "contents": "new"
     },
     {
       "trigger": "NSObject.objectWithRestorationIdentifierPath:coder:",
@@ -30618,32 +30274,12 @@
       "contents": "stringForTraits(${1:unsigned long long arg1})"
     },
     {
-      "trigger": "NSObject.superclass",
-      "contents": "superclass"
-    },
-    {
-      "trigger": "NSObject.supportsSecureCoding",
-      "contents": "supportsSecureCoding"
-    },
-    {
       "trigger": "NSObject.uiaxElementAtPosition:",
       "contents": "uiaxElementAtPosition(${1:struct CGPoint arg1})"
     },
     {
       "trigger": "NSObject.uiaxElementWithAXUIElementRef:",
       "contents": "uiaxElementWithAXUIElementRef(${1:struct __AXUIElement* arg1})"
-    },
-    {
-      "trigger": "NSObject.uiaxFocusedApplicationElement",
-      "contents": "uiaxFocusedApplicationElement"
-    },
-    {
-      "trigger": "NSObject.uiaxSystemWideElement",
-      "contents": "uiaxSystemWideElement"
-    },
-    {
-      "trigger": "NSObject.version",
-      "contents": "version"
     },
     {
       "trigger": "NSObject.viewControllerWithRestorationIdentifierPath:coder:",
@@ -30672,14 +30308,6 @@
     {
       "trigger": "NSOpenStepUnicodeReservedBase (62464)",
       "contents": "NSOpenStepUnicodeReservedBase"
-    },
-    {
-      "trigger": "NSOperationQueue.currentQueue",
-      "contents": "currentQueue"
-    },
-    {
-      "trigger": "NSOperationQueue.mainQueue",
-      "contents": "mainQueue"
     },
     {
       "trigger": "NSOperationQueueDefaultMaxConcurrentOperationCount (-1)",
@@ -30720,10 +30348,6 @@
     {
       "trigger": "NSOrderedSame (0)",
       "contents": "NSOrderedSame"
-    },
-    {
-      "trigger": "NSOrderedSet.orderedSet",
-      "contents": "orderedSet"
     },
     {
       "trigger": "NSOrderedSet.orderedSetWithArray:",
@@ -30774,10 +30398,6 @@
       "contents": "outputStreamToFileAtPath(${1:NSString* path}, append:${2:BOOL shouldAppend})"
     },
     {
-      "trigger": "NSOutputStream.outputStreamToMemory",
-      "contents": "outputStreamToMemory"
-    },
-    {
       "trigger": "NSOutputStream.outputStreamWithURL:append:",
       "contents": "outputStreamWithURL(${1:NSURL* url}, append:${2:BOOL shouldAppend})"
     },
@@ -30802,10 +30422,6 @@
       "contents": "NSPaperSizeDocumentAttribute"
     },
     {
-      "trigger": "NSParagraphStyle.defaultParagraphStyle",
-      "contents": "defaultParagraphStyle"
-    },
-    {
       "trigger": "NSParagraphStyle.defaultWritingDirectionForLanguage:",
       "contents": "defaultWritingDirectionForLanguage(${1:NSString* languageName})"
     },
@@ -30826,10 +30442,6 @@
       "contents": "metadataForPersistentStoreWithURL(${1:NSURL* url}, error:${2:NSError** error})"
     },
     {
-      "trigger": "NSPersistentStore.migrationManagerClass",
-      "contents": "migrationManagerClass"
-    },
-    {
       "trigger": "NSPersistentStore.setMetadata:forPersistentStoreWithURL:error:",
       "contents": "setMetadata(${1:NSDictionary* metadata}, forPersistentStoreWithURL:${2:NSURL* url}, error:${3:NSError** error})"
     },
@@ -30840,10 +30452,6 @@
     {
       "trigger": "NSPersistentStoreCoordinator.registerStoreClass:forStoreType:",
       "contents": "registerStoreClass(${1:Class storeClass}, forStoreType:${2:NSString* storeType})"
-    },
-    {
-      "trigger": "NSPersistentStoreCoordinator.registeredStoreTypes",
-      "contents": "registeredStoreTypes"
     },
     {
       "trigger": "NSPersistentStoreCoordinator.removeUbiquitousContentAndPersistentStoreAtURL:options:error:",
@@ -30982,10 +30590,6 @@
       "contents": "NSPicturesDirectory"
     },
     {
-      "trigger": "NSPipe.pipe",
-      "contents": "pipe"
-    },
-    {
       "trigger": "NSPlainTextDocumentType (NSString*)",
       "contents": "NSPlainTextDocumentType"
     },
@@ -30996,14 +30600,6 @@
     {
       "trigger": "NSPointerArray.pointerArrayWithPointerFunctions:",
       "contents": "pointerArrayWithPointerFunctions(${1:NSPointerFunctions* functions})"
-    },
-    {
-      "trigger": "NSPointerArray.strongObjectsPointerArray",
-      "contents": "strongObjectsPointerArray"
-    },
-    {
-      "trigger": "NSPointerArray.weakObjectsPointerArray",
-      "contents": "weakObjectsPointerArray"
     },
     {
       "trigger": "NSPointerFunctions.pointerFunctionsWithOptions:",
@@ -31056,10 +30652,6 @@
     {
       "trigger": "NSPointerFunctionsWeakMemory (5)",
       "contents": "NSPointerFunctionsWeakMemory"
-    },
-    {
-      "trigger": "NSPort.port",
-      "contents": "port"
     },
     {
       "trigger": "NSPortDidBecomeInvalidNotification (NSString*)",
@@ -31120,14 +30712,6 @@
     {
       "trigger": "NSPrivateQueueConcurrencyType (1)",
       "contents": "NSPrivateQueueConcurrencyType"
-    },
-    {
-      "trigger": "NSProcessInfo.processInfo",
-      "contents": "processInfo"
-    },
-    {
-      "trigger": "NSProgress.currentProgress",
-      "contents": "currentProgress"
     },
     {
       "trigger": "NSProgress.progressWithTotalUnitCount:",
@@ -31262,16 +30846,8 @@
       "contents": "NSProtocolFromString(${1:NSString* namestr})"
     },
     {
-      "trigger": "NSProxy.alloc",
-      "contents": "alloc"
-    },
-    {
       "trigger": "NSProxy.allocWithZone:",
       "contents": "allocWithZone(${1:NSZone* zone})"
-    },
-    {
-      "trigger": "NSProxy.class",
-      "contents": "class"
     },
     {
       "trigger": "NSProxy.respondsToSelector:",
@@ -31410,14 +30986,6 @@
       "contents": "NSRoundUpToMultipleOfPageSize(${1:NSUInteger bytes})"
     },
     {
-      "trigger": "NSRunLoop.currentRunLoop",
-      "contents": "currentRunLoop"
-    },
-    {
-      "trigger": "NSRunLoop.mainRunLoop",
-      "contents": "mainRunLoop"
-    },
-    {
       "trigger": "NSRunLoopCommonModes (NSString*)",
       "contents": "NSRunLoopCommonModes"
     },
@@ -31466,16 +31034,8 @@
       "contents": "NSSecondCalendarUnit"
     },
     {
-      "trigger": "NSSecureCoding.supportsSecureCoding",
-      "contents": "supportsSecureCoding"
-    },
-    {
       "trigger": "NSSelectorFromString",
       "contents": "NSSelectorFromString(${1:NSString* aSelectorName})"
-    },
-    {
-      "trigger": "NSSet.set",
-      "contents": "set"
     },
     {
       "trigger": "NSSet.setWithArray:",
@@ -31742,14 +31302,6 @@
       "contents": "NSStrikethroughStyleAttributeName"
     },
     {
-      "trigger": "NSString.availableStringEncodings",
-      "contents": "availableStringEncodings"
-    },
-    {
-      "trigger": "NSString.defaultCStringEncoding",
-      "contents": "defaultCStringEncoding"
-    },
-    {
       "trigger": "NSString.localizedNameOfStringEncoding:",
       "contents": "localizedNameOfStringEncoding(${1:NSStringEncoding encoding})"
     },
@@ -31760,10 +31312,6 @@
     {
       "trigger": "NSString.pathWithComponents:",
       "contents": "pathWithComponents(${1:NSArray* components})"
-    },
-    {
-      "trigger": "NSString.string",
-      "contents": "string"
     },
     {
       "trigger": "NSString.stringWithCString:",
@@ -32362,36 +31910,8 @@
       "contents": "NSTextWritingDirectionOverride"
     },
     {
-      "trigger": "NSThread.callStackReturnAddresses",
-      "contents": "callStackReturnAddresses"
-    },
-    {
-      "trigger": "NSThread.callStackSymbols",
-      "contents": "callStackSymbols"
-    },
-    {
-      "trigger": "NSThread.currentThread",
-      "contents": "currentThread"
-    },
-    {
       "trigger": "NSThread.detachNewThreadSelector:toTarget:withObject:",
       "contents": "detachNewThreadSelector(${1:SEL selector}, toTarget:${2:id target}, withObject:${3:id argument})"
-    },
-    {
-      "trigger": "NSThread.exit",
-      "contents": "exit"
-    },
-    {
-      "trigger": "NSThread.isMainThread",
-      "contents": "isMainThread"
-    },
-    {
-      "trigger": "NSThread.isMultiThreaded",
-      "contents": "isMultiThreaded"
-    },
-    {
-      "trigger": "NSThread.mainThread",
-      "contents": "mainThread"
     },
     {
       "trigger": "NSThread.setThreadPriority:",
@@ -32406,10 +31926,6 @@
       "contents": "sleepUntilDate(${1:NSDate* date})"
     },
     {
-      "trigger": "NSThread.threadPriority",
-      "contents": "threadPriority"
-    },
-    {
       "trigger": "NSThreadWillExitNotification (NSString*)",
       "contents": "NSThreadWillExitNotification"
     },
@@ -32418,40 +31934,12 @@
       "contents": "NSTimeIntervalSince1970"
     },
     {
-      "trigger": "NSTimeZone.abbreviationDictionary",
-      "contents": "abbreviationDictionary"
-    },
-    {
-      "trigger": "NSTimeZone.defaultTimeZone",
-      "contents": "defaultTimeZone"
-    },
-    {
-      "trigger": "NSTimeZone.knownTimeZoneNames",
-      "contents": "knownTimeZoneNames"
-    },
-    {
-      "trigger": "NSTimeZone.localTimeZone",
-      "contents": "localTimeZone"
-    },
-    {
-      "trigger": "NSTimeZone.resetSystemTimeZone",
-      "contents": "resetSystemTimeZone"
-    },
-    {
       "trigger": "NSTimeZone.setAbbreviationDictionary:",
       "contents": "setAbbreviationDictionary(${1:NSDictionary* dict})"
     },
     {
       "trigger": "NSTimeZone.setDefaultTimeZone:",
       "contents": "setDefaultTimeZone(${1:NSTimeZone* aTimeZone})"
-    },
-    {
-      "trigger": "NSTimeZone.systemTimeZone",
-      "contents": "systemTimeZone"
-    },
-    {
-      "trigger": "NSTimeZone.timeZoneDataVersion",
-      "contents": "timeZoneDataVersion"
     },
     {
       "trigger": "NSTimeZone.timeZoneForSecondsFromGMT:",
@@ -32642,10 +32130,6 @@
       "contents": "setSharedURLCache(${1:NSURLCache* cache})"
     },
     {
-      "trigger": "NSURLCache.sharedURLCache",
-      "contents": "sharedURLCache"
-    },
-    {
       "trigger": "NSURLCacheStorageAllowed (0)",
       "contents": "NSURLCacheStorageAllowed"
     },
@@ -32720,10 +32204,6 @@
     {
       "trigger": "NSURLCredentialPersistenceSynchronizable (3)",
       "contents": "NSURLCredentialPersistenceSynchronizable"
-    },
-    {
-      "trigger": "NSURLCredentialStorage.sharedCredentialStorage",
-      "contents": "sharedCredentialStorage"
     },
     {
       "trigger": "NSURLCredentialStorageChangedNotification (NSString*)",
@@ -33202,10 +32682,6 @@
       "contents": "requestWithURL(${1:NSURL* URL}, cachePolicy:${2:NSURLRequestCachePolicy cachePolicy}, timeoutInterval:${3:NSTimeInterval timeoutInterval})"
     },
     {
-      "trigger": "NSURLRequest.supportsSecureCoding",
-      "contents": "supportsSecureCoding"
-    },
-    {
       "trigger": "NSURLRequestReloadIgnoringCacheData (1)",
       "contents": "NSURLRequestReloadIgnoringCacheData"
     },
@@ -33246,10 +32722,6 @@
       "contents": "sessionWithConfiguration(${1:NSURLSessionConfiguration* configuration}, delegate:${2:id delegate}, delegateQueue:${3:NSOperationQueue* queue})"
     },
     {
-      "trigger": "NSURLSession.sharedSession",
-      "contents": "sharedSession"
-    },
-    {
       "trigger": "NSURLSessionAuthChallengeCancelAuthenticationChallenge (2)",
       "contents": "NSURLSessionAuthChallengeCancelAuthenticationChallenge"
     },
@@ -33268,14 +32740,6 @@
     {
       "trigger": "NSURLSessionConfiguration.backgroundSessionConfiguration:",
       "contents": "backgroundSessionConfiguration(${1:NSString* identifier})"
-    },
-    {
-      "trigger": "NSURLSessionConfiguration.defaultSessionConfiguration",
-      "contents": "defaultSessionConfiguration"
-    },
-    {
-      "trigger": "NSURLSessionConfiguration.ephemeralSessionConfiguration",
-      "contents": "ephemeralSessionConfiguration"
     },
     {
       "trigger": "NSURLSessionDownloadTaskResumeData (NSString*)",
@@ -33538,10 +33002,6 @@
       "contents": "NSUTF8StringEncoding"
     },
     {
-      "trigger": "NSUUID.UUID",
-      "contents": "UUID"
-    },
-    {
       "trigger": "NSUUIDChangedPersistentStoresKey (NSString*)",
       "contents": "NSUUIDChangedPersistentStoresKey"
     },
@@ -33564,10 +33024,6 @@
     {
       "trigger": "NSUbiquitousFileUnavailableError (4353)",
       "contents": "NSUbiquitousFileUnavailableError"
-    },
-    {
-      "trigger": "NSUbiquitousKeyValueStore.defaultStore",
-      "contents": "defaultStore"
     },
     {
       "trigger": "NSUbiquitousKeyValueStoreAccountChange (3)",
@@ -33750,14 +33206,6 @@
       "contents": "NSUserCancelledError"
     },
     {
-      "trigger": "NSUserDefaults.resetStandardUserDefaults",
-      "contents": "resetStandardUserDefaults"
-    },
-    {
-      "trigger": "NSUserDefaults.standardUserDefaults",
-      "contents": "standardUserDefaults"
-    },
-    {
       "trigger": "NSUserDefaultsDidChangeNotification (NSString*)",
       "contents": "NSUserDefaultsDidChangeNotification"
     },
@@ -33914,24 +33362,12 @@
       "contents": "valueWithUIOffset(${1:UIOffset insets})"
     },
     {
-      "trigger": "NSValueTransformer.allowsReverseTransformation",
-      "contents": "allowsReverseTransformation"
-    },
-    {
       "trigger": "NSValueTransformer.setValueTransformer:forName:",
       "contents": "setValueTransformer(${1:NSValueTransformer* transformer}, forName:${2:NSString* name})"
     },
     {
-      "trigger": "NSValueTransformer.transformedValueClass",
-      "contents": "transformedValueClass"
-    },
-    {
       "trigger": "NSValueTransformer.valueTransformerForName:",
       "contents": "valueTransformerForName(${1:NSString* name})"
-    },
-    {
-      "trigger": "NSValueTransformer.valueTransformerNames",
-      "contents": "valueTransformerNames"
     },
     {
       "trigger": "NSVariableExpressionType (2)",
@@ -34534,10 +33970,6 @@
       "contents": "PKPassKitErrorDomain"
     },
     {
-      "trigger": "PKPassLibrary.isPassLibraryAvailable",
-      "contents": "isPassLibraryAvailable"
-    },
-    {
       "trigger": "PKPassLibraryAddedPassesUserInfoKey (NSString*)",
       "contents": "PKPassLibraryAddedPassesUserInfoKey"
     },
@@ -34704,10 +34136,6 @@
     {
       "trigger": "SKAction.playSoundFileNamed:waitForCompletion:",
       "contents": "playSoundFileNamed(${1:NSString* soundFile}, waitForCompletion:${2:BOOL wait})"
-    },
-    {
-      "trigger": "SKAction.removeFromParent",
-      "contents": "removeFromParent"
     },
     {
       "trigger": "SKAction.repeatAction:count:",
@@ -34950,24 +34378,12 @@
       "contents": "SKLabelVerticalAlignmentModeTop"
     },
     {
-      "trigger": "SKNode.node",
-      "contents": "node"
-    },
-    {
       "trigger": "SKPayment.paymentWithProduct:",
       "contents": "paymentWithProduct(${1:SKProduct* product})"
     },
     {
       "trigger": "SKPayment.paymentWithProductIdentifier:",
       "contents": "paymentWithProductIdentifier(${1:NSString* identifier})"
-    },
-    {
-      "trigger": "SKPaymentQueue.canMakePayments",
-      "contents": "canMakePayments"
-    },
-    {
-      "trigger": "SKPaymentQueue.defaultQueue",
-      "contents": "defaultQueue"
     },
     {
       "trigger": "SKPaymentTransactionStateFailed (2)",
@@ -35568,10 +34984,6 @@
     {
       "trigger": "SSL_RSA_WITH_RC4_128_SHA (5)",
       "contents": "SSL_RSA_WITH_RC4_128_SHA"
-    },
-    {
-      "trigger": "SSReadingList.defaultReadingList",
-      "contents": "defaultReadingList"
     },
     {
       "trigger": "SSReadingList.supportsURL:",
@@ -36274,40 +35686,12 @@
       "contents": "TWRequestMethodPOST"
     },
     {
-      "trigger": "TWTweetComposeViewController.canSendTweet",
-      "contents": "canSendTweet"
-    },
-    {
       "trigger": "TWTweetComposeViewControllerResultCancelled (0)",
       "contents": "TWTweetComposeViewControllerResultCancelled"
     },
     {
       "trigger": "TWTweetComposeViewControllerResultDone (1)",
       "contents": "TWTweetComposeViewControllerResultDone"
-    },
-    {
-      "trigger": "UIAActionSheet.toOneRelationshipKeys",
-      "contents": "toOneRelationshipKeys"
-    },
-    {
-      "trigger": "UIAAlert._moreToOneRelationshipKeys",
-      "contents": "_moreToOneRelationshipKeys"
-    },
-    {
-      "trigger": "UIAAlert.toOneRelationshipKeys",
-      "contents": "toOneRelationshipKeys"
-    },
-    {
-      "trigger": "UIAApplication.attributeKeys",
-      "contents": "attributeKeys"
-    },
-    {
-      "trigger": "UIAApplication.toManyRelationshipKeys",
-      "contents": "toManyRelationshipKeys"
-    },
-    {
-      "trigger": "UIAApplication.toOneRelationshipKeys",
-      "contents": "toOneRelationshipKeys"
     },
     {
       "trigger": "UIAElement._classForSimpleUIAXElement:",
@@ -36328,10 +35712,6 @@
     {
       "trigger": "UIAElement._convertRectToCurrentInterfaceOrientation:",
       "contents": "_convertRectToCurrentInterfaceOrientation(${1:id arg1})"
-    },
-    {
-      "trigger": "UIAElement._countsString",
-      "contents": "_countsString"
     },
     {
       "trigger": "UIAElement._delayForTimeInterval:",
@@ -36394,16 +35774,8 @@
       "contents": "_jsStringForUIAElement(${1:id arg1})"
     },
     {
-      "trigger": "UIAElement._liveCount",
-      "contents": "_liveCount"
-    },
-    {
       "trigger": "UIAElement._logVerbosity:format:",
       "contents": "_logVerbosity(${1:unsigned int arg1}, format:${2:id arg2})"
-    },
-    {
-      "trigger": "UIAElement._maxCount",
-      "contents": "_maxCount"
     },
     {
       "trigger": "UIAElement._nameForAXElement:",
@@ -36412,10 +35784,6 @@
     {
       "trigger": "UIAElement._patienceInvocationPathForUIAObject:",
       "contents": "_patienceInvocationPathForUIAObject(${1:id arg1})"
-    },
-    {
-      "trigger": "UIAElement._patienceRetryInterval",
-      "contents": "_patienceRetryInterval"
     },
     {
       "trigger": "UIAElement._performInvocationPath:",
@@ -36458,14 +35826,6 @@
       "contents": "_waitForInvocationPath(${1:id arg1})"
     },
     {
-      "trigger": "UIAElement.allKeys",
-      "contents": "allKeys"
-    },
-    {
-      "trigger": "UIAElement.attributeKeys",
-      "contents": "attributeKeys"
-    },
-    {
       "trigger": "UIAElement.elementAtPosition:",
       "contents": "elementAtPosition(${1:struct CGPoint arg1})"
     },
@@ -36474,32 +35834,12 @@
       "contents": "elementForUIAXElement(${1:id arg1})"
     },
     {
-      "trigger": "UIAElement.initialize",
-      "contents": "initialize"
-    },
-    {
-      "trigger": "UIAElement.patience",
-      "contents": "patience"
-    },
-    {
-      "trigger": "UIAElement.popPatience",
-      "contents": "popPatience"
-    },
-    {
       "trigger": "UIAElement.pushPatience:",
       "contents": "pushPatience(${1:double arg1})"
     },
     {
       "trigger": "UIAElement.setPatience:",
       "contents": "setPatience(${1:double arg1})"
-    },
-    {
-      "trigger": "UIAElement.toManyRelationshipKeys",
-      "contents": "toManyRelationshipKeys"
-    },
-    {
-      "trigger": "UIAElement.toOneRelationshipKeys",
-      "contents": "toOneRelationshipKeys"
     },
     {
       "trigger": "UIAElementArray._arrayWithArray:",
@@ -36514,52 +35854,12 @@
       "contents": "_cachedArrayAtPtr(${1:id* arg1})"
     },
     {
-      "trigger": "UIAElementArray._liveCount",
-      "contents": "_liveCount"
-    },
-    {
-      "trigger": "UIAElementArray._maxCount",
-      "contents": "_maxCount"
-    },
-    {
       "trigger": "UIAElementArray._removeCachedArrayAtPtr:",
       "contents": "_removeCachedArrayAtPtr(${1:id* arg1})"
     },
     {
-      "trigger": "UIAElementArray.initialize",
-      "contents": "initialize"
-    },
-    {
       "trigger": "UIAElementNil._elementNilWithInvocation:",
       "contents": "_elementNilWithInvocation(${1:id arg1})"
-    },
-    {
-      "trigger": "UIAElementNil._liveCount",
-      "contents": "_liveCount"
-    },
-    {
-      "trigger": "UIAElementNil._maxCount",
-      "contents": "_maxCount"
-    },
-    {
-      "trigger": "UIANavigationBar._moreToOneRelationshipKeys",
-      "contents": "_moreToOneRelationshipKeys"
-    },
-    {
-      "trigger": "UIANavigationBar.toOneRelationshipKeys",
-      "contents": "toOneRelationshipKeys"
-    },
-    {
-      "trigger": "UIAPicker._moreToManyRelationshipKeys",
-      "contents": "_moreToManyRelationshipKeys"
-    },
-    {
-      "trigger": "UIAPicker.toManyRelationshipKeys",
-      "contents": "toManyRelationshipKeys"
-    },
-    {
-      "trigger": "UIARecorder.defaultRecorder",
-      "contents": "defaultRecorder"
     },
     {
       "trigger": "UIARecorderAction._elementCanScroll:",
@@ -36574,14 +35874,6 @@
       "contents": "expressionForElement(${1:id arg1})"
     },
     {
-      "trigger": "UIAScreen.attributeKeys",
-      "contents": "attributeKeys"
-    },
-    {
-      "trigger": "UIASyntheticEvents.sharedEventGenerator",
-      "contents": "sharedEventGenerator"
-    },
-    {
       "trigger": "UIATableCell._classForSimpleUIAXElement:",
       "contents": "_classForSimpleUIAXElement(${1:id arg1})"
     },
@@ -36594,32 +35886,8 @@
       "contents": "_classForSimpleUIAXElement(${1:id arg1})"
     },
     {
-      "trigger": "UIATableView._moreToManyRelationshipKeys",
-      "contents": "_moreToManyRelationshipKeys"
-    },
-    {
-      "trigger": "UIATableView.toManyRelationshipKeys",
-      "contents": "toManyRelationshipKeys"
-    },
-    {
       "trigger": "UIATarget._locationForObject:withOptions:",
       "contents": "_locationForObject(${1:id arg1}, withOptions:${2:id arg2})"
-    },
-    {
-      "trigger": "UIATarget.attributeKeys",
-      "contents": "attributeKeys"
-    },
-    {
-      "trigger": "UIATarget.localTarget",
-      "contents": "localTarget"
-    },
-    {
-      "trigger": "UIATarget.toManyRelationshipKeys",
-      "contents": "toManyRelationshipKeys"
-    },
-    {
-      "trigger": "UIATarget.toOneRelationshipKeys",
-      "contents": "toOneRelationshipKeys"
     },
     {
       "trigger": "UIAXElement._attributeForString:",
@@ -36634,36 +35902,8 @@
       "contents": "_parameterizedAttributeForString(${1:id arg1})"
     },
     {
-      "trigger": "UIAXElement._parameterizedAttributeNumbers",
-      "contents": "_parameterizedAttributeNumbers"
-    },
-    {
-      "trigger": "UIAXElement._parameterizedAttributeStrings",
-      "contents": "_parameterizedAttributeStrings"
-    },
-    {
-      "trigger": "UIAXElement._parameterizedAttributesForStringsDictionary",
-      "contents": "_parameterizedAttributesForStringsDictionary"
-    },
-    {
-      "trigger": "UIAXElement._raiseAXErrorAPIDisabled",
-      "contents": "_raiseAXErrorAPIDisabled"
-    },
-    {
       "trigger": "UIAXElement._raiseIfAXErrorAPIDisabled:",
       "contents": "_raiseIfAXErrorAPIDisabled(${1:long arg1})"
-    },
-    {
-      "trigger": "UIAXElement._regularAttributeNumbers",
-      "contents": "_regularAttributeNumbers"
-    },
-    {
-      "trigger": "UIAXElement._regularAttributeStrings",
-      "contents": "_regularAttributeStrings"
-    },
-    {
-      "trigger": "UIAXElement._regularAttributesForStringsDictionary",
-      "contents": "_regularAttributesForStringsDictionary"
     },
     {
       "trigger": "UIAXElement._stringForAttribute:",
@@ -36672,30 +35912,6 @@
     {
       "trigger": "UIAXElement._stringForParameterizedAttribute:",
       "contents": "_stringForParameterizedAttribute(${1:int arg1})"
-    },
-    {
-      "trigger": "UIAXElement._stringsForParameterizedAttributesDictionary",
-      "contents": "_stringsForParameterizedAttributesDictionary"
-    },
-    {
-      "trigger": "UIAXElement._stringsForRegularAttributesDictionary",
-      "contents": "_stringsForRegularAttributesDictionary"
-    },
-    {
-      "trigger": "UIAXElement._stringsForTraitsDictionary",
-      "contents": "_stringsForTraitsDictionary"
-    },
-    {
-      "trigger": "UIAXElement._traitNumbers",
-      "contents": "_traitNumbers"
-    },
-    {
-      "trigger": "UIAXElement._traitStrings",
-      "contents": "_traitStrings"
-    },
-    {
-      "trigger": "UIAXElement.initialize",
-      "contents": "initialize"
     },
     {
       "trigger": "UIAXElement.registerObserver:forAXNotifications:",
@@ -36720,18 +35936,6 @@
     {
       "trigger": "UIAXElement.uiaxElementWithAXUIElementRef:",
       "contents": "uiaxElementWithAXUIElementRef(${1:struct __AXUIElement* arg1})"
-    },
-    {
-      "trigger": "UIAXElement.uiaxFocusedApplicationElement",
-      "contents": "uiaxFocusedApplicationElement"
-    },
-    {
-      "trigger": "UIAXElement.uiaxSystemWideElement",
-      "contents": "uiaxSystemWideElement"
-    },
-    {
-      "trigger": "UIAccelerometer.sharedAccelerometer",
-      "contents": "sharedAccelerometer"
     },
     {
       "trigger": "UIAccessibilityAnnouncementDidFinishNotification (NSString*)",
@@ -36926,10 +36130,6 @@
       "contents": "UIActionSheetStyleDefault"
     },
     {
-      "trigger": "UIActivity.activityCategory",
-      "contents": "activityCategory"
-    },
-    {
       "trigger": "UIActivityCategoryAction (0)",
       "contents": "UIActivityCategoryAction"
     },
@@ -37022,20 +36222,12 @@
       "contents": "UIAlertViewStyleSecureTextInput"
     },
     {
-      "trigger": "UIAppearance.appearance",
-      "contents": "appearance"
-    },
-    {
       "trigger": "UIAppearance.appearanceWhenContainedIn:",
       "contents": "appearanceWhenContainedIn(${1:Class* ContainerClass})"
     },
     {
       "trigger": "UIApplication.registerObjectForStateRestoration:restorationIdentifier:",
       "contents": "registerObjectForStateRestoration(${1:id object}, restorationIdentifier:${2:NSString* restorationIdentifier})"
-    },
-    {
-      "trigger": "UIApplication.sharedApplication",
-      "contents": "sharedApplication"
     },
     {
       "trigger": "UIApplicationBackgroundFetchIntervalMinimum (NSTimeInterval)",
@@ -37394,10 +36586,6 @@
       "contents": "UIBaselineAdjustmentNone"
     },
     {
-      "trigger": "UIBezierPath.bezierPath",
-      "contents": "bezierPath"
-    },
-    {
       "trigger": "UIBezierPath.bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise:",
       "contents": "bezierPathWithArcCenter(${1:CGPoint center}, radius:${2:CGFloat radius}, startAngle:${3:CGFloat startAngle}, endAngle:${4:CGFloat endAngle}, clockwise:${5:BOOL clockwise})"
     },
@@ -37494,14 +36682,6 @@
       "contents": "UICollectionUpdateActionReload"
     },
     {
-      "trigger": "UICollectionViewLayout.invalidationContextClass",
-      "contents": "invalidationContextClass"
-    },
-    {
-      "trigger": "UICollectionViewLayout.layoutAttributesClass",
-      "contents": "layoutAttributesClass"
-    },
-    {
       "trigger": "UICollectionViewLayoutAttributes.layoutAttributesForCellWithIndexPath:",
       "contents": "layoutAttributesForCellWithIndexPath(${1:NSIndexPath* indexPath})"
     },
@@ -37562,22 +36742,6 @@
       "contents": "UICollisionBehaviorModeItems"
     },
     {
-      "trigger": "UIColor.blackColor",
-      "contents": "blackColor"
-    },
-    {
-      "trigger": "UIColor.blueColor",
-      "contents": "blueColor"
-    },
-    {
-      "trigger": "UIColor.brownColor",
-      "contents": "brownColor"
-    },
-    {
-      "trigger": "UIColor.clearColor",
-      "contents": "clearColor"
-    },
-    {
       "trigger": "UIColor.colorWithCGColor:",
       "contents": "colorWithCGColor(${1:CGColorRef cgColor})"
     },
@@ -37600,74 +36764,6 @@
     {
       "trigger": "UIColor.colorWithWhite:alpha:",
       "contents": "colorWithWhite(${1:CGFloat white}, alpha:${2:CGFloat alpha})"
-    },
-    {
-      "trigger": "UIColor.cyanColor",
-      "contents": "cyanColor"
-    },
-    {
-      "trigger": "UIColor.darkGrayColor",
-      "contents": "darkGrayColor"
-    },
-    {
-      "trigger": "UIColor.darkTextColor",
-      "contents": "darkTextColor"
-    },
-    {
-      "trigger": "UIColor.grayColor",
-      "contents": "grayColor"
-    },
-    {
-      "trigger": "UIColor.greenColor",
-      "contents": "greenColor"
-    },
-    {
-      "trigger": "UIColor.groupTableViewBackgroundColor",
-      "contents": "groupTableViewBackgroundColor"
-    },
-    {
-      "trigger": "UIColor.lightGrayColor",
-      "contents": "lightGrayColor"
-    },
-    {
-      "trigger": "UIColor.lightTextColor",
-      "contents": "lightTextColor"
-    },
-    {
-      "trigger": "UIColor.magentaColor",
-      "contents": "magentaColor"
-    },
-    {
-      "trigger": "UIColor.orangeColor",
-      "contents": "orangeColor"
-    },
-    {
-      "trigger": "UIColor.purpleColor",
-      "contents": "purpleColor"
-    },
-    {
-      "trigger": "UIColor.redColor",
-      "contents": "redColor"
-    },
-    {
-      "trigger": "UIColor.scrollViewTexturedBackgroundColor",
-      "contents": "scrollViewTexturedBackgroundColor"
-    },
-    {
-      "trigger": "UIColor.underPageBackgroundColor",
-      "contents": "underPageBackgroundColor"
-    },
-    {
-      "trigger": "UIColor.viewFlipsideBackgroundColor",
-      "contents": "viewFlipsideBackgroundColor"
-    },
-    {
-      "trigger": "UIColor.whiteColor",
-      "contents": "whiteColor"
-    },
-    {
-      "trigger": "UIColor.yellowColor",
-      "contents": "yellowColor"
     },
     {
       "trigger": "UIContentSizeCategoryAccessibilityExtraExtraExtraLarge (NSString*)",
@@ -37898,10 +36994,6 @@
       "contents": "UIDatePickerModeTime"
     },
     {
-      "trigger": "UIDevice.currentDevice",
-      "contents": "currentDevice"
-    },
-    {
       "trigger": "UIDeviceBatteryLevelDidChangeNotification (NSString*)",
       "contents": "UIDeviceBatteryLevelDidChangeNotification"
     },
@@ -38098,14 +37190,6 @@
       "contents": "boldSystemFontOfSize(${1:CGFloat fontSize})"
     },
     {
-      "trigger": "UIFont.buttonFontSize",
-      "contents": "buttonFontSize"
-    },
-    {
-      "trigger": "UIFont.familyNames",
-      "contents": "familyNames"
-    },
-    {
       "trigger": "UIFont.fontNamesForFamilyName:",
       "contents": "fontNamesForFamilyName(${1:NSString* familyName})"
     },
@@ -38122,24 +37206,12 @@
       "contents": "italicSystemFontOfSize(${1:CGFloat fontSize})"
     },
     {
-      "trigger": "UIFont.labelFontSize",
-      "contents": "labelFontSize"
-    },
-    {
       "trigger": "UIFont.preferredFontForTextStyle:",
       "contents": "preferredFontForTextStyle(${1:NSString* style})"
     },
     {
-      "trigger": "UIFont.smallSystemFontSize",
-      "contents": "smallSystemFontSize"
-    },
-    {
       "trigger": "UIFont.systemFontOfSize:",
       "contents": "systemFontOfSize(${1:CGFloat fontSize})"
-    },
-    {
-      "trigger": "UIFont.systemFontSize",
-      "contents": "systemFontSize"
     },
     {
       "trigger": "UIFontDescriptor.fontDescriptorWithFontAttributes:",
@@ -38922,18 +37994,6 @@
       "contents": "UILocalNotificationDefaultSoundName"
     },
     {
-      "trigger": "UILocalizedIndexedCollation.currentCollation",
-      "contents": "currentCollation"
-    },
-    {
-      "trigger": "UIManagedDocument.persistentStoreName",
-      "contents": "persistentStoreName"
-    },
-    {
-      "trigger": "UIMenuController.sharedMenuController",
-      "contents": "sharedMenuController"
-    },
-    {
       "trigger": "UIMenuControllerArrowDefault (0)",
       "contents": "UIMenuControllerArrowDefault"
     },
@@ -39118,16 +38178,8 @@
       "contents": "UIPageViewControllerTransitionStyleScroll"
     },
     {
-      "trigger": "UIPasteboard.generalPasteboard",
-      "contents": "generalPasteboard"
-    },
-    {
       "trigger": "UIPasteboard.pasteboardWithName:create:",
       "contents": "pasteboardWithName(${1:NSString* pasteboardName}, create:${2:BOOL create})"
-    },
-    {
-      "trigger": "UIPasteboard.pasteboardWithUniqueName",
-      "contents": "pasteboardWithUniqueName"
     },
     {
       "trigger": "UIPasteboard.removePasteboardWithName:",
@@ -39198,28 +38250,8 @@
       "contents": "UIPopoverArrowDirectionUp"
     },
     {
-      "trigger": "UIPopoverBackgroundView.arrowBase",
-      "contents": "arrowBase"
-    },
-    {
-      "trigger": "UIPopoverBackgroundView.arrowHeight",
-      "contents": "arrowHeight"
-    },
-    {
-      "trigger": "UIPopoverBackgroundView.contentViewInsets",
-      "contents": "contentViewInsets"
-    },
-    {
-      "trigger": "UIPopoverBackgroundView.wantsDefaultContentAppearance",
-      "contents": "wantsDefaultContentAppearance"
-    },
-    {
       "trigger": "UIPrintErrorDomain (NSString*)",
       "contents": "UIPrintErrorDomain"
-    },
-    {
-      "trigger": "UIPrintInfo.printInfo",
-      "contents": "printInfo"
     },
     {
       "trigger": "UIPrintInfo.printInfoWithDictionary:",
@@ -39268,18 +38300,6 @@
     {
       "trigger": "UIPrintInteractionController.canPrintURL:",
       "contents": "canPrintURL(${1:NSURL* url})"
-    },
-    {
-      "trigger": "UIPrintInteractionController.isPrintingAvailable",
-      "contents": "isPrintingAvailable"
-    },
-    {
-      "trigger": "UIPrintInteractionController.printableUTIs",
-      "contents": "printableUTIs"
-    },
-    {
-      "trigger": "UIPrintInteractionController.sharedPrintController",
-      "contents": "sharedPrintController"
     },
     {
       "trigger": "UIPrintJobFailedError (4)",
@@ -39456,14 +38476,6 @@
     {
       "trigger": "UISaveVideoAtPathToSavedPhotosAlbum",
       "contents": "UISaveVideoAtPathToSavedPhotosAlbum(${1:NSString* videoPath}, ${2:id completionTarget}, ${3:SEL completionSelector}, ${4:void* contextInfo})"
-    },
-    {
-      "trigger": "UIScreen.mainScreen",
-      "contents": "mainScreen"
-    },
-    {
-      "trigger": "UIScreen.screens",
-      "contents": "screens"
     },
     {
       "trigger": "UIScreenBrightnessDidChangeNotification (NSString*)",
@@ -39946,10 +38958,6 @@
       "contents": "UITextBorderStyleRoundedRect"
     },
     {
-      "trigger": "UITextChecker.availableLanguages",
-      "contents": "availableLanguages"
-    },
-    {
       "trigger": "UITextChecker.hasLearnedWord:",
       "contents": "hasLearnedWord(${1:NSString* word})"
     },
@@ -40016,14 +39024,6 @@
     {
       "trigger": "UITextInputCurrentInputModeDidChangeNotification (NSString*)",
       "contents": "UITextInputCurrentInputModeDidChangeNotification"
-    },
-    {
-      "trigger": "UITextInputMode.activeInputModes",
-      "contents": "activeInputModes"
-    },
-    {
-      "trigger": "UITextInputMode.currentInputMode",
-      "contents": "currentInputMode"
     },
     {
       "trigger": "UITextInputTextBackgroundColorKey (NSString*)",
@@ -40190,20 +39190,8 @@
       "contents": "animateWithDuration(${1:NSTimeInterval duration}, delay:${2:NSTimeInterval delay}, usingSpringWithDamping:${3:CGFloat dampingRatio}, initialSpringVelocity:${4:CGFloat velocity}, options:${5:UIViewAnimationOptions options}, animations:${6:void (^)(void) animations}, completion:${7:void (^)(BOOL) completion})"
     },
     {
-      "trigger": "UIView.areAnimationsEnabled",
-      "contents": "areAnimationsEnabled"
-    },
-    {
       "trigger": "UIView.beginAnimations:context:",
       "contents": "beginAnimations(${1:NSString* animationID}, context:${2:void* context})"
-    },
-    {
-      "trigger": "UIView.commitAnimations",
-      "contents": "commitAnimations"
-    },
-    {
-      "trigger": "UIView.layerClass",
-      "contents": "layerClass"
     },
     {
       "trigger": "UIView.performSystemAnimation:onViews:options:animations:completion:",
@@ -40212,10 +39200,6 @@
     {
       "trigger": "UIView.performWithoutAnimation:",
       "contents": "performWithoutAnimation(${1:void (^)(void) actionsWithoutAnimation})"
-    },
-    {
-      "trigger": "UIView.requiresConstraintBasedLayout",
-      "contents": "requiresConstraintBasedLayout"
     },
     {
       "trigger": "UIView.setAnimationBeginsFromCurrentState:",
@@ -40476,14 +39460,6 @@
     {
       "trigger": "UIViewContentModeTopRight (10)",
       "contents": "UIViewContentModeTopRight"
-    },
-    {
-      "trigger": "UIViewController.attemptRotationToDeviceOrientation",
-      "contents": "attemptRotationToDeviceOrientation"
-    },
-    {
-      "trigger": "UIViewController.prepareInterstitialAds",
-      "contents": "prepareInterstitialAds"
     },
     {
       "trigger": "UIViewControllerHierarchyInconsistencyException (NSString*)",
@@ -67528,6 +66504,10 @@
     {
       "trigger": "kMusicSequenceType_Seconds (1936024435)",
       "contents": "KMusicSequenceType_Seconds"
+    },
+    {
+      "trigger": "kMusicTimeStamp_EndOfTrack (1.797693134862316E+308)",
+      "contents": "KMusicTimeStamp_EndOfTrack"
     },
     {
       "trigger": "kNLCCharactersSelector (13)",
