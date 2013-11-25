@@ -62,9 +62,10 @@ Usage
 
 ### Build
 
-1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `b`].
-2. Wait for the console to notify you the message "[Finished]".
-3. If you get a error, you can jump to it with press [`F4`]
+1. Verify that Tools -> Build System is set to Automatic.
+2. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `b`].
+3. Wait for the console to notify you the message "[Finished]".
+4. If you get a error, you can jump to it with press [`F4`]
 
 **note:** Default target is Simulator. If you want to change the target, please edit "RubyMotion.sublime-build".
 
