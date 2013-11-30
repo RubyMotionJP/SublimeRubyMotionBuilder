@@ -48,6 +48,17 @@ Put this package into your Sublime Text 2 or 3 packages folder:
 Usage
 -----
 
+### Table of default key bind
+
+| Functions        | Key bind                   |
+| ---------------- | -------------------------- |
+| Build            | `command` + `b`            |
+| Run              | `command` + `r`            |
+| Run Spec         | `command` + `option` + `r` |
+| Deploy           | `command` + `option` + `b` |
+| Show reference   | `control` + `option` + `d` |
+
+
 ### RubyMotion syntax
 
 1. Open \*.rb or Rakefile in your RubyMotion project
