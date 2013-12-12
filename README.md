@@ -146,3 +146,17 @@ Configuration
 	"activate_terminal": false
 }
 ```
+
+### Disable auto-save
+
+When you would run app through this plugin, the plugin will save changed files. You could disable this feature.
+
+1. Open \*.rb or Rakefile in your RubyMotion project
+2. Open [Sublime Text]->[Preferences]->[Settings - More]->[Syntax Specific - User] in Sublime Text menu.
+3. Configure "auto_save" setting to disable auto-save feature (By default, true).
+
+```json
+{
+	"auto_save": false
+}
+```

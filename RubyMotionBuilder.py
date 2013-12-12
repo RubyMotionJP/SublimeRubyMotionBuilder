@@ -6,6 +6,12 @@ import re
 
 this_dir = os.path.split(os.path.abspath(__file__))[0]
 
+def SaveAllFiles():
+    for window in sublime.windows():
+        for view in window.views():
+            if view.file_name():
+                if view.is_dirty():
+                    view.run_command("save")
 
 def FindRubyMotionRakefile(dir_name):
     re_rubymotion = re.compile("Motion")
@@ -29,6 +35,8 @@ def RunRubyMotionBuildScript(self, build_target, cmd):
     view = self.window.active_view()
     if not view:
         return
+    if view.settings().get("auto_save", True):
+        SaveAllFiles()
     dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
     if dir_name:
         sh_name = os.path.join(this_dir, "rubymotion_build.sh")
@@ -46,6 +54,8 @@ def RunRubyMotionRunScript(self, options):
     view = self.window.active_view()
     if not view:
         return
+    if view.settings().get("auto_save", True):
+        SaveAllFiles()
     dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
     if dir_name:
         sh_name = os.path.join(this_dir, "rubymotion_run.sh")
