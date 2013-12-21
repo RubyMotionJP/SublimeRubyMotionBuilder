@@ -1,13 +1,17 @@
 #!/bin/sh
 
-CMD=$1
-ENV=$2
+PATH=$1
+CMD=$2
+ENV=$3
 
 if [ "$CMD" = "" ]; then
 	CMD="rake build"
 fi
 if [ "$ENV" != "" ]; then
 	eval . $ENV
+fi
+if type bundle >/dev/null 2>&1; then
+    CMD="bundle exec ${CMD}"
 fi
 
 $CMD 2>&1 | ruby -e "\

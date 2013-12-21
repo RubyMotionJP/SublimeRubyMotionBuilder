@@ -1,10 +1,11 @@
 #!/bin/sh
 
+PATH=$1
 TERMINAL_ID="RubyMotionBuilder"
-TERMINAL_APP="$1"
-ACTIVATE_TERMINAL="$2"
-PROJECT_DIR="$3"
-OPTIONS="$4"
+TERMINAL_APP="$2"
+ACTIVATE_TERMINAL="$3"
+PROJECT_DIR="$4"
+OPTIONS="$5"
 
 if [ "${PROJECT_DIR}" = "" ]; then
     exit 1
@@ -14,6 +15,9 @@ if [ "${OPTIONS}" = "" ]; then
     RAKE="rake"
 else
     RAKE="rake ${OPTIONS}"
+fi
+if type bundle >/dev/null 2>&1; then
+    RAKE="bundle exec ${RAKE}"
 fi
 
 if [ "${TERMINAL_APP}" = "iTerm" ]; then
