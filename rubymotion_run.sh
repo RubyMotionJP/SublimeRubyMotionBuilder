@@ -28,7 +28,7 @@ if [ "${TERMINAL_APP}" = "iTerm" ]; then
             select current_session
 
             tell current_session
-                if (name is "ruby" or name is "rake" or name is "sim") then 
+                if ("ruby" is in name or "rake" is in name or "sim" is in name) then 
                     write text "exit"
                 end if
 
