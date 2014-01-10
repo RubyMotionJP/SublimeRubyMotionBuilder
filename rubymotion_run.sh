@@ -48,7 +48,7 @@ else
                     do script "quit" in buildWindow
                     do script "cd '${PROJECT_DIR}'" in buildWindow
                 on error
-                    do script "alias quit='' && cd \"${PROJECT_DIR}\" && clear"
+                    do script "alias quit='' && cd '${PROJECT_DIR}' && clear"
                     tell window 1
                         set custom title to "${TERMINAL_ID}"
                     end tell
