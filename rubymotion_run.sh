@@ -32,7 +32,7 @@ if [ "${TERMINAL_APP}" = "iTerm" ]; then
                     write text "exit"
                 end if
 
-                write text "cd ${PROJECT_DIR}"
+                write text "cd '${PROJECT_DIR}'"
                 write text "${RAKE}"
             end tell
         end tell
