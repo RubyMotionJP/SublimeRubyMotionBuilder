@@ -46,7 +46,7 @@ else
                     set buildWindow to item 1 of (every window whose custom title is "${TERMINAL_ID}")
                     set index of buildWindow to 1
                     do script "quit" in buildWindow
-                    do script "cd \"${PROJECT_DIR}\"" in buildWindow
+                    do script "cd '${PROJECT_DIR}'" in buildWindow
                 on error
                     do script "alias quit='' && cd \"${PROJECT_DIR}\" && clear"
                     tell window 1
