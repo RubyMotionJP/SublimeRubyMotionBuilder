@@ -3,6 +3,7 @@ import subprocess
 import sublime
 import sublime_plugin
 import re
+import glob
 
 this_dir = os.path.split(os.path.abspath(__file__))[0]
 env_path = os.environ["PATH"]
@@ -120,8 +121,13 @@ class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
 
 class GenerateRubyMotionCompletions(sublime_plugin.WindowCommand):
     def run(self):
+        self.dirs = glob.glob('/Library/RubyMotion/data/ios/*/BridgeSupport/')
+        self.dirs.extend(glob.glob('/Library/RubyMotion/data/osx/*/BridgeSupport/'))
+        self.window.show_quick_panel(self.dirs, self.on_done)
+
+    def on_done(self, picked):
         rb_name = os.path.join(this_dir, "rubymotion_completion_generator.rb")
-        bridge_support_dir = "/Library/RubyMotion/data/ios/7.0/BridgeSupport/"
+        bridge_support_dir = self.dirs[picked]
         self.window.run_command("exec", {"cmd": ["ruby", rb_name, bridge_support_dir], "working_dir": this_dir})
 
 
