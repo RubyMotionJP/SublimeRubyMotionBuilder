@@ -103,6 +103,31 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
         RunRubyMotionRunScript(self, "device")
 
 
+class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
+    def run(self):
+        view = self.window.active_view()
+        view_file_name = view.file_name()
+        dir_name, _ = os.path.split(view_file_name)
+        dir_name = FindRubyMotionRakefile(dir_name)
+        cmd = "rake -T"
+        print(env_path)
+        if os.path.isfile(os.path.join(dir_name, "Gemfile.lock")):
+            cmd = "bundle exec rake -T"
+        p = subprocess.Popen(cmd, shell=True, cwd=dir_name,
+            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            close_fds=True)
+        output = p.stdout.read()
+        self.task_list = output.decode("utf-8").split("\n")
+        self.task_list.pop() # remove emply last line
+        self.window.show_quick_panel(self.task_list, self.on_done, sublime.MONOSPACE_FONT)
+
+    def on_done(self, picked):
+        if picked == -1:
+            return
+        pickup_task = re.compile('rake (\w+)')
+        task = pickup_task.match(self.task_list[picked]).group(1) 
+        RunRubyMotionRunScript(self, task)
+
 class RubyMotionSetBreakpoint(sublime_plugin.WindowCommand):
     def run(self):
         view = self.window.active_view()

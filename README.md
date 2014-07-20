@@ -56,6 +56,7 @@ Usage
 | Run              | `command` + `r`            |
 | Run Spec         | `command` + `option` + `r` |
 | Deploy           | `command` + `option` + `b` |
+| Run from list    | `command` + `option` + `l` |
 | Set Breakpoint   | `control` + `option` + `b` |
 | Show reference   | `control` + `option` + `d` |
 
@@ -107,6 +108,20 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake spec".
 
 1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `b`].
 2. Wait for the console to notify you the message "[Finished]".
+
+### Run command from Rake task list
+
+1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `l`].
+2. Select a task from displayed list.
+
+This command need `PATH` environment variable in plugin.
+Mountain Lion or later users can set variable via `/etc/launchd.conf` like
+
+```
+$ echo "setenv PATH $PATH" | sudo tee -ai /etc/launchd.conf
+```
+
+Then, reboot your Mac.
 
 ### Set break point for debugging
 
