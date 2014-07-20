@@ -114,7 +114,7 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake spec".
 
 ### Completions generator
 
-These two commands also supported in Command Pallet.
+The command is supported in command palette.
 
 * `RubyMotionBuilder: Generate completions` will generate completions from BridgeSupport files of RubyMotion.
 
