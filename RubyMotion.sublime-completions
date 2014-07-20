@@ -1,5 +1,5 @@
 {
-  "scope": "source.rubymotion",
+  "scope": "source.ruby.rubymotion",
   "completions": [
     "ABAddressBookCreate",
     "ABAddressBookGetAuthorizationStatus",
@@ -21,6 +21,8 @@
     "ACAccountType",
     "ADBannerView",
     "ADBannerViewDelegate",
+    "ADClient",
+    "ADClient.sharedClient",
     "ADInterstitialAd",
     "ADInterstitialAdDelegate",
     "ALAsset",
@@ -393,7 +395,6 @@
     "CTGlyphInfoGetTypeID",
     "CTLineGetTypeID",
     "CTParagraphStyleGetTypeID",
-    "CTRunDelegateGetTypeID",
     "CTRunGetTypeID",
     "CTSubscriber",
     "CTSubscriberInfo",
@@ -620,6 +621,11 @@
     "MKTileOverlayRenderer",
     "MKUserLocation",
     "MKUserTrackingBarButtonItem",
+    "MPChangePlaybackRateCommand",
+    "MPChangePlaybackRateCommandEvent",
+    "MPContentItem",
+    "MPFeedbackCommand",
+    "MPFeedbackCommandEvent",
     "MPMediaEntity",
     "MPMediaItem",
     "MPMediaItemArtwork",
@@ -653,6 +659,19 @@
     "MPMusicPlayerController.iPodMusicPlayer",
     "MPNowPlayingInfoCenter",
     "MPNowPlayingInfoCenter.defaultCenter",
+    "MPPlayableContentDataSource",
+    "MPPlayableContentDelegate",
+    "MPPlayableContentManager",
+    "MPPlayableContentManager.sharedContentManager",
+    "MPRatingCommand",
+    "MPRatingCommandEvent",
+    "MPRemoteCommand",
+    "MPRemoteCommandCenter",
+    "MPRemoteCommandCenter.sharedCommandCenter",
+    "MPRemoteCommandEvent",
+    "MPSeekCommandEvent",
+    "MPSkipIntervalCommand",
+    "MPSkipIntervalCommandEvent",
     "MPTimedMetadata",
     "MPVolumeSettingsAlertHide",
     "MPVolumeSettingsAlertIsVisible",
@@ -889,6 +908,7 @@
     "NSObject.superclass",
     "NSObject.supportsSecureCoding",
     "NSObject.uiaxFocusedApplicationElement",
+    "NSObject.uiaxSpringBoardElement",
     "NSObject.uiaxSystemWideElement",
     "NSObject.version",
     "NSOpenStepRootDirectory",
@@ -1079,6 +1099,7 @@
     "SKSpriteNode",
     "SKStoreProductViewController",
     "SKStoreProductViewControllerDelegate",
+    "SKTerminateForInvalidReceipt",
     "SKTexture",
     "SKTextureAtlas",
     "SKTransition",
@@ -1103,6 +1124,8 @@
     "TXTRecordData",
     "UIAActionSheet",
     "UIAActionSheet.toOneRelationshipKeys",
+    "UIAActivityView",
+    "UIAActivityView.toOneRelationshipKeys",
     "UIAAlert",
     "UIAAlert._moreToOneRelationshipKeys",
     "UIAAlert.toOneRelationshipKeys",
@@ -1111,6 +1134,10 @@
     "UIAApplication.toManyRelationshipKeys",
     "UIAApplication.toOneRelationshipKeys",
     "UIAButton",
+    "UIACollectionCell",
+    "UIACollectionView",
+    "UIACollectionView._moreToManyRelationshipKeys",
+    "UIACollectionView.toManyRelationshipKeys",
     "UIAElement",
     "UIAElement._countsString",
     "UIAElement._liveCount",
@@ -1130,10 +1157,12 @@
     "UIAElementNil",
     "UIAElementNil._liveCount",
     "UIAElementNil._maxCount",
+    "UIAElementSynonym",
     "UIAHost",
     "UIAKey",
     "UIAKeyboard",
     "UIALink",
+    "UIALocalizedValue",
     "UIANavigationBar",
     "UIANavigationBar._moreToOneRelationshipKeys",
     "UIANavigationBar.toOneRelationshipKeys",
@@ -1146,6 +1175,8 @@
     "UIARecorder",
     "UIARecorder.defaultRecorder",
     "UIARecorderAction",
+    "UIARemote",
+    "UIARemote.sharedRemote",
     "UIAScreen",
     "UIAScreen.attributeKeys",
     "UIASegmentedControl",
@@ -1181,7 +1212,9 @@
     "UIAXElement._traitNumbers",
     "UIAXElement._traitStrings",
     "UIAXElement.initialize",
+    "UIAXElement.initializeAccessibility",
     "UIAXElement.uiaxFocusedApplicationElement",
+    "UIAXElement.uiaxSpringBoardElement",
     "UIAXElement.uiaxSystemWideElement",
     "UIAcceleration",
     "UIAccelerometer",
@@ -1464,31 +1497,39 @@
     "X",
     "Y",
     "Z",
+    "_axBundle",
+    "_axBundlePath",
     "_axMainWindow",
     "_bundle",
+    "_bundleID",
+    "_bundlePath",
     "_copyTraitsNumber",
     "_createdTime",
     "_creationTime",
     "_delayForAnimationsInProgress",
-    "_doubleTapSpeedFromDefaults",
+    "_delayForTyping",
     "_emptyCaches",
     "_handleAlert",
     "_hasNonzeroSize",
     "_hitpoint",
+    "_initTouchscreenProperties",
     "_interfaceOrientation",
     "_invalidate",
+    "_jsVariableExpressionString",
+    "_jsVariableName",
     "_lastAccessedTime",
     "_lastAnimationEndedTime",
-    "_lockBar",
+    "_lockScreenScrollView",
     "_logInfo",
     "_logInfoWithChildren",
+    "_name",
     "_raiseInvalidElementAction",
     "_refreshedTime",
     "_releaseEvents",
-    "_screenIsLocked",
-    "_screenIsOff",
+    "_screenType",
     "_selfPatienceInvocation",
     "_shouldAllowSettingValue",
+    "_state",
     "_synonymToManyRelationshipKeys",
     "_systemVersionDictionary",
     "_uiScreen",
@@ -1551,10 +1592,10 @@
     "actionSheets",
     "actionType",
     "actions",
-    "activate",
     "active",
     "activeExchanges",
     "activeFormat",
+    "activePointCount",
     "activeProcessorCount",
     "activeVideoMaxFrameDuration",
     "activeVideoMinFrameDuration",
@@ -1563,7 +1604,9 @@
     "activityIndicators",
     "activityTitle",
     "activityType",
+    "activityView",
     "activityViewController",
+    "activityViews",
     "actualScaleFactor",
     "actualTrackingAdjustment",
     "adType",
@@ -1676,6 +1719,8 @@
     "annotations",
     "anyObject",
     "apertureMode",
+    "appIconScrollView",
+    "appItemScrollView",
     "appStoreReceiptURL",
     "applicationFinishedRestoringState",
     "applicationFrame",
@@ -1697,6 +1742,7 @@
     "arrivalDate",
     "arrowDirection",
     "arrowOffset",
+    "artwork",
     "ascender",
     "ascending",
     "aspectRatioThumbnail",
@@ -1821,6 +1867,7 @@
     "body",
     "bodyA",
     "bodyB",
+    "bookmarkCommand",
     "boolValue",
     "borderColor",
     "borderStyle",
@@ -1935,6 +1982,7 @@
     "certificates",
     "changeCount",
     "changeInLength",
+    "changePlaybackRateCommand",
     "changedValues",
     "changedValuesForCurrentEvent",
     "channelAssignments",
@@ -1953,7 +2001,6 @@
     "childViewControllerForStatusBarStyle",
     "childViewControllers",
     "children",
-    "choose",
     "chopPatience",
     "circle",
     "class",
@@ -1966,8 +2013,14 @@
     "clearsOnBeginEditing",
     "clearsOnInsertion",
     "clearsSelectionOnViewWillAppear",
+    "clickDown",
+    "clickLeft",
     "clickLock",
     "clickMenu",
+    "clickPlayPause",
+    "clickRight",
+    "clickSelect",
+    "clickUp",
     "clickVolumeDown",
     "clickVolumeUp",
     "client",
@@ -1982,6 +2035,7 @@
     "collectionView",
     "collectionViewContentSize",
     "collectionViewLayout",
+    "collectionViews",
     "collections",
     "collisionBitMask",
     "collisionDelegate",
@@ -1993,6 +2047,7 @@
     "colorSpace",
     "colors",
     "columnNumber",
+    "command",
     "comment",
     "commentURL",
     "commitConfiguration",
@@ -2205,6 +2260,7 @@
     "departureDate",
     "dependencies",
     "depth",
+    "descendants",
     "descender",
     "description",
     "descriptionFunction",
@@ -2255,6 +2311,7 @@
     "disconnectTimeout",
     "discoveryInfo",
     "diskCapacity",
+    "dislikeCommand",
     "dismiss",
     "dismissHeadingCalibrationDisplay",
     "dismissMoviePlayerViewControllerAnimated",
@@ -2388,7 +2445,6 @@
     "estimatedSectionHeaderHeight",
     "event",
     "eventIdentifier",
-    "eventRecord",
     "eventStore",
     "eventStoreIdentifier",
     "events",
@@ -2416,6 +2472,7 @@
     "exposurePointOfInterest",
     "expression",
     "expressionBlock",
+    "expressionFlushTimer",
     "expressionResultType",
     "expressionType",
     "extendStateRestoration",
@@ -2596,6 +2653,7 @@
     "gyroUpdateInterval",
     "handleAlert",
     "handleOrientationChange",
+    "handlesAlerts",
     "hardwareRevision",
     "hasAction",
     "hasActions",
@@ -2615,6 +2673,7 @@
     "hasPassword",
     "hasProtectedContent",
     "hasRecurrenceRules",
+    "hasRemoteFocus",
     "hasRightEyePosition",
     "hasRollAngle",
     "hasSmile",
@@ -2714,6 +2773,7 @@
     "inputKeys",
     "inputLatency",
     "inputMeterLevel",
+    "inputMode",
     "inputNumberOfChannels",
     "inputParameters",
     "inputPorts",
@@ -2764,6 +2824,7 @@
     "inviter",
     "invocation",
     "invoke",
+    "ioSystemClient",
     "isAbsolutePath",
     "isAbstract",
     "isAccelerometerActive",
@@ -2801,10 +2862,10 @@
     "isByteRangeAccessSupported",
     "isCalculating",
     "isCameraIrisOpen",
-    "isCancelEvent",
     "isCancellable",
     "isCancelled",
     "isCapturingStillImage",
+    "isCarDisplayWindow",
     "isClosedCaptionDisplayEnabled",
     "isCompatibleWithSavedPhotosAlbum",
     "isCompleted",
@@ -2812,6 +2873,7 @@
     "isConcurrent",
     "isConflict",
     "isConnected",
+    "isContainer",
     "isContentDiscarded",
     "isContinuous",
     "isCountOnlyRequest",
@@ -2883,6 +2945,7 @@
     "isLenient",
     "isLoaded",
     "isLoading",
+    "isLocked",
     "isLowLightBoostEnabled",
     "isLowLightBoostSupported",
     "isMagnetometerActive",
@@ -2897,10 +2960,12 @@
     "isMomentary",
     "isMovingFromParentViewController",
     "isMovingToParentViewController",
+    "isMultiThreaded",
     "isMultipleTouchEnabled",
     "isMultitaskingSupported",
     "isMuted",
     "isNavigationBarHidden",
+    "isNegative",
     "isNetworkActivityIndicatorVisible",
     "isNew",
     "isNotifying",
@@ -2953,6 +3018,7 @@
     "isResting",
     "isRotateEnabled",
     "isRunning",
+    "isScreenOff",
     "isScrollEnabled",
     "isSearchResultsButtonSelected",
     "isSearching",
@@ -3044,13 +3110,17 @@
     "keyboards",
     "keys",
     "keyspace",
+    "keystrokeFlushTimer",
+    "keystrokes",
     "kind",
     "label",
     "landscapeImagePhone",
     "landscapeImagePhoneInsets",
     "language",
     "languageCode",
+    "languageID",
     "languageMap",
+    "languageName",
     "lastActionTime",
     "lastCommandTime",
     "lastIndex",
@@ -3059,6 +3129,7 @@
     "lastPathComponent",
     "lastReportedDate",
     "lastTurnDate",
+    "lastUpdateTime",
     "lastVisibleCellIndex",
     "layer",
     "layerInstructions",
@@ -3101,6 +3172,7 @@
     "lightModelAmbientColor",
     "lightModelTwoSided",
     "lightingType",
+    "likeCommand",
     "lineBreakMode",
     "lineCap",
     "lineCapStyle",
@@ -3125,7 +3197,9 @@
     "localName",
     "localPlayerScore",
     "locale",
+    "localeID",
     "localeIdentifier",
+    "localeName",
     "locality",
     "localizationDictionary",
     "localizations",
@@ -3184,6 +3258,7 @@
     "mapRect",
     "mapType",
     "mapView",
+    "mapViews",
     "mappingModel",
     "mappingType",
     "markAsFinished",
@@ -3228,6 +3303,7 @@
     "maximumNumberOfTouches",
     "maximumOutputNumberOfChannels",
     "maximumPoints",
+    "maximumRating",
     "maximumRegionMonitoringDistance",
     "maximumRelativeValue",
     "maximumSignificantDigits",
@@ -3281,6 +3357,7 @@
     "minimumNumberOfPeers",
     "minimumNumberOfTouches",
     "minimumPressDuration",
+    "minimumRating",
     "minimumRelativeValue",
     "minimumScaleFactor",
     "minimumSignificantDigits",
@@ -3360,6 +3437,7 @@
     "nextLayout",
     "nextObject",
     "nextResponder",
+    "nextTrackCommand",
     "nibBundle",
     "nibName",
     "nilSymbol",
@@ -3426,6 +3504,7 @@
     "offsetInFile",
     "oldVersionNumber",
     "onImage",
+    "onScreenRect",
     "onTintColor",
     "opacity",
     "open",
@@ -3549,6 +3628,7 @@
     "patience",
     "pattern",
     "pause",
+    "pauseCommand",
     "pauseOnWillResignActive",
     "pausesIncomingScene",
     "pausesLocationUpdatesAutomatically",
@@ -3557,6 +3637,7 @@
     "payment",
     "peakHoldLevel",
     "peerID",
+    "pendingDragExpressions",
     "pendingTapExpression",
     "peoplePickerDelegate",
     "perMillSymbol",
@@ -3598,8 +3679,11 @@
     "placeholderItem",
     "placemark",
     "play",
+    "playCommand",
     "playInputClick",
     "playableDuration",
+    "playbackProgress",
+    "playbackRate",
     "playbackSessionID",
     "playbackStartDate",
     "playbackStartOffset",
@@ -3665,6 +3749,7 @@
     "preferredInput",
     "preferredInputNumberOfChannels",
     "preferredInterfaceOrientationForPresentation",
+    "preferredIntervals",
     "preferredLanguages",
     "preferredLocalizations",
     "preferredMaxLayoutWidth",
@@ -3701,6 +3786,7 @@
     "previewItemURL",
     "previousAXElement",
     "previousFailureCount",
+    "previousTrackCommand",
     "price",
     "priceLocale",
     "primaryLanguage",
@@ -3774,6 +3860,8 @@
     "rank",
     "rasterizationScale",
     "rate",
+    "rating",
+    "ratingCommand",
     "reactivateApp",
     "readDataToEndOfFile",
     "readInBackgroundAndNotify",
@@ -3816,6 +3904,7 @@
     "regularExpression",
     "regularFileContents",
     "relation",
+    "relationship",
     "relationshipKeyPathsForPrefetching",
     "relationshipMappings",
     "relationshipsByName",
@@ -3823,6 +3912,7 @@
     "relativePath",
     "relativeString",
     "release",
+    "releaseTimeForMostRecentEvent",
     "relevantDate",
     "relinquishFunction",
     "reload",
@@ -3830,6 +3920,7 @@
     "reloadData",
     "reloadInputViews",
     "reloadSectionIndexTitles",
+    "remote",
     "remoteParticipantVolume",
     "removeAllActions",
     "removeAllAnimations",
@@ -3900,6 +3991,7 @@
     "resourcePath",
     "resourceSpecifier",
     "resourceURL",
+    "responder",
     "response",
     "restitution",
     "restorationClass",
@@ -3979,15 +4071,20 @@
     "score",
     "scores",
     "screen",
+    "screenScale",
+    "screenSize",
     "scriptingActionExpressionShouldFavorTapOffset",
     "scriptingFavoredSynonymString",
     "scriptingInvocationFullExpressionString",
     "scriptingInvocationString",
     "scriptingSynonymFullExpressionString",
     "scriptingSynonymStrings",
+    "scriptingSynonyms",
     "scrollDirection",
     "scrollDown",
     "scrollIndicatorInsets",
+    "scrollItemCount",
+    "scrollItemIndex",
     "scrollLeft",
     "scrollMode",
     "scrollRight",
@@ -4031,6 +4128,8 @@
     "secureTextFields",
     "securityIdentity",
     "seed",
+    "seekBackwardCommand",
+    "seekForwardCommand",
     "seekToEndOfFile",
     "seekableTimeRanges",
     "seekingWaitsForVideoCompositionRendering",
@@ -4148,6 +4247,7 @@
     "showsNodeCount",
     "showsNumberOfCopies",
     "showsPageRange",
+    "showsPhysics",
     "showsPointsOfInterest",
     "showsReorderControl",
     "showsRouteButton",
@@ -4164,8 +4264,10 @@
     "size",
     "sizeFunction",
     "sizeToFit",
+    "skipBackwardCommand",
     "skipDescendants",
     "skipDescendents",
+    "skipForwardCommand",
     "skipToBeginning",
     "skipToNextItem",
     "skipToPreviousItem",
@@ -4210,12 +4312,17 @@
     "spotCutoff",
     "spotDirection",
     "spotExponent",
+    "springboard",
     "stackSize",
     "stalenessInterval",
     "standaloneMonthSymbols",
     "standaloneQuarterSymbols",
     "standaloneWeekdaySymbols",
     "standardizedURL",
+    "starkDeviceProperties",
+    "starkDigitizerDescriptorData",
+    "starkDisplayUUID",
+    "starkModeEnabled",
     "start",
     "startAccelerometerUpdates",
     "startAdvertisingPeer",
@@ -4236,6 +4343,7 @@
     "startQuery",
     "startReading",
     "startRunning",
+    "startTime",
     "startUpdatingHeading",
     "startUpdatingLocation",
     "startVideoCapture",
@@ -4263,6 +4371,7 @@
     "stopAnimating",
     "stopBrowsingForNearbyPlayers",
     "stopBrowsingForPeers",
+    "stopCommand",
     "stopDeviceMotionUpdates",
     "stopGyroUpdates",
     "stopLoading",
@@ -4323,17 +4432,18 @@
     "supportedEventAvailabilities",
     "supportedFileTypes",
     "supportedInterfaceOrientations",
+    "supportedPlaybackRates",
     "supportedPolarPatterns",
     "suppressesIncrementalRendering",
     "suppressesPlayerRendering",
     "suspend",
     "switchBitrate",
-    "switcherScrollView",
     "switches",
     "symbolicLinkDestinationURL",
     "symbolicTraits",
     "synchronize",
     "synchronizeFile",
+    "syntheticStarkDevice",
     "systemBuild",
     "systemID",
     "systemName",
@@ -4346,6 +4456,7 @@
     "tabStops",
     "tableFooterView",
     "tableHeaderView",
+    "tableName",
     "tableView",
     "tableViews",
     "tag",
@@ -4456,6 +4567,7 @@
     "toString",
     "toUInt32",
     "toValue",
+    "togglePlayPauseCommand",
     "tokenizer",
     "tolerance",
     "toolbar",
@@ -4514,6 +4626,7 @@
     "uiaTarget",
     "uiaxElement",
     "uiaxElementAtCenterPoint",
+    "uiaxSpringBoardElement",
     "uiaxSystemWideElement",
     "unachievedDescription",
     "undo",
@@ -4585,6 +4698,7 @@
     "validationPredicates",
     "validationWarnings",
     "value",
+    "valueChangedCount",
     "valueChangedHandler",
     "valueExpression",
     "valueFunction",
@@ -5890,6 +6004,10 @@
       "contents": "AUDIO_TOOLBOX_VERSION"
     },
     {
+      "trigger": "AUDIO_UNIT_VERSION (1070)",
+      "contents": "AUDIO_UNIT_VERSION"
+    },
+    {
       "trigger": "AUGraphAddNode",
       "contents": "AUGraphAddNode(${1:AUGraph inGraph}, ${2:AudioComponentDescription* inDescription}, ${3:AUNode* outNode})"
     },
@@ -6294,6 +6412,10 @@
       "contents": "AVAudioSessionErrorCodeCannotStartPlaying"
     },
     {
+      "trigger": "AVAudioSessionErrorCodeCannotStartRecording (561145187)",
+      "contents": "AVAudioSessionErrorCodeCannotStartRecording"
+    },
+    {
       "trigger": "AVAudioSessionErrorCodeIncompatibleCategory (560161140)",
       "contents": "AVAudioSessionErrorCodeIncompatibleCategory"
     },
@@ -6448,6 +6570,10 @@
     {
       "trigger": "AVAudioSessionPortBuiltInSpeaker (NSString*)",
       "contents": "AVAudioSessionPortBuiltInSpeaker"
+    },
+    {
+      "trigger": "AVAudioSessionPortCarAudio (NSString*)",
+      "contents": "AVAudioSessionPortCarAudio"
     },
     {
       "trigger": "AVAudioSessionPortHDMI (NSString*)",
@@ -8822,6 +8948,54 @@
       "contents": "AVVideoWidthKey"
     },
     {
+      "trigger": "AudioComponentCopyName",
+      "contents": "AudioComponentCopyName(${1:AudioComponent inComponent}, ${2:CFStringRef* outName})"
+    },
+    {
+      "trigger": "AudioComponentCount",
+      "contents": "AudioComponentCount(${1:AudioComponentDescription* inDesc})"
+    },
+    {
+      "trigger": "AudioComponentFindNext",
+      "contents": "AudioComponentFindNext(${1:AudioComponent inComponent}, ${2:AudioComponentDescription* inDesc})"
+    },
+    {
+      "trigger": "AudioComponentGetDescription",
+      "contents": "AudioComponentGetDescription(${1:AudioComponent inComponent}, ${2:AudioComponentDescription* outDesc})"
+    },
+    {
+      "trigger": "AudioComponentGetIcon",
+      "contents": "AudioComponentGetIcon(${1:AudioComponent comp}, ${2:float desiredPointSize})"
+    },
+    {
+      "trigger": "AudioComponentGetLastActiveTime",
+      "contents": "AudioComponentGetLastActiveTime(${1:AudioComponent comp})"
+    },
+    {
+      "trigger": "AudioComponentGetVersion",
+      "contents": "AudioComponentGetVersion(${1:AudioComponent inComponent}, ${2:UInt32* outVersion})"
+    },
+    {
+      "trigger": "AudioComponentInstanceCanDo",
+      "contents": "AudioComponentInstanceCanDo(${1:AudioComponentInstance inInstance}, ${2:SInt16 inSelectorID})"
+    },
+    {
+      "trigger": "AudioComponentInstanceDispose",
+      "contents": "AudioComponentInstanceDispose(${1:AudioComponentInstance inInstance})"
+    },
+    {
+      "trigger": "AudioComponentInstanceGetComponent",
+      "contents": "AudioComponentInstanceGetComponent(${1:AudioComponentInstance inInstance})"
+    },
+    {
+      "trigger": "AudioComponentInstanceNew",
+      "contents": "AudioComponentInstanceNew(${1:AudioComponent inComponent}, ${2:AudioComponentInstance* outInstance})"
+    },
+    {
+      "trigger": "AudioComponentRegister",
+      "contents": "AudioComponentRegister(${1:AudioComponentDescription* inDesc}, ${2:CFStringRef inName}, ${3:UInt32 inVersion}, ${4:AudioComponentFactoryFunction inFactory})"
+    },
+    {
       "trigger": "AudioConverterConvertBuffer",
       "contents": "AudioConverterConvertBuffer(${1:AudioConverterRef inAudioConverter}, ${2:UInt32 inInputDataSize}, ${3:void* inInputData}, ${4:UInt32* ioOutputDataSize}, ${5:void* outOutputData})"
     },
@@ -8980,6 +9154,22 @@
     {
       "trigger": "AudioFormatGetPropertyInfo",
       "contents": "AudioFormatGetPropertyInfo(${1:AudioFormatPropertyID inPropertyID}, ${2:UInt32 inSpecifierSize}, ${3:void* inSpecifier}, ${4:UInt32* outPropertyDataSize})"
+    },
+    {
+      "trigger": "AudioOutputUnitGetHostIcon",
+      "contents": "AudioOutputUnitGetHostIcon(${1:AudioUnit au}, ${2:float desiredPointSize})"
+    },
+    {
+      "trigger": "AudioOutputUnitPublish",
+      "contents": "AudioOutputUnitPublish(${1:AudioComponentDescription* inDesc}, ${2:CFStringRef inName}, ${3:UInt32 inVersion}, ${4:AudioUnit inOutputUnit})"
+    },
+    {
+      "trigger": "AudioOutputUnitStart",
+      "contents": "AudioOutputUnitStart(${1:AudioUnit ci})"
+    },
+    {
+      "trigger": "AudioOutputUnitStop",
+      "contents": "AudioOutputUnitStop(${1:AudioUnit ci})"
     },
     {
       "trigger": "AudioQueueAddPropertyListener",
@@ -9184,6 +9374,70 @@
     {
       "trigger": "AudioSessionSetProperty",
       "contents": "AudioSessionSetProperty(${1:AudioSessionPropertyID inID}, ${2:UInt32 inDataSize}, ${3:void* inData})"
+    },
+    {
+      "trigger": "AudioUnitAddPropertyListener",
+      "contents": "AudioUnitAddPropertyListener(${1:AudioUnit inUnit}, ${2:AudioUnitPropertyID inID}, ${3:AudioUnitPropertyListenerProc inProc}, ${4:void* inProcUserData})"
+    },
+    {
+      "trigger": "AudioUnitAddRenderNotify",
+      "contents": "AudioUnitAddRenderNotify(${1:AudioUnit inUnit}, ${2:AURenderCallback inProc}, ${3:void* inProcUserData})"
+    },
+    {
+      "trigger": "AudioUnitGetParameter",
+      "contents": "AudioUnitGetParameter(${1:AudioUnit inUnit}, ${2:AudioUnitParameterID inID}, ${3:AudioUnitScope inScope}, ${4:AudioUnitElement inElement}, ${5:AudioUnitParameterValue* outValue})"
+    },
+    {
+      "trigger": "AudioUnitGetProperty",
+      "contents": "AudioUnitGetProperty(${1:AudioUnit inUnit}, ${2:AudioUnitPropertyID inID}, ${3:AudioUnitScope inScope}, ${4:AudioUnitElement inElement}, ${5:void* outData}, ${6:UInt32* ioDataSize})"
+    },
+    {
+      "trigger": "AudioUnitGetPropertyInfo",
+      "contents": "AudioUnitGetPropertyInfo(${1:AudioUnit inUnit}, ${2:AudioUnitPropertyID inID}, ${3:AudioUnitScope inScope}, ${4:AudioUnitElement inElement}, ${5:UInt32* outDataSize}, ${6:Boolean* outWritable})"
+    },
+    {
+      "trigger": "AudioUnitInitialize",
+      "contents": "AudioUnitInitialize(${1:AudioUnit inUnit})"
+    },
+    {
+      "trigger": "AudioUnitProcess",
+      "contents": "AudioUnitProcess(${1:AudioUnit inUnit}, ${2:AudioUnitRenderActionFlags* ioActionFlags}, ${3:AudioTimeStamp* inTimeStamp}, ${4:UInt32 inNumberFrames}, ${5:AudioBufferList* ioData})"
+    },
+    {
+      "trigger": "AudioUnitProcessMultiple",
+      "contents": "AudioUnitProcessMultiple(${1:AudioUnit inUnit}, ${2:AudioUnitRenderActionFlags* ioActionFlags}, ${3:AudioTimeStamp* inTimeStamp}, ${4:UInt32 inNumberFrames}, ${5:UInt32 inNumberInputBufferLists}, ${6:AudioBufferList** inInputBufferLists}, ${7:UInt32 inNumberOutputBufferLists}, ${8:AudioBufferList** ioOutputBufferLists})"
+    },
+    {
+      "trigger": "AudioUnitRemovePropertyListenerWithUserData",
+      "contents": "AudioUnitRemovePropertyListenerWithUserData(${1:AudioUnit inUnit}, ${2:AudioUnitPropertyID inID}, ${3:AudioUnitPropertyListenerProc inProc}, ${4:void* inProcUserData})"
+    },
+    {
+      "trigger": "AudioUnitRemoveRenderNotify",
+      "contents": "AudioUnitRemoveRenderNotify(${1:AudioUnit inUnit}, ${2:AURenderCallback inProc}, ${3:void* inProcUserData})"
+    },
+    {
+      "trigger": "AudioUnitRender",
+      "contents": "AudioUnitRender(${1:AudioUnit inUnit}, ${2:AudioUnitRenderActionFlags* ioActionFlags}, ${3:AudioTimeStamp* inTimeStamp}, ${4:UInt32 inOutputBusNumber}, ${5:UInt32 inNumberFrames}, ${6:AudioBufferList* ioData})"
+    },
+    {
+      "trigger": "AudioUnitReset",
+      "contents": "AudioUnitReset(${1:AudioUnit inUnit}, ${2:AudioUnitScope inScope}, ${3:AudioUnitElement inElement})"
+    },
+    {
+      "trigger": "AudioUnitScheduleParameters",
+      "contents": "AudioUnitScheduleParameters(${1:AudioUnit inUnit}, ${2:AudioUnitParameterEvent* inParameterEvent}, ${3:UInt32 inNumParamEvents})"
+    },
+    {
+      "trigger": "AudioUnitSetParameter",
+      "contents": "AudioUnitSetParameter(${1:AudioUnit inUnit}, ${2:AudioUnitParameterID inID}, ${3:AudioUnitScope inScope}, ${4:AudioUnitElement inElement}, ${5:AudioUnitParameterValue inValue}, ${6:UInt32 inBufferOffsetInFrames})"
+    },
+    {
+      "trigger": "AudioUnitSetProperty",
+      "contents": "AudioUnitSetProperty(${1:AudioUnit inUnit}, ${2:AudioUnitPropertyID inID}, ${3:AudioUnitScope inScope}, ${4:AudioUnitElement inElement}, ${5:void* inData}, ${6:UInt32 inDataSize})"
+    },
+    {
+      "trigger": "AudioUnitUninitialize",
+      "contents": "AudioUnitUninitialize(${1:AudioUnit inUnit})"
     },
     {
       "trigger": "CAAnimation.defaultValueForKey:",
@@ -9564,6 +9818,10 @@
     {
       "trigger": "CBErrorAlreadyAdvertising (9)",
       "contents": "CBErrorAlreadyAdvertising"
+    },
+    {
+      "trigger": "CBErrorConnectionFailed (10)",
+      "contents": "CBErrorConnectionFailed"
     },
     {
       "trigger": "CBErrorConnectionTimeout (6)",
@@ -15466,6 +15724,10 @@
       "contents": "CMBufferQueueGetMinPresentationTimeStamp(${1:CMBufferQueueRef queue})"
     },
     {
+      "trigger": "CMBufferQueueGetTotalSize",
+      "contents": "CMBufferQueueGetTotalSize(${1:CMBufferQueueRef queue})"
+    },
+    {
       "trigger": "CMBufferQueueInstallTrigger",
       "contents": "CMBufferQueueInstallTrigger(${1:CMBufferQueueRef queue}, ${2:CMBufferQueueTriggerCallback triggerCallback}, ${3:void* triggerRefcon}, ${4:CMBufferQueueTriggerCondition triggerCondition}, ${5:CMTime triggerTime}, ${6:CMBufferQueueTriggerToken* triggerTokenOut})"
     },
@@ -15980,6 +16242,10 @@
     {
       "trigger": "CMTimeMultiplyByFloat64",
       "contents": "CMTimeMultiplyByFloat64(${1:CMTime time}, ${2:Float64 multiplier})"
+    },
+    {
+      "trigger": "CMTimeMultiplyByRatio",
+      "contents": "CMTimeMultiplyByRatio(${1:CMTime time}, ${2:int32_t multiplier}, ${3:int32_t divisor})"
     },
     {
       "trigger": "CMTimeRangeContainsTime",
@@ -25070,6 +25336,10 @@
       "contents": "polylineWithPoints(${1:MKMapPoint* points}, count:${2:NSUInteger count})"
     },
     {
+      "trigger": "MKLaunchOptionsCameraKey (NSString*)",
+      "contents": "MKLaunchOptionsCameraKey"
+    },
+    {
       "trigger": "MKLaunchOptionsDirectionsModeDriving (NSString*)",
       "contents": "MKLaunchOptionsDirectionsModeDriving"
     },
@@ -25966,6 +26236,26 @@
       "contents": "MPNowPlayingInfoPropertyPlaybackRate"
     },
     {
+      "trigger": "MPRemoteCommandHandlerStatusCommandFailed (200)",
+      "contents": "MPRemoteCommandHandlerStatusCommandFailed"
+    },
+    {
+      "trigger": "MPRemoteCommandHandlerStatusNoSuchContent (100)",
+      "contents": "MPRemoteCommandHandlerStatusNoSuchContent"
+    },
+    {
+      "trigger": "MPRemoteCommandHandlerStatusSuccess (0)",
+      "contents": "MPRemoteCommandHandlerStatusSuccess"
+    },
+    {
+      "trigger": "MPSeekCommandEventTypeBeginSeeking (0)",
+      "contents": "MPSeekCommandEventTypeBeginSeeking"
+    },
+    {
+      "trigger": "MPSeekCommandEventTypeEndSeeking (1)",
+      "contents": "MPSeekCommandEventTypeEndSeeking"
+    },
+    {
       "trigger": "MPVolumeViewWirelessRouteActiveDidChangeNotification (NSString*)",
       "contents": "MPVolumeViewWirelessRouteActiveDidChangeNotification"
     },
@@ -25996,6 +26286,22 @@
     {
       "trigger": "MessageComposeResultSent (1)",
       "contents": "MessageComposeResultSent"
+    },
+    {
+      "trigger": "MusicDeviceMIDIEvent",
+      "contents": "MusicDeviceMIDIEvent(${1:MusicDeviceComponent inUnit}, ${2:UInt32 inStatus}, ${3:UInt32 inData1}, ${4:UInt32 inData2}, ${5:UInt32 inOffsetSampleFrame})"
+    },
+    {
+      "trigger": "MusicDeviceStartNote",
+      "contents": "MusicDeviceStartNote(${1:MusicDeviceComponent inUnit}, ${2:MusicDeviceInstrumentID inInstrument}, ${3:MusicDeviceGroupID inGroupID}, ${4:NoteInstanceID* outNoteInstanceID}, ${5:UInt32 inOffsetSampleFrame}, ${6:MusicDeviceNoteParams* inParams})"
+    },
+    {
+      "trigger": "MusicDeviceStopNote",
+      "contents": "MusicDeviceStopNote(${1:MusicDeviceComponent inUnit}, ${2:MusicDeviceGroupID inGroupID}, ${3:NoteInstanceID inNoteInstanceID}, ${4:UInt32 inOffsetSampleFrame})"
+    },
+    {
+      "trigger": "MusicDeviceSysEx",
+      "contents": "MusicDeviceSysEx(${1:MusicDeviceComponent inUnit}, ${2:UInt8* inData}, ${3:UInt32 inLength})"
     },
     {
       "trigger": "MusicEventIteratorDeleteEvent",
@@ -30246,6 +30552,10 @@
       "contents": "objectWithRestorationIdentifierPath(${1:NSArray* identifierComponents}, coder:${2:NSCoder* coder})"
     },
     {
+      "trigger": "NSObject.registerObserver:forAXNotification:",
+      "contents": "registerObserver(${1:struct __AXObserver* arg1}, forAXNotification:${2:NSInteger arg2})"
+    },
+    {
       "trigger": "NSObject.registerObserver:forAXNotifications:",
       "contents": "registerObserver(${1:struct __AXObserver* arg1}, forAXNotifications:${2:BOOL arg2})"
     },
@@ -30267,19 +30577,27 @@
     },
     {
       "trigger": "NSObject.stringForAXNotification:",
-      "contents": "stringForAXNotification(${1:int arg1})"
+      "contents": "stringForAXNotification(${1:NSInteger arg1})"
     },
     {
       "trigger": "NSObject.stringForTraits:",
       "contents": "stringForTraits(${1:unsigned long long arg1})"
     },
     {
+      "trigger": "NSObject.uiaxApplicationAtPosition:",
+      "contents": "uiaxApplicationAtPosition(${1:CGPoint arg1})"
+    },
+    {
       "trigger": "NSObject.uiaxElementAtPosition:",
-      "contents": "uiaxElementAtPosition(${1:struct CGPoint arg1})"
+      "contents": "uiaxElementAtPosition(${1:CGPoint arg1})"
     },
     {
       "trigger": "NSObject.uiaxElementWithAXUIElementRef:",
       "contents": "uiaxElementWithAXUIElementRef(${1:struct __AXUIElement* arg1})"
+    },
+    {
+      "trigger": "NSObject.unregisterObserver:forAXNotification:",
+      "contents": "unregisterObserver(${1:struct __AXObserver* arg1}, forAXNotification:${2:NSInteger arg2})"
     },
     {
       "trigger": "NSObject.viewControllerWithRestorationIdentifierPath:coder:",
@@ -34218,6 +34536,10 @@
       "contents": "setTexture(${1:SKTexture* texture})"
     },
     {
+      "trigger": "SKAction.setTexture:resize:",
+      "contents": "setTexture(${1:SKTexture* texture}, resize:${2:BOOL resize})"
+    },
+    {
       "trigger": "SKAction.speedBy:duration:",
       "contents": "speedBy(${1:CGFloat speed}, duration:${2:NSTimeInterval sec})"
     },
@@ -34402,8 +34724,16 @@
       "contents": "SKPaymentTransactionStateRestored"
     },
     {
+      "trigger": "SKPhysicsBody.bodyWithBodies:",
+      "contents": "bodyWithBodies(${1:NSArray* bodies})"
+    },
+    {
       "trigger": "SKPhysicsBody.bodyWithCircleOfRadius:",
       "contents": "bodyWithCircleOfRadius(${1:CGFloat r})"
+    },
+    {
+      "trigger": "SKPhysicsBody.bodyWithCircleOfRadius:center:",
+      "contents": "bodyWithCircleOfRadius(${1:CGFloat r}, center:${2:CGPoint center})"
     },
     {
       "trigger": "SKPhysicsBody.bodyWithEdgeChainFromPath:",
@@ -34428,6 +34758,10 @@
     {
       "trigger": "SKPhysicsBody.bodyWithRectangleOfSize:",
       "contents": "bodyWithRectangleOfSize(${1:CGSize s})"
+    },
+    {
+      "trigger": "SKPhysicsBody.bodyWithRectangleOfSize:center:",
+      "contents": "bodyWithRectangleOfSize(${1:CGSize s}, center:${2:CGPoint center})"
     },
     {
       "trigger": "SKPhysicsJointFixed.jointWithBodyA:bodyB:anchor:",
@@ -35694,24 +36028,36 @@
       "contents": "TWTweetComposeViewControllerResultDone"
     },
     {
+      "trigger": "UIAActionSheet._classForSimpleUIAXElement:",
+      "contents": "_classForSimpleUIAXElement(${1:id arg1})"
+    },
+    {
+      "trigger": "UIAAlert._classForSimpleUIAXElement:",
+      "contents": "_classForSimpleUIAXElement(${1:id arg1})"
+    },
+    {
+      "trigger": "UIACollectionView._classForSimpleUIAXElement:",
+      "contents": "_classForSimpleUIAXElement(${1:id arg1})"
+    },
+    {
       "trigger": "UIAElement._classForSimpleUIAXElement:",
       "contents": "_classForSimpleUIAXElement(${1:id arg1})"
     },
     {
       "trigger": "UIAElement._convertPointFromCurrentInterfaceOrientation:",
-      "contents": "_convertPointFromCurrentInterfaceOrientation(${1:struct CGPoint arg1})"
+      "contents": "_convertPointFromCurrentInterfaceOrientation(${1:CGPoint arg1})"
     },
     {
       "trigger": "UIAElement._convertPointToCurrentInterfaceOrientation:",
-      "contents": "_convertPointToCurrentInterfaceOrientation(${1:struct CGPoint arg1})"
+      "contents": "_convertPointToCurrentInterfaceOrientation(${1:CGPoint arg1})"
     },
     {
       "trigger": "UIAElement._convertRectFromCurrentInterfaceOrientation:",
-      "contents": "_convertRectFromCurrentInterfaceOrientation(${1:id arg1})"
+      "contents": "_convertRectFromCurrentInterfaceOrientation(${1:CGRect arg1})"
     },
     {
       "trigger": "UIAElement._convertRectToCurrentInterfaceOrientation:",
-      "contents": "_convertRectToCurrentInterfaceOrientation(${1:id arg1})"
+      "contents": "_convertRectToCurrentInterfaceOrientation(${1:CGRect arg1})"
     },
     {
       "trigger": "UIAElement._delayForTimeInterval:",
@@ -35762,8 +36108,12 @@
       "contents": "_jsStringForObject(${1:id arg1})"
     },
     {
+      "trigger": "UIAElement._jsStringForPoint:",
+      "contents": "_jsStringForPoint(${1:CGPoint arg1})"
+    },
+    {
       "trigger": "UIAElement._jsStringForRect:",
-      "contents": "_jsStringForRect(${1:id arg1})"
+      "contents": "_jsStringForRect(${1:CGRect arg1})"
     },
     {
       "trigger": "UIAElement._jsStringForString:",
@@ -35774,8 +36124,12 @@
       "contents": "_jsStringForUIAElement(${1:id arg1})"
     },
     {
+      "trigger": "UIAElement._jsStringForValue:",
+      "contents": "_jsStringForValue(${1:id arg1})"
+    },
+    {
       "trigger": "UIAElement._logVerbosity:format:",
-      "contents": "_logVerbosity(${1:unsigned int arg1}, format:${2:id arg2})"
+      "contents": "_logVerbosity(${1:NSUInteger arg1}, format:${2:id arg2})"
     },
     {
       "trigger": "UIAElement._nameForAXElement:",
@@ -35807,15 +36161,15 @@
     },
     {
       "trigger": "UIAElement._transformToRotateFromInterfaceOrientation:",
-      "contents": "_transformToRotateFromInterfaceOrientation(${1:int arg1})"
+      "contents": "_transformToRotateFromInterfaceOrientation(${1:NSInteger arg1})"
     },
     {
       "trigger": "UIAElement._transformToRotateToInterfaceOrientation:",
-      "contents": "_transformToRotateToInterfaceOrientation(${1:int arg1})"
+      "contents": "_transformToRotateToInterfaceOrientation(${1:NSInteger arg1})"
     },
     {
-      "trigger": "UIAElement._uiaClassForClass:",
-      "contents": "_uiaClassForClass(${1:Class arg1})"
+      "trigger": "UIAElement._uiaClassForClassName:",
+      "contents": "_uiaClassForClassName(${1:id arg1})"
     },
     {
       "trigger": "UIAElement._valueForAXElement:",
@@ -35827,7 +36181,7 @@
     },
     {
       "trigger": "UIAElement.elementAtPosition:",
-      "contents": "elementAtPosition(${1:struct CGPoint arg1})"
+      "contents": "elementAtPosition(${1:CGPoint arg1})"
     },
     {
       "trigger": "UIAElement.elementForUIAXElement:",
@@ -35862,12 +36216,28 @@
       "contents": "_elementNilWithInvocation(${1:id arg1})"
     },
     {
+      "trigger": "UIAElementSynonym._setAssociatedStringExpressions:forSynonymString:",
+      "contents": "_setAssociatedStringExpressions(${1:id arg1}, forSynonymString:${2:id arg2})"
+    },
+    {
+      "trigger": "UIAElementSynonym.associatedStringExpressionsForSynonymString:",
+      "contents": "associatedStringExpressionsForSynonymString(${1:id arg1})"
+    },
+    {
+      "trigger": "UIAElementSynonym.synonymForRelationship:",
+      "contents": "synonymForRelationship(${1:id arg1})"
+    },
+    {
+      "trigger": "UIAElementSynonym.synonymForRelationship:attribute:value:",
+      "contents": "synonymForRelationship(${1:id arg1}, attribute:${2:id arg2}, value:${3:id arg3})"
+    },
+    {
       "trigger": "UIARecorderAction._elementCanScroll:",
       "contents": "_elementCanScroll(${1:id arg1})"
     },
     {
-      "trigger": "UIARecorderAction.actionWithGSEventRecord:",
-      "contents": "actionWithGSEventRecord(${1:CDStruct_141d6fc6* arg1})"
+      "trigger": "UIARecorderAction.actionWithAXEventRepresentation:",
+      "contents": "actionWithAXEventRepresentation(${1:id arg1})"
     },
     {
       "trigger": "UIARecorderAction.expressionForElement:",
@@ -35894,6 +36264,14 @@
       "contents": "_attributeForString(${1:id arg1})"
     },
     {
+      "trigger": "UIAXElement._convertHostedCoordinates:forContextID:",
+      "contents": "_convertHostedCoordinates(${1:CGPoint arg1}, forContextID:${2:id arg2})"
+    },
+    {
+      "trigger": "UIAXElement._convertHostedViewFrame:forContextID:",
+      "contents": "_convertHostedViewFrame(${1:CGRect arg1}, forContextID:${2:id arg2})"
+    },
+    {
       "trigger": "UIAXElement._objectForCFTypeRef:",
       "contents": "_objectForCFTypeRef(${1:void* arg1})"
     },
@@ -35907,11 +36285,15 @@
     },
     {
       "trigger": "UIAXElement._stringForAttribute:",
-      "contents": "_stringForAttribute(${1:int arg1})"
+      "contents": "_stringForAttribute(${1:NSInteger arg1})"
     },
     {
       "trigger": "UIAXElement._stringForParameterizedAttribute:",
-      "contents": "_stringForParameterizedAttribute(${1:int arg1})"
+      "contents": "_stringForParameterizedAttribute(${1:NSInteger arg1})"
+    },
+    {
+      "trigger": "UIAXElement.registerObserver:forAXNotification:",
+      "contents": "registerObserver(${1:struct __AXObserver* arg1}, forAXNotification:${2:NSInteger arg2})"
     },
     {
       "trigger": "UIAXElement.registerObserver:forAXNotifications:",
@@ -35923,19 +36305,27 @@
     },
     {
       "trigger": "UIAXElement.stringForAXNotification:",
-      "contents": "stringForAXNotification(${1:int arg1})"
+      "contents": "stringForAXNotification(${1:NSInteger arg1})"
     },
     {
       "trigger": "UIAXElement.stringForTraits:",
       "contents": "stringForTraits(${1:unsigned long long arg1})"
     },
     {
+      "trigger": "UIAXElement.uiaxApplicationAtPosition:",
+      "contents": "uiaxApplicationAtPosition(${1:CGPoint arg1})"
+    },
+    {
       "trigger": "UIAXElement.uiaxElementAtPosition:",
-      "contents": "uiaxElementAtPosition(${1:struct CGPoint arg1})"
+      "contents": "uiaxElementAtPosition(${1:CGPoint arg1})"
     },
     {
       "trigger": "UIAXElement.uiaxElementWithAXUIElementRef:",
       "contents": "uiaxElementWithAXUIElementRef(${1:struct __AXUIElement* arg1})"
+    },
+    {
+      "trigger": "UIAXElement.unregisterObserver:forAXNotification:",
+      "contents": "unregisterObserver(${1:struct __AXObserver* arg1}, forAXNotification:${2:NSInteger arg2})"
     },
     {
       "trigger": "UIAccessibilityAnnouncementDidFinishNotification (NSString*)",
@@ -39882,12 +40272,12 @@
       "contents": "__CGSizeEqualToSize(${1:CGSize size1}, ${2:CGSize size2})"
     },
     {
-      "trigger": "_convertLocation:",
-      "contents": "_convertLocation(${1:struct CGPoint arg1})"
+      "trigger": "_applicationAtPosition:",
+      "contents": "_applicationAtPosition(${1:CGPoint arg1})"
     },
     {
       "trigger": "_dragFrom:to:forDuration:withTouchCount:withFlick:",
-      "contents": "_dragFrom(${1:id arg1}, to:${2:id arg2}, forDuration:${3:double arg3}, withTouchCount:${4:int arg4}, withFlick:${5:BOOL arg5})"
+      "contents": "_dragFrom(${1:id arg1}, to:${2:id arg2}, forDuration:${3:NSTimeInterval arg3}, withTouchCount:${4:NSInteger arg4}, withFlick:${5:BOOL arg5})"
     },
     {
       "trigger": "_dragInsideWithOptions:withFlick:",
@@ -39895,7 +40285,7 @@
     },
     {
       "trigger": "_elementAtPosition:",
-      "contents": "_elementAtPosition(${1:struct CGPoint arg1})"
+      "contents": "_elementAtPosition(${1:CGPoint arg1})"
     },
     {
       "trigger": "_elementForSimpleUIAXElement:",
@@ -39922,16 +40312,32 @@
       "contents": "_elementsOfClass(${1:Class arg1}, forSelector:${2:SEL arg2})"
     },
     {
+      "trigger": "_enableStarkModeWithDisplayUUID:",
+      "contents": "_enableStarkModeWithDisplayUUID(${1:id arg1})"
+    },
+    {
+      "trigger": "_enterPasscode:",
+      "contents": "_enterPasscode(${1:id arg1})"
+    },
+    {
       "trigger": "_flipPages:",
-      "contents": "_flipPages(${1:int arg1})"
+      "contents": "_flipPages(${1:NSInteger arg1})"
     },
     {
       "trigger": "_handEnded:",
-      "contents": "_handEnded(${1:CDStruct_141d6fc6* arg1})"
+      "contents": "_handEnded(${1:id arg1})"
     },
     {
       "trigger": "_handStarted:",
-      "contents": "_handStarted(${1:CDStruct_141d6fc6* arg1})"
+      "contents": "_handStarted(${1:id arg1})"
+    },
+    {
+      "trigger": "_handleAnnouncement:",
+      "contents": "_handleAnnouncement(${1:id arg1})"
+    },
+    {
+      "trigger": "_initWithAXEventRepresentation:",
+      "contents": "_initWithAXEventRepresentation(${1:id arg1})"
     },
     {
       "trigger": "_initWithAXUIElementRef:",
@@ -39940,10 +40346,6 @@
     {
       "trigger": "_initWithArray:",
       "contents": "_initWithArray(${1:id arg1})"
-    },
-    {
-      "trigger": "_initWithGSEventRecord:",
-      "contents": "_initWithGSEventRecord(${1:CDStruct_141d6fc6* arg1})"
     },
     {
       "trigger": "_initWithInvocation:",
@@ -39959,27 +40361,39 @@
     },
     {
       "trigger": "_inspectConfirmElement:forAXAncestry:index:",
-      "contents": "_inspectConfirmElement(${1:id arg1}, forAXAncestry:${2:id arg2}, index:${3:unsigned int* arg3})"
+      "contents": "_inspectConfirmElement(${1:id arg1}, forAXAncestry:${2:id arg2}, index:${3:NSUInteger* arg3})"
     },
     {
       "trigger": "_inspectedElementForAXAncestry:index:triedKeys:",
-      "contents": "_inspectedElementForAXAncestry(${1:id arg1}, index:${2:unsigned int* arg2}, triedKeys:${3:id arg3})"
+      "contents": "_inspectedElementForAXAncestry(${1:id arg1}, index:${2:NSUInteger* arg2}, triedKeys:${3:id arg3})"
     },
     {
       "trigger": "_inspectedToManyRelationship:forAXAncestry:index:",
-      "contents": "_inspectedToManyRelationship(${1:id arg1}, forAXAncestry:${2:id arg2}, index:${3:unsigned int* arg3})"
+      "contents": "_inspectedToManyRelationship(${1:id arg1}, forAXAncestry:${2:id arg2}, index:${3:NSUInteger* arg3})"
     },
     {
       "trigger": "_inspectedToOneRelationship:forAXAncestry:index:",
-      "contents": "_inspectedToOneRelationship(${1:id arg1}, forAXAncestry:${2:id arg2}, index:${3:unsigned int* arg3})"
+      "contents": "_inspectedToOneRelationship(${1:id arg1}, forAXAncestry:${2:id arg2}, index:${3:NSUInteger* arg3})"
     },
     {
       "trigger": "_isStillFreshAtTime:",
       "contents": "_isStillFreshAtTime(${1:double arg1})"
     },
     {
+      "trigger": "_isVisibleAtPoint:",
+      "contents": "_isVisibleAtPoint(${1:CGPoint arg1})"
+    },
+    {
+      "trigger": "_logLocalizedStringHintForKey:testValue:",
+      "contents": "_logLocalizedStringHintForKey(${1:id arg1}, testValue:${2:id arg2})"
+    },
+    {
       "trigger": "_moveLastTouchPoint:",
-      "contents": "_moveLastTouchPoint(${1:struct CGPoint arg1})"
+      "contents": "_moveLastTouchPoint(${1:CGPoint arg1})"
+    },
+    {
+      "trigger": "_nameFromChildForAXElement:",
+      "contents": "_nameFromChildForAXElement(${1:id arg1})"
     },
     {
       "trigger": "_navBarShouldAcceptAXElement:",
@@ -40003,39 +40417,35 @@
     },
     {
       "trigger": "_scriptingIndexSynonymsForElement:maxCount:",
-      "contents": "_scriptingIndexSynonymsForElement(${1:id arg1}, maxCount:${2:unsigned int arg2})"
+      "contents": "_scriptingIndexSynonymsForElement(${1:id arg1}, maxCount:${2:NSUInteger arg2})"
     },
     {
       "trigger": "_scriptingStringForOffsetWithScreenPoint:inRect:",
-      "contents": "_scriptingStringForOffsetWithScreenPoint(${1:struct CGPoint arg1}, inRect:${2:id arg2})"
+      "contents": "_scriptingStringForOffsetWithScreenPoint(${1:CGPoint arg1}, inRect:${2:CGRect arg2})"
     },
     {
       "trigger": "_scriptingStringForPoint:",
-      "contents": "_scriptingStringForPoint(${1:struct CGPoint arg1})"
+      "contents": "_scriptingStringForPoint(${1:CGPoint arg1})"
     },
     {
       "trigger": "_scriptingSynonymsForSubElement:maxCount:",
-      "contents": "_scriptingSynonymsForSubElement(${1:id arg1}, maxCount:${2:unsigned int arg2})"
+      "contents": "_scriptingSynonymsForSubElement(${1:id arg1}, maxCount:${2:NSUInteger arg2})"
     },
     {
-      "trigger": "_sendDownEvent:upEvent:",
-      "contents": "_sendDownEvent(${1:int arg1}, upEvent:${2:int arg2})"
+      "trigger": "_scrollViewWithElementType:",
+      "contents": "_scrollViewWithElementType(${1:id arg1})"
     },
     {
-      "trigger": "_sendDownEvent:upEvent:duration:",
-      "contents": "_sendDownEvent(${1:int arg1}, upEvent:${2:int arg2}, duration:${3:double arg3})"
+      "trigger": "_sendHIDEvent:",
+      "contents": "_sendHIDEvent(${1:struct __IOHIDEvent* arg1})"
     },
     {
-      "trigger": "_sendEventMessage:",
-      "contents": "_sendEventMessage(${1:id arg1})"
-    },
-    {
-      "trigger": "_sendHandEventWithPointArray:indentifierArray:pointCount:",
-      "contents": "_sendHandEventWithPointArray(${1:struct CGPoint* arg1}, indentifierArray:${2:int* arg2}, pointCount:${3:int arg3})"
+      "trigger": "_sendHIDKeyboardEventPage:usage:duration:",
+      "contents": "_sendHIDKeyboardEventPage(${1:NSUInteger arg1}, usage:${2:NSUInteger arg2}, duration:${3:NSTimeInterval arg3})"
     },
     {
       "trigger": "_sendSimpleEvent:",
-      "contents": "_sendSimpleEvent(${1:int arg1})"
+      "contents": "_sendSimpleEvent(${1:NSInteger arg1})"
     },
     {
       "trigger": "_setArray:",
@@ -40058,12 +40468,28 @@
       "contents": "_setValidForAXError(${1:long arg1})"
     },
     {
+      "trigger": "_slideToCamera:",
+      "contents": "_slideToCamera(${1:id arg1})"
+    },
+    {
+      "trigger": "_slideToUnlock:",
+      "contents": "_slideToUnlock(${1:id arg1})"
+    },
+    {
       "trigger": "_spinWheel:",
-      "contents": "_spinWheel(${1:int arg1})"
+      "contents": "_spinWheel(${1:NSInteger arg1})"
+    },
+    {
+      "trigger": "_submitHIDReportAtLocation:ofType:",
+      "contents": "_submitHIDReportAtLocation(${1:CGPoint arg1}, ofType:${2:NSInteger arg2})"
     },
     {
       "trigger": "_tapOptionalObject:tapCount:touchCount:tapOffset:",
       "contents": "_tapOptionalObject(${1:id arg1}, tapCount:${2:double arg2}, touchCount:${3:double arg3}, tapOffset:${4:id arg4})"
+    },
+    {
+      "trigger": "_tapPictureFrame:",
+      "contents": "_tapPictureFrame(${1:id arg1})"
     },
     {
       "trigger": "_tapRequiredObject:tapCount:touchCount:",
@@ -40074,16 +40500,24 @@
       "contents": "_textFieldShouldAcceptAXElement(${1:id arg1})"
     },
     {
-      "trigger": "_tryHitpoint:",
-      "contents": "_tryHitpoint(${1:struct CGPoint arg1})"
+      "trigger": "_touch:withOptions:",
+      "contents": "_touch(${1:id arg1}, withOptions:${2:id arg2})"
     },
     {
-      "trigger": "_typeKeyForString:",
-      "contents": "_typeKeyForString(${1:id arg1})"
+      "trigger": "_trackValueChanges:",
+      "contents": "_trackValueChanges(${1:BOOL arg1})"
+    },
+    {
+      "trigger": "_typeKeyForString:keyLayout:",
+      "contents": "_typeKeyForString(${1:id arg1}, keyLayout:${2:id arg2})"
     },
     {
       "trigger": "_uiaUniqueIndexOfObject:",
       "contents": "_uiaUniqueIndexOfObject(${1:id arg1})"
+    },
+    {
+      "trigger": "_updateTouchPoints:count:",
+      "contents": "_updateTouchPoints(${1:CGPoint* arg1}, count:${2:NSInteger arg2})"
     },
     {
       "trigger": "_windowShouldAcceptAXElement:",
@@ -40628,6 +41062,10 @@
     {
       "trigger": "addTarget:action:forControlEvents:",
       "contents": "addTarget(${1:id target}, action:${2:SEL action}, forControlEvents:${3:UIControlEvents controlEvents})"
+    },
+    {
+      "trigger": "addTargetWithHandler:",
+      "contents": "addTargetWithHandler(${1:MPRemoteCommandHandlerStatus (^)(MPRemoteCommandEvent *) handler})"
     },
     {
       "trigger": "addTextContainer:",
@@ -41242,6 +41680,10 @@
       "contents": "application(${1:UIApplication* application}, willFinishLaunchingWithOptions:${2:NSDictionary* launchOptions})"
     },
     {
+      "trigger": "applicationAtPoint:",
+      "contents": "applicationAtPoint(${1:id arg1})"
+    },
+    {
       "trigger": "applicationDidBecomeActive:",
       "contents": "applicationDidBecomeActive(${1:UIApplication* application})"
     },
@@ -41604,6 +42046,10 @@
     {
       "trigger": "beginEntityMapping:manager:error:",
       "contents": "beginEntityMapping(${1:NSEntityMapping* mapping}, manager:${2:NSMigrationManager* manager}, error:${3:NSError** error})"
+    },
+    {
+      "trigger": "beginLoadingChildItemsAtIndexPath:completionHandler:",
+      "contents": "beginLoadingChildItemsAtIndexPath(${1:NSIndexPath* indexPath}, completionHandler:${2:void (^)(NSError *) completionHandler})"
     },
     {
       "trigger": "beginTrackingWithTouch:withEvent:",
@@ -42014,8 +42460,16 @@
       "contents": "checkResourceIsReachableAndReturnError(${1:NSError** error})"
     },
     {
+      "trigger": "childItemsDisplayPlaybackProgressAtIndexPath:",
+      "contents": "childItemsDisplayPlaybackProgressAtIndexPath(${1:NSIndexPath* indexPath})"
+    },
+    {
       "trigger": "childNodeWithName:",
       "contents": "childNodeWithName(${1:NSString* name})"
+    },
+    {
+      "trigger": "childWithTestingTrait:",
+      "contents": "childWithTestingTrait(${1:NSString* arg1})"
     },
     {
       "trigger": "childWithTestingTrait:",
@@ -42422,6 +42876,10 @@
       "contents": "contentHuggingPriorityForAxis(${1:UILayoutConstraintAxis axis})"
     },
     {
+      "trigger": "contentItemAtIndexPath:",
+      "contents": "contentItemAtIndexPath(${1:NSIndexPath* indexPath})"
+    },
+    {
       "trigger": "contentOffsetForSegmentAtIndex:",
       "contents": "contentOffsetForSegmentAtIndex(${1:NSUInteger segment})"
     },
@@ -42627,7 +43085,7 @@
     },
     {
       "trigger": "countByEnumeratingWithState:objects:count:",
-      "contents": "countByEnumeratingWithState(${1:CDStruct_11f37819* arg1}, objects:${2:id* arg2}, count:${3:unsigned int arg3})"
+      "contents": "countByEnumeratingWithState(${1:CDStruct_11f37819* arg1}, objects:${2:id* arg2}, count:${3:NSUInteger arg3})"
     },
     {
       "trigger": "countByEnumeratingWithState:objects:count:",
@@ -43038,6 +43496,22 @@
       "contents": "dequeueReusableSupplementaryViewOfKind(${1:NSString* elementKind}, withReuseIdentifier:${2:NSString* identifier}, forIndexPath:${3:NSIndexPath* indexPath})"
     },
     {
+      "trigger": "descendantWithTestingTrait:",
+      "contents": "descendantWithTestingTrait(${1:NSString* arg1})"
+    },
+    {
+      "trigger": "descendantWithTestingTrait:",
+      "contents": "descendantWithTestingTrait(${1:id arg1})"
+    },
+    {
+      "trigger": "descendantsWithAttributes:traits:",
+      "contents": "descendantsWithAttributes(${1:NSDictionary* arg1}, traits:${2:unsigned long long arg2})"
+    },
+    {
+      "trigger": "descendantsWithAttributes:traits:",
+      "contents": "descendantsWithAttributes(${1:id arg1}, traits:${2:unsigned long long arg2})"
+    },
+    {
       "trigger": "descriptionWithLocale:",
       "contents": "descriptionWithLocale(${1:id locale})"
     },
@@ -43080,6 +43554,10 @@
     {
       "trigger": "detectConflictsForObject:",
       "contents": "detectConflictsForObject(${1:NSManagedObject* object})"
+    },
+    {
+      "trigger": "determineAppInstallationAttributionWithCompletionHandler:",
+      "contents": "determineAppInstallationAttributionWithCompletionHandler(${1:void (^)(BOOL) completionHandler})"
     },
     {
       "trigger": "determineCompatibleFileTypesWithCompletionHandler:",
@@ -43551,7 +44029,7 @@
     },
     {
       "trigger": "elementOfClass:atIndex:",
-      "contents": "elementOfClass(${1:Class arg1}, atIndex:${2:unsigned int arg2})"
+      "contents": "elementOfClass(${1:Class arg1}, atIndex:${2:NSUInteger arg2})"
     },
     {
       "trigger": "encodeArrayOfObjCType:count:at:",
@@ -44487,7 +44965,7 @@
     },
     {
       "trigger": "firstElementOfAttribute:withValue:forAttribute:",
-      "contents": "firstElementOfAttribute(${1:int arg1}, withValue:${2:id arg2}, forAttribute:${3:int arg3})"
+      "contents": "firstElementOfAttribute(${1:NSInteger arg1}, withValue:${2:id arg2}, forAttribute:${3:NSInteger arg3})"
     },
     {
       "trigger": "firstMatchInString:options:range:",
@@ -46902,12 +47380,12 @@
       "contents": "guidedAccessRestrictionWithIdentifier(${1:NSString* restrictionIdentifier}, didChangeState:${2:UIGuidedAccessRestrictionState newRestrictionState})"
     },
     {
-      "trigger": "handleError:userInteractionPermitted:",
-      "contents": "handleError(${1:NSError* error}, userInteractionPermitted:${2:BOOL userInteractionPermitted})"
+      "trigger": "handleAXEventRepresentation:",
+      "contents": "handleAXEventRepresentation(${1:id arg1})"
     },
     {
-      "trigger": "handleEvent:",
-      "contents": "handleEvent(${1:CDStruct_141d6fc6* arg1})"
+      "trigger": "handleError:userInteractionPermitted:",
+      "contents": "handleError(${1:NSError* error}, userInteractionPermitted:${2:BOOL userInteractionPermitted})"
     },
     {
       "trigger": "handleFailureInFunction:file:lineNumber:description:",
@@ -46990,6 +47468,14 @@
       "contents": "hitTest(${1:CGPoint point}, withEvent:${2:UIEvent* event})"
     },
     {
+      "trigger": "holdDown:",
+      "contents": "holdDown(${1:double arg1})"
+    },
+    {
+      "trigger": "holdLeft:",
+      "contents": "holdLeft(${1:double arg1})"
+    },
+    {
       "trigger": "holdLock:",
       "contents": "holdLock(${1:double arg1})"
     },
@@ -47004,6 +47490,22 @@
     {
       "trigger": "holdMenu:",
       "contents": "holdMenu(${1:id arg1})"
+    },
+    {
+      "trigger": "holdPlayPause:",
+      "contents": "holdPlayPause(${1:double arg1})"
+    },
+    {
+      "trigger": "holdRight:",
+      "contents": "holdRight(${1:double arg1})"
+    },
+    {
+      "trigger": "holdSelect:",
+      "contents": "holdSelect(${1:double arg1})"
+    },
+    {
+      "trigger": "holdUp:",
+      "contents": "holdUp(${1:double arg1})"
     },
     {
       "trigger": "holdVolumeDown:",
@@ -47055,7 +47557,7 @@
     },
     {
       "trigger": "imageFromRect:",
-      "contents": "imageFromRect(${1:id arg1})"
+      "contents": "imageFromRect(${1:CGRect arg1})"
     },
     {
       "trigger": "imagePickerController:didFinishPickingImage:editingInfo:",
@@ -47332,6 +47834,10 @@
     {
       "trigger": "initWithAVPlayer:",
       "contents": "initWithAVPlayer(${1:AVPlayer* player})"
+    },
+    {
+      "trigger": "initWithAXAttributedString:",
+      "contents": "initWithAXAttributedString(${1:id arg1})"
     },
     {
       "trigger": "initWithAccessibilityContainer:",
@@ -48374,6 +48880,10 @@
       "contents": "initWithReferenceView(${1:UIView* view})"
     },
     {
+      "trigger": "initWithRelationship:attribute:value:",
+      "contents": "initWithRelationship(${1:id arg1}, attribute:${2:id arg2}, value:${3:id arg3})"
+    },
+    {
       "trigger": "initWithRequest:",
       "contents": "initWithRequest(${1:MKDirectionsRequest* request})"
     },
@@ -49322,6 +49832,98 @@
       "contents": "itemsInRect(${1:CGRect rect})"
     },
     {
+      "trigger": "k3DMixerAttenuationCurve_Exponential (1)",
+      "contents": "K3DMixerAttenuationCurve_Exponential"
+    },
+    {
+      "trigger": "k3DMixerAttenuationCurve_Inverse (2)",
+      "contents": "K3DMixerAttenuationCurve_Inverse"
+    },
+    {
+      "trigger": "k3DMixerAttenuationCurve_Linear (3)",
+      "contents": "K3DMixerAttenuationCurve_Linear"
+    },
+    {
+      "trigger": "k3DMixerAttenuationCurve_Power (0)",
+      "contents": "K3DMixerAttenuationCurve_Power"
+    },
+    {
+      "trigger": "k3DMixerParam_Azimuth (0)",
+      "contents": "K3DMixerParam_Azimuth"
+    },
+    {
+      "trigger": "k3DMixerParam_Distance (2)",
+      "contents": "K3DMixerParam_Distance"
+    },
+    {
+      "trigger": "k3DMixerParam_Elevation (1)",
+      "contents": "K3DMixerParam_Elevation"
+    },
+    {
+      "trigger": "k3DMixerParam_Enable (5)",
+      "contents": "K3DMixerParam_Enable"
+    },
+    {
+      "trigger": "k3DMixerParam_Gain (3)",
+      "contents": "K3DMixerParam_Gain"
+    },
+    {
+      "trigger": "k3DMixerParam_GlobalReverbGain (9)",
+      "contents": "K3DMixerParam_GlobalReverbGain"
+    },
+    {
+      "trigger": "k3DMixerParam_MaxGain (7)",
+      "contents": "K3DMixerParam_MaxGain"
+    },
+    {
+      "trigger": "k3DMixerParam_MinGain (6)",
+      "contents": "K3DMixerParam_MinGain"
+    },
+    {
+      "trigger": "k3DMixerParam_ObstructionAttenuation (11)",
+      "contents": "K3DMixerParam_ObstructionAttenuation"
+    },
+    {
+      "trigger": "k3DMixerParam_OcclusionAttenuation (10)",
+      "contents": "K3DMixerParam_OcclusionAttenuation"
+    },
+    {
+      "trigger": "k3DMixerParam_PlaybackRate (4)",
+      "contents": "K3DMixerParam_PlaybackRate"
+    },
+    {
+      "trigger": "k3DMixerParam_ReverbBlend (8)",
+      "contents": "K3DMixerParam_ReverbBlend"
+    },
+    {
+      "trigger": "k3DMixerRenderingFlags_ConstantReverbBlend (64)",
+      "contents": "K3DMixerRenderingFlags_ConstantReverbBlend"
+    },
+    {
+      "trigger": "k3DMixerRenderingFlags_DistanceAttenuation (4)",
+      "contents": "K3DMixerRenderingFlags_DistanceAttenuation"
+    },
+    {
+      "trigger": "k3DMixerRenderingFlags_DistanceDiffusion (16)",
+      "contents": "K3DMixerRenderingFlags_DistanceDiffusion"
+    },
+    {
+      "trigger": "k3DMixerRenderingFlags_DistanceFilter (8)",
+      "contents": "K3DMixerRenderingFlags_DistanceFilter"
+    },
+    {
+      "trigger": "k3DMixerRenderingFlags_DopplerShift (2)",
+      "contents": "K3DMixerRenderingFlags_DopplerShift"
+    },
+    {
+      "trigger": "k3DMixerRenderingFlags_InterAuralDelay (1)",
+      "contents": "K3DMixerRenderingFlags_InterAuralDelay"
+    },
+    {
+      "trigger": "k3DMixerRenderingFlags_LinearDistanceAttenuation (32)",
+      "contents": "K3DMixerRenderingFlags_LinearDistanceAttenuation"
+    },
+    {
       "trigger": "kABAuthorizationStatusAuthorized (3)",
       "contents": "KABAuthorizationStatusAuthorized"
     },
@@ -49914,12 +50516,296 @@
       "contents": "KAUGraphErr_OutputNodeErr"
     },
     {
+      "trigger": "kAUGroupParameterID_AllNotesOff (123)",
+      "contents": "KAUGroupParameterID_AllNotesOff"
+    },
+    {
+      "trigger": "kAUGroupParameterID_AllSoundOff (120)",
+      "contents": "KAUGroupParameterID_AllSoundOff"
+    },
+    {
+      "trigger": "kAUGroupParameterID_ChannelPressure (208)",
+      "contents": "KAUGroupParameterID_ChannelPressure"
+    },
+    {
+      "trigger": "kAUGroupParameterID_DataEntry (6)",
+      "contents": "KAUGroupParameterID_DataEntry"
+    },
+    {
+      "trigger": "kAUGroupParameterID_DataEntry_LSB (38)",
+      "contents": "KAUGroupParameterID_DataEntry_LSB"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Expression (11)",
+      "contents": "KAUGroupParameterID_Expression"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Expression_LSB (43)",
+      "contents": "KAUGroupParameterID_Expression_LSB"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Foot (4)",
+      "contents": "KAUGroupParameterID_Foot"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Foot_LSB (36)",
+      "contents": "KAUGroupParameterID_Foot_LSB"
+    },
+    {
+      "trigger": "kAUGroupParameterID_KeyPressure (160)",
+      "contents": "KAUGroupParameterID_KeyPressure"
+    },
+    {
+      "trigger": "kAUGroupParameterID_KeyPressure_FirstKey (256)",
+      "contents": "KAUGroupParameterID_KeyPressure_FirstKey"
+    },
+    {
+      "trigger": "kAUGroupParameterID_KeyPressure_LastKey (383)",
+      "contents": "KAUGroupParameterID_KeyPressure_LastKey"
+    },
+    {
+      "trigger": "kAUGroupParameterID_ModWheel (1)",
+      "contents": "KAUGroupParameterID_ModWheel"
+    },
+    {
+      "trigger": "kAUGroupParameterID_ModWheel_LSB (33)",
+      "contents": "KAUGroupParameterID_ModWheel_LSB"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Pan (10)",
+      "contents": "KAUGroupParameterID_Pan"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Pan_LSB (42)",
+      "contents": "KAUGroupParameterID_Pan_LSB"
+    },
+    {
+      "trigger": "kAUGroupParameterID_PitchBend (224)",
+      "contents": "KAUGroupParameterID_PitchBend"
+    },
+    {
+      "trigger": "kAUGroupParameterID_ResetAllControllers (121)",
+      "contents": "KAUGroupParameterID_ResetAllControllers"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Sostenuto (66)",
+      "contents": "KAUGroupParameterID_Sostenuto"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Sustain (64)",
+      "contents": "KAUGroupParameterID_Sustain"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Volume (7)",
+      "contents": "KAUGroupParameterID_Volume"
+    },
+    {
+      "trigger": "kAUGroupParameterID_Volume_LSB (39)",
+      "contents": "KAUGroupParameterID_Volume_LSB"
+    },
+    {
+      "trigger": "kAULowShelfParam_CutoffFrequency (0)",
+      "contents": "KAULowShelfParam_CutoffFrequency"
+    },
+    {
+      "trigger": "kAULowShelfParam_Gain (1)",
+      "contents": "KAULowShelfParam_Gain"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_2ndOrderButterworthHighPass (2)",
+      "contents": "KAUNBandEQFilterType_2ndOrderButterworthHighPass"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_2ndOrderButterworthLowPass (1)",
+      "contents": "KAUNBandEQFilterType_2ndOrderButterworthLowPass"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_BandPass (5)",
+      "contents": "KAUNBandEQFilterType_BandPass"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_BandStop (6)",
+      "contents": "KAUNBandEQFilterType_BandStop"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_HighShelf (8)",
+      "contents": "KAUNBandEQFilterType_HighShelf"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_LowShelf (7)",
+      "contents": "KAUNBandEQFilterType_LowShelf"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_Parametric (0)",
+      "contents": "KAUNBandEQFilterType_Parametric"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_ResonantHighPass (4)",
+      "contents": "KAUNBandEQFilterType_ResonantHighPass"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_ResonantHighShelf (10)",
+      "contents": "KAUNBandEQFilterType_ResonantHighShelf"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_ResonantLowPass (3)",
+      "contents": "KAUNBandEQFilterType_ResonantLowPass"
+    },
+    {
+      "trigger": "kAUNBandEQFilterType_ResonantLowShelf (9)",
+      "contents": "KAUNBandEQFilterType_ResonantLowShelf"
+    },
+    {
+      "trigger": "kAUNBandEQParam_Bandwidth (5000)",
+      "contents": "KAUNBandEQParam_Bandwidth"
+    },
+    {
+      "trigger": "kAUNBandEQParam_BypassBand (1000)",
+      "contents": "KAUNBandEQParam_BypassBand"
+    },
+    {
+      "trigger": "kAUNBandEQParam_FilterType (2000)",
+      "contents": "KAUNBandEQParam_FilterType"
+    },
+    {
+      "trigger": "kAUNBandEQParam_Frequency (3000)",
+      "contents": "KAUNBandEQParam_Frequency"
+    },
+    {
+      "trigger": "kAUNBandEQParam_Gain (4000)",
+      "contents": "KAUNBandEQParam_Gain"
+    },
+    {
+      "trigger": "kAUNBandEQParam_GlobalGain (0)",
+      "contents": "KAUNBandEQParam_GlobalGain"
+    },
+    {
+      "trigger": "kAUNBandEQProperty_BiquadCoefficients (2203)",
+      "contents": "KAUNBandEQProperty_BiquadCoefficients"
+    },
+    {
+      "trigger": "kAUNBandEQProperty_MaxNumberOfBands (2201)",
+      "contents": "KAUNBandEQProperty_MaxNumberOfBands"
+    },
+    {
+      "trigger": "kAUNBandEQProperty_NumberOfBands (2200)",
+      "contents": "KAUNBandEQProperty_NumberOfBands"
+    },
+    {
       "trigger": "kAUNodeInteraction_Connection (1)",
       "contents": "KAUNodeInteraction_Connection"
     },
     {
       "trigger": "kAUNodeInteraction_InputCallback (2)",
       "contents": "KAUNodeInteraction_InputCallback"
+    },
+    {
+      "trigger": "kAUPresetCPULoadKey (cpu-load)",
+      "contents": "KAUPresetCPULoadKey"
+    },
+    {
+      "trigger": "kAUPresetDataKey (data)",
+      "contents": "KAUPresetDataKey"
+    },
+    {
+      "trigger": "kAUPresetElementNameKey (element-name)",
+      "contents": "KAUPresetElementNameKey"
+    },
+    {
+      "trigger": "kAUPresetExternalFileRefs (file-references)",
+      "contents": "KAUPresetExternalFileRefs"
+    },
+    {
+      "trigger": "kAUPresetManufacturerKey (manufacturer)",
+      "contents": "KAUPresetManufacturerKey"
+    },
+    {
+      "trigger": "kAUPresetNameKey (name)",
+      "contents": "KAUPresetNameKey"
+    },
+    {
+      "trigger": "kAUPresetPartKey (part)",
+      "contents": "KAUPresetPartKey"
+    },
+    {
+      "trigger": "kAUPresetRenderQualityKey (render-quality)",
+      "contents": "KAUPresetRenderQualityKey"
+    },
+    {
+      "trigger": "kAUPresetSubtypeKey (subtype)",
+      "contents": "KAUPresetSubtypeKey"
+    },
+    {
+      "trigger": "kAUPresetTypeKey (type)",
+      "contents": "KAUPresetTypeKey"
+    },
+    {
+      "trigger": "kAUPresetVersionKey (version)",
+      "contents": "KAUPresetVersionKey"
+    },
+    {
+      "trigger": "kAUSamplerParam_CoarseTuning (901)",
+      "contents": "KAUSamplerParam_CoarseTuning"
+    },
+    {
+      "trigger": "kAUSamplerParam_FineTuning (902)",
+      "contents": "KAUSamplerParam_FineTuning"
+    },
+    {
+      "trigger": "kAUSamplerParam_Gain (900)",
+      "contents": "KAUSamplerParam_Gain"
+    },
+    {
+      "trigger": "kAUSamplerParam_Pan (903)",
+      "contents": "KAUSamplerParam_Pan"
+    },
+    {
+      "trigger": "kAUSamplerProperty_BankAndPreset (4100)",
+      "contents": "KAUSamplerProperty_BankAndPreset"
+    },
+    {
+      "trigger": "kAUSamplerProperty_LoadAudioFiles (4101)",
+      "contents": "KAUSamplerProperty_LoadAudioFiles"
+    },
+    {
+      "trigger": "kAUSamplerProperty_LoadInstrument (4102)",
+      "contents": "KAUSamplerProperty_LoadInstrument"
+    },
+    {
+      "trigger": "kAUSamplerProperty_LoadPresetFromBank (4100)",
+      "contents": "KAUSamplerProperty_LoadPresetFromBank"
+    },
+    {
+      "trigger": "kAUSampler_DefaultBankLSB (0)",
+      "contents": "KAUSampler_DefaultBankLSB"
+    },
+    {
+      "trigger": "kAUSampler_DefaultMelodicBankMSB (121)",
+      "contents": "KAUSampler_DefaultMelodicBankMSB"
+    },
+    {
+      "trigger": "kAUSampler_DefaultPercussionBankMSB (120)",
+      "contents": "KAUSampler_DefaultPercussionBankMSB"
+    },
+    {
+      "trigger": "kAUVoiceIOProperty_BypassVoiceProcessing (2100)",
+      "contents": "KAUVoiceIOProperty_BypassVoiceProcessing"
+    },
+    {
+      "trigger": "kAUVoiceIOProperty_DuckNonVoiceAudio (2102)",
+      "contents": "KAUVoiceIOProperty_DuckNonVoiceAudio"
+    },
+    {
+      "trigger": "kAUVoiceIOProperty_MuteOutput (2104)",
+      "contents": "KAUVoiceIOProperty_MuteOutput"
+    },
+    {
+      "trigger": "kAUVoiceIOProperty_VoiceProcessingEnableAGC (2101)",
+      "contents": "KAUVoiceIOProperty_VoiceProcessingEnableAGC"
+    },
+    {
+      "trigger": "kAUVoiceIOProperty_VoiceProcessingQuality (2103)",
+      "contents": "KAUVoiceIOProperty_VoiceProcessingQuality"
     },
     {
       "trigger": "kAbbrevSquaredLigaturesOffSelector (15)",
@@ -50900,6 +51786,46 @@
     {
       "trigger": "kAudioChannelLayoutTag_XY (6881282)",
       "contents": "KAudioChannelLayoutTag_XY"
+    },
+    {
+      "trigger": "kAudioComponentErr_DuplicateDescription (-66752)",
+      "contents": "KAudioComponentErr_DuplicateDescription"
+    },
+    {
+      "trigger": "kAudioComponentErr_InitializationTimedOut (-66747)",
+      "contents": "KAudioComponentErr_InitializationTimedOut"
+    },
+    {
+      "trigger": "kAudioComponentErr_InstanceInvalidated (-66749)",
+      "contents": "KAudioComponentErr_InstanceInvalidated"
+    },
+    {
+      "trigger": "kAudioComponentErr_InvalidFormat (-66746)",
+      "contents": "KAudioComponentErr_InvalidFormat"
+    },
+    {
+      "trigger": "kAudioComponentErr_NotPermitted (-66748)",
+      "contents": "KAudioComponentErr_NotPermitted"
+    },
+    {
+      "trigger": "kAudioComponentErr_TooManyInstances (-66750)",
+      "contents": "KAudioComponentErr_TooManyInstances"
+    },
+    {
+      "trigger": "kAudioComponentErr_UnsupportedType (-66751)",
+      "contents": "KAudioComponentErr_UnsupportedType"
+    },
+    {
+      "trigger": "kAudioComponentFlag_SandboxSafe (2)",
+      "contents": "KAudioComponentFlag_SandboxSafe"
+    },
+    {
+      "trigger": "kAudioComponentFlag_Unsearchable (1)",
+      "contents": "KAudioComponentFlag_Unsearchable"
+    },
+    {
+      "trigger": "kAudioComponentRegistrationsChangedNotification (CFStringRef)",
+      "contents": "KAudioComponentRegistrationsChangedNotification"
     },
     {
       "trigger": "kAudioConverterApplicableEncodeBitRates (1634034290)",
@@ -52002,6 +52928,82 @@
       "contents": "KAudioFormatiLBC"
     },
     {
+      "trigger": "kAudioOfflineUnitRenderAction_Complete (128)",
+      "contents": "KAudioOfflineUnitRenderAction_Complete"
+    },
+    {
+      "trigger": "kAudioOfflineUnitRenderAction_Preflight (32)",
+      "contents": "KAudioOfflineUnitRenderAction_Preflight"
+    },
+    {
+      "trigger": "kAudioOfflineUnitRenderAction_Render (64)",
+      "contents": "KAudioOfflineUnitRenderAction_Render"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_ChannelMap (2002)",
+      "contents": "KAudioOutputUnitProperty_ChannelMap"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_CurrentDevice (2000)",
+      "contents": "KAudioOutputUnitProperty_CurrentDevice"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_EnableIO (2003)",
+      "contents": "KAudioOutputUnitProperty_EnableIO"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_HasIO (2006)",
+      "contents": "KAudioOutputUnitProperty_HasIO"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_HostReceivesRemoteControlEvents (2011)",
+      "contents": "KAudioOutputUnitProperty_HostReceivesRemoteControlEvents"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_HostTransportState (2013)",
+      "contents": "KAudioOutputUnitProperty_HostTransportState"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_IsRunning (2001)",
+      "contents": "KAudioOutputUnitProperty_IsRunning"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_MIDICallbacks (2010)",
+      "contents": "KAudioOutputUnitProperty_MIDICallbacks"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_NodeComponentDescription (2014)",
+      "contents": "KAudioOutputUnitProperty_NodeComponentDescription"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_RemoteControlToHost (2012)",
+      "contents": "KAudioOutputUnitProperty_RemoteControlToHost"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_SetInputCallback (2005)",
+      "contents": "KAudioOutputUnitProperty_SetInputCallback"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_StartTime (2004)",
+      "contents": "KAudioOutputUnitProperty_StartTime"
+    },
+    {
+      "trigger": "kAudioOutputUnitProperty_StartTimestampsAtZero (2007)",
+      "contents": "KAudioOutputUnitProperty_StartTimestampsAtZero"
+    },
+    {
+      "trigger": "kAudioOutputUnitRange (512)",
+      "contents": "KAudioOutputUnitRange"
+    },
+    {
+      "trigger": "kAudioOutputUnitStartSelect (513)",
+      "contents": "KAudioOutputUnitStartSelect"
+    },
+    {
+      "trigger": "kAudioOutputUnitStopSelect (514)",
+      "contents": "KAudioOutputUnitStopSelect"
+    },
+    {
       "trigger": "kAudioQueueDeviceProperty_NumberChannels (1634821219)",
       "contents": "KAudioQueueDeviceProperty_NumberChannels"
     },
@@ -52718,8 +53720,872 @@
       "contents": "KAudioToolboxErr_TrackNotFound"
     },
     {
+      "trigger": "kAudioUnitAddPropertyListenerSelect (10)",
+      "contents": "KAudioUnitAddPropertyListenerSelect"
+    },
+    {
+      "trigger": "kAudioUnitAddRenderNotifySelect (15)",
+      "contents": "KAudioUnitAddRenderNotifySelect"
+    },
+    {
+      "trigger": "kAudioUnitClumpID_System (0)",
+      "contents": "KAudioUnitClumpID_System"
+    },
+    {
+      "trigger": "kAudioUnitComplexRenderSelect (19)",
+      "contents": "KAudioUnitComplexRenderSelect"
+    },
+    {
+      "trigger": "kAudioUnitConfigurationInfo_ChannelConfigurations (ChannelConfigurations)",
+      "contents": "KAudioUnitConfigurationInfo_ChannelConfigurations"
+    },
+    {
+      "trigger": "kAudioUnitConfigurationInfo_HasCustomView (HasCustomView)",
+      "contents": "KAudioUnitConfigurationInfo_HasCustomView"
+    },
+    {
+      "trigger": "kAudioUnitConfigurationInfo_InitialInputs (InitialInputs)",
+      "contents": "KAudioUnitConfigurationInfo_InitialInputs"
+    },
+    {
+      "trigger": "kAudioUnitConfigurationInfo_InitialOutputs (InitialOutputs)",
+      "contents": "KAudioUnitConfigurationInfo_InitialOutputs"
+    },
+    {
+      "trigger": "kAudioUnitErr_CannotDoInCurrentContext (-10863)",
+      "contents": "KAudioUnitErr_CannotDoInCurrentContext"
+    },
+    {
+      "trigger": "kAudioUnitErr_FailedInitialization (-10875)",
+      "contents": "KAudioUnitErr_FailedInitialization"
+    },
+    {
+      "trigger": "kAudioUnitErr_FileNotSpecified (-10869)",
+      "contents": "KAudioUnitErr_FileNotSpecified"
+    },
+    {
+      "trigger": "kAudioUnitErr_FormatNotSupported (-10868)",
+      "contents": "KAudioUnitErr_FormatNotSupported"
+    },
+    {
+      "trigger": "kAudioUnitErr_IllegalInstrument (-10873)",
+      "contents": "KAudioUnitErr_IllegalInstrument"
+    },
+    {
+      "trigger": "kAudioUnitErr_Initialized (-10849)",
+      "contents": "KAudioUnitErr_Initialized"
+    },
+    {
+      "trigger": "kAudioUnitErr_InstrumentTypeNotFound (-10872)",
+      "contents": "KAudioUnitErr_InstrumentTypeNotFound"
+    },
+    {
+      "trigger": "kAudioUnitErr_InvalidElement (-10877)",
+      "contents": "KAudioUnitErr_InvalidElement"
+    },
+    {
+      "trigger": "kAudioUnitErr_InvalidFile (-10871)",
+      "contents": "KAudioUnitErr_InvalidFile"
+    },
+    {
+      "trigger": "kAudioUnitErr_InvalidOfflineRender (-10848)",
+      "contents": "KAudioUnitErr_InvalidOfflineRender"
+    },
+    {
+      "trigger": "kAudioUnitErr_InvalidParameter (-10878)",
+      "contents": "KAudioUnitErr_InvalidParameter"
+    },
+    {
+      "trigger": "kAudioUnitErr_InvalidProperty (-10879)",
+      "contents": "KAudioUnitErr_InvalidProperty"
+    },
+    {
+      "trigger": "kAudioUnitErr_InvalidPropertyValue (-10851)",
+      "contents": "KAudioUnitErr_InvalidPropertyValue"
+    },
+    {
+      "trigger": "kAudioUnitErr_InvalidScope (-10866)",
+      "contents": "KAudioUnitErr_InvalidScope"
+    },
+    {
+      "trigger": "kAudioUnitErr_NoConnection (-10876)",
+      "contents": "KAudioUnitErr_NoConnection"
+    },
+    {
+      "trigger": "kAudioUnitErr_PropertyNotInUse (-10850)",
+      "contents": "KAudioUnitErr_PropertyNotInUse"
+    },
+    {
+      "trigger": "kAudioUnitErr_PropertyNotWritable (-10865)",
+      "contents": "KAudioUnitErr_PropertyNotWritable"
+    },
+    {
+      "trigger": "kAudioUnitErr_TooManyFramesToProcess (-10874)",
+      "contents": "KAudioUnitErr_TooManyFramesToProcess"
+    },
+    {
+      "trigger": "kAudioUnitErr_Unauthorized (-10847)",
+      "contents": "KAudioUnitErr_Unauthorized"
+    },
+    {
+      "trigger": "kAudioUnitErr_Uninitialized (-10867)",
+      "contents": "KAudioUnitErr_Uninitialized"
+    },
+    {
+      "trigger": "kAudioUnitErr_UnknownFileType (-10870)",
+      "contents": "KAudioUnitErr_UnknownFileType"
+    },
+    {
+      "trigger": "kAudioUnitGetParameterSelect (6)",
+      "contents": "KAudioUnitGetParameterSelect"
+    },
+    {
+      "trigger": "kAudioUnitGetPropertyInfoSelect (3)",
+      "contents": "KAudioUnitGetPropertyInfoSelect"
+    },
+    {
+      "trigger": "kAudioUnitGetPropertySelect (4)",
+      "contents": "KAudioUnitGetPropertySelect"
+    },
+    {
+      "trigger": "kAudioUnitInitializeSelect (1)",
+      "contents": "KAudioUnitInitializeSelect"
+    },
+    {
+      "trigger": "kAudioUnitManufacturer_Apple (1634758764)",
+      "contents": "KAudioUnitManufacturer_Apple"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_CFNameRelease (16)",
+      "contents": "KAudioUnitParameterFlag_CFNameRelease"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_CanRamp (33554432)",
+      "contents": "KAudioUnitParameterFlag_CanRamp"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_DisplayCubeRoot (262144)",
+      "contents": "KAudioUnitParameterFlag_DisplayCubeRoot"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_DisplayCubed (196608)",
+      "contents": "KAudioUnitParameterFlag_DisplayCubed"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_DisplayExponential (327680)",
+      "contents": "KAudioUnitParameterFlag_DisplayExponential"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_DisplayLogarithmic (4194304)",
+      "contents": "KAudioUnitParameterFlag_DisplayLogarithmic"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_DisplayMask (4653056)",
+      "contents": "KAudioUnitParameterFlag_DisplayMask"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_DisplaySquareRoot (65536)",
+      "contents": "KAudioUnitParameterFlag_DisplaySquareRoot"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_DisplaySquared (131072)",
+      "contents": "KAudioUnitParameterFlag_DisplaySquared"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_ExpertMode (67108864)",
+      "contents": "KAudioUnitParameterFlag_ExpertMode"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_HasCFNameString (134217728)",
+      "contents": "KAudioUnitParameterFlag_HasCFNameString"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_HasClump (1048576)",
+      "contents": "KAudioUnitParameterFlag_HasClump"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_IsElementMeta (536870912)",
+      "contents": "KAudioUnitParameterFlag_IsElementMeta"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_IsGlobalMeta (268435456)",
+      "contents": "KAudioUnitParameterFlag_IsGlobalMeta"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_IsHighResolution (8388608)",
+      "contents": "KAudioUnitParameterFlag_IsHighResolution"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_IsReadable (1073741824)",
+      "contents": "KAudioUnitParameterFlag_IsReadable"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_IsWritable (-2147483648)",
+      "contents": "KAudioUnitParameterFlag_IsWritable"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_MeterReadOnly (32768)",
+      "contents": "KAudioUnitParameterFlag_MeterReadOnly"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_NonRealTime (16777216)",
+      "contents": "KAudioUnitParameterFlag_NonRealTime"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_PlotHistory (16384)",
+      "contents": "KAudioUnitParameterFlag_PlotHistory"
+    },
+    {
+      "trigger": "kAudioUnitParameterFlag_ValuesHaveStrings (2097152)",
+      "contents": "KAudioUnitParameterFlag_ValuesHaveStrings"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_AbsoluteCents (20)",
+      "contents": "KAudioUnitParameterUnit_AbsoluteCents"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_BPM (22)",
+      "contents": "KAudioUnitParameterUnit_BPM"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Beats (23)",
+      "contents": "KAudioUnitParameterUnit_Beats"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Boolean (2)",
+      "contents": "KAudioUnitParameterUnit_Boolean"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Cents (9)",
+      "contents": "KAudioUnitParameterUnit_Cents"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_CustomUnit (26)",
+      "contents": "KAudioUnitParameterUnit_CustomUnit"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Decibels (13)",
+      "contents": "KAudioUnitParameterUnit_Decibels"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Degrees (15)",
+      "contents": "KAudioUnitParameterUnit_Degrees"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_EqualPowerCrossfade (16)",
+      "contents": "KAudioUnitParameterUnit_EqualPowerCrossfade"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Generic (0)",
+      "contents": "KAudioUnitParameterUnit_Generic"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Hertz (8)",
+      "contents": "KAudioUnitParameterUnit_Hertz"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Indexed (1)",
+      "contents": "KAudioUnitParameterUnit_Indexed"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_LinearGain (14)",
+      "contents": "KAudioUnitParameterUnit_LinearGain"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_MIDIController (12)",
+      "contents": "KAudioUnitParameterUnit_MIDIController"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_MIDINoteNumber (11)",
+      "contents": "KAudioUnitParameterUnit_MIDINoteNumber"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Meters (19)",
+      "contents": "KAudioUnitParameterUnit_Meters"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Milliseconds (24)",
+      "contents": "KAudioUnitParameterUnit_Milliseconds"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_MixerFaderCurve1 (17)",
+      "contents": "KAudioUnitParameterUnit_MixerFaderCurve1"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Octaves (21)",
+      "contents": "KAudioUnitParameterUnit_Octaves"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Pan (18)",
+      "contents": "KAudioUnitParameterUnit_Pan"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Percent (3)",
+      "contents": "KAudioUnitParameterUnit_Percent"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Phase (6)",
+      "contents": "KAudioUnitParameterUnit_Phase"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Rate (7)",
+      "contents": "KAudioUnitParameterUnit_Rate"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Ratio (25)",
+      "contents": "KAudioUnitParameterUnit_Ratio"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_RelativeSemiTones (10)",
+      "contents": "KAudioUnitParameterUnit_RelativeSemiTones"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_SampleFrames (5)",
+      "contents": "KAudioUnitParameterUnit_SampleFrames"
+    },
+    {
+      "trigger": "kAudioUnitParameterUnit_Seconds (4)",
+      "contents": "KAudioUnitParameterUnit_Seconds"
+    },
+    {
+      "trigger": "kAudioUnitProcessMultipleSelect (21)",
+      "contents": "KAudioUnitProcessMultipleSelect"
+    },
+    {
+      "trigger": "kAudioUnitProcessSelect (20)",
+      "contents": "KAudioUnitProcessSelect"
+    },
+    {
+      "trigger": "kAudioUnitProperty_3DMixerAttenuationCurve (3013)",
+      "contents": "KAudioUnitProperty_3DMixerAttenuationCurve"
+    },
+    {
+      "trigger": "kAudioUnitProperty_3DMixerDistanceAtten (3004)",
+      "contents": "KAudioUnitProperty_3DMixerDistanceAtten"
+    },
+    {
+      "trigger": "kAudioUnitProperty_3DMixerDistanceParams (3010)",
+      "contents": "KAudioUnitProperty_3DMixerDistanceParams"
+    },
+    {
+      "trigger": "kAudioUnitProperty_3DMixerRenderingFlags (3003)",
+      "contents": "KAudioUnitProperty_3DMixerRenderingFlags"
+    },
+    {
+      "trigger": "kAudioUnitProperty_AudioChannelLayout (19)",
+      "contents": "KAudioUnitProperty_AudioChannelLayout"
+    },
+    {
+      "trigger": "kAudioUnitProperty_BypassEffect (21)",
+      "contents": "KAudioUnitProperty_BypassEffect"
+    },
+    {
+      "trigger": "kAudioUnitProperty_CPULoad (6)",
+      "contents": "KAudioUnitProperty_CPULoad"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ClassInfo (0)",
+      "contents": "KAudioUnitProperty_ClassInfo"
+    },
+    {
+      "trigger": "kAudioUnitProperty_CurrentPlayTime (3302)",
+      "contents": "KAudioUnitProperty_CurrentPlayTime"
+    },
+    {
+      "trigger": "kAudioUnitProperty_DeferredRendererExtraLatency (3321)",
+      "contents": "KAudioUnitProperty_DeferredRendererExtraLatency"
+    },
+    {
+      "trigger": "kAudioUnitProperty_DeferredRendererPullSize (3320)",
+      "contents": "KAudioUnitProperty_DeferredRendererPullSize"
+    },
+    {
+      "trigger": "kAudioUnitProperty_DeferredRendererWaitFrames (3322)",
+      "contents": "KAudioUnitProperty_DeferredRendererWaitFrames"
+    },
+    {
+      "trigger": "kAudioUnitProperty_DependentParameters (45)",
+      "contents": "KAudioUnitProperty_DependentParameters"
+    },
+    {
+      "trigger": "kAudioUnitProperty_DopplerShift (3002)",
+      "contents": "KAudioUnitProperty_DopplerShift"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ElementCount (11)",
+      "contents": "KAudioUnitProperty_ElementCount"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ElementName (30)",
+      "contents": "KAudioUnitProperty_ElementName"
+    },
+    {
+      "trigger": "kAudioUnitProperty_FactoryPresets (24)",
+      "contents": "KAudioUnitProperty_FactoryPresets"
+    },
+    {
+      "trigger": "kAudioUnitProperty_FrequencyResponse (52)",
+      "contents": "KAudioUnitProperty_FrequencyResponse"
+    },
+    {
+      "trigger": "kAudioUnitProperty_HostCallbacks (27)",
+      "contents": "KAudioUnitProperty_HostCallbacks"
+    },
+    {
+      "trigger": "kAudioUnitProperty_InPlaceProcessing (29)",
+      "contents": "KAudioUnitProperty_InPlaceProcessing"
+    },
+    {
+      "trigger": "kAudioUnitProperty_InputSamplesInOutput (49)",
+      "contents": "KAudioUnitProperty_InputSamplesInOutput"
+    },
+    {
+      "trigger": "kAudioUnitProperty_IsInterAppConnected (101)",
+      "contents": "KAudioUnitProperty_IsInterAppConnected"
+    },
+    {
+      "trigger": "kAudioUnitProperty_LastRenderError (22)",
+      "contents": "KAudioUnitProperty_LastRenderError"
+    },
+    {
+      "trigger": "kAudioUnitProperty_Latency (12)",
+      "contents": "KAudioUnitProperty_Latency"
+    },
+    {
+      "trigger": "kAudioUnitProperty_MakeConnection (1)",
+      "contents": "KAudioUnitProperty_MakeConnection"
+    },
+    {
+      "trigger": "kAudioUnitProperty_MatrixDimensions (3009)",
+      "contents": "KAudioUnitProperty_MatrixDimensions"
+    },
+    {
+      "trigger": "kAudioUnitProperty_MatrixLevels (3006)",
+      "contents": "KAudioUnitProperty_MatrixLevels"
+    },
+    {
+      "trigger": "kAudioUnitProperty_MaximumFramesPerSlice (14)",
+      "contents": "KAudioUnitProperty_MaximumFramesPerSlice"
+    },
+    {
+      "trigger": "kAudioUnitProperty_MeterClipping (3011)",
+      "contents": "KAudioUnitProperty_MeterClipping"
+    },
+    {
+      "trigger": "kAudioUnitProperty_MeteringMode (3007)",
+      "contents": "KAudioUnitProperty_MeteringMode"
+    },
+    {
+      "trigger": "kAudioUnitProperty_NickName (54)",
+      "contents": "KAudioUnitProperty_NickName"
+    },
+    {
+      "trigger": "kAudioUnitProperty_OfflineRender (37)",
+      "contents": "KAudioUnitProperty_OfflineRender"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ParameterHistoryInfo (53)",
+      "contents": "KAudioUnitProperty_ParameterHistoryInfo"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ParameterInfo (4)",
+      "contents": "KAudioUnitProperty_ParameterInfo"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ParameterList (3)",
+      "contents": "KAudioUnitProperty_ParameterList"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ParameterValueStrings (16)",
+      "contents": "KAudioUnitProperty_ParameterValueStrings"
+    },
+    {
+      "trigger": "kAudioUnitProperty_PeerURL (102)",
+      "contents": "KAudioUnitProperty_PeerURL"
+    },
+    {
+      "trigger": "kAudioUnitProperty_PresentPreset (36)",
+      "contents": "KAudioUnitProperty_PresentPreset"
+    },
+    {
+      "trigger": "kAudioUnitProperty_RemoteControlEventListener (100)",
+      "contents": "KAudioUnitProperty_RemoteControlEventListener"
+    },
+    {
+      "trigger": "kAudioUnitProperty_RenderQuality (26)",
+      "contents": "KAudioUnitProperty_RenderQuality"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ReverbPreset (3012)",
+      "contents": "KAudioUnitProperty_ReverbPreset"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ReverbRoomType (10)",
+      "contents": "KAudioUnitProperty_ReverbRoomType"
+    },
+    {
+      "trigger": "kAudioUnitProperty_SampleRate (2)",
+      "contents": "KAudioUnitProperty_SampleRate"
+    },
+    {
+      "trigger": "kAudioUnitProperty_SampleRateConverterComplexity (3014)",
+      "contents": "KAudioUnitProperty_SampleRateConverterComplexity"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ScheduleAudioSlice (3300)",
+      "contents": "KAudioUnitProperty_ScheduleAudioSlice"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ScheduleStartTimeStamp (3301)",
+      "contents": "KAudioUnitProperty_ScheduleStartTimeStamp"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ScheduledFileBufferSizeFrames (3313)",
+      "contents": "KAudioUnitProperty_ScheduledFileBufferSizeFrames"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ScheduledFileIDs (3310)",
+      "contents": "KAudioUnitProperty_ScheduledFileIDs"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ScheduledFileNumberBuffers (3314)",
+      "contents": "KAudioUnitProperty_ScheduledFileNumberBuffers"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ScheduledFilePrime (3312)",
+      "contents": "KAudioUnitProperty_ScheduledFilePrime"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ScheduledFileRegion (3311)",
+      "contents": "KAudioUnitProperty_ScheduledFileRegion"
+    },
+    {
+      "trigger": "kAudioUnitProperty_SetRenderCallback (23)",
+      "contents": "KAudioUnitProperty_SetRenderCallback"
+    },
+    {
+      "trigger": "kAudioUnitProperty_ShouldAllocateBuffer (51)",
+      "contents": "KAudioUnitProperty_ShouldAllocateBuffer"
+    },
+    {
+      "trigger": "kAudioUnitProperty_SpatializationAlgorithm (3000)",
+      "contents": "KAudioUnitProperty_SpatializationAlgorithm"
+    },
+    {
+      "trigger": "kAudioUnitProperty_StreamFormat (8)",
+      "contents": "KAudioUnitProperty_StreamFormat"
+    },
+    {
+      "trigger": "kAudioUnitProperty_SupportedChannelLayoutTags (32)",
+      "contents": "KAudioUnitProperty_SupportedChannelLayoutTags"
+    },
+    {
+      "trigger": "kAudioUnitProperty_SupportedNumChannels (13)",
+      "contents": "KAudioUnitProperty_SupportedNumChannels"
+    },
+    {
+      "trigger": "kAudioUnitProperty_TailTime (20)",
+      "contents": "KAudioUnitProperty_TailTime"
+    },
+    {
+      "trigger": "kAudioUnitProperty_UsesInternalReverb (1005)",
+      "contents": "KAudioUnitProperty_UsesInternalReverb"
+    },
+    {
+      "trigger": "kAudioUnitRange (0)",
+      "contents": "KAudioUnitRange"
+    },
+    {
+      "trigger": "kAudioUnitRemoteControlEvent_Rewind (3)",
+      "contents": "KAudioUnitRemoteControlEvent_Rewind"
+    },
+    {
+      "trigger": "kAudioUnitRemoteControlEvent_TogglePlayPause (1)",
+      "contents": "KAudioUnitRemoteControlEvent_TogglePlayPause"
+    },
+    {
+      "trigger": "kAudioUnitRemoteControlEvent_ToggleRecord (2)",
+      "contents": "KAudioUnitRemoteControlEvent_ToggleRecord"
+    },
+    {
+      "trigger": "kAudioUnitRemovePropertyListenerSelect (11)",
+      "contents": "KAudioUnitRemovePropertyListenerSelect"
+    },
+    {
+      "trigger": "kAudioUnitRemovePropertyListenerWithUserDataSelect (18)",
+      "contents": "KAudioUnitRemovePropertyListenerWithUserDataSelect"
+    },
+    {
+      "trigger": "kAudioUnitRemoveRenderNotifySelect (16)",
+      "contents": "KAudioUnitRemoveRenderNotifySelect"
+    },
+    {
+      "trigger": "kAudioUnitRenderAction_DoNotCheckRenderArgs (512)",
+      "contents": "KAudioUnitRenderAction_DoNotCheckRenderArgs"
+    },
+    {
+      "trigger": "kAudioUnitRenderAction_OutputIsSilence (16)",
+      "contents": "KAudioUnitRenderAction_OutputIsSilence"
+    },
+    {
+      "trigger": "kAudioUnitRenderAction_PostRender (8)",
+      "contents": "KAudioUnitRenderAction_PostRender"
+    },
+    {
+      "trigger": "kAudioUnitRenderAction_PostRenderError (256)",
+      "contents": "KAudioUnitRenderAction_PostRenderError"
+    },
+    {
+      "trigger": "kAudioUnitRenderAction_PreRender (4)",
+      "contents": "KAudioUnitRenderAction_PreRender"
+    },
+    {
+      "trigger": "kAudioUnitRenderSelect (14)",
+      "contents": "KAudioUnitRenderSelect"
+    },
+    {
+      "trigger": "kAudioUnitResetSelect (9)",
+      "contents": "KAudioUnitResetSelect"
+    },
+    {
       "trigger": "kAudioUnitSampleFractionBits (24)",
       "contents": "KAudioUnitSampleFractionBits"
+    },
+    {
+      "trigger": "kAudioUnitSampleRateConverterComplexity_Linear (1818848869)",
+      "contents": "KAudioUnitSampleRateConverterComplexity_Linear"
+    },
+    {
+      "trigger": "kAudioUnitSampleRateConverterComplexity_Mastering (1650553971)",
+      "contents": "KAudioUnitSampleRateConverterComplexity_Mastering"
+    },
+    {
+      "trigger": "kAudioUnitSampleRateConverterComplexity_Normal (1852797549)",
+      "contents": "KAudioUnitSampleRateConverterComplexity_Normal"
+    },
+    {
+      "trigger": "kAudioUnitScheduleParametersSelect (17)",
+      "contents": "KAudioUnitScheduleParametersSelect"
+    },
+    {
+      "trigger": "kAudioUnitScope_Global (0)",
+      "contents": "KAudioUnitScope_Global"
+    },
+    {
+      "trigger": "kAudioUnitScope_Group (3)",
+      "contents": "KAudioUnitScope_Group"
+    },
+    {
+      "trigger": "kAudioUnitScope_Input (1)",
+      "contents": "KAudioUnitScope_Input"
+    },
+    {
+      "trigger": "kAudioUnitScope_Layer (6)",
+      "contents": "KAudioUnitScope_Layer"
+    },
+    {
+      "trigger": "kAudioUnitScope_LayerItem (7)",
+      "contents": "KAudioUnitScope_LayerItem"
+    },
+    {
+      "trigger": "kAudioUnitScope_Note (5)",
+      "contents": "KAudioUnitScope_Note"
+    },
+    {
+      "trigger": "kAudioUnitScope_Output (2)",
+      "contents": "KAudioUnitScope_Output"
+    },
+    {
+      "trigger": "kAudioUnitScope_Part (4)",
+      "contents": "KAudioUnitScope_Part"
+    },
+    {
+      "trigger": "kAudioUnitSetParameterSelect (7)",
+      "contents": "KAudioUnitSetParameterSelect"
+    },
+    {
+      "trigger": "kAudioUnitSetPropertySelect (5)",
+      "contents": "KAudioUnitSetPropertySelect"
+    },
+    {
+      "trigger": "kAudioUnitSubType_AU3DMixerEmbedded (862217581)",
+      "contents": "KAudioUnitSubType_AU3DMixerEmbedded"
+    },
+    {
+      "trigger": "kAudioUnitSubType_AUConverter (1668247158)",
+      "contents": "KAudioUnitSubType_AUConverter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_AUiPodEQ (1768973681)",
+      "contents": "KAudioUnitSubType_AUiPodEQ"
+    },
+    {
+      "trigger": "kAudioUnitSubType_AUiPodTime (1768977517)",
+      "contents": "KAudioUnitSubType_AUiPodTime"
+    },
+    {
+      "trigger": "kAudioUnitSubType_AUiPodTimeOther (1768977519)",
+      "contents": "KAudioUnitSubType_AUiPodTimeOther"
+    },
+    {
+      "trigger": "kAudioUnitSubType_AudioFilePlayer (1634103404)",
+      "contents": "KAudioUnitSubType_AudioFilePlayer"
+    },
+    {
+      "trigger": "kAudioUnitSubType_BandPassFilter (1651532147)",
+      "contents": "KAudioUnitSubType_BandPassFilter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_DeferredRenderer (1684366962)",
+      "contents": "KAudioUnitSubType_DeferredRenderer"
+    },
+    {
+      "trigger": "kAudioUnitSubType_Delay (1684368505)",
+      "contents": "KAudioUnitSubType_Delay"
+    },
+    {
+      "trigger": "kAudioUnitSubType_Distortion (1684632436)",
+      "contents": "KAudioUnitSubType_Distortion"
+    },
+    {
+      "trigger": "kAudioUnitSubType_DynamicsProcessor (1684237680)",
+      "contents": "KAudioUnitSubType_DynamicsProcessor"
+    },
+    {
+      "trigger": "kAudioUnitSubType_GenericOutput (1734700658)",
+      "contents": "KAudioUnitSubType_GenericOutput"
+    },
+    {
+      "trigger": "kAudioUnitSubType_HighPassFilter (1752195443)",
+      "contents": "KAudioUnitSubType_HighPassFilter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_HighShelfFilter (1752393830)",
+      "contents": "KAudioUnitSubType_HighShelfFilter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_LowPassFilter (1819304307)",
+      "contents": "KAudioUnitSubType_LowPassFilter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_LowShelfFilter (1819502694)",
+      "contents": "KAudioUnitSubType_LowShelfFilter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_MatrixMixer (1836608888)",
+      "contents": "KAudioUnitSubType_MatrixMixer"
+    },
+    {
+      "trigger": "kAudioUnitSubType_Merger (1835364967)",
+      "contents": "KAudioUnitSubType_Merger"
+    },
+    {
+      "trigger": "kAudioUnitSubType_MultiChannelMixer (1835232632)",
+      "contents": "KAudioUnitSubType_MultiChannelMixer"
+    },
+    {
+      "trigger": "kAudioUnitSubType_NBandEQ (1851942257)",
+      "contents": "KAudioUnitSubType_NBandEQ"
+    },
+    {
+      "trigger": "kAudioUnitSubType_NewTimePitch (1853191280)",
+      "contents": "KAudioUnitSubType_NewTimePitch"
+    },
+    {
+      "trigger": "kAudioUnitSubType_ParametricEQ (1886217585)",
+      "contents": "KAudioUnitSubType_ParametricEQ"
+    },
+    {
+      "trigger": "kAudioUnitSubType_PeakLimiter (1819112562)",
+      "contents": "KAudioUnitSubType_PeakLimiter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_RemoteIO (1919512419)",
+      "contents": "KAudioUnitSubType_RemoteIO"
+    },
+    {
+      "trigger": "kAudioUnitSubType_Reverb2 (1920361010)",
+      "contents": "KAudioUnitSubType_Reverb2"
+    },
+    {
+      "trigger": "kAudioUnitSubType_Sampler (1935764848)",
+      "contents": "KAudioUnitSubType_Sampler"
+    },
+    {
+      "trigger": "kAudioUnitSubType_ScheduledSoundPlayer (1936945260)",
+      "contents": "KAudioUnitSubType_ScheduledSoundPlayer"
+    },
+    {
+      "trigger": "kAudioUnitSubType_Splitter (1936747636)",
+      "contents": "KAudioUnitSubType_Splitter"
+    },
+    {
+      "trigger": "kAudioUnitSubType_Varispeed (1986097769)",
+      "contents": "KAudioUnitSubType_Varispeed"
+    },
+    {
+      "trigger": "kAudioUnitSubType_VoiceProcessingIO (1987078511)",
+      "contents": "KAudioUnitSubType_VoiceProcessingIO"
+    },
+    {
+      "trigger": "kAudioUnitType_Effect (1635083896)",
+      "contents": "KAudioUnitType_Effect"
+    },
+    {
+      "trigger": "kAudioUnitType_FormatConverter (1635083875)",
+      "contents": "KAudioUnitType_FormatConverter"
+    },
+    {
+      "trigger": "kAudioUnitType_Generator (1635084142)",
+      "contents": "KAudioUnitType_Generator"
+    },
+    {
+      "trigger": "kAudioUnitType_MIDIProcessor (1635085673)",
+      "contents": "KAudioUnitType_MIDIProcessor"
+    },
+    {
+      "trigger": "kAudioUnitType_Mixer (1635085688)",
+      "contents": "KAudioUnitType_Mixer"
+    },
+    {
+      "trigger": "kAudioUnitType_MusicDevice (1635085685)",
+      "contents": "KAudioUnitType_MusicDevice"
+    },
+    {
+      "trigger": "kAudioUnitType_MusicEffect (1635085670)",
+      "contents": "KAudioUnitType_MusicEffect"
+    },
+    {
+      "trigger": "kAudioUnitType_OfflineEffect (1635086188)",
+      "contents": "KAudioUnitType_OfflineEffect"
+    },
+    {
+      "trigger": "kAudioUnitType_Output (1635086197)",
+      "contents": "KAudioUnitType_Output"
+    },
+    {
+      "trigger": "kAudioUnitType_Panner (1635086446)",
+      "contents": "KAudioUnitType_Panner"
+    },
+    {
+      "trigger": "kAudioUnitType_RemoteEffect (1635086968)",
+      "contents": "KAudioUnitType_RemoteEffect"
+    },
+    {
+      "trigger": "kAudioUnitType_RemoteGenerator (1635086951)",
+      "contents": "KAudioUnitType_RemoteGenerator"
+    },
+    {
+      "trigger": "kAudioUnitType_RemoteInstrument (1635086953)",
+      "contents": "KAudioUnitType_RemoteInstrument"
+    },
+    {
+      "trigger": "kAudioUnitType_RemoteMusicEffect (1635086957)",
+      "contents": "KAudioUnitType_RemoteMusicEffect"
+    },
+    {
+      "trigger": "kAudioUnitUninitializeSelect (2)",
+      "contents": "KAudioUnitUninitializeSelect"
     },
     {
       "trigger": "kAudio_BadFilePathError (561017960)",
@@ -52812,6 +54678,14 @@
     {
       "trigger": "kBSLNTag (1651731566)",
       "contents": "KBSLNTag"
+    },
+    {
+      "trigger": "kBandpassParam_Bandwidth (1)",
+      "contents": "KBandpassParam_Bandwidth"
+    },
+    {
+      "trigger": "kBandpassParam_CenterFrequency (0)",
+      "contents": "KBandpassParam_CenterFrequency"
     },
     {
       "trigger": "kBoxAnnotationSelector (1)",
@@ -64006,6 +65880,22 @@
       "contents": "KDefaultUpperCaseSelector"
     },
     {
+      "trigger": "kDelayParam_DelayTime (1)",
+      "contents": "KDelayParam_DelayTime"
+    },
+    {
+      "trigger": "kDelayParam_Feedback (2)",
+      "contents": "KDelayParam_Feedback"
+    },
+    {
+      "trigger": "kDelayParam_LopassCutoff (3)",
+      "contents": "KDelayParam_LopassCutoff"
+    },
+    {
+      "trigger": "kDelayParam_WetDryMix (0)",
+      "contents": "KDelayParam_WetDryMix"
+    },
+    {
       "trigger": "kDesignComplexityType (18)",
       "contents": "KDesignComplexityType"
     },
@@ -64056,6 +65946,110 @@
     {
       "trigger": "kDisplayTextSelector (1)",
       "contents": "KDisplayTextSelector"
+    },
+    {
+      "trigger": "kDistortionParam_CubicTerm (8)",
+      "contents": "KDistortionParam_CubicTerm"
+    },
+    {
+      "trigger": "kDistortionParam_Decay (1)",
+      "contents": "KDistortionParam_Decay"
+    },
+    {
+      "trigger": "kDistortionParam_Decimation (3)",
+      "contents": "KDistortionParam_Decimation"
+    },
+    {
+      "trigger": "kDistortionParam_DecimationMix (5)",
+      "contents": "KDistortionParam_DecimationMix"
+    },
+    {
+      "trigger": "kDistortionParam_Delay (0)",
+      "contents": "KDistortionParam_Delay"
+    },
+    {
+      "trigger": "kDistortionParam_DelayMix (2)",
+      "contents": "KDistortionParam_DelayMix"
+    },
+    {
+      "trigger": "kDistortionParam_FinalMix (15)",
+      "contents": "KDistortionParam_FinalMix"
+    },
+    {
+      "trigger": "kDistortionParam_LinearTerm (6)",
+      "contents": "KDistortionParam_LinearTerm"
+    },
+    {
+      "trigger": "kDistortionParam_PolynomialMix (9)",
+      "contents": "KDistortionParam_PolynomialMix"
+    },
+    {
+      "trigger": "kDistortionParam_RingModBalance (12)",
+      "contents": "KDistortionParam_RingModBalance"
+    },
+    {
+      "trigger": "kDistortionParam_RingModFreq1 (10)",
+      "contents": "KDistortionParam_RingModFreq1"
+    },
+    {
+      "trigger": "kDistortionParam_RingModFreq2 (11)",
+      "contents": "KDistortionParam_RingModFreq2"
+    },
+    {
+      "trigger": "kDistortionParam_RingModMix (13)",
+      "contents": "KDistortionParam_RingModMix"
+    },
+    {
+      "trigger": "kDistortionParam_Rounding (4)",
+      "contents": "KDistortionParam_Rounding"
+    },
+    {
+      "trigger": "kDistortionParam_SoftClipGain (14)",
+      "contents": "KDistortionParam_SoftClipGain"
+    },
+    {
+      "trigger": "kDistortionParam_SquaredTerm (7)",
+      "contents": "KDistortionParam_SquaredTerm"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_AttackTime (4)",
+      "contents": "KDynamicsProcessorParam_AttackTime"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_CompressionAmount (1000)",
+      "contents": "KDynamicsProcessorParam_CompressionAmount"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_ExpansionRatio (2)",
+      "contents": "KDynamicsProcessorParam_ExpansionRatio"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_ExpansionThreshold (3)",
+      "contents": "KDynamicsProcessorParam_ExpansionThreshold"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_HeadRoom (1)",
+      "contents": "KDynamicsProcessorParam_HeadRoom"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_InputAmplitude (2000)",
+      "contents": "KDynamicsProcessorParam_InputAmplitude"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_MasterGain (6)",
+      "contents": "KDynamicsProcessorParam_MasterGain"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_OutputAmplitude (3000)",
+      "contents": "KDynamicsProcessorParam_OutputAmplitude"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_ReleaseTime (5)",
+      "contents": "KDynamicsProcessorParam_ReleaseTime"
+    },
+    {
+      "trigger": "kDynamicsProcessorParam_Threshold (0)",
+      "contents": "KDynamicsProcessorParam_Threshold"
     },
     {
       "trigger": "kEAGLColorFormatRGB565 (NSString*)",
@@ -65058,6 +67052,10 @@
       "contents": "KGSS_C_INITIATE"
     },
     {
+      "trigger": "kHALOutputParam_Volume (14)",
+      "contents": "KHALOutputParam_Volume"
+    },
+    {
       "trigger": "kHalfWidthCJKRomanSelector (0)",
       "contents": "KHalfWidthCJKRomanSelector"
     },
@@ -65088,6 +67086,22 @@
     {
       "trigger": "kHideDiacriticsSelector (1)",
       "contents": "KHideDiacriticsSelector"
+    },
+    {
+      "trigger": "kHighShelfParam_CutOffFrequency (0)",
+      "contents": "KHighShelfParam_CutOffFrequency"
+    },
+    {
+      "trigger": "kHighShelfParam_Gain (1)",
+      "contents": "KHighShelfParam_Gain"
+    },
+    {
+      "trigger": "kHipassParam_CutoffFrequency (0)",
+      "contents": "KHipassParam_CutoffFrequency"
+    },
+    {
+      "trigger": "kHipassParam_Resonance (1)",
+      "contents": "KHipassParam_Resonance"
     },
     {
       "trigger": "kHiraganaToKatakanaSelector (2)",
@@ -65196,6 +67210,26 @@
     {
       "trigger": "kInstrumentInfoKey_Program (program)",
       "contents": "KInstrumentInfoKey_Program"
+    },
+    {
+      "trigger": "kInstrumentType_AUPreset (2)",
+      "contents": "KInstrumentType_AUPreset"
+    },
+    {
+      "trigger": "kInstrumentType_Audiofile (3)",
+      "contents": "KInstrumentType_Audiofile"
+    },
+    {
+      "trigger": "kInstrumentType_DLSPreset (1)",
+      "contents": "KInstrumentType_DLSPreset"
+    },
+    {
+      "trigger": "kInstrumentType_EXS24 (4)",
+      "contents": "KInstrumentType_EXS24"
+    },
+    {
+      "trigger": "kInstrumentType_SF2Preset (1)",
+      "contents": "KInstrumentType_SF2Preset"
     },
     {
       "trigger": "kInternationalSymbolsSelector (5)",
@@ -65594,6 +67628,18 @@
       "contents": "KLigaturesType"
     },
     {
+      "trigger": "kLimiterParam_AttackTime (0)",
+      "contents": "KLimiterParam_AttackTime"
+    },
+    {
+      "trigger": "kLimiterParam_DecayTime (1)",
+      "contents": "KLimiterParam_DecayTime"
+    },
+    {
+      "trigger": "kLimiterParam_PreGain (2)",
+      "contents": "KLimiterParam_PreGain"
+    },
+    {
       "trigger": "kLineFinalSwashesOffSelector (7)",
       "contents": "KLineFinalSwashesOffSelector"
     },
@@ -65668,6 +67714,14 @@
     {
       "trigger": "kLogosOnSelector (6)",
       "contents": "KLogosOnSelector"
+    },
+    {
+      "trigger": "kLowPassParam_CutoffFrequency (0)",
+      "contents": "KLowPassParam_CutoffFrequency"
+    },
+    {
+      "trigger": "kLowPassParam_Resonance (1)",
+      "contents": "KLowPassParam_Resonance"
     },
     {
       "trigger": "kLowerCaseNumbersSelector (0)",
@@ -66430,12 +68484,108 @@
       "contents": "KMathematicalGreekOnSelector"
     },
     {
+      "trigger": "kMatrixMixerParam_Enable (1)",
+      "contents": "KMatrixMixerParam_Enable"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PostAveragePower (3000)",
+      "contents": "KMatrixMixerParam_PostAveragePower"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PostAveragePowerLinear (7000)",
+      "contents": "KMatrixMixerParam_PostAveragePowerLinear"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PostPeakHoldLevel (4000)",
+      "contents": "KMatrixMixerParam_PostPeakHoldLevel"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PostPeakHoldLevelLinear (8000)",
+      "contents": "KMatrixMixerParam_PostPeakHoldLevelLinear"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PreAveragePower (1000)",
+      "contents": "KMatrixMixerParam_PreAveragePower"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PreAveragePowerLinear (5000)",
+      "contents": "KMatrixMixerParam_PreAveragePowerLinear"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PrePeakHoldLevel (2000)",
+      "contents": "KMatrixMixerParam_PrePeakHoldLevel"
+    },
+    {
+      "trigger": "kMatrixMixerParam_PrePeakHoldLevelLinear (6000)",
+      "contents": "KMatrixMixerParam_PrePeakHoldLevelLinear"
+    },
+    {
+      "trigger": "kMatrixMixerParam_Volume (0)",
+      "contents": "KMatrixMixerParam_Volume"
+    },
+    {
       "trigger": "kMonospacedNumbersSelector (0)",
       "contents": "KMonospacedNumbersSelector"
     },
     {
       "trigger": "kMonospacedTextSelector (1)",
       "contents": "KMonospacedTextSelector"
+    },
+    {
+      "trigger": "kMultiChannelMixerParam_Enable (1)",
+      "contents": "KMultiChannelMixerParam_Enable"
+    },
+    {
+      "trigger": "kMultiChannelMixerParam_Pan (2)",
+      "contents": "KMultiChannelMixerParam_Pan"
+    },
+    {
+      "trigger": "kMultiChannelMixerParam_PostAveragePower (3000)",
+      "contents": "KMultiChannelMixerParam_PostAveragePower"
+    },
+    {
+      "trigger": "kMultiChannelMixerParam_PostPeakHoldLevel (4000)",
+      "contents": "KMultiChannelMixerParam_PostPeakHoldLevel"
+    },
+    {
+      "trigger": "kMultiChannelMixerParam_PreAveragePower (1000)",
+      "contents": "KMultiChannelMixerParam_PreAveragePower"
+    },
+    {
+      "trigger": "kMultiChannelMixerParam_PrePeakHoldLevel (2000)",
+      "contents": "KMultiChannelMixerParam_PrePeakHoldLevel"
+    },
+    {
+      "trigger": "kMultiChannelMixerParam_Volume (0)",
+      "contents": "KMultiChannelMixerParam_Volume"
+    },
+    {
+      "trigger": "kMusicDeviceMIDIEventSelect (257)",
+      "contents": "KMusicDeviceMIDIEventSelect"
+    },
+    {
+      "trigger": "kMusicDevicePrepareInstrumentSelect (259)",
+      "contents": "KMusicDevicePrepareInstrumentSelect"
+    },
+    {
+      "trigger": "kMusicDeviceRange (256)",
+      "contents": "KMusicDeviceRange"
+    },
+    {
+      "trigger": "kMusicDeviceReleaseInstrumentSelect (260)",
+      "contents": "KMusicDeviceReleaseInstrumentSelect"
+    },
+    {
+      "trigger": "kMusicDeviceStartNoteSelect (261)",
+      "contents": "KMusicDeviceStartNoteSelect"
+    },
+    {
+      "trigger": "kMusicDeviceStopNoteSelect (262)",
+      "contents": "KMusicDeviceStopNoteSelect"
+    },
+    {
+      "trigger": "kMusicDeviceSysExSelect (258)",
+      "contents": "KMusicDeviceSysExSelect"
     },
     {
       "trigger": "kMusicEventType_AUPreset (10)",
@@ -66478,6 +68628,14 @@
       "contents": "KMusicEventType_User"
     },
     {
+      "trigger": "kMusicNoteEvent_Unused (4294967295)",
+      "contents": "KMusicNoteEvent_Unused"
+    },
+    {
+      "trigger": "kMusicNoteEvent_UseGroupInstrument (4294967295)",
+      "contents": "KMusicNoteEvent_UseGroupInstrument"
+    },
+    {
       "trigger": "kMusicSequenceFileFlags_EraseFile (1)",
       "contents": "KMusicSequenceFileFlags_EraseFile"
     },
@@ -66516,6 +68674,22 @@
     {
       "trigger": "kNeverAuthenticate (0)",
       "contents": "KNeverAuthenticate"
+    },
+    {
+      "trigger": "kNewTimePitchParam_EnablePeakLocking (6)",
+      "contents": "KNewTimePitchParam_EnablePeakLocking"
+    },
+    {
+      "trigger": "kNewTimePitchParam_Overlap (4)",
+      "contents": "KNewTimePitchParam_Overlap"
+    },
+    {
+      "trigger": "kNewTimePitchParam_Pitch (1)",
+      "contents": "KNewTimePitchParam_Pitch"
+    },
+    {
+      "trigger": "kNewTimePitchParam_Rate (0)",
+      "contents": "KNewTimePitchParam_Rate"
     },
     {
       "trigger": "kNoAlternatesSelector (0)",
@@ -66574,8 +68748,16 @@
       "contents": "KNormalPositionSelector"
     },
     {
+      "trigger": "kNumAUNBandEQFilterTypes (11)",
+      "contents": "KNumAUNBandEQFilterTypes"
+    },
+    {
       "trigger": "kNumberCaseType (21)",
       "contents": "KNumberCaseType"
+    },
+    {
+      "trigger": "kNumberOfResponseFrequencies (1024)",
+      "contents": "KNumberOfResponseFrequencies"
     },
     {
       "trigger": "kNumberSpacingType (6)",
@@ -66750,6 +68932,26 @@
       "contents": "KPanningMode_VectorBasedPanning"
     },
     {
+      "trigger": "kParameterEvent_Immediate (1)",
+      "contents": "KParameterEvent_Immediate"
+    },
+    {
+      "trigger": "kParameterEvent_Ramped (2)",
+      "contents": "KParameterEvent_Ramped"
+    },
+    {
+      "trigger": "kParametricEQParam_CenterFreq (0)",
+      "contents": "KParametricEQParam_CenterFreq"
+    },
+    {
+      "trigger": "kParametricEQParam_Gain (2)",
+      "contents": "KParametricEQParam_Gain"
+    },
+    {
+      "trigger": "kParametricEQParam_Q (1)",
+      "contents": "KParametricEQParam_Q"
+    },
+    {
       "trigger": "kParenthesisAnnotationSelector (5)",
       "contents": "KParenthesisAnnotationSelector"
     },
@@ -66810,6 +69012,18 @@
       "contents": "KQuarterWidthTextSelector"
     },
     {
+      "trigger": "kRandomParam_BoundA (0)",
+      "contents": "KRandomParam_BoundA"
+    },
+    {
+      "trigger": "kRandomParam_BoundB (1)",
+      "contents": "KRandomParam_BoundB"
+    },
+    {
+      "trigger": "kRandomParam_Curve (2)",
+      "contents": "KRandomParam_Curve"
+    },
+    {
       "trigger": "kRareLigaturesOffSelector (5)",
       "contents": "KRareLigaturesOffSelector"
     },
@@ -66826,12 +69040,124 @@
       "contents": "KRebusPicturesOnSelector"
     },
     {
+      "trigger": "kRenderQuality_High (96)",
+      "contents": "KRenderQuality_High"
+    },
+    {
+      "trigger": "kRenderQuality_Low (32)",
+      "contents": "KRenderQuality_Low"
+    },
+    {
+      "trigger": "kRenderQuality_Max (127)",
+      "contents": "KRenderQuality_Max"
+    },
+    {
+      "trigger": "kRenderQuality_Medium (64)",
+      "contents": "KRenderQuality_Medium"
+    },
+    {
+      "trigger": "kRenderQuality_Min (0)",
+      "contents": "KRenderQuality_Min"
+    },
+    {
       "trigger": "kRequiredLigaturesOffSelector (1)",
       "contents": "KRequiredLigaturesOffSelector"
     },
     {
       "trigger": "kRequiredLigaturesOnSelector (0)",
       "contents": "KRequiredLigaturesOnSelector"
+    },
+    {
+      "trigger": "kReverb2Param_DecayTimeAt0Hz (4)",
+      "contents": "KReverb2Param_DecayTimeAt0Hz"
+    },
+    {
+      "trigger": "kReverb2Param_DecayTimeAtNyquist (5)",
+      "contents": "KReverb2Param_DecayTimeAtNyquist"
+    },
+    {
+      "trigger": "kReverb2Param_DryWetMix (0)",
+      "contents": "KReverb2Param_DryWetMix"
+    },
+    {
+      "trigger": "kReverb2Param_Gain (1)",
+      "contents": "KReverb2Param_Gain"
+    },
+    {
+      "trigger": "kReverb2Param_MaxDelayTime (3)",
+      "contents": "KReverb2Param_MaxDelayTime"
+    },
+    {
+      "trigger": "kReverb2Param_MinDelayTime (2)",
+      "contents": "KReverb2Param_MinDelayTime"
+    },
+    {
+      "trigger": "kReverb2Param_RandomizeReflections (6)",
+      "contents": "KReverb2Param_RandomizeReflections"
+    },
+    {
+      "trigger": "kReverbParam_FilterBandwidth (15)",
+      "contents": "KReverbParam_FilterBandwidth"
+    },
+    {
+      "trigger": "kReverbParam_FilterFrequency (14)",
+      "contents": "KReverbParam_FilterFrequency"
+    },
+    {
+      "trigger": "kReverbParam_FilterGain (16)",
+      "contents": "KReverbParam_FilterGain"
+    },
+    {
+      "trigger": "kReverbRoomType_Cathedral (8)",
+      "contents": "KReverbRoomType_Cathedral"
+    },
+    {
+      "trigger": "kReverbRoomType_LargeChamber (7)",
+      "contents": "KReverbRoomType_LargeChamber"
+    },
+    {
+      "trigger": "kReverbRoomType_LargeHall (4)",
+      "contents": "KReverbRoomType_LargeHall"
+    },
+    {
+      "trigger": "kReverbRoomType_LargeHall2 (12)",
+      "contents": "KReverbRoomType_LargeHall2"
+    },
+    {
+      "trigger": "kReverbRoomType_LargeRoom (2)",
+      "contents": "KReverbRoomType_LargeRoom"
+    },
+    {
+      "trigger": "kReverbRoomType_LargeRoom2 (9)",
+      "contents": "KReverbRoomType_LargeRoom2"
+    },
+    {
+      "trigger": "kReverbRoomType_MediumChamber (6)",
+      "contents": "KReverbRoomType_MediumChamber"
+    },
+    {
+      "trigger": "kReverbRoomType_MediumHall (3)",
+      "contents": "KReverbRoomType_MediumHall"
+    },
+    {
+      "trigger": "kReverbRoomType_MediumHall2 (10)",
+      "contents": "KReverbRoomType_MediumHall2"
+    },
+    {
+      "trigger": "kReverbRoomType_MediumHall3 (11)",
+      "contents": "KReverbRoomType_MediumHall3"
+    },
+    {
+      "trigger": "kReverbRoomType_MediumRoom (1)",
+      "contents": "KReverbRoomType_MediumRoom"
+    },
+    {
+      "trigger": "kReverbRoomType_Plate (5)",
+      "contents": "KReverbRoomType_Plate"
+    },
+    {
+      "trigger": "kReverbRoomType_SmallRoom (0)",
+      "contents": "KReverbRoomType_SmallRoom"
     },
     {
       "trigger": "kRomanNumeralAnnotationSelector (7)",
@@ -67392,6 +69718,18 @@
     {
       "trigger": "kSTXHasLigAction (8192)",
       "contents": "KSTXHasLigAction"
+    },
+    {
+      "trigger": "kScheduledAudioSliceFlag_BeganToRender (2)",
+      "contents": "KScheduledAudioSliceFlag_BeganToRender"
+    },
+    {
+      "trigger": "kScheduledAudioSliceFlag_BeganToRenderLate (4)",
+      "contents": "KScheduledAudioSliceFlag_BeganToRenderLate"
+    },
+    {
+      "trigger": "kScheduledAudioSliceFlag_Complete (1)",
+      "contents": "KScheduledAudioSliceFlag_Complete"
     },
     {
       "trigger": "kScientificInferiorsSelector (4)",
@@ -68138,6 +70476,30 @@
       "contents": "KSmartSwashType"
     },
     {
+      "trigger": "kSpatializationAlgorithm_EqualPowerPanning (0)",
+      "contents": "KSpatializationAlgorithm_EqualPowerPanning"
+    },
+    {
+      "trigger": "kSpatializationAlgorithm_HRTF (2)",
+      "contents": "KSpatializationAlgorithm_HRTF"
+    },
+    {
+      "trigger": "kSpatializationAlgorithm_SoundField (3)",
+      "contents": "KSpatializationAlgorithm_SoundField"
+    },
+    {
+      "trigger": "kSpatializationAlgorithm_SphericalHead (1)",
+      "contents": "KSpatializationAlgorithm_SphericalHead"
+    },
+    {
+      "trigger": "kSpatializationAlgorithm_StereoPassThrough (5)",
+      "contents": "KSpatializationAlgorithm_StereoPassThrough"
+    },
+    {
+      "trigger": "kSpatializationAlgorithm_VectorBasedPanning (4)",
+      "contents": "KSpatializationAlgorithm_VectorBasedPanning"
+    },
+    {
       "trigger": "kSquaredLigaturesOffSelector (13)",
       "contents": "KSquaredLigaturesOffSelector"
     },
@@ -68388,6 +70750,10 @@
     {
       "trigger": "kThirdWidthTextSelector (3)",
       "contents": "KThirdWidthTextSelector"
+    },
+    {
+      "trigger": "kTimePitchParam_Rate (0)",
+      "contents": "KTimePitchParam_Rate"
     },
     {
       "trigger": "kTitlingCapsSelector (4)",
@@ -68786,6 +71152,14 @@
       "contents": "KUpperCaseType"
     },
     {
+      "trigger": "kVarispeedParam_PlaybackCents (1)",
+      "contents": "KVarispeedParam_PlaybackCents"
+    },
+    {
+      "trigger": "kVarispeedParam_PlaybackRate (0)",
+      "contents": "KVarispeedParam_PlaybackRate"
+    },
+    {
       "trigger": "kVerticalFractionsSelector (1)",
       "contents": "KVerticalFractionsSelector"
     },
@@ -69175,7 +71549,15 @@
     },
     {
       "trigger": "liftUp:",
-      "contents": "liftUp(${1:struct CGPoint arg1})"
+      "contents": "liftUp(${1:CGPoint arg1})"
+    },
+    {
+      "trigger": "liftUp:touchCount:",
+      "contents": "liftUp(${1:CGPoint arg1}, touchCount:${2:NSUInteger arg2})"
+    },
+    {
+      "trigger": "liftUpAtPoints:touchCount:",
+      "contents": "liftUpAtPoints(${1:CGPoint* arg1}, touchCount:${2:NSUInteger arg2})"
     },
     {
       "trigger": "limitDateForMode:",
@@ -69318,16 +71700,20 @@
       "contents": "localizedStandardCompare(${1:NSString* string})"
     },
     {
+      "trigger": "localizedStringForKey:",
+      "contents": "localizedStringForKey(${1:id arg1})"
+    },
+    {
       "trigger": "localizedStringForKey:value:table:",
       "contents": "localizedStringForKey(${1:NSString* key}, value:${2:NSString* value}, table:${3:NSString* tableName})"
     },
     {
-      "trigger": "localizedStringForKey:value:table:",
-      "contents": "localizedStringForKey(${1:id arg1}, value:${2:id arg2}, table:${3:id arg3})"
-    },
-    {
       "trigger": "localizedStringForKey:value:table:bundlePath:",
       "contents": "localizedStringForKey(${1:id arg1}, value:${2:id arg2}, table:${3:id arg3}, bundlePath:${4:id arg4})"
+    },
+    {
+      "trigger": "localizedStringForKey:withOptions:",
+      "contents": "localizedStringForKey(${1:id arg1}, withOptions:${2:id arg2})"
     },
     {
       "trigger": "localizedValueForFieldKey:",
@@ -69814,6 +72200,10 @@
       "contents": "moveToPoint(${1:CGPoint point})"
     },
     {
+      "trigger": "moveToPoints:touchCount:duration:",
+      "contents": "moveToPoints(${1:CGPoint* arg1}, touchCount:${2:NSUInteger arg2}, duration:${3:NSTimeInterval arg3})"
+    },
+    {
       "trigger": "multiplyByInverseOfAttitude:",
       "contents": "multiplyByInverseOfAttitude(${1:CMAttitude* attitude})"
     },
@@ -70014,6 +72404,10 @@
       "contents": "numberFromString(${1:NSString* string})"
     },
     {
+      "trigger": "numberOfChildItemsAtIndexPath:",
+      "contents": "numberOfChildItemsAtIndexPath(${1:NSIndexPath* indexPath})"
+    },
+    {
       "trigger": "numberOfComponentsInPickerView:",
       "contents": "numberOfComponentsInPickerView(${1:UIPickerView* pickerView})"
     },
@@ -70047,15 +72441,15 @@
     },
     {
       "trigger": "objectAtIndex:",
+      "contents": "objectAtIndex(${1:NSUInteger arg1})"
+    },
+    {
+      "trigger": "objectAtIndex:",
       "contents": "objectAtIndex(${1:NSUInteger idx})"
     },
     {
       "trigger": "objectAtIndex:",
       "contents": "objectAtIndex(${1:NSUInteger index})"
-    },
-    {
-      "trigger": "objectAtIndex:",
-      "contents": "objectAtIndex(${1:unsigned int arg1})"
     },
     {
       "trigger": "objectAtIndexPath:",
@@ -70423,11 +72817,11 @@
     },
     {
       "trigger": "performAXAction:",
-      "contents": "performAXAction(${1:int arg1})"
+      "contents": "performAXAction(${1:NSInteger arg1})"
     },
     {
       "trigger": "performAXAction:withValue:",
-      "contents": "performAXAction(${1:int arg1}, withValue:${2:id arg2})"
+      "contents": "performAXAction(${1:NSInteger arg1}, withValue:${2:id arg2})"
     },
     {
       "trigger": "performActivityWithOptions:reason:usingBlock:",
@@ -70686,6 +73080,10 @@
       "contents": "playPrerollAdWithCompletionHandler(${1:void (^)(NSError *) completionHandler})"
     },
     {
+      "trigger": "playableContentManager:initiatePlaybackOfContentItemAtIndexPath:completionHandler:",
+      "contents": "playableContentManager(${1:MPPlayableContentManager* contentManager}, initiatePlaybackOfContentItemAtIndexPath:${2:NSIndexPath* indexPath}, completionHandler:${3:void (^)(NSError *) completionHandler})"
+    },
+    {
       "trigger": "player:didAcceptInvite:",
       "contents": "player(${1:GKPlayer* player}, didAcceptInvite:${2:GKInvite* invite})"
     },
@@ -70811,7 +73209,7 @@
     },
     {
       "trigger": "postElementNotFoundAtPoint:description:",
-      "contents": "postElementNotFoundAtPoint(${1:struct CGPoint arg1}, description:${2:id arg2})"
+      "contents": "postElementNotFoundAtPoint(${1:CGPoint arg1}, description:${2:id arg2})"
     },
     {
       "trigger": "postNotification:",
@@ -71794,6 +74192,10 @@
       "contents": "removeSuiteNamed(${1:NSString* suiteName})"
     },
     {
+      "trigger": "removeTarget:",
+      "contents": "removeTarget(${1:id target})"
+    },
+    {
       "trigger": "removeTarget:action:",
       "contents": "removeTarget(${1:id target}, action:${2:SEL action})"
     },
@@ -72631,11 +75033,11 @@
     },
     {
       "trigger": "sendAccelerometerX:Y:Z:",
-      "contents": "sendAccelerometerX(${1:float arg1}, Y:${2:float arg2}, Z:${3:float arg3})"
+      "contents": "sendAccelerometerX(${1:CGFloat arg1}, Y:${2:CGFloat arg2}, Z:${3:CGFloat arg3})"
     },
     {
       "trigger": "sendAccelerometerX:Y:Z:duration:",
-      "contents": "sendAccelerometerX(${1:float arg1}, Y:${2:float arg2}, Z:${3:float arg3}, duration:${4:double arg4})"
+      "contents": "sendAccelerometerX(${1:CGFloat arg1}, Y:${2:CGFloat arg2}, Z:${3:CGFloat arg3}, duration:${4:NSTimeInterval arg4})"
     },
     {
       "trigger": "sendAction:to:forEvent:",
@@ -72679,19 +75081,19 @@
     },
     {
       "trigger": "sendDoubleFingerTap:",
-      "contents": "sendDoubleFingerTap(${1:struct CGPoint arg1})"
+      "contents": "sendDoubleFingerTap(${1:CGPoint arg1})"
     },
     {
       "trigger": "sendDoubleTap:",
-      "contents": "sendDoubleTap(${1:struct CGPoint arg1})"
+      "contents": "sendDoubleTap(${1:CGPoint arg1})"
     },
     {
       "trigger": "sendDragWithStartPoint:endPoint:duration:",
-      "contents": "sendDragWithStartPoint(${1:struct CGPoint arg1}, endPoint:${2:struct CGPoint arg2}, duration:${3:double arg3})"
+      "contents": "sendDragWithStartPoint(${1:CGPoint arg1}, endPoint:${2:CGPoint arg2}, duration:${3:NSTimeInterval arg3})"
     },
     {
       "trigger": "sendDragWithStartPoint:endPoint:duration:withFlick:inRect:",
-      "contents": "sendDragWithStartPoint(${1:struct CGPoint arg1}, endPoint:${2:struct CGPoint arg2}, duration:${3:double arg3}, withFlick:${4:BOOL arg4}, inRect:${5:id arg5})"
+      "contents": "sendDragWithStartPoint(${1:CGPoint arg1}, endPoint:${2:CGPoint arg2}, duration:${3:NSTimeInterval arg3}, withFlick:${4:BOOL arg4}, inRect:${5:CGRect arg5})"
     },
     {
       "trigger": "sendEvent:",
@@ -72703,27 +75105,27 @@
     },
     {
       "trigger": "sendFlickWithStartPoint:endPoint:duration:",
-      "contents": "sendFlickWithStartPoint(${1:struct CGPoint arg1}, endPoint:${2:struct CGPoint arg2}, duration:${3:double arg3})"
+      "contents": "sendFlickWithStartPoint(${1:CGPoint arg1}, endPoint:${2:CGPoint arg2}, duration:${3:NSTimeInterval arg3})"
     },
     {
       "trigger": "sendMultifingerDragWithPointArray:numPoints:duration:numFingers:",
-      "contents": "sendMultifingerDragWithPointArray(${1:struct CGPoint* arg1}, numPoints:${2:int arg2}, duration:${3:double arg3}, numFingers:${4:int arg4})"
+      "contents": "sendMultifingerDragWithPointArray(${1:CGPoint* arg1}, numPoints:${2:NSInteger arg2}, duration:${3:NSTimeInterval arg3}, numFingers:${4:NSInteger arg4})"
     },
     {
       "trigger": "sendPinchCloseWithStartPoint:endPoint:duration:",
-      "contents": "sendPinchCloseWithStartPoint(${1:struct CGPoint arg1}, endPoint:${2:struct CGPoint arg2}, duration:${3:double arg3})"
+      "contents": "sendPinchCloseWithStartPoint(${1:CGPoint arg1}, endPoint:${2:CGPoint arg2}, duration:${3:NSTimeInterval arg3})"
     },
     {
       "trigger": "sendPinchCloseWithStartPoint:endPoint:duration:inRect:",
-      "contents": "sendPinchCloseWithStartPoint(${1:struct CGPoint arg1}, endPoint:${2:struct CGPoint arg2}, duration:${3:double arg3}, inRect:${4:id arg4})"
+      "contents": "sendPinchCloseWithStartPoint(${1:CGPoint arg1}, endPoint:${2:CGPoint arg2}, duration:${3:NSTimeInterval arg3}, inRect:${4:CGRect arg4})"
     },
     {
       "trigger": "sendPinchOpenWithStartPoint:endPoint:duration:",
-      "contents": "sendPinchOpenWithStartPoint(${1:struct CGPoint arg1}, endPoint:${2:struct CGPoint arg2}, duration:${3:double arg3})"
+      "contents": "sendPinchOpenWithStartPoint(${1:CGPoint arg1}, endPoint:${2:CGPoint arg2}, duration:${3:NSTimeInterval arg3})"
     },
     {
       "trigger": "sendPinchOpenWithStartPoint:endPoint:duration:inRect:",
-      "contents": "sendPinchOpenWithStartPoint(${1:struct CGPoint arg1}, endPoint:${2:struct CGPoint arg2}, duration:${3:double arg3}, inRect:${4:struct CGRect arg4})"
+      "contents": "sendPinchOpenWithStartPoint(${1:CGPoint arg1}, endPoint:${2:CGPoint arg2}, duration:${3:NSTimeInterval arg3}, inRect:${4:CGRect arg4})"
     },
     {
       "trigger": "sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:",
@@ -72735,7 +75137,7 @@
     },
     {
       "trigger": "sendRotate:withRadius:rotation:duration:touchCount:",
-      "contents": "sendRotate(${1:struct CGPoint arg1}, withRadius:${2:float arg2}, rotation:${3:float arg3}, duration:${4:float arg4}, touchCount:${5:unsigned int arg5})"
+      "contents": "sendRotate(${1:CGPoint arg1}, withRadius:${2:CGFloat arg2}, rotation:${3:CGFloat arg3}, duration:${4:CGFloat arg4}, touchCount:${5:NSUInteger arg5})"
     },
     {
       "trigger": "sendSubviewToBack:",
@@ -72743,11 +75145,11 @@
     },
     {
       "trigger": "sendTap:",
-      "contents": "sendTap(${1:struct CGPoint arg1})"
+      "contents": "sendTap(${1:CGPoint arg1})"
     },
     {
       "trigger": "sendTaps:location:withNumberOfTouches:inRect:",
-      "contents": "sendTaps(${1:int arg1}, location:${2:struct CGPoint arg2}, withNumberOfTouches:${3:int arg3}, inRect:${4:struct CGRect arg4})"
+      "contents": "sendTaps(${1:NSInteger arg1}, location:${2:CGPoint arg2}, withNumberOfTouches:${3:NSInteger arg3}, inRect:${4:CGRect arg4})"
     },
     {
       "trigger": "sentenceRangeForRange:",
@@ -73310,6 +75712,10 @@
       "contents": "setArrowOffset(${1:CGFloat arrowOffset})"
     },
     {
+      "trigger": "setArtwork:",
+      "contents": "setArtwork(${1:MPMediaItemArtwork* artwork})"
+    },
+    {
       "trigger": "setAssetsFilter:",
       "contents": "setAssetsFilter(${1:ALAssetsFilter* filter})"
     },
@@ -73624,6 +76030,10 @@
     {
       "trigger": "setBrightness:",
       "contents": "setBrightness(${1:CGFloat brightness})"
+    },
+    {
+      "trigger": "setBrightness:",
+      "contents": "setBrightness(${1:id arg1})"
     },
     {
       "trigger": "setByAddingObject:",
@@ -73980,6 +76390,10 @@
     {
       "trigger": "setContactTestBitMask:",
       "contents": "setContactTestBitMask(${1:uint32_t contactTestBitMask})"
+    },
+    {
+      "trigger": "setContainer:",
+      "contents": "setContainer(${1:BOOL container})"
     },
     {
       "trigger": "setContentCompressionResistancePriority:forAxis:",
@@ -74755,7 +77169,7 @@
     },
     {
       "trigger": "setEndLocation:",
-      "contents": "setEndLocation(${1:struct CGPoint endLocation})"
+      "contents": "setEndLocation(${1:CGPoint endLocation})"
     },
     {
       "trigger": "setEndPlaybackTime:",
@@ -74818,10 +77232,6 @@
       "contents": "setEvent(${1:EKEvent* event})"
     },
     {
-      "trigger": "setEventRecord:",
-      "contents": "setEventRecord(${1:CDStruct_141d6fc6* arg1})"
-    },
-    {
       "trigger": "setEventStore:",
       "contents": "setEventStore(${1:EKEventStore* eventStore})"
     },
@@ -74872,6 +77282,10 @@
     {
       "trigger": "setExpression:",
       "contents": "setExpression(${1:NSExpression* expression})"
+    },
+    {
+      "trigger": "setExpressionFlushTimer:",
+      "contents": "setExpressionFlushTimer(${1:NSTimer* expressionFlushTimer})"
     },
     {
       "trigger": "setExpressionResultType:",
@@ -75228,6 +77642,10 @@
     {
       "trigger": "setHTTPShouldUsePipelining:",
       "contents": "setHTTPShouldUsePipelining(${1:BOOL shouldUsePipelining})"
+    },
+    {
+      "trigger": "setHandlesAlerts:",
+      "contents": "setHandlesAlerts(${1:BOOL handlesAlerts})"
     },
     {
       "trigger": "setHasAction:",
@@ -75678,6 +78096,10 @@
       "contents": "setKeyframeValue(${1:id value}, time:${2:CGFloat time}, forIndex:${3:NSUInteger index})"
     },
     {
+      "trigger": "setKeystrokeFlushTimer:",
+      "contents": "setKeystrokeFlushTimer(${1:NSTimer* keystrokeFlushTimer})"
+    },
+    {
       "trigger": "setKind:",
       "contents": "setKind(${1:NSString* kind})"
     },
@@ -75700,6 +78122,10 @@
     {
       "trigger": "setLastActionTime:",
       "contents": "setLastActionTime(${1:double lastActionTime})"
+    },
+    {
+      "trigger": "setLastUpdateTime:",
+      "contents": "setLastUpdateTime(${1:long long lastUpdateTime})"
     },
     {
       "trigger": "setLayerInstructions:",
@@ -75906,6 +78332,10 @@
       "contents": "setLocalizedDescription(${1:NSString* localizedDescription})"
     },
     {
+      "trigger": "setLocalizedTitle:",
+      "contents": "setLocalizedTitle(${1:NSString* localizedTitle})"
+    },
+    {
       "trigger": "setLocation:",
       "contents": "setLocation(${1:NSString* location})"
     },
@@ -76096,6 +78526,10 @@
     {
       "trigger": "setMaximumNumberOfTouches:",
       "contents": "setMaximumNumberOfTouches(${1:NSUInteger maximumNumberOfTouches})"
+    },
+    {
+      "trigger": "setMaximumRating:",
+      "contents": "setMaximumRating(${1:float maximumRating})"
     },
     {
       "trigger": "setMaximumRelativeValue:",
@@ -76302,6 +78736,10 @@
       "contents": "setMinimumPressDuration(${1:CFTimeInterval minimumPressDuration})"
     },
     {
+      "trigger": "setMinimumRating:",
+      "contents": "setMinimumRating(${1:float minimumRating})"
+    },
+    {
       "trigger": "setMinimumRelativeValue:",
       "contents": "setMinimumRelativeValue(${1:id minimumRelativeValue})"
     },
@@ -76432,6 +78870,10 @@
     {
       "trigger": "setMovieTimeScale:",
       "contents": "setMovieTimeScale(${1:CMTimeScale movieTimeScale})"
+    },
+    {
+      "trigger": "setMultiThreaded:",
+      "contents": "setMultiThreaded(${1:BOOL multiThreaded})"
     },
     {
       "trigger": "setMultipleSelectionBackgroundView:",
@@ -76723,11 +79165,11 @@
     },
     {
       "trigger": "setOrientation:",
-      "contents": "setOrientation(${1:UIPrintInfoOrientation orientation})"
+      "contents": "setOrientation(${1:NSInteger arg1})"
     },
     {
       "trigger": "setOrientation:",
-      "contents": "setOrientation(${1:int arg1})"
+      "contents": "setOrientation(${1:UIPrintInfoOrientation orientation})"
     },
     {
       "trigger": "setOrthography:range:",
@@ -77026,6 +79468,10 @@
       "contents": "setPausingHandler(${1:void (^)(void) pausingHandler})"
     },
     {
+      "trigger": "setPendingDragExpressions:",
+      "contents": "setPendingDragExpressions(${1:NSArray* pendingDragExpressions})"
+    },
+    {
       "trigger": "setPendingTapExpression:",
       "contents": "setPendingTapExpression(${1:NSArray* pendingTapExpression})"
     },
@@ -77124,6 +79570,14 @@
     {
       "trigger": "setPlaceholder:",
       "contents": "setPlaceholder(${1:NSString* placeholder})"
+    },
+    {
+      "trigger": "setPlayable:",
+      "contents": "setPlayable(${1:BOOL playable})"
+    },
+    {
+      "trigger": "setPlaybackProgress:",
+      "contents": "setPlaybackProgress(${1:float playbackProgress})"
     },
     {
       "trigger": "setPlayer:",
@@ -77264,6 +79718,10 @@
     {
       "trigger": "setPreferredInputNumberOfChannels:error:",
       "contents": "setPreferredInputNumberOfChannels(${1:NSInteger count}, error:${2:NSError** outError})"
+    },
+    {
+      "trigger": "setPreferredIntervals:",
+      "contents": "setPreferredIntervals(${1:NSArray* preferredIntervals})"
     },
     {
       "trigger": "setPreferredMaxLayoutWidth:",
@@ -77544,6 +80002,10 @@
     {
       "trigger": "setRelativeOffset:",
       "contents": "setRelativeOffset(${1:NSTimeInterval relativeOffset})"
+    },
+    {
+      "trigger": "setReleaseTimeForMostRecentEvent:",
+      "contents": "setReleaseTimeForMostRecentEvent(${1:double releaseTimeForMostRecentEvent})"
     },
     {
       "trigger": "setRelinquishFunction:",
@@ -78274,6 +80736,10 @@
       "contents": "setShowsPageRange(${1:BOOL showsPageRange})"
     },
     {
+      "trigger": "setShowsPhysics:",
+      "contents": "setShowsPhysics(${1:BOOL showsPhysics})"
+    },
+    {
       "trigger": "setShowsPointsOfInterest:",
       "contents": "setShowsPointsOfInterest(${1:BOOL showsPointsOfInterest})"
     },
@@ -78459,7 +80925,7 @@
     },
     {
       "trigger": "setStartLocation:",
-      "contents": "setStartLocation(${1:struct CGPoint startLocation})"
+      "contents": "setStartLocation(${1:CGPoint startLocation})"
     },
     {
       "trigger": "setStartPage:",
@@ -78472,6 +80938,10 @@
     {
       "trigger": "setStartProgress:",
       "contents": "setStartProgress(${1:float startProgress})"
+    },
+    {
+      "trigger": "setStartTime:",
+      "contents": "setStartTime(${1:long long startTime})"
     },
     {
       "trigger": "setState:",
@@ -78594,6 +81064,10 @@
       "contents": "setSubtype(${1:NSString* subtype})"
     },
     {
+      "trigger": "setSupportedPlaybackRates:",
+      "contents": "setSupportedPlaybackRates(${1:NSArray* supportedPlaybackRates})"
+    },
+    {
       "trigger": "setSuppressesIncrementalRendering:",
       "contents": "setSuppressesIncrementalRendering(${1:BOOL suppressesIncrementalRendering})"
     },
@@ -78644,6 +81118,10 @@
     {
       "trigger": "setTailIndent:",
       "contents": "setTailIndent(${1:CGFloat tailIndent})"
+    },
+    {
+      "trigger": "setTapCount:",
+      "contents": "setTapCount(${1:unsigned int tapCount})"
     },
     {
       "trigger": "setTarget:",
@@ -78743,7 +81221,7 @@
     },
     {
       "trigger": "setTextViewValueMaxLength:",
-      "contents": "setTextViewValueMaxLength(${1:int arg1})"
+      "contents": "setTextViewValueMaxLength(${1:NSInteger arg1})"
     },
     {
       "trigger": "setTexture:",
@@ -79062,6 +81540,10 @@
       "contents": "setUbiquitous(${1:BOOL flag}, itemAtURL:${2:NSURL* url}, destinationURL:${3:NSURL* destinationURL}, error:${4:NSError** error})"
     },
     {
+      "trigger": "setUiaTarget:",
+      "contents": "setUiaTarget(${1:UIATarget* uiaTarget})"
+    },
+    {
       "trigger": "setUndoManager:",
       "contents": "setUndoManager(${1:NSUndoManager* undoManager})"
     },
@@ -79231,7 +81713,7 @@
     },
     {
       "trigger": "setValue:forAttribute:",
-      "contents": "setValue(${1:id arg1}, forAttribute:${2:int arg2})"
+      "contents": "setValue(${1:id arg1}, forAttribute:${2:NSInteger arg2})"
     },
     {
       "trigger": "setValue:forHTTPHeaderField:",
@@ -79256,6 +81738,10 @@
     {
       "trigger": "setValue:forUndefinedKey:",
       "contents": "setValue(${1:id value}, forUndefinedKey:${2:NSString* key})"
+    },
+    {
+      "trigger": "setValueChangedCount:",
+      "contents": "setValueChangedCount(${1:unsigned int valueChangedCount})"
     },
     {
       "trigger": "setValueChangedHandler:",
@@ -79319,7 +81805,7 @@
     },
     {
       "trigger": "setVerboseOptions:",
-      "contents": "setVerboseOptions(${1:unsigned int arg1})"
+      "contents": "setVerboseOptions(${1:NSUInteger arg1})"
     },
     {
       "trigger": "setVersionHashModifier:",
@@ -80103,6 +82589,10 @@
     },
     {
       "trigger": "stringForAttributes:",
+      "contents": "stringForAttributes(${1:NSArray* arg1})"
+    },
+    {
+      "trigger": "stringForAttributes:",
       "contents": "stringForAttributes(${1:id arg1})"
     },
     {
@@ -80116,6 +82606,10 @@
     {
       "trigger": "stringForObjectValue:",
       "contents": "stringForObjectValue(${1:id obj})"
+    },
+    {
+      "trigger": "stringForScriptingLanguage:withOptions:",
+      "contents": "stringForScriptingLanguage(${1:NSInteger arg1}, withOptions:${2:NSUInteger arg2})"
     },
     {
       "trigger": "stringFromByteCount:",
@@ -80658,8 +83152,16 @@
       "contents": "toggleUnderline(${1:id sender})"
     },
     {
+      "trigger": "touch:",
+      "contents": "touch(${1:id arg1})"
+    },
+    {
       "trigger": "touch:andHold:",
       "contents": "touch(${1:id arg1}, andHold:${2:id arg2})"
+    },
+    {
+      "trigger": "touch:withOptions:",
+      "contents": "touch(${1:id arg1}, withOptions:${2:id arg2})"
     },
     {
       "trigger": "touchAndHold:",
@@ -80667,7 +83169,15 @@
     },
     {
       "trigger": "touchDown:",
-      "contents": "touchDown(${1:struct CGPoint arg1})"
+      "contents": "touchDown(${1:CGPoint arg1})"
+    },
+    {
+      "trigger": "touchDown:touchCount:",
+      "contents": "touchDown(${1:CGPoint arg1}, touchCount:${2:NSUInteger arg2})"
+    },
+    {
+      "trigger": "touchDownAtPoints:touchCount:",
+      "contents": "touchDownAtPoints(${1:CGPoint* arg1}, touchCount:${2:NSUInteger arg2})"
     },
     {
       "trigger": "touchesBegan:withEvent:",
@@ -80744,6 +83254,10 @@
     {
       "trigger": "translationInView:",
       "contents": "translationInView(${1:UIView* view})"
+    },
+    {
+      "trigger": "triggerDictationFromAudioInputPath:",
+      "contents": "triggerDictationFromAudioInputPath(${1:id arg1})"
     },
     {
       "trigger": "truncateFileAtOffset:",
@@ -80838,6 +83352,10 @@
       "contents": "unlockWithCondition(${1:NSInteger condition})"
     },
     {
+      "trigger": "unlockWithOptions:",
+      "contents": "unlockWithOptions(${1:id arg1})"
+    },
+    {
       "trigger": "unregisterListener:",
       "contents": "unregisterListener(${1:id listener})"
     },
@@ -80878,8 +83396,8 @@
       "contents": "updateValue(${1:NSData* value}, forCharacteristic:${2:CBMutableCharacteristic* characteristic}, onSubscribedCentrals:${3:NSArray* centrals})"
     },
     {
-      "trigger": "updateWithGSEventRecord:",
-      "contents": "updateWithGSEventRecord(${1:CDStruct_141d6fc6* arg1})"
+      "trigger": "updateWithAXEventRepresentation:",
+      "contents": "updateWithAXEventRepresentation(${1:id arg1})"
     },
     {
       "trigger": "updateWithValues:version:",
@@ -82419,15 +84937,15 @@
     },
     {
       "trigger": "valueForAttribute:",
-      "contents": "valueForAttribute(${1:NSString* key})"
+      "contents": "valueForAttribute(${1:NSInteger arg1})"
     },
     {
       "trigger": "valueForAttribute:",
-      "contents": "valueForAttribute(${1:int arg1})"
+      "contents": "valueForAttribute(${1:NSString* key})"
     },
     {
       "trigger": "valueForAttribute:parameter:",
-      "contents": "valueForAttribute(${1:int arg1}, parameter:${2:id arg2})"
+      "contents": "valueForAttribute(${1:NSInteger arg1}, parameter:${2:id arg2})"
     },
     {
       "trigger": "valueForHTTPHeaderField:",
@@ -82468,6 +84986,10 @@
     {
       "trigger": "valueOfAttribute:forResultAtIndex:",
       "contents": "valueOfAttribute(${1:NSString* attrName}, forResultAtIndex:${2:NSUInteger idx})"
+    },
+    {
+      "trigger": "valuesForAttributes:",
+      "contents": "valuesForAttributes(${1:NSArray* arg1})"
     },
     {
       "trigger": "valuesForAttributes:",

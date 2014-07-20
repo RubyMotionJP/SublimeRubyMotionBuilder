@@ -110,15 +110,6 @@ class RubyMotionDoc(sublime_plugin.WindowCommand):
         subprocess.call(["open", "dash://%s" % word])
 
 
-class GenerateRubyMotionSyntax(sublime_plugin.WindowCommand):
-    def run(self):
-        if int(sublime.version()) // 1000 == 3:
-            rb_name = os.path.join(this_dir, "rubymotion_syntax_generator3.rb")
-        else:
-            rb_name = os.path.join(this_dir, "rubymotion_syntax_generator2.rb")
-        self.window.run_command("exec", {"cmd": ["ruby", rb_name], "working_dir": this_dir})
-
-
 class GenerateRubyMotionCompletions(sublime_plugin.WindowCommand):
     def run(self):
         self.dirs = glob.glob('/Library/RubyMotion/data/ios/*/BridgeSupport/')

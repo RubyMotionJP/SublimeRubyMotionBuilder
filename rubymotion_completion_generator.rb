@@ -173,7 +173,7 @@ class RubyMotionCompletion
       STDERR.print("Sorting ...") if DebugEnabled
 
       jobj = JsonObject.new
-      jobj["scope"] = "source.rubymotion"
+      jobj["scope"] = "source.ruby.rubymotion"
       jobj["completions"] = completions.uniq.sort { |x, y| x.to_s <=> y.to_s }
 
       STDERR.puts(" done") if DebugEnabled

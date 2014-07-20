@@ -112,11 +112,10 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake spec".
 1. Open \*.rb or Rakefile in your RubyMotion project.
 2. Select a word (like method) and press [`control` + `option` + `d`].
 
-### Syntax/Completions generator
+### Completions generator
 
 These two commands also supported in Command Pallet.
 
-* `RubyMotionBuilder: Generate syntax` will generate syntax and snippets from Ruby syntax.
 * `RubyMotionBuilder: Generate completions` will generate completions from BridgeSupport files of RubyMotion.
 
 

@@ -50,7 +50,7 @@
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.rubymotion</string>
+	<string>source.ruby.rubymotion</string>
 	<key>uuid</key>
 	<string>24B36DA8-FC2A-492F-AB75-6138586771C2</string>
 </dict>

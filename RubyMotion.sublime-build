@@ -1,5 +1,5 @@
 {
 	"target": "ruby_motion_build",
 	"build_target": "simulator", // "simulator" or "device" or "all"
-	"selector": "source.rubymotion"
+	"selector": "source.ruby.rubymotion"
 }

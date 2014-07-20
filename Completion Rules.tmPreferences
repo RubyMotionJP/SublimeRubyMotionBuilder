@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>scope</key>
-    <string>source.rubymotion</string>
+    <string>source.ruby.rubymotion</string>
     <key>settings</key>
     <dict>
         <key>cancelCompletion</key>
