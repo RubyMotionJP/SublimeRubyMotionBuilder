@@ -133,6 +133,8 @@ class GenerateRubyMotionCompletions(sublime_plugin.WindowCommand):
         self.window.show_quick_panel(self.dirs, self.on_done)
 
     def on_done(self, picked):
+        if picked == -1:
+            return
         rb_name = os.path.join(this_dir, "rubymotion_completion_generator.rb")
         bridge_support_dir = self.dirs[picked]
         self.window.run_command("exec", {"cmd": ["ruby", rb_name, bridge_support_dir], "working_dir": this_dir})
