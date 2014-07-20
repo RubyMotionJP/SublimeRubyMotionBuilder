@@ -111,9 +111,11 @@ class RubyMotionSetBreakpoint(sublime_plugin.WindowCommand):
         view_file_name = view.file_name()
         dir_name, file_name = os.path.split(view_file_name)
         dir_name = FindRubyMotionRakefile(dir_name)
+        breakpoint = "b %s:%d\n" % (file_name, line)
         io = open("%s/debugger_cmds" % dir_name, 'a')
-        io.write("b %s:%d\n" % (file_name, line))
+        io.write(breakpoint)
         io.close()
+        sublime.message_dialog("Set Breakpoint in debugger_cmds:\n\n  " + breakpoint)
 
 
 class RubyMotionDoc(sublime_plugin.WindowCommand):
