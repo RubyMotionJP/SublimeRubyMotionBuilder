@@ -28,9 +28,10 @@ def FindRubyMotionRakefile(dir_name):
     return None
 
 def GetLanguageFilePath():
-    # Retuns file path like "Packages/RubyMotionBuild/RubyMotion.tmLanguage"
     path = os.path.join(this_dir, "RubyMotion.tmLanguage")
-    path = path.lstrip(os.path.normpath(os.path.join(sublime.packages_path(), "..")))
+    if int(sublime.version()) // 1000 == 3:
+        # Retuns file path like "Packages/RubyMotionBuild/RubyMotion.tmLanguage" for Sublime 3
+        path = path.lstrip(os.path.normpath(os.path.join(sublime.packages_path(), "..")))
     return path
 
 def RunRubyMotionBuildScript(self, build_target, cmd):
