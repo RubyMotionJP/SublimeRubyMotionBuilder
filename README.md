@@ -36,12 +36,12 @@ Put this package into your Sublime Text 2 or 3 packages folder:
 
 * Sublime Text 2
 ```
-% git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/RubyMotionBuild
+% git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/RubyMotionBuilder
 ```
 
 * Sublime Text 3
 ```
-% git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/RubyMotionBuild
+% git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/RubyMotionBuilder
 ```
 
 
