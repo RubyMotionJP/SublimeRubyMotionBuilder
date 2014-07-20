@@ -56,6 +56,7 @@ Usage
 | Run              | `command` + `r`            |
 | Run Spec         | `command` + `option` + `r` |
 | Deploy           | `command` + `option` + `b` |
+| Set Breakpoint   | `control` + `option` + `b` |
 | Show reference   | `control` + `option` + `d` |
 
 
@@ -106,6 +107,12 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake spec".
 
 1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `b`].
 2. Wait for the console to notify you the message "[Finished]".
+
+### Set break point for debugging
+
+1. Open \*.rb or Rakefile in your RubyMotion project.
+2. Move a text cursor in where set a breakpoint and  [`control` + `option` + `b`].
+Then, the breakpoint was described in `debugger_cmds` like `b app_delegate.rb:7`
 
 ### Show reference documents using Dash app
 

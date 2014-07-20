@@ -4,6 +4,7 @@
 	{ "keys": ["super+alt+r"], "command": "ruby_motion_run_spec"},
 	{ "keys": ["shift+super+r"], "command": "ruby_motion_run", "args": {"options": "retina=true"} },
 	{ "keys": ["super+alt+b"], "command": "ruby_motion_deploy"},
+	{ "keys": ["ctrl+alt+b"], "command": "ruby_motion_set_breakpoint"},
 	{ "keys": ["ctrl+alt+d"], "command": "ruby_motion_doc"},
 	{ "keys": ["#"], "command": "insert_snippet", "args": {"contents": "#{${1:$SELECTION}}$0"}, "context":
 		[

@@ -103,6 +103,19 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
         RunRubyMotionRunScript(self, "device")
 
 
+class RubyMotionSetBreakpoint(sublime_plugin.WindowCommand):
+    def run(self):
+        view = self.window.active_view()
+        line, _ = view.rowcol(view.sel()[0].begin())
+        line = line + 1
+        view_file_name = view.file_name()
+        dir_name, file_name = os.path.split(view_file_name)
+        dir_name = FindRubyMotionRakefile(dir_name)
+        io = open("%s/debugger_cmds" % dir_name, 'a')
+        io.write("b %s:%d\n" % (file_name, line))
+        io.close()
+
+
 class RubyMotionDoc(sublime_plugin.WindowCommand):
     def run(self):
         view = self.window.active_view()

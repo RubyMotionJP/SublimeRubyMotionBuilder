@@ -20,6 +20,10 @@
 		"command": "ruby_motion_deploy"
 	},
 	{
+		"caption": "RubyMotionBuilder: Set break point for debugging",
+		"command": "ruby_motion_set_breakpoint"
+	},
+	{
 		"caption": "RubyMotionBuilder: Show reference documents using Dash app",
 		"command": "ruby_motion_doc"
 	},
