@@ -6,7 +6,7 @@ if [ "$CMD" = "" ]; then
 	CMD="rake build"
 fi
 if type bundle >/dev/null 2>&1; then
-	if [-e "Gemfile.lock"]; then
+	if [ -f "Gemfile" ]; then
 		CMD="bundle exec ${CMD}"
 	fi
 fi

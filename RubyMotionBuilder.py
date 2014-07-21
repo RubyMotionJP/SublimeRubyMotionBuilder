@@ -106,7 +106,7 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
         dir_name, _ = os.path.split(view_file_name)
         dir_name = FindRubyMotionRakefile(dir_name)
         cmd = "rake -T"
-        if os.path.isfile(os.path.join(dir_name, "Gemfile.lock")):
+        if os.path.isfile(os.path.join(dir_name, "Gemfile")):
             cmd = "bundle exec rake -T"
         p = subprocess.Popen(cmd, shell=True, cwd=dir_name,
             stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,

@@ -16,7 +16,7 @@ else
     RAKE="rake ${OPTIONS}"
 fi
 if type bundle >/dev/null 2>&1; then
-    if [-e "Gemfile.lock"]; then
+    if [ -f "Gemfile" ]; then
         RAKE="bundle exec ${RAKE}"
     fi
 fi
