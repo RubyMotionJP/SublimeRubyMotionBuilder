@@ -16,7 +16,9 @@ else
     RAKE="rake ${OPTIONS}"
 fi
 if type bundle >/dev/null 2>&1; then
-    RAKE="bundle exec ${RAKE}"
+    if [-e "Gemfile.lock"]; then
+        RAKE="bundle exec ${RAKE}"
+    fi
 fi
 
 if [ "${TERMINAL_APP}" = "iTerm" ]; then
