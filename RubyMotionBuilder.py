@@ -6,7 +6,6 @@ import re
 import glob
 
 this_dir = os.path.split(os.path.abspath(__file__))[0]
-env_path = os.environ["PATH"]
 
 def SaveAllFiles():
     for window in sublime.windows():
@@ -47,7 +46,7 @@ def RunRubyMotionBuildScript(self, build_target, cmd):
             cmd += ":" + build_target
         settings = sublime.load_settings("RubyMotion.sublime-settings")
         file_regex = "^(...*?):([0-9]*):([0-9]*)"
-        self.window.run_command("exec", {"cmd": ["sh", sh_name, env_path, cmd], "working_dir": dir_name, "file_regex": file_regex})
+        self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
 
 
 def RunRubyMotionRunScript(self, options):
@@ -70,7 +69,7 @@ def RunRubyMotionRunScript(self, options):
         terminal = view.settings().get("terminal", "Terminal")
         activate_terminal = view.settings().get("activate_terminal", True)
         activate_terminal = "true" if activate_terminal else "false"
-        self.window.run_command("exec", {"cmd": ["sh", sh_name, env_path, terminal, activate_terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
+        self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, activate_terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
         # setting recovery
         settings.set("show_panel_on_build", show_panel_on_build)
 
@@ -107,7 +106,6 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
         dir_name, _ = os.path.split(view_file_name)
         dir_name = FindRubyMotionRakefile(dir_name)
         cmd = "rake -T"
-        print(env_path)
         if os.path.isfile(os.path.join(dir_name, "Gemfile.lock")):
             cmd = "bundle exec rake -T"
         p = subprocess.Popen(cmd, shell=True, cwd=dir_name,

@@ -1,11 +1,10 @@
 #!/bin/sh
 
-PATH=$1
 TERMINAL_ID="RubyMotionBuilder"
-TERMINAL_APP="$2"
-ACTIVATE_TERMINAL="$3"
-PROJECT_DIR="$4"
-OPTIONS="$5"
+TERMINAL_APP="$1"
+ACTIVATE_TERMINAL="$2"
+PROJECT_DIR="$3"
+OPTIONS="$4"
 
 if [ "${PROJECT_DIR}" = "" ]; then
     exit 1

@@ -1,7 +1,6 @@
 #!/bin/sh
 
-PATH=$1
-CMD=$2
+CMD=$1
 
 if [ "$CMD" = "" ]; then
 	CMD="rake build"
