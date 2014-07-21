@@ -119,7 +119,7 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
     def on_done(self, picked):
         if picked == -1:
             return
-        pickup_task = re.compile('rake (\w+)')
+        pickup_task = re.compile('rake ([\w:]+)')
         task = pickup_task.match(self.task_list[picked]).group(1) 
         RunRubyMotionRunScript(self, task)
 
