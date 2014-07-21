@@ -81,7 +81,7 @@ Usage
 1. Open \*.rb or Rakefile in your RubyMotion project
 2. You can see the "RubyMotion" on status bar in right bottom corner. Otherwise, it's not working. If Sublime Text cache keep syntax as "Ruby", please close and open the file.
 
-**note:** RubyMotion detection rule is projtect's Rakefile contains "Motion", or not.
+**note:** RubyMotion detection rule is project's Rakefile contains "Motion", or not.
 
 ### Code completion
 
