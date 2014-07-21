@@ -18,6 +18,7 @@ This plugin provides some features that simplify RubyMotion developing in Sublim
 	Provides build system for RubyMotion. Supports four commands, `Build`, `Clean`, `Run` and `Deploy`.
 	`Run` kick Terminal.app automatically.
 
+
 Package Control Installation
 ----------------------------
 
@@ -27,12 +28,11 @@ Package Control Installation
 2. Select `Package Control: Install Package` from the popup menu and press [`enter` / `return`]
 3. Enter "RubyMotionBuilder" and press [`enter` / `return`]
 
+
 Manual Installation
-------------
+-------------------
 
 Put this package into your Sublime Text 2 or 3 packages folder:
-
-### Mac OS X
 
 * Sublime Text 2
 ```
@@ -43,6 +43,21 @@ Put this package into your Sublime Text 2 or 3 packages folder:
 ```
 % git clone https://github.com/RubyMotionJP/SublimeRubyMotionBuilder.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/RubyMotionBuilder
 ```
+
+
+Set up
+------
+
+First, RubyMotionBuilder requires `PATH` environment variable to run `Build` and some commands.
+Mountain Lion or later users can configure variable via `/etc/launchd.conf` like
+
+```
+$ echo "setenv PATH $PATH" | sudo tee -ai /etc/launchd.conf
+```
+
+(Older Mac OS X users can configure using `~/.MacOSX/environment.plist`)
+
+Then, reboot your Mac.
 
 
 Usage
@@ -109,19 +124,10 @@ Then, automatically post "quit" to Terminal.app and re-execute "rake spec".
 1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `b`].
 2. Wait for the console to notify you the message "[Finished]".
 
-### Run command from Rake task list
+### Run commands from Rake task list
 
 1. Open \*.rb or Rakefile in your RubyMotion project and press [`command` + `option` + `l`].
 2. Select a task from displayed list.
-
-This command need `PATH` environment variable in plugin.
-Mountain Lion or later users can set variable via `/etc/launchd.conf` like
-
-```
-$ echo "setenv PATH $PATH" | sudo tee -ai /etc/launchd.conf
-```
-
-Then, reboot your Mac.
 
 ### Set break point for debugging
 
@@ -142,7 +148,7 @@ The command is supported in command palette.
 
 
 Configuration
------
+-------------
 
 ### Switch Terminal
 
