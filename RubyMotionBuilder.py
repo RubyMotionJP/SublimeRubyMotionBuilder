@@ -45,12 +45,9 @@ def RunRubyMotionBuildScript(self, build_target, cmd):
         sh_name = os.path.join(this_dir, "rubymotion_build.sh")
         if build_target and build_target != "all":
             cmd += ":" + build_target
-
         settings = sublime.load_settings("RubyMotion.sublime-settings")
-        env_file = settings.get("rubymotion_build_env_file", "")
-
         file_regex = "^(...*?):([0-9]*):([0-9]*)"
-        self.window.run_command("exec", {"cmd": ["sh", sh_name, env_path, cmd, env_file], "working_dir": dir_name, "file_regex": file_regex})
+        self.window.run_command("exec", {"cmd": ["sh", sh_name, env_path, cmd], "working_dir": dir_name, "file_regex": file_regex})
 
 
 def RunRubyMotionRunScript(self, options):

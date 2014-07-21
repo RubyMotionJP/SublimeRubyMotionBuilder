@@ -1,8 +1,4 @@
 {
-	// Shell environment file for Build, Clean, Deploy
-	// ex. $HOME/.bash_profile
-	"rubymotion_build_env_file": "",
-
 	// The number of spaces a tab is considered equal to
 	"tab_size": 2,
 	
