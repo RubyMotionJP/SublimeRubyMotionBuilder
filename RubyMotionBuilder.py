@@ -58,7 +58,7 @@ def GetTaskList(root_dir):
     cache_path = os.path.join(root_dir, ".sublime_cache_tasklist")
     rakefile_path = os.path.join(root_dir, "Rakefile")
     gemfile_path = os.path.join(root_dir, "Gemfile")
-    time_rakefile = time_gemfile = time_cachefile = 1
+    time_rakefile = time_gemfile = time_cachefile = 0
 
     if os.path.isfile(cache_path):
         time_cachefile = os.stat(cache_path).st_mtime
