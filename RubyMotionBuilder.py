@@ -33,6 +33,48 @@ def GetLanguageFilePath():
         path = path.lstrip(os.path.normpath(os.path.join(sublime.packages_path(), "..")))
     return path
 
+def GetTaskListWithRake(root_dir):
+    cmd = "rake -T"
+    if os.path.isfile(os.path.join(root_dir, "Gemfile")):
+        cmd = "bundle exec rake -T"
+    p = subprocess.Popen(cmd, shell=True, cwd=root_dir,
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        close_fds=True)
+    output = p.stdout.read()
+    list = output.decode("utf-8").split("\n")
+    list.pop() # remove emply last line
+    return list
+
+def GetTaskListFromCache(cache_path):
+    return open(cache_path).readlines()
+
+def SaveTaskListToCache(data, cache_path):
+    f = open(cache_path, 'w')
+    for item in data:
+        f.write(item + "\n")
+    f.close()
+
+def GetTaskList(root_dir):
+    cache_path = os.path.join(root_dir, ".sublime_cache_tasklist")
+    rakefile_path = os.path.join(root_dir, "Rakefile")
+    gemfile_path = os.path.join(root_dir, "Gemfile")
+    time_rakefile = time_gemfile = time_cachefile = 1
+
+    if os.path.isfile(cache_path):
+        time_cachefile = os.stat(cache_path).st_mtime
+    if os.path.isfile(rakefile_path):
+        time_rakefile = os.stat(rakefile_path).st_mtime
+    if os.path.isfile(gemfile_path):
+        time_gemfile = os.stat(gemfile_path).st_mtime
+
+    if (time_cachefile < time_rakefile) or (time_cachefile < time_gemfile):
+        list = GetTaskListWithRake(root_dir)
+        SaveTaskListToCache(list, cache_path)
+    else:
+        list = GetTaskListFromCache(cache_path)
+
+    return list
+
 def RunRubyMotionBuildScript(self, build_target, cmd):
     view = self.window.active_view()
     if not view:
@@ -105,15 +147,7 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
         view_file_name = view.file_name()
         dir_name, _ = os.path.split(view_file_name)
         dir_name = FindRubyMotionRakefile(dir_name)
-        cmd = "rake -T"
-        if os.path.isfile(os.path.join(dir_name, "Gemfile")):
-            cmd = "bundle exec rake -T"
-        p = subprocess.Popen(cmd, shell=True, cwd=dir_name,
-            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-            close_fds=True)
-        output = p.stdout.read()
-        self.task_list = output.decode("utf-8").split("\n")
-        self.task_list.pop() # remove emply last line
+        self.task_list = GetTaskList(dir_name)
         self.window.show_quick_panel(self.task_list, self.on_done, sublime.MONOSPACE_FONT)
 
     def on_done(self, picked):
