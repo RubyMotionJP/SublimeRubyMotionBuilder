@@ -38,7 +38,7 @@ def GetTaskListWithRake(root_dir):
     if os.path.isfile(os.path.join(root_dir, "Gemfile")):
         cmd = "bundle exec rake -T"
     p = subprocess.Popen(cmd, shell=True, cwd=root_dir,
-        stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=None,
         close_fds=True)
     output = p.stdout.read()
     list = output.decode("utf-8").split("\n")
