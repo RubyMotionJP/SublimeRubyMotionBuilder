@@ -6,5 +6,5 @@
 	{ "keys": ["super+alt+b"], "command": "ruby_motion_deploy"},
 	{ "keys": ["super+alt+l"], "command": "ruby_motion_run_command_from_list"},
 	{ "keys": ["ctrl+alt+b"], "command": "ruby_motion_set_breakpoint"},
-	{ "keys": ["ctrl+alt+d"], "command": "ruby_motion_doc"},
+	{ "keys": ["ctrl+alt+d"], "command": "ruby_motion_doc"}
 ]
