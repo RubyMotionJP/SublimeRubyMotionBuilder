@@ -151,12 +151,9 @@ class RubyMotionDeploy(sublime_plugin.WindowCommand):
 
 class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
     def run(self):
-        view = self.window.active_view()
-        view_file_name = view.file_name()
-        if not view_file_name:
+        dir_name = GetProjectRootDirectory()
+        if not dir_name:
             return
-        dir_name, _ = os.path.split(view_file_name)
-        dir_name = FindRubyMotionRakefile(dir_name)
         self.task_list = GetTaskList(dir_name)
         self.window.show_quick_panel(self.task_list, self.on_done, sublime.MONOSPACE_FONT)
 
