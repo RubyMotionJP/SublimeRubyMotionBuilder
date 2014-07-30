@@ -88,25 +88,24 @@ def GetTaskList(root_dir):
     return list
 
 def RunRubyMotionBuildScript(self, cmd):
-    view = self.window.active_view()
-    if view.settings().get("auto_save", True):
-        SaveAllFiles()
     dir_name = GetProjectRootDirectory()
     if not dir_name:
         return
+    view = self.window.active_view()
+    if view.settings().get("auto_save", True):
+        SaveAllFiles()
     sh_name = os.path.join(this_dir, "rubymotion_build.sh")
     settings = sublime.load_settings("RubyMotion.sublime-settings")
     file_regex = "^(...*?):([0-9]*):([0-9]*)"
     self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
 
-
 def RunRubyMotionRunScript(self, options):
-    view = self.window.active_view()
-    if view.settings().get("auto_save", True):
-        SaveAllFiles()
     dir_name = GetProjectRootDirectory()
     if not dir_name:
         return
+    view = self.window.active_view()
+    if view.settings().get("auto_save", True):
+        SaveAllFiles()
     sh_name = os.path.join(this_dir, "rubymotion_run.sh")
     file_regex = "^(...*?):([0-9]*):([0-9]*)"
     # build console is not required for Run
@@ -163,6 +162,7 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
         pickup_task = re.compile('rake ([\w:]+)')
         task = pickup_task.match(self.task_list[picked]).group(1) 
         RunRubyMotionRunScript(self, task)
+
 
 class RubyMotionSetBreakpoint(sublime_plugin.WindowCommand):
     def run(self):
