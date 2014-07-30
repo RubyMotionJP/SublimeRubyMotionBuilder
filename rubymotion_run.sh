@@ -1,6 +1,5 @@
 #!/bin/sh
 
-TERMINAL_ID="RubyMotionBuilder"
 TERMINAL_APP="$1"
 ACTIVATE_TERMINAL="$2"
 PROJECT_DIR="$3"
@@ -44,15 +43,15 @@ else
             tell application "Terminal"
                 if "${ACTIVATE_TERMINAL}" is "true" then activate
                 try
-                    set buildWindow to item 1 of (every window whose custom title is "${TERMINAL_ID}")
-                    set index of buildWindow to 1
-                    do script "exit" in buildWindow
+                    set buildWindow to window 1
+                    set selected tab of buildWindow to tab 1 of buildWindow
+                    set processList to processes in buildWindow
+                    if processList contains "sim" then
+                        do script "exit" in buildWindow
+                    end if
                     do script "cd '${PROJECT_DIR}'" in buildWindow
                 on error
                     do script "alias exit='' && cd '${PROJECT_DIR}' && clear"
-                    tell window 1
-                        set custom title to "${TERMINAL_ID}"
-                    end tell
                 end try
             delay 0.1
             do script "${RAKE}" in front window
