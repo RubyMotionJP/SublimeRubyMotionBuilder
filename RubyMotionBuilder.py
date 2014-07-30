@@ -42,8 +42,11 @@ def GetTaskListWithRake(root_dir):
         stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=None,
         close_fds=True)
     output = p.stdout.read()
-    list = output.decode("utf-8").split("\n")
-    list.pop() # remove emply last line
+    tmp = output.decode("utf-8").split("\n")
+    list = []
+    for item in tmp:
+        if item.startswith("rake"):
+            list.append(item)
     return list
 
 def GetTaskListFromCache(cache_path):
