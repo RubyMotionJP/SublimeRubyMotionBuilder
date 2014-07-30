@@ -27,6 +27,15 @@ def FindRubyMotionRakefile(dir_name):
         dir_name = os.path.dirname(dir_name)
     return None
 
+def GetProjectRootDirectory():
+    for view in sublime.active_window().views():
+        if view.settings().get('syntax').endswith('RubyMotion.tmLanguage'):
+            if view.file_name():
+                dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
+                if dir_name:
+                    return dir_name
+    return None
+
 def GetLanguageFilePath():
     path = os.path.join(this_dir, "RubyMotion.tmLanguage")
     if int(sublime.version()) // 1000 == 3:
@@ -85,7 +94,7 @@ def RunRubyMotionBuildScript(self, build_target, cmd):
         return
     if view.settings().get("auto_save", True):
         SaveAllFiles()
-    dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
+    dir_name = GetProjectRootDirectory()
     if dir_name:
         sh_name = os.path.join(this_dir, "rubymotion_build.sh")
         if build_target and build_target != "all":
@@ -101,7 +110,7 @@ def RunRubyMotionRunScript(self, options):
         return
     if view.settings().get("auto_save", True):
         SaveAllFiles()
-    dir_name = FindRubyMotionRakefile(os.path.split(view.file_name())[0])
+    dir_name = GetProjectRootDirectory()
     if dir_name:
         sh_name = os.path.join(this_dir, "rubymotion_run.sh")
         file_regex = "^(...*?):([0-9]*):([0-9]*)"
