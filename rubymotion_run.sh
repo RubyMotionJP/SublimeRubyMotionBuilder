@@ -39,23 +39,20 @@ if [ "${TERMINAL_APP}" = "iTerm" ]; then
 END
 else
     osascript<<END
-        try
-            tell application "Terminal"
-                if "${ACTIVATE_TERMINAL}" is "true" then activate
-                try
-                    set buildWindow to window 1
-                    set selected tab of buildWindow to tab 1 of buildWindow
-                    set processList to processes in buildWindow
-                    if processList contains "sim" then
-                        do script "exit" in buildWindow
-                    end if
-                    do script "cd '${PROJECT_DIR}'" in buildWindow
-                on error
-                    do script "alias exit='' && cd '${PROJECT_DIR}' && clear"
-                end try
-            delay 0.1
+        tell application "Terminal"
+            if "${ACTIVATE_TERMINAL}" is "true" then activate
+            try
+                set buildWindow to window 1
+                set selected tab of buildWindow to tab 1 of buildWindow
+                if (processes in buildWindow) contains "sim" then
+                    do script "exit" in buildWindow
+                end if
+                do script "cd '${PROJECT_DIR}'" in buildWindow
+            on error
+                do script "alias exit='' && cd '${PROJECT_DIR}' && clear"
+                delay 0.5
+            end try
             do script "${RAKE}" in front window
-            end tell
-        end try
+        end tell
 END
 fi
