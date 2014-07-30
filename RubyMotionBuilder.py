@@ -11,9 +11,8 @@ this_dir = os.path.split(os.path.abspath(__file__))[0]
 def SaveAllFiles():
     for window in sublime.windows():
         for view in window.views():
-            if view.file_name():
-                if view.is_dirty():
-                    view.run_command("save")
+            if view.file_name() and view.is_dirty():
+                view.run_command("save")
 
 def FindRubyMotionRakefile(dir_name):
     re_rubymotion = re.compile("Motion")
@@ -38,7 +37,7 @@ def GetProjectRootDirectory():
 
 def GetLanguageFilePath():
     path = os.path.join(this_dir, "RubyMotion.tmLanguage")
-    if int(sublime.version()) // 1000 == 3:
+    if sublime.version() >= '3000':
         # Retuns file path like "Packages/RubyMotionBuild/RubyMotion.tmLanguage" for Sublime 3
         path = path.lstrip(os.path.normpath(os.path.join(sublime.packages_path(), "..")))
     return path
@@ -90,41 +89,39 @@ def GetTaskList(root_dir):
 
 def RunRubyMotionBuildScript(self, cmd):
     view = self.window.active_view()
-    if not view:
-        return
     if view.settings().get("auto_save", True):
         SaveAllFiles()
     dir_name = GetProjectRootDirectory()
-    if dir_name:
-        sh_name = os.path.join(this_dir, "rubymotion_build.sh")
-        settings = sublime.load_settings("RubyMotion.sublime-settings")
-        file_regex = "^(...*?):([0-9]*):([0-9]*)"
-        self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
+    if not dir_name:
+        return
+    sh_name = os.path.join(this_dir, "rubymotion_build.sh")
+    settings = sublime.load_settings("RubyMotion.sublime-settings")
+    file_regex = "^(...*?):([0-9]*):([0-9]*)"
+    self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
 
 
 def RunRubyMotionRunScript(self, options):
     view = self.window.active_view()
-    if not view:
-        return
     if view.settings().get("auto_save", True):
         SaveAllFiles()
     dir_name = GetProjectRootDirectory()
-    if dir_name:
-        sh_name = os.path.join(this_dir, "rubymotion_run.sh")
-        file_regex = "^(...*?):([0-9]*):([0-9]*)"
-        # build console is not required for Run
-        self.window.run_command("hide_panel", {"panel": "output.exec"})
-        settings = sublime.load_settings("Preferences.sublime-settings")
-        show_panel_on_build = settings.get("show_panel_on_build", True)
-        if show_panel_on_build:
-            # temporary setting to keep console visibility
-            settings.set("show_panel_on_build", False)
-        terminal = view.settings().get("terminal", "Terminal")
-        activate_terminal = view.settings().get("activate_terminal", True)
-        activate_terminal = "true" if activate_terminal else "false"
-        self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, activate_terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
-        # setting recovery
-        settings.set("show_panel_on_build", show_panel_on_build)
+    if not dir_name:
+        return
+    sh_name = os.path.join(this_dir, "rubymotion_run.sh")
+    file_regex = "^(...*?):([0-9]*):([0-9]*)"
+    # build console is not required for Run
+    self.window.run_command("hide_panel", {"panel": "output.exec"})
+    settings = sublime.load_settings("Preferences.sublime-settings")
+    show_panel_on_build = settings.get("show_panel_on_build", True)
+    if show_panel_on_build:
+        # temporary setting to keep console visibility
+        settings.set("show_panel_on_build", False)
+    terminal = view.settings().get("terminal", "Terminal")
+    activate_terminal = view.settings().get("activate_terminal", True)
+    activate_terminal = "true" if activate_terminal else "false"
+    self.window.run_command("exec", {"cmd": ["sh", sh_name, terminal, activate_terminal, dir_name, options], "working_dir": dir_name, "file_regex": file_regex})
+    # setting recovery
+    settings.set("show_panel_on_build", show_panel_on_build)
 
 
 class RubyMotionBuild(sublime_plugin.WindowCommand):
@@ -162,7 +159,7 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
         self.window.show_quick_panel(self.task_list, self.on_done, sublime.MONOSPACE_FONT)
 
     def on_done(self, picked):
-        if picked == -1:
+        if picked < 0:
             return
         pickup_task = re.compile('rake ([\w:]+)')
         task = pickup_task.match(self.task_list[picked]).group(1) 
@@ -198,7 +195,7 @@ class GenerateRubyMotionCompletions(sublime_plugin.WindowCommand):
         self.window.show_quick_panel(self.dirs, self.on_done)
 
     def on_done(self, picked):
-        if picked == -1:
+        if picked < 0:
             return
         rb_name = os.path.join(this_dir, "rubymotion_completion_generator.rb")
         bridge_support_dir = self.dirs[picked]
