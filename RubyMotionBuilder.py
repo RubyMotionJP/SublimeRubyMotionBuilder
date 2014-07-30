@@ -88,7 +88,7 @@ def GetTaskList(root_dir):
 
     return list
 
-def RunRubyMotionBuildScript(self, build_target, cmd):
+def RunRubyMotionBuildScript(self, cmd):
     view = self.window.active_view()
     if not view:
         return
@@ -97,8 +97,6 @@ def RunRubyMotionBuildScript(self, build_target, cmd):
     dir_name = GetProjectRootDirectory()
     if dir_name:
         sh_name = os.path.join(this_dir, "rubymotion_build.sh")
-        if build_target and build_target != "all":
-            cmd += ":" + build_target
         settings = sublime.load_settings("RubyMotion.sublime-settings")
         file_regex = "^(...*?):([0-9]*):([0-9]*)"
         self.window.run_command("exec", {"cmd": ["sh", sh_name, cmd], "working_dir": dir_name, "file_regex": file_regex})
@@ -130,8 +128,8 @@ def RunRubyMotionRunScript(self, options):
 
 
 class RubyMotionBuild(sublime_plugin.WindowCommand):
-    def run(self, build_target=None):
-        RunRubyMotionBuildScript(self, build_target, "rake build")
+    def run(self):
+        RunRubyMotionBuildScript(self, "rake build")
 
 
 class RubyMotionClean(sublime_plugin.WindowCommand):

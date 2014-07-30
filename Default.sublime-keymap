@@ -1,5 +1,6 @@
 [
 	{ "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["super+b"], "command": "ruby_motion_build"},
 	{ "keys": ["super+r"], "command": "ruby_motion_run"},
 	{ "keys": ["super+alt+r"], "command": "ruby_motion_run_spec"},
 	{ "keys": ["shift+super+r"], "command": "ruby_motion_run", "args": {"options": "retina=true"} },
