@@ -153,6 +153,8 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
     def run(self):
         view = self.window.active_view()
         view_file_name = view.file_name()
+        if not view_file_name:
+            return
         dir_name, _ = os.path.split(view_file_name)
         dir_name = FindRubyMotionRakefile(dir_name)
         self.task_list = GetTaskList(dir_name)
@@ -168,9 +170,11 @@ class RubyMotionRunCommandFromList(sublime_plugin.WindowCommand):
 class RubyMotionSetBreakpoint(sublime_plugin.WindowCommand):
     def run(self):
         view = self.window.active_view()
+        view_file_name = view.file_name()
+        if not view_file_name:
+            return
         line, _ = view.rowcol(view.sel()[0].begin())
         line = line + 1
-        view_file_name = view.file_name()
         dir_name, file_name = os.path.split(view_file_name)
         dir_name = FindRubyMotionRakefile(dir_name)
         breakpoint = "b %s:%d\n" % (file_name, line)
