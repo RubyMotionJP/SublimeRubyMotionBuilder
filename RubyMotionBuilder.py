@@ -2,6 +2,7 @@ import os.path
 import subprocess
 import sublime
 import sublime_plugin
+import codecs
 import re
 import time
 import glob
@@ -19,7 +20,7 @@ def FindRubyMotionRakefile(dir_name):
     while dir_name != "/":
         rakefile = os.path.join(dir_name, "Rakefile")
         if os.path.isfile(rakefile):
-            for line in open(rakefile):
+            for line in codecs.open(rakefile, "r", "utf-8"):
                 if re_rubymotion.search(line):
                     return dir_name
             return None
