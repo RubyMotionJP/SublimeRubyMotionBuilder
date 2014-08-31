@@ -28,6 +28,9 @@ def FindRubyMotionRakefile(dir_name):
     return None
 
 def GetProjectRootDirectory():
+    dir_name = FindRubyMotionRakefile(os.path.split(sublime.active_window().active_view().file_name())[0])
+    if dir_name:
+        return dir_name
     for view in sublime.active_window().views():
         if view.settings().get('syntax').endswith('RubyMotion.tmLanguage'):
             if view.file_name():
