@@ -197,6 +197,7 @@ class GenerateRubyMotionCompletions(sublime_plugin.WindowCommand):
     def run(self):
         self.dirs = glob.glob('/Library/RubyMotion/data/ios/*/BridgeSupport/')
         self.dirs.extend(glob.glob('/Library/RubyMotion/data/osx/*/BridgeSupport/'))
+        self.dirs.extend(glob.glob('/Library/RubyMotionPre/data/android/*/BridgeSupport/'))
         self.window.show_quick_panel(self.dirs, self.on_done)
 
     def on_done(self, picked):

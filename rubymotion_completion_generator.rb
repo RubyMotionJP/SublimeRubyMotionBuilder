@@ -161,6 +161,8 @@ class RubyMotionCompletion
                 # <TODO>
               when "opaque"
                 # <TODO>
+              when "interface"
+                # <TODO> for android
               else
                 STDERR.puts "Unknown node #{node.name}"
               end
@@ -298,9 +300,33 @@ class RubyMotionCompletion
 
 end
 
+class RubyMotionCompletionAndroid < RubyMotionCompletion
+  def parse_class(_node)
+    class_name = _node.attribute("name").to_s
+    class_name = class_name.split('/').map{ |x| "#{x[0].upcase}#{x[1..-1]}" }.join('::').sub(/\$.+/, '')
+    completions = [create_completion(class_name, class_name)]
+
+    _node.each_element("method") do |method|
+      name = method.attribute("name").to_s
+      if m = name.match(/&lt;(.+)&gt;/)
+        name = m[1]
+      end
+      name.sub!(/\$.+/, '')
+
+      completions << create_completion(name, name)
+    end
+    
+    return completions
+  end
+end
+
 ###############################################################
 
 # Compile the completion tags
 File.open("RubyMotion.sublime-completions", "w") do |file|
-  file.puts RubyMotionCompletion.new(RubyMotionPath).compile
+  if RubyMotionPath.include?("android")
+    file.puts RubyMotionCompletionAndroid.new(RubyMotionPath).compile
+  else
+    file.puts RubyMotionCompletion.new(RubyMotionPath).compile
+  end
 end
