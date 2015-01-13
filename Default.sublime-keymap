@@ -1,11 +1,11 @@
 [
-	{ "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
-	{ "keys": ["super+b"], "command": "ruby_motion_build"},
-	{ "keys": ["super+r"], "command": "ruby_motion_run"},
-	{ "keys": ["super+alt+r"], "command": "ruby_motion_run_spec"},
-	{ "keys": ["shift+super+r"], "command": "ruby_motion_run", "args": {"options": "retina=true"} },
-	{ "keys": ["super+alt+b"], "command": "ruby_motion_deploy"},
-	{ "keys": ["super+alt+l"], "command": "ruby_motion_run_command_from_list"},
-	{ "keys": ["ctrl+alt+b"], "command": "ruby_motion_set_breakpoint"},
-	{ "keys": ["ctrl+alt+d"], "command": "ruby_motion_doc"}
+	{ "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["super+b"], "command": "ruby_motion_build", "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["super+r"], "command": "ruby_motion_run", "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["super+alt+r"], "command": "ruby_motion_run_spec", "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["shift+super+r"], "command": "ruby_motion_run", "args": {"options": "retina=true"} , "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["super+alt+b"], "command": "ruby_motion_deploy", "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["super+alt+l"], "command": "ruby_motion_run_command_from_list", "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["ctrl+alt+b"], "command": "ruby_motion_set_breakpoint", "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] },
+	{ "keys": ["ctrl+alt+d"], "command": "ruby_motion_doc", "context":[{"key":"selector", "operator":"equal", "operand":"source.ruby.rubymotion"}] }
 ]
