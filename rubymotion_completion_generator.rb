@@ -130,44 +130,39 @@ class RubyMotionCompletion
 
       completions = []
 
-      Dir.foreach(@_dir) do |x|
+      Dir.glob("#{@_dir}/*.bridgesupport") do |x|
+        file = File.open(x)
+        doc = REXML::Document.new(file)
 
-        if x[0, 1] != '.'
+        if doc.root.has_elements?
+          STDERR.puts("Compiling: %s" % x) if DebugEnabled
 
-          file = File.open(@_dir + x)
-          doc = REXML::Document.new(file)
-
-          if doc.root.has_elements?
-
-            STDERR.puts("Compiling: %s" % x) if DebugEnabled
-
-            doc.root.each_element do |node|
-              case node.name
-              when "class", "informal_protocol"
-                completions += self.parse_class(node)
-              when "function"
-                completions += self.parse_function(node)
-              when "function_alias"
-                completions += self.parse_alias(node)
-              when "constant"
-                completions += self.parse_constant(node)
-              when "string_constant"
-                completions += self.parse_string(node)
-              when "enum"
-                completions += self.parse_enum(node)
-              when "struct"
-                # <TODO>
-              when "cftype"
-                # <TODO>
-              when "opaque"
-                # <TODO>
-              when "depends_on"
-                # <TODO>
-              when "interface"
-                # <TODO> for android
-              else
-                STDERR.puts "Unknown node #{node.name}"
-              end
+          doc.root.each_element do |node|
+            case node.name
+            when "class", "informal_protocol"
+              completions += self.parse_class(node)
+            when "function"
+              completions += self.parse_function(node)
+            when "function_alias"
+              completions += self.parse_alias(node)
+            when "constant"
+              completions += self.parse_constant(node)
+            when "string_constant"
+              completions += self.parse_string(node)
+            when "enum"
+              completions += self.parse_enum(node)
+            when "struct"
+              # <TODO>
+            when "cftype"
+              # <TODO>
+            when "opaque"
+              # <TODO>
+            when "depends_on"
+              # <TODO>
+            when "interface"
+              # <TODO> for android
+            else
+              STDERR.puts "Unknown node #{node.name}"
             end
           end
         end
