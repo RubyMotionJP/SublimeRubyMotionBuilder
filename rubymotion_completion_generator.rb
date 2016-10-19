@@ -161,6 +161,8 @@ class RubyMotionCompletion
                 # <TODO>
               when "opaque"
                 # <TODO>
+              when "depends_on"
+                # <TODO>
               when "interface"
                 # <TODO> for android
               else
