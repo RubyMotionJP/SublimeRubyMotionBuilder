@@ -5,7 +5,7 @@ require 'rexml/document'
 DebugEnabled = true
 
 # RubyMotion Bridgesupport default path
-RubyMotionPath = ARGV[0] || "/Library/RubyMotion/data/ios/7.0/BridgeSupport/"
+RubyMotionPath = ARGV[0] || "/Library/RubyMotion/data/ios/10.0/BridgeSupport/"
 
 STDERR.puts "build for " + RubyMotionPath if DebugEnabled
 
