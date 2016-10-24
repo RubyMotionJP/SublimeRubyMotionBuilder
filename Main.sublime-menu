@@ -1,0 +1,56 @@
+[
+    {
+        "id": "project",
+        "caption": "Project",
+        "children":
+        [
+            {"caption": "-" },
+            {
+                "id": "RubyMotionBuilder",
+                "caption": "RubyMotion",
+                "children":
+                [
+                    {
+                        "caption": "Build",
+                        "command": "ruby_motion_build"
+                    },
+                    {
+                        "caption": "Clean",
+                        "command": "ruby_motion_clean"
+                    },
+                    {
+                        "caption": "Run on simulator",
+                        "command": "ruby_motion_run"
+                    },
+                    {
+                        "caption": "Run Spec",
+                        "command": "ruby_motion_run_spec"
+                    },
+                    {
+                        "caption": "Deploy to device",
+                        "command": "ruby_motion_deploy"
+                    },
+                    {
+                        "caption": "Run command from Rake task list",
+                        "command": "ruby_motion_run_command_from_list"
+                    },
+                    {"caption": "-" },
+                    {
+                        "caption": "Set break point for debugging",
+                        "command": "ruby_motion_set_breakpoint"
+                    },
+                    {"caption": "-" },
+                    {
+                        "caption": "Show reference documents using Dash app",
+                        "command": "ruby_motion_doc"
+                    },
+                    {"caption": "-" },
+                    {
+                        "caption": "Generate completions",
+                        "command": "generate_ruby_motion_completions"
+                    }
+                ]
+            }
+        ]
+    }
+]
