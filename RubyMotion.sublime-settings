@@ -5,6 +5,9 @@
 	// Set to true to insert spaces when tab is pressed
 	"translate_tabs_to_spaces": true,
 
+	// Activate terminal window
+	"activate_terminal": true,
+
 	// Set to terminal application name (ex. "Terminail", "iTerm")
 	"terminal": "Terminal"
 }
