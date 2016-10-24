@@ -24,7 +24,7 @@
                         "command": "ruby_motion_run"
                     },
                     {
-                        "caption": "Run Spec",
+                        "caption": "Run spec on simulator",
                         "command": "ruby_motion_run_spec"
                     },
                     {
