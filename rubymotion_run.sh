@@ -24,11 +24,10 @@ if [ "${TERMINAL_APP}" = "iTerm" ]; then
     osascript<<END
         tell application "iTerm"
             if "${ACTIVATE_TERMINAL}" is "true" then activate
-            set current_session to (the first session of the current terminal)
-            select current_session
+            select first tab of current window
 
-            tell current_session
-                if ("ruby" is in name or "rake" is in name or "sim" is in name) then 
+            tell current session of current window
+                if ("ruby" is in name or "rake" is in name or "repl" is in name) then 
                     write text "exit"
                 end if
 
@@ -44,7 +43,7 @@ else
             try
                 set buildWindow to window 1
                 set selected tab of buildWindow to tab 1 of buildWindow
-                if (processes in buildWindow) contains "sim" then
+                if (processes in buildWindow) contains "repl" then
                     do script "exit" in buildWindow
                 end if
                 do script "cd '${PROJECT_DIR}'" in buildWindow
