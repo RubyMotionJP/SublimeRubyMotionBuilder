@@ -2,6 +2,7 @@
     {
         "id": "project",
         "caption": "Project",
+        "mnemonic": "P",
         "children":
         [
             {"caption": "-" },
