@@ -134,7 +134,7 @@ class RubyMotionBuild(sublime_plugin.WindowCommand):
 
 class RubyMotionClean(sublime_plugin.WindowCommand):
     def run(self):
-        RunRubyMotionBuildScript(self, None, "rake clean")
+        RunRubyMotionBuildScript(self, "rake clean")
 
 
 class RubyMotionRun(sublime_plugin.WindowCommand):
